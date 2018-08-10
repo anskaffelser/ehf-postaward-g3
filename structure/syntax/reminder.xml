@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Syntax xmlns="urn:fdc:difi.no:2017:vefa:structure:Syntax-1">
+
+    <Term>reminder</Term>
+    <Name>EHF Reminder 2.0</Name>
+
+    <Property key="sch:prefix">EHF-REMINDER</Property>
+    <Property key="sch:identifier">reminder-basic</Property>
+
+    <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Reminder-2</Namespace>
+    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
+    <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>
+
+    <Document>
+        <Term>ubl:Reminder</Term>
+
+        <Element>
+            <Term>cbc:CustomizationID</Term>
+            <Name>Customization identifier</Name>
+            <Description>Identifies the specification of content and rules that apply to the transaction.</Description>
+            <Value type="FIXED">urn:www.peppol.eu:transaction:biitrns111:ver1.0</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:ProfileID</Term>
+            <Name>Profile identifier</Name>
+            <Description>Identifies the business process context in which the transaction appears.</Description>
+            <Value type="FIXED">urn:fdc:difi.no:2017:ehf:profile:02:1.0</Value>
+        </Element>
+    </Document>
+
+</Syntax>

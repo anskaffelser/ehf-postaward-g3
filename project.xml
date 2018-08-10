@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xmlns="urn:fdc:difi.no:2017:vefa:structure:Project-1">
+
+    <Name>EHF Reminder 2.0</Name>
+
+    <Documentation path="guide/">Implementation guideline</Documentation>
+
+    <!-- Syntax -->
+    <Resource>
+        <Type>Syntax-1</Type>
+        <Path>structure/syntax/reminder.xml</Path>
+        <Title>Reminder</Title>
+    </Resource>
+
+</Project>

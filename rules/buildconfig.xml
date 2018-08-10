@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <!-- <testfolder>test</testfolder>
+    <testfolder>unit</testfolder> -->
+
+    <configuration>
+        <identifier>ehf-reminder-base-2.0</identifier>
+        <title>EHF Reminder 2.0</title>
+        <file source="sch/EHF-REMINDER.sch" path="xsl/EHF-REMINDER.xsl" />
+    </configuration>
+
+    <configuration>
+        <identifier>ehf-reminder-02-2.0</identifier>
+        <title>EHF Reminder 2.0 (Profile 02)</title>
+        <profileId>urn:fdc:difi.no:2017:ehf:profile:02:1.0</profileId>
+        <customizationId>urn:fdc:difi.no:2017:ehf:reminder:2.0</customizationId>
+        <inherit>ubl-reminder-2.1</inherit>
+        <inherit>ehf-reminder-base-2.0</inherit>
+    </configuration>
+
+</buildConfigurations>
