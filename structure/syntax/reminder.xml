@@ -25,7 +25,7 @@
             <Term>cbc:CustomizationID</Term>
             <Name>Customization identifier</Name>
             <Description>Identifies the specification of content and rules that apply to the transaction.</Description>
-            <Value type="FIXED">urn:www.peppol.eu:transaction:biitrns111:ver1.0</Value>
+            <Value type="FIXED">urn:fdc:difi.no:2017:ehf:reminder:2.0</Value>
         </Element>
 
         <Element>
@@ -468,7 +468,7 @@
         </Element>
 
         <Element cardinality="0..n">
-            <Term>csc:PaymentMeans</Term>
+            <Term>cac:PaymentMeans</Term>
             <Name>Name</Name>
             <Description>Information about the payment.</Description>
 
