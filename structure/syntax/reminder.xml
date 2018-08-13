@@ -14,19 +14,661 @@
     <Document>
         <Term>ubl:Reminder</Term>
 
-        <Element>
+        <Element cardinality="0..1">
+            <Term>cbc:UBLVersionID</Term>
+            <Name>UBL version identifier</Name>
+            <Description>Identifies the version of syntax that transactions are based on.</Description>
+            <Value type="EXAMPLE">2.1</Value>
+        </Element>
+
+        <Element cardinality="0..1">
             <Term>cbc:CustomizationID</Term>
             <Name>Customization identifier</Name>
             <Description>Identifies the specification of content and rules that apply to the transaction.</Description>
             <Value type="FIXED">urn:www.peppol.eu:transaction:biitrns111:ver1.0</Value>
         </Element>
 
-        <Element>
+        <Element cardinality="0..1">
             <Term>cbc:ProfileID</Term>
             <Name>Profile identifier</Name>
             <Description>Identifies the business process context in which the transaction appears.</Description>
             <Value type="FIXED">urn:fdc:difi.no:2017:ehf:profile:02:1.0</Value>
         </Element>
+
+        <Element>
+            <Term>cbc:ID</Term>
+            <Name>Reminder number</Name>
+            <Description>A number that uniquely define the reminder.</Description>
+            <Value type="EXAMPLE">123456</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:IssueDate</Term>
+            <Name>Reminder date</Name>
+            <Description>The date on when the reminder was issued. (YYYY-MM-DD)</Description>
+            <Value type="EXAMPLE">2010-12-03</Value>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:ReminderTypeCode</Term>
+            <Name>Reminder type code</Name>
+            <Description>A code signifying the type of the reminder.</Description>
+            <Value type="EXAMPLE">999</Value>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:ReminderSequenceNumeric</Term>
+            <Name>Reminder sequence number</Name>
+            <Description>The number of the current reminder in the sequence of reminders related to the
+                specified payment, i.e. the number of reminders previously sent plus one.</Description>
+            <Value type="EXAMPLE">3</Value>
+        </Element>
+
+        <Element cardinality="0..n">
+            <Term>cbc:Note</Term>
+            <Name>Reminder date</Name>
+            <Description>Free-form text to this reminder.</Description>
+        </Element>
+
+        <Element>
+            <Term>cac:AccountingSupplierParty</Term>
+            <Name>Supplier</Name>
+            <Description>The organization or person that deliver a item or service.</Description>
+
+            <Element cardinality="0..1">
+                <Term>cac:Party</Term>
+                <Name>Supplier</Name>
+                <Description>An association to a supplier.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EndpointID</Term>
+                    <Name>Endpoint identifier</Name>
+                    <Description>An identifier indicating the suppliers electronic address for their
+                        messaging. The identifier must be entered as a numerical code according to ISO6523 and
+                        consists of one prefix. The prefix specifies the issuer of the identifier, and the actual
+                        identifier.</Description>
+                    <Value type="EXAMPLE">9908:123456789</Value>
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Trader identifier</Name>
+                    <Description>The identification of a trader.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Trader identifier</Name>
+                        <Description>Identifies the trader. One should enter the identification system when using this element.</Description>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:PartyName</Term>
+                    <Name>Trader name</Name>
+                    <Description>Must enter trader name.</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Name</Name>
+                        <Description> The supplier's name.</Description>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PostalAddress</Term>
+                    <Name>Address</Name>
+                    <Description>Trader's address.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Address identifier</Name>
+                        <Description>Identifies a specific address within a system of registered addresses.
+                            One should enter the identification system when using this element.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Postbox</Term>
+                        <Name>Postbox</Name>
+                        <Description>A post office box number registered for postal delivery.</Description>
+                        <Value type="EXAMPLE">Postbox 123</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Street name</Name>
+                        <Description>The name of a street or road.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:BuildingNumber</Term>
+                        <Name>Street number</Name>
+                        <Description>The number of the street or road.</Description>
+                        <Value type="EXAMPLE">1</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CityName</Term>
+                        <Name>Post location</Name>
+                        <Description>The post location of a city, town, or village.</Description>
+                        <Value type="EXAMPLE">Frogner</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post code</Name>
+                        <Description>The postal number for this address, such as zip code or post code.</Description>
+                        <Value type="EXAMPLE">0612</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subentity</Name>
+                        <Description>The division of a country in which this address is located, such as the name
+                            of its county, province or state.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Country</Term>
+                        <Name>Country</Name>
+                        <Description>The country in which this address is situated.</Description>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>A code signifying this country, and based on ISO3166-1.
+                                The code should be entered for the customer(CustomerParty) and the supplier (SupplierParty),
+                                to avoid warning messages from Schematron.</Description>
+                            <Value type="EXAMPLE">NO</Value>
+                        </Element>
+
+                    </Element>
+
+                    <Element cardinality="0..n">
+                        <Term>cac:PartyLegalEntity</Term>
+                        <Name>Supplier organization number</Name>
+                        <Description>Identifies the suppliers organization number through a national register (Brønnøysundregister).</Description>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:RegistrationName</Term>
+                            <Name>Organization name</Name>
+                            <Description>The name of the supplier's as registered with the specified organization number.</Description>
+                            <Value type="EXAMPLE">Supplier 1</Value>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:CompanyID</Term>
+                            <Name>Organization number</Name>
+                            <Description>The supplier's organization number. For norwegian suppliers: only numbers are accepted.</Description>
+                            <Value type="EXAMPLE">999999999</Value>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cac:RegistrationAddress</Term>
+                            <Name>Address</Name>
+                            <Description>The registration address of the legal supplier.</Description>
+
+                            <Element cardinality="0..1">
+                                <Term>cbc:CityName</Term>
+                                <Name>Post location</Name>
+                                <Description>The post location of a city, town, or village.</Description>
+                            </Element>
+
+                            <Element cardinality="0..1">
+                                <Term>cbc:CountrySubentity</Term>
+                                <Name>Region, province, subentity</Name>
+                                <Description>The division of a country in which this address is located, such as county, province, region etc.</Description>
+                            </Element>
+
+                            <Element cardinality="0..1">
+                                <Term>cac:Country</Term>
+                                <Name>Country</Name>
+                                <Description>The country in which this address is situated.</Description>
+
+                                <Element cardinality="0..1">
+                                    <Term>cbc:IdentificationCode</Term>
+                                    <Name>Country code</Name>
+                                    <Description>A code signifying this country, and based on ISO3166-1. The code
+                                        should be entered for the customer(CustomerParty) and the supplier
+                                        (SupplierParty), to avoid warning messages from Schematron.</Description>
+                                    <Value type="EXAMPLE">NO</Value>
+                                </Element>
+                            </Element>
+
+                        </Element>
+
+                </Element>
+
+            </Element>
+        </Element>
+
+        <Element>
+            <Term>cac:AccountingCustomerParty</Term>
+            <Name>Customer</Name>
+            <Description>Denotes the customer.</Description>
+
+            <Element cardinality="0..1">
+                <Term>cac:Party</Term>
+                <Name>Customer</Name>
+                <Description>Specification of the customer.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EndpointID</Term>
+                    <Name>Endpoint identifier</Name>
+                    <Description>An identifier indicating the suppliers electronic address for their messaging. The identifier must be entered
+                        as a numerical code according to ISO6523 and consists of one prefix. The prefix specifies the issuer of the identifier, and the actual
+                        identifier.</Description>
+                    <Value type="EXAMPLE">9908:123456789</Value>
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Trader identification</Name>
+                    <Description>Identifier a trader.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Customer number</Name>
+                        <Description>Identifies a customer with a number, which can be defined by itself or a unique
+                            identification issued by another. Denote the identification number as customer number in the invoice.</Description>
+                        <Value type="EXAMPLE">9908:123456789</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:PartyName</Term>
+                    <Name>Trader name</Name>
+                    <Description>Must enter trader name.</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Name</Name>
+                        <Description> The supplier's name.</Description>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PostalAddress</Term>
+                    <Name>Address</Name>
+                    <Description>Entering the address.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Address identifier</Name>
+                        <Description>Identifies a specific address within a system of registered addresses.
+                            One should enter the identification system when using this element.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Postbox</Term>
+                        <Name>Postbox</Name>
+                        <Description>A post office box number registered for postal delivery.</Description>
+                        <Value type="EXAMPLE">Postbox 123</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Street name</Name>
+                        <Description>The name of a street or road.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:BuildingNumber</Term>
+                        <Name>Street number</Name>
+                        <Description>The number of the street or road.</Description>
+                        <Value type="EXAMPLE">1</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CityName</Term>
+                        <Name>Post location</Name>
+                        <Description>The post location of a city, town, or village.</Description>
+                        <Value type="EXAMPLE">Frogner</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post number</Name>
+                        <Description>The postal number for this address.</Description>
+                        <Value type="EXAMPLE">0612</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Region, county, province</Name>
+                        <Description>The division of a country in which this address is located.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Country</Term>
+                        <Name>Country</Name>
+                        <Description>The country in which this address is situated.</Description>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:PartyLegalEntity</Term>
+                    <Name>Legal trader</Name>
+                    <Description>Identifies a legal trader through a national register (Brønnøysundregister).</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:RegistrationName</Term>
+                        <Name>Registration name</Name>
+                        <Description>The name of the buyer as registered with the relevant legal authority.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CompanyID</Term>
+                        <Name>Organization number</Name>
+                        <Description>The customer's organization number.</Description>
+                        <Value type="EXAMPLE">888888888</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:RegistrationAddress</Term>
+                        <Name>Address</Name>
+                        <Description>The registration address of the legal buyer.</Description>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:CityName</Term>
+                            <Name>Post location</Name>
+                            <Description>The post location of a city, town, or village.</Description>
+                            <Value type="EXAMPLE">Frogner</Value>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:CountrySubentity</Term>
+                            <Name>Region</Name>
+                            <Description>The division of a country in which this address is located., such as county, province, region etc.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cac:Country</Term>
+                            <Name>Country</Name>
+                            <Description>The country in which this address is situated.</Description>
+
+                            <Element cardinality="0..1">
+                                <Term>cbc:IdentificationCode</Term>
+                                <Name>Country code</Name>
+                                <Description>A code signifying this country, and based on ISO3166-1. The code should be entered for the customer(CustomerParty)
+                                    and the supplier (SupplierParty), to avoid warning messages from Schematron.</Description>
+                                <Value type="EXAMPLE">NO</Value>
+                            </Element>
+                        </Element>
+
+                    </Element>
+
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Contact</Term>
+                    <Name>Contact information</Name>
+                    <Description>The buyer's contact information.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Reference</Name>
+                        <Description>The buyer's reference specified as "Their ref."</Description>
+                        <Value type="EXAMPLE">3159bbx</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telephone</Term>
+                        <Name>Telephone</Name>
+                        <Description>The buyer's contact information- telephone number.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telefax</Term>
+                        <Name>Telefax</Name>
+                        <Description>The buyer's contact information- telefax number.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ElectronicMail</Term>
+                        <Name>Electronic mail</Name>
+                        <Description>The buyer's contact information- electronic mail address.</Description>
+                    </Element>
+
+                </Element>
+
+            </Element>
+
+
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:PayeeParty</Term>
+            <Name>Payment receiver</Name>
+            <Description>The payment receiver or trader issue an invoice. Can be a invoice-company. </Description>
+
+            <Element cardinality="0..n">
+                <Term>cac:PartyIdentification</Term>
+                <Name>Trader identifier</Name>
+                <Description>Identifies a trader.</Description>
+
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>ID</Name>
+                    <Description> Identifies a payment receiver. If including this element, one should enter the identification system.</Description>
+                </Element>
+            </Element>
+
+            <Element cardinality="0..n">
+                <Term>cac:PartyName</Term>
+                <Name>Trader name</Name>
+                <Description>MUST include the trader name.</Description>
+
+                <Element>
+                    <Term>cbc:Name</Term>
+                    <Name>Name</Name>
+                    <Description>The payment receiver's name.</Description>
+                </Element>
+            </Element>
+
+        </Element>
+
+        <Element cardinality="0..n">
+            <Term>csc:PaymentMeans</Term>
+            <Name>Name</Name>
+            <Description>Information about the payment.</Description>
+
+            <Element>
+                <Term>cbc:PaymentMeansCode</Term>
+                <Name>Payment means type code</Name>
+                <Description>The means, expressed as code, for how a payment is expected to be or has been settled.</Description>
+            </Element>
+
+            <Element cardinality="0..n">
+                <Term>cbc:PaymentID</Term>
+                <Name>Payment identifier</Name>
+                <Description>Identifies the payment by using means of payment.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:PayeeFinancialAccount</Term>
+                <Name>Credit transfer</Name>
+                <Description>The payee's financial account.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:ID</Term>
+                    <Name>Payment account identifier</Name>
+                    <Description>Identifies the financial payment account, i.e. the bank account number.</Description>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Name</Term>
+                    <Name>Payment account name</Name>
+                    <Description>The name of the financial payment account.</Description>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:FinancialInstitutionBranch</Term>
+                    <Name>Financial institution branch</Name>
+                    <Description>The branch of the financial institution according to the financial payment account.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Payment service provider identifier</Name>
+                        <Description>An identifier for the payment service provider where a payment is located.</Description>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..n">
+            <Term>cac:PaymentTerms</Term>
+            <Name>Payment terms</Name>
+            <Description>Payment terms according to invoice.</Description>
+
+            <Element cardinality="0..n">
+                <Term>cbc:Note</Term>
+                <Name>Note</Name>
+                <Description>Textual description of the payment terms.</Description>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..n">
+            <Term>cac:TaxTotal</Term>
+            <Name>Tax total</Name>
+            <Description>VAT amount per tax rate and total VAT amount.</Description>
+
+            <Element>
+                <Term>cbc:TaxAmount</Term>
+                <Name>Total tax</Name>
+                <Description>Total amount for specified amount regime. EHF only denotes the VAT amount.</Description>
+                <Value type="EXAMPLE">962,0</Value>
+            </Element>
+
+            <Element cardinality="0..n">
+                <Term>cac:TaxSubtotal</Term>
+                <Name>Tax sub total</Name>
+                <Description>Specifies tax amount within different VAT rates.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:TaxableAmount</Term>
+                    <Name>Tax basis</Name>
+                    <Description>VAT basis to calculate a tax for a given VAT category.</Description>
+                    <Value type="EXAMPLE">3400,00</Value>
+                </Element>
+
+                <Element>
+                    <Term>cbc:TaxAmount</Term>
+                    <Name>Tax amount</Name>
+                    <Description>The amount of this tax subtotal.</Description>
+                    <Value type="EXAMPLE">850,00</Value>
+                </Element>
+
+                <Element>
+                    <Term>cac:TaxCategory</Term>
+                    <Name>Tax category</Name>
+                    <Description>VAT basis to calculate a tax for a given VAT category.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>ID</Name>
+                        <Description>Identifier for tax category.</Description>
+                        <Value type="EXAMPLE">S</Value> <!--FYLL INN MER HER-->
+                    </Element>
+
+                    <Element>
+                        <Term>cAc:TaxScheme</Term>
+                        <Name>Tax scheme</Name>
+                        <Description>The taxation scheme within this tax category.</Description>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:ID</Term>
+                            <Name>ID</Name>
+                            <Description>Identifies the tax scheme.</Description>
+                            <Value type="EXAMPLE">VAT</Value>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element>
+            <Term>cac:LegalMonetaryTotal</Term>
+            <Name>Monetary total</Name>
+            <Description>The total amount payable on the invoice, including allowances, charges and taxes.</Description>
+
+            <Element cardinality="0..1">
+                <Term>cbc:LineExtensionAmount</Term>
+                <Name>Line extension amount</Name>
+                <Description>Net of line amount, exclusive VAT.</Description>
+                <Value type="EXAMPLE">400,00</Value>
+            </Element>
+
+            <Element>
+                <Term>cbc:PayableAmount</Term>
+                <Name>Payable amount</Name>
+                <Description>Total amount to be paid.</Description>
+                <Value type="EXAMPLE">5162,00</Value>
+            </Element>
+        </Element>
+
+        <Element cardinality="1..n">
+            <Term>cac:ReminderLine</Term>
+            <Name>Reminder line</Name>
+            <Description>A line describing a payment past due.</Description>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Line number</Name>
+                <Description>Identifies the reminder line.</Description>
+            </Element>
+
+            <Element cardinality="0..n">
+                <Term>cbc:Note</Term>
+                <Name>Note</Name>
+                <Description>Free-form text added to reminder line.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:DebitLineAmount</Term>
+                <Name>Debit line amount</Name>
+                <Description>The amount debited on the reminder line.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:CreditLineAmount</Term>
+                <Name>Credit line amount</Name>
+                <Description>The amount credited on the reminder line.</Description>
+            </Element>
+
+            <Element cardinality="0..*">
+                <Term>cac:BillingReference</Term>
+                <Name>Billing reference</Name>
+                <Description>A reference to a billing document associated with the reminder line.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cac:InvoiceDocumentReference</Term>
+                    <Name>Document reference</Name>
+                    <Description>Reference to an invoice.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Reference identifier</Name>
+                        <Description>Identifier for the referenced document.</Description>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:CreditNoteDocumentReference</Term>
+                    <Name>Document reference</Name>
+                    <Description>Reference to a credit note.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Reference identifier</Name>
+                        <Description>Identifier for the referenced credit note document.</Description>
+                    </Element>
+                </Element>
+            </Element>
+
+        </Element>
+
+
+
     </Document>
 
 </Syntax>
