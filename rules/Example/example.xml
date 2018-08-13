@@ -1,4 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<reminder ">
 
-</reminder>
+<ubl:Reminder
+        xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Reminder-2"
+        xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+        xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+        xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+        xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+        xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
+    <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+    <cbc:CustomizationID>urn:www.peppol.eu:transaction:biitrns111:ver1.0</cbc:CustomizationID>
+    <cbc:ProfileID>urn:fdc:difi.no:2017:ehf:profile:02:1.0</cbc:ProfileID>
+    <cbc:ID>123456</cbc:ID>
+    <cbc:IssueDate>2018-12-04</cbc:IssueDate>
+    <cbc:ReminderTypeCode>999</cbc:ReminderTypeCode>
+    <cbc:ReminderSequenceNumeric>3</cbc:ReminderSequenceNumeric>
+    <cbc:Note>Filling some information.</cbc:Note>
+
+    <cac:AccountingSupplierParty>
+        <cac:Party>
+            <cbc:EndpointID>9908:123456789</cbc:EndpointID>
+            <cac:PartyIdentification>
+                <cbc:ID>STT134</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name>Salescompany ltd.</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:ID schemeID="GLN" schemeAgencyID="9">1231412341324</cbc:ID>
+                <cbc:Postbox>5431</cbc:Postbox>
+                <cbc:StreetName>Anystreet</cbc:StreetName>
+                <cbc:BuildingNumber>5</cbc:BuildingNumber>
+                <cbc:CityName>Anycity</cbc:CityName>
+                <cbc:PostalZone>0746</cbc:PostalZone>
+                <cbc:CountrySubentity>RegionA</cbc:CountrySubentity>
+                <cac:Country>
+                    <cbc:IdentificationCode listID="IS03166-1" listAgencyID="6">NO</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>The Sellercompany AS</cbc:RegistrationName>
+                <cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretalsregisteret" schemeAgencyID="82">123456789</cbc:CompanyID>
+                <cac:RegistrationAddress>
+                    <cbc:CityName>Oslo</cbc:CityName>
+                    <cbc:CountrySubentity>RegionA</cbc:CountrySubentity>
+                    <cac:Country>
+                        <cbc:IdentificationCode>NO</cbc:IdentificationCode>
+                    </cac:Country>
+                </cac:RegistrationAddress>
+            </cac:PartyLegalEntity>
+        </cac:Party>
+    </cac:AccountingSupplierParty>
+
+    <cac:AccountingCustomerParty>
+        <cac:Party>
+            <cbc:EndpointID>9908:123456789</cbc:EndpointID>
+            <cac:PartyIdentification>
+                <cbc:ID>345KS5324</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name>Buyercompany ltd</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:ID schemeID="GLN" schemeAgencyID="9">1238764941386</cbc:ID>
+                <cbc:Postbox>123</cbc:Postbox>
+                <cbc:StreetName>Anystreet</cbc:StreetName>
+                <cbc:BuildingNumber>1</cbc:BuildingNumber>
+                <cbc:CityName>Anytown</cbc:CityName>
+                <cbc:PostalZone>0612</cbc:PostalZone>
+                <cbc:CountrySubentity>RegionB</cbc:CountrySubentity>
+                <cac:Country>
+                    <cbc:IdentificationCode listID="ISO3166-1" listAgencyID="6">NO</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>The buyercompany AS</cbc:RegistrationName>
+                <cbc:CompanyID schemeAgencyID="NO:ORGNR" schemeID="82">888888888</cbc:CompanyID>
+                <cac:RegistrationAddress>
+                    <cbc:CityName>Anycity</cbc:CityName>
+                    <cbc:CountrySubentity>RegionB</cbc:CountrySubentity>
+                    <cac:Country>
+                        <cbc:IdentificationCode>NO</cbc:IdentificationCode>
+                    </cac:Country>
+                </cac:RegistrationAddress>
+            </cac:PartyLegalEntity>
+            <cac:Contact>
+                <cbc:ID>3159bbx</cbc:ID>
+                <cbc:Telephone>517287</cbc:Telephone>
+                <cbc:Telefax>517288</cbc:Telefax>
+                <cbc:ElectronicMail>jenny@buyercompany.no</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:AccountingCustomerParty>
+
+    <cac:PaymentMeans>
+        <cbc:PaymentMeansCode></cbc:PaymentMeansCode>
+        <cbc:PaymentID></cbc:PaymentID>
+        <cac:PayeeFinancialAccount>
+            <cbc:ID></cbc:ID>
+            <cbc:Name></cbc:Name>
+            <cac:FinancialInstitutionBranch>
+                <cbc:ID></cbc:ID>
+            </cac:FinancialInstitutionBranch>
+        </cac:PayeeFinancialAccount>
+    </cac:PaymentMeans>
+
+    <cac:PaymentTerms>
+        <cbc:Note>Adding reminder with 2 percentage.</cbc:Note>
+    </cac:PaymentTerms>
+
+    <cac:TaxTotal>
+        <cbc:TaxAmount currencyID="NOK">962,0</cbc:TaxAmount>
+        <cac:TaxSubtotal>
+            <cbc:TaxAmount currencyID="NOK">3400,00</cbc:TaxAmount>
+            <cac:TaxCategory>
+                <cbc:ID>S</cbc:ID>
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:TaxCategory>
+        </cac:TaxSubtotal>
+    </cac:TaxTotal>
+
+    <cac:LegalMonetaryTotal>
+        <cbc:LineExtensionAmount currencyID="NOK">400,00</cbc:LineExtensionAmount>
+        <cbc:PayableAmount currencyID="NOK">5162,00</cbc:PayableAmount>
+    </cac:LegalMonetaryTotal>
+    
+    <cac:ReminderLine>
+        <cbc:ID>1</cbc:ID>
+        <cbc:Note>According to reminder 12345</cbc:Note>
+        <cbc:DebitLineAmount currencyID="NOK">100</cbc:DebitLineAmount>
+        <cac:BillingReference>
+            <cac:InvoiceDocumentReference>
+                <cbc:ID>1232</cbc:ID>
+            </cac:InvoiceDocumentReference>
+        </cac:BillingReference>
+    </cac:ReminderLine>
+
+
+    <cac:ReminderLine>
+        <cbc:ID>2</cbc:ID>
+        <cbc:Note>According to creditnote 6545</cbc:Note>
+        <cbc:CreditLineAmount currencyID="NOK">50</cbc:CreditLineAmount>
+        <cac:BillingReference>
+            <cac:CreditNoteDocumentReference>
+                <cbc:ID>53234</cbc:ID>
+            </cac:CreditNoteDocumentReference>
+        </cac:BillingReference>
+    </cac:ReminderLine>
+</ubl:Reminder>

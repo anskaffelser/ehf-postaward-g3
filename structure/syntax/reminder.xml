@@ -8,27 +8,27 @@
     <Property key="sch:identifier">reminder-basic</Property>
 
     <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Reminder-2</Namespace>
-    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
+    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2</Namespace>
     <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>
 
     <Document>
         <Term>ubl:Reminder</Term>
 
-        <Element cardinality="0..1">
+        <Element>
             <Term>cbc:UBLVersionID</Term>
             <Name>UBL version identifier</Name>
             <Description>Identifies the version of syntax that transactions are based on.</Description>
             <Value type="EXAMPLE">2.1</Value>
         </Element>
 
-        <Element cardinality="0..1">
+        <Element>
             <Term>cbc:CustomizationID</Term>
             <Name>Customization identifier</Name>
             <Description>Identifies the specification of content and rules that apply to the transaction.</Description>
             <Value type="FIXED">urn:www.peppol.eu:transaction:biitrns111:ver1.0</Value>
         </Element>
 
-        <Element cardinality="0..1">
+        <Element>
             <Term>cbc:ProfileID</Term>
             <Name>Profile identifier</Name>
             <Description>Identifies the business process context in which the transaction appears.</Description>
@@ -64,7 +64,7 @@
             <Value type="EXAMPLE">3</Value>
         </Element>
 
-        <Element cardinality="0..n">
+        <Element cardinality="0..1">
             <Term>cbc:Note</Term>
             <Name>Reminder date</Name>
             <Description>Free-form text to this reminder.</Description>
@@ -75,7 +75,7 @@
             <Name>Supplier</Name>
             <Description>The organization or person that deliver a item or service.</Description>
 
-            <Element cardinality="0..1">
+            <Element>
                 <Term>cac:Party</Term>
                 <Name>Supplier</Name>
                 <Description>An association to a supplier.</Description>
@@ -90,7 +90,7 @@
                     <Value type="EXAMPLE">9908:123456789</Value>
                 </Element>
 
-                <Element cardinality="0..n">
+                <Element cardinality="0..1">
                     <Term>cac:PartyIdentification</Term>
                     <Name>Trader identifier</Name>
                     <Description>The identification of a trader.</Description>
@@ -102,7 +102,7 @@
                     </Element>
                 </Element>
 
-                <Element cardinality="0..n">
+                <Element>
                     <Term>cac:PartyName</Term>
                     <Name>Trader name</Name>
                     <Description>Must enter trader name.</Description>
@@ -114,7 +114,7 @@
                     </Element>
                 </Element>
 
-                <Element cardinality="0..1">
+                <Element>
                     <Term>cac:PostalAddress</Term>
                     <Name>Address</Name>
                     <Description>Trader's address.</Description>
@@ -167,12 +167,12 @@
                             of its county, province or state.</Description>
                     </Element>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cac:Country</Term>
                         <Name>Country</Name>
                         <Description>The country in which this address is situated.</Description>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Country code</Name>
                             <Description>A code signifying this country, and based on ISO3166-1.
@@ -183,7 +183,7 @@
 
                     </Element>
 
-                    <Element cardinality="0..n">
+                    <Element>
                         <Term>cac:PartyLegalEntity</Term>
                         <Name>Supplier organization number</Name>
                         <Description>Identifies the suppliers organization number through a national register (Brønnøysundregister).</Description>
@@ -195,7 +195,7 @@
                             <Value type="EXAMPLE">Supplier 1</Value>
                         </Element>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:CompanyID</Term>
                             <Name>Organization number</Name>
                             <Description>The supplier's organization number. For norwegian suppliers: only numbers are accepted.</Description>
@@ -224,7 +224,7 @@
                                 <Name>Country</Name>
                                 <Description>The country in which this address is situated.</Description>
 
-                                <Element cardinality="0..1">
+                                <Element>
                                     <Term>cbc:IdentificationCode</Term>
                                     <Name>Country code</Name>
                                     <Description>A code signifying this country, and based on ISO3166-1. The code
@@ -246,7 +246,7 @@
             <Name>Customer</Name>
             <Description>Denotes the customer.</Description>
 
-            <Element cardinality="0..1">
+            <Element>
                 <Term>cac:Party</Term>
                 <Name>Customer</Name>
                 <Description>Specification of the customer.</Description>
@@ -260,7 +260,7 @@
                     <Value type="EXAMPLE">9908:123456789</Value>
                 </Element>
 
-                <Element cardinality="0..n">
+                <Element cardinality="0..1">
                     <Term>cac:PartyIdentification</Term>
                     <Name>Trader identification</Name>
                     <Description>Identifier a trader.</Description>
@@ -274,7 +274,7 @@
                     </Element>
                 </Element>
 
-                <Element cardinality="0..n">
+                <Element>
                     <Term>cac:PartyName</Term>
                     <Name>Trader name</Name>
                     <Description>Must enter trader name.</Description>
@@ -286,7 +286,7 @@
                     </Element>
                 </Element>
 
-                <Element cardinality="0..1">
+                <Element>
                     <Term>cac:PostalAddress</Term>
                     <Name>Address</Name>
                     <Description>Entering the address.</Description>
@@ -345,7 +345,7 @@
                     </Element>
                 </Element>
 
-                <Element cardinality="0..n">
+                <Element>
                     <Term>cac:PartyLegalEntity</Term>
                     <Name>Legal trader</Name>
                     <Description>Identifies a legal trader through a national register (Brønnøysundregister).</Description>
@@ -356,7 +356,7 @@
                         <Description>The name of the buyer as registered with the relevant legal authority.</Description>
                     </Element>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:CompanyID</Term>
                         <Name>Organization number</Name>
                         <Description>The customer's organization number.</Description>
@@ -386,7 +386,7 @@
                             <Name>Country</Name>
                             <Description>The country in which this address is situated.</Description>
 
-                            <Element cardinality="0..1">
+                            <Element>
                                 <Term>cbc:IdentificationCode</Term>
                                 <Name>Country code</Name>
                                 <Description>A code signifying this country, and based on ISO3166-1. The code should be entered for the customer(CustomerParty)
@@ -399,12 +399,12 @@
 
                 </Element>
 
-                <Element cardinality="0..1">
+                <Element>
                     <Term>cac:Contact</Term>
                     <Name>Contact information</Name>
                     <Description>The buyer's contact information.</Description>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:ID</Term>
                         <Name>Reference</Name>
                         <Description>The buyer's reference specified as "Their ref."</Description>
@@ -441,7 +441,7 @@
             <Name>Payment receiver</Name>
             <Description>The payment receiver or trader issue an invoice. Can be a invoice-company. </Description>
 
-            <Element cardinality="0..n">
+            <Element cardinality="0..1">
                 <Term>cac:PartyIdentification</Term>
                 <Name>Trader identifier</Name>
                 <Description>Identifies a trader.</Description>
@@ -453,7 +453,7 @@
                 </Element>
             </Element>
 
-            <Element cardinality="0..n">
+            <Element cardinality="0..1">
                 <Term>cac:PartyName</Term>
                 <Name>Trader name</Name>
                 <Description>MUST include the trader name.</Description>
@@ -520,14 +520,14 @@
             <Name>Payment terms</Name>
             <Description>Payment terms according to invoice.</Description>
 
-            <Element cardinality="0..n">
+            <Element cardinality="0..1">
                 <Term>cbc:Note</Term>
                 <Name>Note</Name>
                 <Description>Textual description of the payment terms.</Description>
             </Element>
         </Element>
 
-        <Element cardinality="0..n">
+        <Element cardinality="0..1">
             <Term>cac:TaxTotal</Term>
             <Name>Tax total</Name>
             <Description>VAT amount per tax rate and total VAT amount.</Description>
@@ -544,7 +544,7 @@
                 <Name>Tax sub total</Name>
                 <Description>Specifies tax amount within different VAT rates.</Description>
 
-                <Element cardinality="0..1">
+                <Element>
                     <Term>cbc:TaxableAmount</Term>
                     <Name>Tax basis</Name>
                     <Description>VAT basis to calculate a tax for a given VAT category.</Description>
@@ -563,7 +563,7 @@
                     <Name>Tax category</Name>
                     <Description>VAT basis to calculate a tax for a given VAT category.</Description>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:ID</Term>
                         <Name>ID</Name>
                         <Description>Identifier for tax category.</Description>
@@ -571,11 +571,11 @@
                     </Element>
 
                     <Element>
-                        <Term>cAc:TaxScheme</Term>
+                        <Term>cac:TaxScheme</Term>
                         <Name>Tax scheme</Name>
                         <Description>The taxation scheme within this tax category.</Description>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:ID</Term>
                             <Name>ID</Name>
                             <Description>Identifies the tax scheme.</Description>
@@ -591,7 +591,7 @@
             <Name>Monetary total</Name>
             <Description>The total amount payable on the invoice, including allowances, charges and taxes.</Description>
 
-            <Element cardinality="0..1">
+            <Element>
                 <Term>cbc:LineExtensionAmount</Term>
                 <Name>Line extension amount</Name>
                 <Description>Net of line amount, exclusive VAT.</Description>
@@ -617,7 +617,7 @@
                 <Description>Identifies the reminder line.</Description>
             </Element>
 
-            <Element cardinality="0..n">
+            <Element cardinality="0..1">
                 <Term>cbc:Note</Term>
                 <Name>Note</Name>
                 <Description>Free-form text added to reminder line.</Description>
@@ -635,7 +635,7 @@
                 <Description>The amount credited on the reminder line.</Description>
             </Element>
 
-            <Element cardinality="0..*">
+            <Element>
                 <Term>cac:BillingReference</Term>
                 <Name>Billing reference</Name>
                 <Description>A reference to a billing document associated with the reminder line.</Description>
