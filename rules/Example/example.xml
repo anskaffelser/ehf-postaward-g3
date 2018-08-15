@@ -127,7 +127,7 @@
     
     <cac:ReminderLine>
         <cbc:ID>1</cbc:ID>
-        <cbc:Note>According to reminder 12345</cbc:Note>
+        <cbc:Note>Applies to reminder 12345</cbc:Note>
         <cbc:DebitLineAmount currencyID="NOK">100</cbc:DebitLineAmount>
         <cac:BillingReference>
             <cac:InvoiceDocumentReference>
@@ -139,7 +139,7 @@
 
     <cac:ReminderLine>
         <cbc:ID>2</cbc:ID>
-        <cbc:Note>According to creditnote 6545</cbc:Note>
+        <cbc:Note>Applies to creditnote 6545</cbc:Note>
         <cbc:CreditLineAmount currencyID="NOK">50</cbc:CreditLineAmount>
         <cac:BillingReference>
             <cac:CreditNoteDocumentReference>

@@ -67,8 +67,7 @@ This document is divided into:
 
 * Chapter one
 * Chapter two
-* Chapter three
-
+* Chapter three...
 
 
 === Mandatory Use
@@ -112,16 +111,6 @@ Erik Gustavsen, Edisys
 
 
 |===
-
-=== Consequences of Implementing this Version
-
-
-
-
-
-
-=== Challenges Observed
-
 
 
 = Electronic Commerce Format (EHF)
@@ -174,7 +163,7 @@ According to circular P-10/2012 FAD recommends all central government agencies t
 
 == Message Level Response
 
-Message Level Response
+HVA SKAL VI SKRIVE HER??
 
 
 == Profiles and Messages
@@ -188,7 +177,6 @@ business transactions exchanged.”
 
 If possible, the EHF is using profiles prepared by BII (see www.cenbii.eu) or PEPPOL (see www.peppol.eu).
 Examples of relevant profiles are:
-
 
 |===
 |Profile |Document Types
@@ -309,7 +297,7 @@ Person or organization that issues an invoice.
 Invoice Receiver::
 Person or organization that receives an invoice.
 
-Payment Receiver:
+Payment Receiver::
 Person or organization that receives the payment
 ****
 
@@ -318,11 +306,6 @@ Person or organization that receives the payment
 
 This chapter describes the principles and assumptions that underlie the use of EHF reminder process.
 This is basically similar to the CEN BII 08- Billing with dispute and reminder.
-
-
-== Reminder Process in General
-
-// Hva er forskjellen mellom denne delseksjonen og "the reminder process"?
 
 
 == Functionality and Roles
@@ -384,7 +367,7 @@ Payment receiver (PayeeParty):: Payment receiver is optional information in EHF.
 the seller is the payment receiver.
 ****
 
-[Source, xml]
+[source, xml]
 .Example: Supplying seller information on the header level in an EHF reminder message.
 
 ----
@@ -425,7 +408,7 @@ the seller is the payment receiver.
 </cac:AccountingSupplierParty>
 ----
 
-[Source, xml]
+[source, xml]
 .Example: Supplying buyer information on the header level in an EHF reminder message.
 
 ----
@@ -476,10 +459,42 @@ the seller is the payment receiver.
 
 The invoice reference and/or credit note reference on line level (BillingReference) must be send. See example below.
 
+
 == Debit and Credit Line Amount
 
-Line amount, regarding to delayed invoice, must be specified in element DebitLineAmount with reference
+//Line amount, delayed invoice, must be specified in the DebitLineAmount element and associate to InvoiceDocumentReference (a reference to an invoice).
 
+[source, xml]
+.Example: Debit line amount.
+
+----
+<cac:ReminderLine>
+    <cbc:ID>1</cbc:ID>
+    <cbc:Note>Applies to reminder 12345</cbc:Note>
+    <cbc:DebitLineAmount currencyID="NOK">100</cbc:DebitLineAmount>
+    <cac:BillingReference>
+        <cac:InvoiceDocumentReference>
+            <cbc:ID>1232</cbc:ID>
+        </cac:InvoiceDocumentReference>
+    </cac:BillingReference>
+</cac:ReminderLine>
+----
+
+[source, xml]
+.Example: Debit line amount.
+
+----
+<cac:ReminderLine>
+    <cbc:ID>2</cbc:ID>
+    <cbc:Note>Applies to creditnote 6545</cbc:Note>
+    <cbc:CreditLineAmount currencyID="NOK">50</cbc:CreditLineAmount>
+    <cac:BillingReference>
+        <cac:CreditNoteDocumentReference>
+            <cbc:ID>53234</cbc:ID>
+        </cac:CreditNoteDocumentReference>
+    </cac:BillingReference>
+</cac:ReminderLine>
+----
 
 
 == Value Added Tax (Norwegian MVA)
@@ -585,6 +600,7 @@ CustomizationID may be extended with more elements for specific trade or busines
 
 
 === Validation Rules
+
 
 ==== Norwegian Rules for Reminder
 
