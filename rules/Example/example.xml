@@ -140,7 +140,7 @@
     <cac:ReminderLine>
         <cbc:ID>2</cbc:ID>
         <cbc:Note>Applies to creditnote 6545</cbc:Note>
-        <cbc:CreditLineAmount currencyID="NOK">50</cbc:CreditLineAmount>
+        <cbc:CreditLineAmount currencyID="NOK">100</cbc:CreditLineAmount>
         <cac:BillingReference>
             <cac:CreditNoteDocumentReference>
                 <cbc:ID>53234</cbc:ID>

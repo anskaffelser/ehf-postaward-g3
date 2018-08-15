@@ -367,9 +367,8 @@ Payment receiver (PayeeParty):: Payment receiver is optional information in EHF.
 the seller is the payment receiver.
 ****
 
-[source, xml]
+[source,xml]
 .Example: Supplying seller information on the header level in an EHF reminder message.
-
 ----
 <cac:AccountingSupplierParty>
     <cac:Party>
@@ -408,9 +407,8 @@ the seller is the payment receiver.
 </cac:AccountingSupplierParty>
 ----
 
-[source, xml]
+[source,xml]
 .Example: Supplying buyer information on the header level in an EHF reminder message.
-
 ----
 <cac:AccountingCustomerParty>
     <cac:Party>
@@ -464,6 +462,8 @@ The invoice reference and/or credit note reference on line level (BillingReferen
 
 //Line amount, delayed invoice, must be specified in the DebitLineAmount element and associate to InvoiceDocumentReference (a reference to an invoice).
 
+
+
 [source, xml]
 .Example: Debit line amount.
 
@@ -487,7 +487,7 @@ The invoice reference and/or credit note reference on line level (BillingReferen
 <cac:ReminderLine>
     <cbc:ID>2</cbc:ID>
     <cbc:Note>Applies to creditnote 6545</cbc:Note>
-    <cbc:CreditLineAmount currencyID="NOK">50</cbc:CreditLineAmount>
+    <cbc:CreditLineAmount currencyID="NOK">100</cbc:CreditLineAmount>
     <cac:BillingReference>
         <cac:CreditNoteDocumentReference>
             <cbc:ID>53234</cbc:ID>
@@ -502,7 +502,7 @@ The invoice reference and/or credit note reference on line level (BillingReferen
 VAT categories used in Norway as of july 1, 2013 are specified in the table below. Use of other VAT categories than
 those specified below leads to rejection of the XML instance document during validation.
 
-.Table: Valit VAT categories and rates
+.Table: Valid VAT categories and rates
 
 
 |===
@@ -604,7 +604,7 @@ CustomizationID may be extended with more elements for specific trade or busines
 
 ==== Norwegian Rules for Reminder
 
-
+FYLL INN HER, SPØR ERLEND.
 
 == Validation Service
 
