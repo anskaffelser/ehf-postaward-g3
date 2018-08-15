@@ -117,21 +117,7 @@
                 <Element>
                     <Term>cac:PostalAddress</Term>
                     <Name>Address</Name>
-                    <Description>Trader's address.</Description>
-
-                    <Element cardinality="0..1">
-                        <Term>cbc:ID</Term>
-                        <Name>Address identifier</Name>
-                        <Description>Identifies a specific address within a system of registered addresses.
-                            One should enter the identification system when using this element.</Description>
-                    </Element>
-
-                    <Element cardinality="0..1">
-                        <Term>cbc:Postbox</Term>
-                        <Name>Postbox</Name>
-                        <Description>A post office box number registered for postal delivery.</Description>
-                        <Value type="EXAMPLE">Postbox 123</Value>
-                    </Element>
+                    <Description>Entering the address.</Description>
 
                     <Element cardinality="0..1">
                         <Term>cbc:StreetName</Term>
@@ -140,10 +126,10 @@
                     </Element>
 
                     <Element cardinality="0..1">
-                        <Term>cbc:BuildingNumber</Term>
-                        <Name>Street number</Name>
-                        <Description>The number of the street or road.</Description>
-                        <Value type="EXAMPLE">1</Value>
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Additional street number</Name>
+                        <Description>An additional address line in an address that can be used to give further details
+                            supplementing the main line.</Description>
                     </Element>
 
                     <Element cardinality="0..1">
@@ -155,86 +141,94 @@
 
                     <Element cardinality="0..1">
                         <Term>cbc:PostalZone</Term>
-                        <Name>Post code</Name>
-                        <Description>The postal number for this address, such as zip code or post code.</Description>
+                        <Name>Post number</Name>
+                        <Description>The postal number for this address.</Description>
                         <Value type="EXAMPLE">0612</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cbc:CountrySubentity</Term>
-                        <Name>Country subentity</Name>
-                        <Description>The division of a country in which this address is located, such as the name
-                            of its county, province or state.</Description>
+                        <Name>Region, county, province</Name>
+                        <Description>The division of a country in which this address is located.</Description>
                     </Element>
 
-                    <Element>
+                    <Element cardinality="0..n">
+                        <Term>cac:AddressLine</Term>
+                        <Name>Address line</Name>
+                        <Description>An address line.</Description>
+
+                        <Element>
+                            <Term>cbc:Line</Term>
+                            <Name>Line</Name>
+                            <Description>An additional address line in an address that can be used to give further
+                                details supplementing the main line.</Description>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..1">
                         <Term>cac:Country</Term>
                         <Name>Country</Name>
                         <Description>The country in which this address is situated.</Description>
 
-                        <Element>
+                        <Element cardinality="0..1">
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Country code</Name>
-                            <Description>A code signifying this country, and based on ISO3166-1.
-                                The code should be entered for the customer(CustomerParty) and the supplier (SupplierParty),
-                                to avoid warning messages from Schematron.</Description>
-                            <Value type="EXAMPLE">NO</Value>
+                            <Description>A code that identifies the country.</Description>
                         </Element>
+                    </Element>
+                </Element>
 
+                <Element>
+                    <Term>cac:PartyLegalEntity</Term>
+                    <Name>Supplier organization number</Name>
+                    <Description>Identifies the suppliers organization number through a national register (Brønnøysundregister).</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:RegistrationName</Term>
+                        <Name>Organization name</Name>
+                        <Description>The name of the supplier's as registered with the specified organization number.</Description>
+                        <Value type="EXAMPLE">Supplier 1</Value>
                     </Element>
 
                     <Element>
-                        <Term>cac:PartyLegalEntity</Term>
-                        <Name>Supplier organization number</Name>
-                        <Description>Identifies the suppliers organization number through a national register (Brønnøysundregister).</Description>
+                        <Term>cbc:CompanyID</Term>
+                        <Name>Organization number</Name>
+                        <Description>The supplier's organization number. For norwegian suppliers: only numbers are accepted.</Description>
+                        <Value type="EXAMPLE">999999999</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:RegistrationAddress</Term>
+                        <Name>Address</Name>
+                        <Description>The registration address of the legal supplier.</Description>
 
                         <Element cardinality="0..1">
-                            <Term>cbc:RegistrationName</Term>
-                            <Name>Organization name</Name>
-                            <Description>The name of the supplier's as registered with the specified organization number.</Description>
-                            <Value type="EXAMPLE">Supplier 1</Value>
-                        </Element>
-
-                        <Element>
-                            <Term>cbc:CompanyID</Term>
-                            <Name>Organization number</Name>
-                            <Description>The supplier's organization number. For norwegian suppliers: only numbers are accepted.</Description>
-                            <Value type="EXAMPLE">999999999</Value>
+                            <Term>cbc:CityName</Term>
+                            <Name>Post location</Name>
+                            <Description>The post location of a city, town, or village.</Description>
                         </Element>
 
                         <Element cardinality="0..1">
-                            <Term>cac:RegistrationAddress</Term>
-                            <Name>Address</Name>
-                            <Description>The registration address of the legal supplier.</Description>
-
-                            <Element cardinality="0..1">
-                                <Term>cbc:CityName</Term>
-                                <Name>Post location</Name>
-                                <Description>The post location of a city, town, or village.</Description>
-                            </Element>
-
-                            <Element cardinality="0..1">
-                                <Term>cbc:CountrySubentity</Term>
-                                <Name>Region, province, subentity</Name>
-                                <Description>The division of a country in which this address is located, such as county, province, region etc.</Description>
-                            </Element>
-
-                            <Element cardinality="0..1">
-                                <Term>cac:Country</Term>
-                                <Name>Country</Name>
-                                <Description>The country in which this address is situated.</Description>
-
-                                <Element>
-                                    <Term>cbc:IdentificationCode</Term>
-                                    <Name>Country code</Name>
-                                    <Description>A code signifying this country, and based on ISO3166-1. The code
-                                        should be entered for the customer(CustomerParty) and the supplier
-                                        (SupplierParty), to avoid warning messages from Schematron.</Description>
-                                    <Value type="EXAMPLE">NO</Value>
-                                </Element>
-                            </Element>
-
+                            <Term>cbc:CountrySubentity</Term>
+                            <Name>Region, province, subentity</Name>
+                            <Description>The division of a country in which this address is located, such as county, province, region etc.</Description>
                         </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cac:Country</Term>
+                            <Name>Country</Name>
+                            <Description>The country in which this address is situated.</Description>
+
+                            <Element>
+                                <Term>cbc:IdentificationCode</Term>
+                                <Name>Country code</Name>
+                                <Description>A code signifying this country, and based on ISO3166-1. The code
+                                    should be entered for the customer(CustomerParty) and the supplier
+                                    (SupplierParty), to avoid warning messages from Schematron.</Description>
+                                <Value type="EXAMPLE">NO</Value>
+                            </Element>
+                        </Element>
+
                     </Element>
                 </Element>
 
@@ -292,30 +286,16 @@
                     <Description>Entering the address.</Description>
 
                     <Element cardinality="0..1">
-                        <Term>cbc:ID</Term>
-                        <Name>Address identifier</Name>
-                        <Description>Identifies a specific address within a system of registered addresses.
-                            One should enter the identification system when using this element.</Description>
-                    </Element>
-
-                    <Element cardinality="0..1">
-                        <Term>cbc:Postbox</Term>
-                        <Name>Postbox</Name>
-                        <Description>A post office box number registered for postal delivery.</Description>
-                        <Value type="EXAMPLE">Postbox 123</Value>
-                    </Element>
-
-                    <Element cardinality="0..1">
                         <Term>cbc:StreetName</Term>
                         <Name>Street name</Name>
                         <Description>The name of a street or road.</Description>
                     </Element>
 
                     <Element cardinality="0..1">
-                        <Term>cbc:BuildingNumber</Term>
-                        <Name>Street number</Name>
-                        <Description>The number of the street or road.</Description>
-                        <Value type="EXAMPLE">1</Value>
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Additional street number</Name>
+                        <Description>An additional address line in an address that can be used to give further details
+                        supplementing the main line.</Description>
                     </Element>
 
                     <Element cardinality="0..1">
@@ -338,10 +318,29 @@
                         <Description>The division of a country in which this address is located.</Description>
                     </Element>
 
+                    <Element cardinality="0..n">
+                        <Term>cac:AddressLine</Term>
+                        <Name>Address line</Name>
+                        <Description>An address line.</Description>
+
+                        <Element>
+                            <Term>cbc:Line</Term>
+                            <Name>Line</Name>
+                            <Description>An additional address line in an address that can be used to give further
+                            details supplementing the main line.</Description>
+                        </Element>
+                    </Element>
+
                     <Element cardinality="0..1">
                         <Term>cac:Country</Term>
                         <Name>Country</Name>
                         <Description>The country in which this address is situated.</Description>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>A code that identifies the country.</Description>
+                        </Element>
                     </Element>
                 </Element>
 
@@ -467,7 +466,7 @@
 
         </Element>
 
-        <Element cardinality="0..n">
+        <Element cardinality="1..n">
             <Term>cac:PaymentMeans</Term>
             <Name>Name</Name>
             <Description>Information about the payment.</Description>
@@ -478,18 +477,18 @@
                 <Description>The means, expressed as code, for how a payment is expected to be or has been settled.</Description>
             </Element>
 
-            <Element cardinality="0..n">
+            <Element cardinality="0..1">
                 <Term>cbc:PaymentID</Term>
                 <Name>Payment identifier</Name>
                 <Description>Identifies the payment by using means of payment.</Description>
             </Element>
 
-            <Element cardinality="0..1">
+            <Element>
                 <Term>cac:PayeeFinancialAccount</Term>
                 <Name>Credit transfer</Name>
                 <Description>The payee's financial account.</Description>
 
-                <Element cardinality="0..1">
+                <Element>
                     <Term>cbc:ID</Term>
                     <Name>Payment account identifier</Name>
                     <Description>Identifies the financial payment account, i.e. the bank account number.</Description>
@@ -506,7 +505,7 @@
                     <Name>Financial institution branch</Name>
                     <Description>The branch of the financial institution according to the financial payment account.</Description>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:ID</Term>
                         <Name>Payment service provider identifier</Name>
                         <Description>An identifier for the payment service provider where a payment is located.</Description>
@@ -515,12 +514,12 @@
             </Element>
         </Element>
 
-        <Element cardinality="0..n">
+        <Element>
             <Term>cac:PaymentTerms</Term>
             <Name>Payment terms</Name>
             <Description>Payment terms according to invoice.</Description>
 
-            <Element cardinality="0..1">
+            <Element>
                 <Term>cbc:Note</Term>
                 <Name>Note</Name>
                 <Description>Textual description of the payment terms.</Description>

@@ -3,12 +3,9 @@
 <ubl:Reminder
         xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Reminder-2"
         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-        xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-        xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-        xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-        xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
-    <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
-    <cbc:CustomizationID>urn:www.peppol.eu:transaction:biitrns111:ver1.0</cbc:CustomizationID>
+        xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <cbc:UBLVersionID>2.2</cbc:UBLVersionID>
+    <cbc:CustomizationID>urn:fdc:difi.no:2017:ehf:reminder:2.0</cbc:CustomizationID>
     <cbc:ProfileID>urn:fdc:difi.no:2017:ehf:profile:02:1.0</cbc:ProfileID>
     <cbc:ID>123456</cbc:ID>
     <cbc:IssueDate>2018-12-04</cbc:IssueDate>
@@ -26,20 +23,21 @@
                 <cbc:Name>Salescompany ltd.</cbc:Name>
             </cac:PartyName>
             <cac:PostalAddress>
-                <cbc:ID schemeID="GLN" schemeAgencyID="9">1231412341324</cbc:ID>
-                <cbc:Postbox>5431</cbc:Postbox>
                 <cbc:StreetName>Anystreet</cbc:StreetName>
-                <cbc:BuildingNumber>5</cbc:BuildingNumber>
-                <cbc:CityName>Anycity</cbc:CityName>
-                <cbc:PostalZone>0746</cbc:PostalZone>
+                <cbc:AdditionalStreetName></cbc:AdditionalStreetName>
+                <cbc:CityName>Anytown</cbc:CityName>
+                <cbc:PostalZone>0743</cbc:PostalZone>
                 <cbc:CountrySubentity>RegionA</cbc:CountrySubentity>
+                <cac:AddressLine>
+                    <cbc:Line></cbc:Line>
+                </cac:AddressLine>
                 <cac:Country>
-                    <cbc:IdentificationCode listID="IS03166-1" listAgencyID="6">NO</cbc:IdentificationCode>
+                    <cbc:IdentificationCode listID="ISO3166-1" listAgencyID="6">NO</cbc:IdentificationCode>
                 </cac:Country>
             </cac:PostalAddress>
             <cac:PartyLegalEntity>
                 <cbc:RegistrationName>The Sellercompany AS</cbc:RegistrationName>
-                <cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretalsregisteret" schemeAgencyID="82">123456789</cbc:CompanyID>
+                <cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretaksregisteret" schemeAgencyID="82">123456789</cbc:CompanyID>
                 <cac:RegistrationAddress>
                     <cbc:CityName>Oslo</cbc:CityName>
                     <cbc:CountrySubentity>RegionA</cbc:CountrySubentity>
@@ -61,13 +59,14 @@
                 <cbc:Name>Buyercompany ltd</cbc:Name>
             </cac:PartyName>
             <cac:PostalAddress>
-                <cbc:ID schemeID="GLN" schemeAgencyID="9">1238764941386</cbc:ID>
-                <cbc:Postbox>123</cbc:Postbox>
                 <cbc:StreetName>Anystreet</cbc:StreetName>
-                <cbc:BuildingNumber>1</cbc:BuildingNumber>
+                <cbc:AdditionalStreetName></cbc:AdditionalStreetName>
                 <cbc:CityName>Anytown</cbc:CityName>
                 <cbc:PostalZone>0612</cbc:PostalZone>
                 <cbc:CountrySubentity>RegionB</cbc:CountrySubentity>
+                <cac:AddressLine>
+                    <cbc:Line></cbc:Line>
+                </cac:AddressLine>
                 <cac:Country>
                     <cbc:IdentificationCode listID="ISO3166-1" listAgencyID="6">NO</cbc:IdentificationCode>
                 </cac:Country>
@@ -109,9 +108,9 @@
     </cac:PaymentTerms>
 
     <cac:TaxTotal>
-        <cbc:TaxAmount currencyID="NOK">962,0</cbc:TaxAmount>
+        <cbc:TaxAmount currencyID="NOK">962.0</cbc:TaxAmount>
         <cac:TaxSubtotal>
-            <cbc:TaxAmount currencyID="NOK">3400,00</cbc:TaxAmount>
+            <cbc:TaxAmount currencyID="NOK">3400.00</cbc:TaxAmount>
             <cac:TaxCategory>
                 <cbc:ID>S</cbc:ID>
                 <cac:TaxScheme>
@@ -122,8 +121,8 @@
     </cac:TaxTotal>
 
     <cac:LegalMonetaryTotal>
-        <cbc:LineExtensionAmount currencyID="NOK">400,00</cbc:LineExtensionAmount>
-        <cbc:PayableAmount currencyID="NOK">5162,00</cbc:PayableAmount>
+        <cbc:LineExtensionAmount currencyID="NOK">400.00</cbc:LineExtensionAmount>
+        <cbc:PayableAmount currencyID="NOK">5162.00</cbc:PayableAmount>
     </cac:LegalMonetaryTotal>
     
     <cac:ReminderLine>
