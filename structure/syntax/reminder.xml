@@ -126,13 +126,6 @@
                     </Element>
 
                     <Element cardinality="0..1">
-                        <Term>cbc:AdditionalStreetName</Term>
-                        <Name>Additional street number</Name>
-                        <Description>An additional address line in an address that can be used to give further details
-                            supplementing the main line.</Description>
-                    </Element>
-
-                    <Element cardinality="0..1">
                         <Term>cbc:CityName</Term>
                         <Name>Post location</Name>
                         <Description>The post location of a city, town, or village.</Description>
@@ -144,25 +137,6 @@
                         <Name>Post number</Name>
                         <Description>The postal number for this address.</Description>
                         <Value type="EXAMPLE">0612</Value>
-                    </Element>
-
-                    <Element cardinality="0..1">
-                        <Term>cbc:CountrySubentity</Term>
-                        <Name>Region, county, province</Name>
-                        <Description>The division of a country in which this address is located.</Description>
-                    </Element>
-
-                    <Element cardinality="0..n">
-                        <Term>cac:AddressLine</Term>
-                        <Name>Address line</Name>
-                        <Description>An address line.</Description>
-
-                        <Element>
-                            <Term>cbc:Line</Term>
-                            <Name>Line</Name>
-                            <Description>An additional address line in an address that can be used to give further
-                                details supplementing the main line.</Description>
-                        </Element>
                     </Element>
 
                     <Element cardinality="0..1">
@@ -206,12 +180,6 @@
                             <Term>cbc:CityName</Term>
                             <Name>Post location</Name>
                             <Description>The post location of a city, town, or village.</Description>
-                        </Element>
-
-                        <Element cardinality="0..1">
-                            <Term>cbc:CountrySubentity</Term>
-                            <Name>Region, province, subentity</Name>
-                            <Description>The division of a country in which this address is located, such as county, province, region etc.</Description>
                         </Element>
 
                         <Element cardinality="0..1">
@@ -292,13 +260,6 @@
                     </Element>
 
                     <Element cardinality="0..1">
-                        <Term>cbc:AdditionalStreetName</Term>
-                        <Name>Additional street number</Name>
-                        <Description>An additional address line in an address that can be used to give further details
-                        supplementing the main line.</Description>
-                    </Element>
-
-                    <Element cardinality="0..1">
                         <Term>cbc:CityName</Term>
                         <Name>Post location</Name>
                         <Description>The post location of a city, town, or village.</Description>
@@ -310,25 +271,6 @@
                         <Name>Post number</Name>
                         <Description>The postal number for this address.</Description>
                         <Value type="EXAMPLE">0612</Value>
-                    </Element>
-
-                    <Element cardinality="0..1">
-                        <Term>cbc:CountrySubentity</Term>
-                        <Name>Region, county, province</Name>
-                        <Description>The division of a country in which this address is located.</Description>
-                    </Element>
-
-                    <Element cardinality="0..n">
-                        <Term>cac:AddressLine</Term>
-                        <Name>Address line</Name>
-                        <Description>An address line.</Description>
-
-                        <Element>
-                            <Term>cbc:Line</Term>
-                            <Name>Line</Name>
-                            <Description>An additional address line in an address that can be used to give further
-                            details supplementing the main line.</Description>
-                        </Element>
                     </Element>
 
                     <Element cardinality="0..1">
@@ -372,12 +314,6 @@
                             <Name>Post location</Name>
                             <Description>The post location of a city, town, or village.</Description>
                             <Value type="EXAMPLE">Frogner</Value>
-                        </Element>
-
-                        <Element cardinality="0..1">
-                            <Term>cbc:CountrySubentity</Term>
-                            <Name>Region</Name>
-                            <Description>The division of a country in which this address is located., such as county, province, region etc.</Description>
                         </Element>
 
                         <Element cardinality="0..1">
