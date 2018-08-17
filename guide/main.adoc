@@ -121,8 +121,8 @@ the seller is the payment receiver.
             </cac:Country>
         </cac:PostalAddress>
         <cac:PartyLegalEntity>
-            <cbc:RegistrationName>The Sellercompany AS</cbc:RegistrationName>
-            <cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretaksregisteret" schemeAgencyID="82">123456789</cbc:CompanyID>
+            <cbc:RegistrationName>Selger AS</cbc:RegistrationName>
+            <cbc:CompanyID>54321</cbc:CompanyID>
             <cac:RegistrationAddress>
                 <cbc:CityName>Oslo</cbc:CityName>
                 <cac:Country>
@@ -145,21 +145,21 @@ the seller is the payment receiver.
             <cbc:ID>345KS5324</cbc:ID>
         </cac:PartyIdentification>
         <cac:PartyName>
-            <cbc:Name>Buyercompany ltd</cbc:Name>
+            <cbc:Name>Pennalhuset AS</cbc:Name>
         </cac:PartyName>
         <cac:PostalAddress>
-            <cbc:StreetName>Anystreet</cbc:StreetName>
-            <cbc:CityName>Anytown</cbc:CityName>
-            <cbc:PostalZone>0612</cbc:PostalZone>
+            <cbc:StreetName>Heimdalsgata 37</cbc:StreetName>
+            <cbc:CityName>Oslo</cbc:CityName>
+            <cbc:PostalZone>0578</cbc:PostalZone>
             <cac:Country>
-                <cbc:IdentificationCode listID="ISO3166-1" listAgencyID="6">NO</cbc:IdentificationCode>
+                <cbc:IdentificationCode>NO</cbc:IdentificationCode>
             </cac:Country>
         </cac:PostalAddress>
         <cac:PartyLegalEntity>
-            <cbc:RegistrationName>The buyercompany AS</cbc:RegistrationName>
-            <cbc:CompanyID schemeAgencyID="NO:ORGNR" schemeID="82">888888888</cbc:CompanyID>
+            <cbc:RegistrationName>Energidrikk AS</cbc:RegistrationName>
+            <cbc:CompanyID>1234</cbc:CompanyID>
             <cac:RegistrationAddress>
-                <cbc:CityName>Anycity</cbc:CityName>
+                <cbc:CityName>Bergen</cbc:CityName>
                 <cac:Country>
                     <cbc:IdentificationCode>NO</cbc:IdentificationCode>
                 </cac:Country>
@@ -169,7 +169,7 @@ the seller is the payment receiver.
             <cbc:ID>3159bbx</cbc:ID>
             <cbc:Telephone>517287</cbc:Telephone>
             <cbc:Telefax>517288</cbc:Telefax>
-            <cbc:ElectronicMail>jenny@buyercompany.no</cbc:ElectronicMail>
+            <cbc:ElectronicMail>jenny@energidrikk.no</cbc:ElectronicMail>
         </cac:Contact>
     </cac:Party>
 </cac:AccountingCustomerParty>
@@ -185,16 +185,18 @@ The invoice reference and/or credit note reference on line level (BillingReferen
 
 // Beskriv hva dette er.
 
+ReminderLine consist of DebitLineAmount and CreditLineAmount. The BillingReference (reference to a billing)
+
 [source,xml]
 .Example: Debit line amount.
 ----
 <cac:ReminderLine>
     <cbc:ID>1</cbc:ID>
-    <cbc:Note>Applies to reminder 12345</cbc:Note>
+    <cbc:Note>Purring 12345</cbc:Note>
     <cbc:DebitLineAmount currencyID="NOK">100</cbc:DebitLineAmount>
     <cac:BillingReference>
         <cac:InvoiceDocumentReference>
-            <cbc:ID>1232</cbc:ID>
+            <cbc:ID>43232</cbc:ID>
         </cac:InvoiceDocumentReference>
     </cac:BillingReference>
 </cac:ReminderLine>
@@ -205,7 +207,7 @@ The invoice reference and/or credit note reference on line level (BillingReferen
 ----
 <cac:ReminderLine>
     <cbc:ID>2</cbc:ID>
-    <cbc:Note>Applies to creditnote 6545</cbc:Note>
+    <cbc:Note>Kreditnota 6545</cbc:Note>
     <cbc:CreditLineAmount currencyID="NOK">100</cbc:CreditLineAmount>
     <cac:BillingReference>
         <cac:CreditNoteDocumentReference>
@@ -218,7 +220,7 @@ The invoice reference and/or credit note reference on line level (BillingReferen
 
 == Value Added Tax (Norwegian MVA)
 
-VAT categories used in Norway as of July 1, 2013 are specified in the table below. Use of other VAT categories than
+VAT categories used in Norway, from July 1 2013, are specified in the table below. Use of other VAT categories than
 those specified below leads to rejection of the XML instance document during validation.
 
 .Table: Valid VAT categories and rates
