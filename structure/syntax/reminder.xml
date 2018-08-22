@@ -15,13 +15,6 @@
         <Term>ubl:Reminder</Term>
 
         <Element>
-            <Term>cbc:UBLVersionID</Term>
-            <Name>UBL version identifier</Name>
-            <Description>Identifies the version of syntax that transactions are based on.</Description>
-            <Value type="EXAMPLE">2.1</Value>
-        </Element>
-
-        <Element>
             <Term>cbc:CustomizationID</Term>
             <Name>Customization identifier</Name>
             <Description>Identifies the specification of content and rules that apply to the transaction.</Description>
@@ -53,7 +46,7 @@
             <Term>cbc:ReminderTypeCode</Term>
             <Name>Reminder type code</Name>
             <Description>A code signifying the type of the reminder.</Description>
-            <Value type="EXAMPLE">999</Value>
+            <Value type="FIXED">71</Value>
         </Element>
 
         <Element cardinality="0..1">
@@ -68,6 +61,26 @@
             <Term>cbc:Note</Term>
             <Name>Reminder date</Name>
             <Description>Free-form text to this reminder.</Description>
+        </Element>
+
+        <Element cardinality="1..n">
+            <Term>cac:AdditionalDocumentReference</Term>
+            <Name>Relevant document references</Name>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Referenced document identifier</Name>
+            </Element>
+
+            <Element>
+                <Term>cbc:IssueDate</Term>
+                <Name>Referenced document issue date</Name>
+            </Element>
+
+            <Element>
+                <Term>cbc:DocumentTypeCode</Term>
+                <Name>Referenced document type</Name>
+            </Element>
         </Element>
 
         <Element>
@@ -106,12 +119,11 @@
                 <Element>
                     <Term>cac:PartyName</Term>
                     <Name>Trader name</Name>
-                    <Description>Must enter trader name.</Description>
 
                     <Element>
                         <Term>cbc:Name</Term>
                         <Name>Name</Name>
-                        <Description> The supplier's name.</Description>
+                        <Description>The supplier's name.</Description>
                     </Element>
                 </Element>
 
@@ -149,6 +161,7 @@
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Country code</Name>
                             <Description>A code that identifies the country.</Description>
+                            <Reference type="CODE_LIST">ISO3166</Reference>
                         </Element>
                     </Element>
                 </Element>
@@ -194,13 +207,12 @@
                                 <Description>A code signifying this country, and based on ISO3166-1. The code
                                     should be entered for the customer(CustomerParty) and the supplier
                                     (SupplierParty), to avoid warning messages from Schematron.</Description>
+                                <Reference type="CODE_LIST">ISO3166</Reference>
                                 <Value type="EXAMPLE">NO</Value>
                             </Element>
                         </Element>
-
                     </Element>
                 </Element>
-
             </Element>
         </Element>
 
@@ -284,6 +296,7 @@
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Country code</Name>
                             <Description>A code that identifies the country.</Description>
+                            <Reference type="CODE_LIST">ISO3166</Reference>
                         </Element>
                     </Element>
                 </Element>
@@ -332,9 +345,7 @@
                                 <Value type="EXAMPLE">NO</Value>
                             </Element>
                         </Element>
-
                     </Element>
-
                 </Element>
 
                 <Element>
@@ -366,11 +377,8 @@
                         <Name>Electronic mail</Name>
                         <Description>The buyer's contact information- electronic mail address.</Description>
                     </Element>
-
                 </Element>
             </Element>
-
-
         </Element>
 
         <Element cardinality="0..1">
@@ -393,7 +401,6 @@
             <Element cardinality="0..1">
                 <Term>cac:PartyName</Term>
                 <Name>Trader name</Name>
-                <Description>MUST include the trader name.</Description>
 
                 <Element>
                     <Term>cbc:Name</Term>
@@ -401,7 +408,6 @@
                     <Description>The payment receiver's name.</Description>
                 </Element>
             </Element>
-
         </Element>
 
         <Element cardinality="1..n">
@@ -464,6 +470,35 @@
             </Element>
         </Element>
 
+        <Element cardinality="0..n">
+            <Term>cac:PrepaidPayment</Term>
+
+            <Element>
+                <Term>cbc:PaidAmount</Term>
+            </Element>
+            
+            <Element>
+                <Term>cbc:ReceivedDate</Term>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..n">
+            <Term>cac:AllowanceCharge</Term>
+
+            <Element>
+                <Term>cbc:ChargeIndicator</Term>
+                <Value type="FIXED">true</Value>
+            </Element>
+
+            <Element>
+                <Term>cbc:AllowanceChargeReasonCode</Term>
+            </Element>
+
+            <Element>
+                <Term>cbc:Amount</Term>
+            </Element>
+        </Element>
+
         <Element cardinality="0..1">
             <Term>cac:TaxTotal</Term>
             <Name>Tax total</Name>
@@ -504,6 +539,7 @@
                         <Term>cbc:ID</Term>
                         <Name>ID</Name>
                         <Description>Identifier for tax category.</Description>
+                        <Reference type="CODE_LIST">UNCL5305</Reference>
                         <Value type="EXAMPLE">S</Value> <!--FYLL INN MER HER-->
                     </Element>
 
@@ -572,7 +608,7 @@
                 <Description>The amount credited on the reminder line.</Description>
             </Element>
 
-            <Element>
+            <!-- <Element>
                 <Term>cac:BillingReference</Term>
                 <Name>Billing reference</Name>
                 <Description>A reference to a billing document associated with the reminder line.</Description>
@@ -600,12 +636,7 @@
                         <Description>Identifier for the referenced credit note document.</Description>
                     </Element>
                 </Element>
-            </Element>
-
+            </Element> -->
         </Element>
-
-
-
     </Document>
-
 </Syntax>

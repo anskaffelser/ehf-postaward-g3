@@ -63,7 +63,9 @@ Payment Receiver::
 Person or organization that receives the payment
 ****
 
+
 = Process
+
 
 == The Reminder Process
 
@@ -80,9 +82,10 @@ reminder and pays the supplier the amount based on received invoice.
 image::images/EHFReminder.png[align="center"]
 
 
-= Description of Selected Parts of EHF Invoice Messages
+= Detailed descriptions
 
 This chapter describes selected parts of the information contents of the EHF reminder.
+
 
 == Roles and Actor
 
@@ -97,6 +100,7 @@ Buyer (AccountingCustomerParty):: Buyer is mandatory information in EHF.
 Payment receiver (PayeeParty):: Payment receiver is optional information in EHF. If this information is not supplied,
 the seller is the payment receiver.
 ****
+
 
 === Supplier Information
 
@@ -133,6 +137,7 @@ the seller is the payment receiver.
     </cac:Party>
 </cac:AccountingSupplierParty>
 ----
+
 
 === Buyers Information
 [source,xml]
@@ -175,11 +180,13 @@ the seller is the payment receiver.
 </cac:AccountingCustomerParty>
 ----
 
+
 == Invoice- Credit note Reference
 
 The invoice reference and/or credit note reference on line level (BillingReference) must be send. See example below.
 
 // LEGG TIL EKSEMPEL.
+
 
 == Debit and Credit Line Amount
 

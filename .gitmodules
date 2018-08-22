@@ -1,0 +1,3 @@
+[submodule "source/poacc-upgrade"]
+	path = source/poacc-upgrade
+	url = https://github.com/OpenPEPPOL/poacc-upgrade-3.git

@@ -12,4 +12,14 @@
         <Title>Reminder</Title>
     </Resource>
 
+    <Resource>
+        <Type>CodeList-1</Type>
+        <Path>source/poacc-upgrade/structure/codelist/ISO3166-1_Alpha2.xml</Path>
+    </Resource>
+
+    <Resource>
+        <Type>CodeList-1</Type>
+        <Path>source/poacc-upgrade/structure/codelist/UNCL5305.xml</Path>
+    </Resource>
+
 </Project>
