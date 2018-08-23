@@ -134,8 +134,16 @@
 
                     <Element cardinality="0..1">
                         <Term>cbc:StreetName</Term>
-                        <Name>Street name</Name>
+                        <Name>Address line 1</Name>
                         <Description>The name of a street or road.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further
+                            details supplementing the main line. Common use are secondary house number in a complex
+                            or in a building.</Description>
                     </Element>
 
                     <Element cardinality="0..1">
@@ -150,6 +158,24 @@
                         <Name>Post number</Name>
                         <Description>The postal number for this address.</Description>
                         <Value type="EXAMPLE">0612</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subdivision</Name>
+                        <Description>For specifying a region, county, state, province etc. within a country by using text.</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cac:AddressLine</Term>
+                        <Name>Address line</Name>
+
+                        <Element>
+                            <Term>cbc:Line</Term>
+                            <Name>Address line 3</Name>
+                            <Description>An additional address line in an address that can be used to give further
+                                details supplementing the main line.</Description>
+                        </Element>
                     </Element>
 
                     <Element cardinality="0..1">
@@ -269,8 +295,16 @@
 
                     <Element cardinality="0..1">
                         <Term>cbc:StreetName</Term>
-                        <Name>Street name</Name>
+                        <Name>Address line 1</Name>
                         <Description>The name of a street or road.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further
+                            details supplementing the main line. Common use are secondary house number in a complex
+                            or in a building.</Description>
                     </Element>
 
                     <Element cardinality="0..1">
@@ -285,6 +319,24 @@
                         <Name>Post number</Name>
                         <Description>The postal number for this address.</Description>
                         <Value type="EXAMPLE">0612</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subdivision</Name>
+                        <Description>For specifying a region, county, state, province etc. within a country by using text.</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cac:AddressLine</Term>
+                        <Name>Address line</Name>
+
+                        <Element>
+                            <Term>cbc:Line</Term>
+                            <Name>Address line 3</Name>
+                            <Description>An additional address line in an address that can be used to give further
+                                details supplementing the main line.</Description>
+                        </Element>
                     </Element>
 
                     <Element cardinality="0..1">
