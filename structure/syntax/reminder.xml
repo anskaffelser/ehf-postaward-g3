@@ -524,30 +524,46 @@
 
         <Element cardinality="0..n">
             <Term>cac:PrepaidPayment</Term>
+            <Name>Prepaid payment</Name>
 
             <Element>
                 <Term>cbc:PaidAmount</Term>
+                <Name>Paid amount</Name>
+                <Description>The amount of this payment.</Description>
+                <Value type="EXAMPLE">250 kr</Value>
             </Element>
             
             <Element>
                 <Term>cbc:ReceivedDate</Term>
+                <Name>Received date</Name>
+                <Description>The date on which this payment was received.</Description>
+                <Value type="EXAMPLE">2018-05-04</Value>
             </Element>
         </Element>
 
         <Element cardinality="0..n">
             <Term>cac:AllowanceCharge</Term>
+            <Name>Document level allowances</Name>
+            <Description>A discount or charge that applies to a price component.</Description>
 
             <Element>
                 <Term>cbc:ChargeIndicator</Term>
+                <Name>Document level charge indicator</Name>
+                <Description>An indicator that this AllowanceCharge describes a charge (true).</Description>
                 <Value type="FIXED">true</Value>
             </Element>
 
             <Element>
                 <Term>cbc:AllowanceChargeReasonCode</Term>
+                <Name>Document level charge reason code</Name>
+                <Description>The reason for the document level charge, expressed as code (or text?)</Description>
             </Element>
 
             <Element>
                 <Term>cbc:Amount</Term>
+                <Name>Document level charge amount</Name>
+                <Description>The amount of a charge, without VAT.</Description>
+                <Value type="EXAMPLE">1000</Value>
             </Element>
         </Element>
 
