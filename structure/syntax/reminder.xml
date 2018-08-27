@@ -244,42 +244,45 @@
                             </Element>
                         </Element>
                     </Element>
+                </Element>
+
+                <Element>
+                    <Term>cac:Contact</Term>
+                    <Name>Seller contact information</Name>
+                    <Description>The seller's contact information.</Description>
 
                     <Element>
-                        <Term>cac:Contact</Term>
-                        <Name>Seller contact information</Name>
-                        <Description>The seller's contact information.</Description>
+                        <Term>cbc:ID</Term>
+                        <Name>Seller reference identifier</Name>
+                        <Description>The seller's reference specified as "Their ref."</Description>
+                        <Value type="EXAMPLE">31x</Value>
+                    </Element>
 
-                        <Element>
-                            <Term>cbc:ID</Term>
-                            <Name>Seller reference identifier</Name>
-                            <Description>The seller's reference specified as "Their ref."</Description>
-                            <Value type="EXAMPLE">31x</Value>
-                        </Element>
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telephone</Term>
+                        <Name>Seller contact telephone number</Name>
+                        <Description>The seller's contact information- telephone number.</Description>
+                        <Value type="EXAMPLE">98373628</Value>
+                    </Element>
 
-                        <Element cardinality="0..1">
-                            <Term>cbc:Telephone</Term>
-                            <Name>Seller contact telephone number</Name>
-                            <Description>The seller's contact information- telephone number.</Description>
-                            <Value type="EXAMPLE">98373628</Value>
-                        </Element>
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telefax</Term>
+                        <Name>Seller contact telefax</Name>
+                        <Description>The seller's contact information- telefax number.</Description>
+                        <Value type="EXAMPLE">98373629</Value>
+                    </Element>
 
-                        <Element cardinality="0..1">
-                            <Term>cbc:Telefax</Term>
-                            <Name>Seller contact telefax</Name>
-                            <Description>The seller's contact information- telefax number.</Description>
-                            <Value type="EXAMPLE">98373629</Value>
-                        </Element>
-
-                        <Element cardinality="0..1">
-                            <Term>cbc:ElectronicMail</Term>
-                            <Name>Seller contact email address</Name>
-                            <Description>The seller's contact information- electronic mail address.</Description>
-                            <Value type="EXAMPLE">seller@company.com</Value>
-                        </Element>
+                    <Element cardinality="0..1">
+                        <Term>cbc:ElectronicMail</Term>
+                        <Name>Seller contact email address</Name>
+                        <Description>The seller's contact information- electronic mail address.</Description>
+                        <Value type="EXAMPLE">seller@company.com</Value>
+                    </Element>
                 </Element>
+
             </Element>
         </Element>
+
 
         <Element>
             <Term>cac:AccountingCustomerParty</Term>
@@ -425,7 +428,6 @@
                             <Term>cac:Country</Term>
                             <Name>Buyer country</Name>
                             <Description>The country in which this address is situated.</Description>
-                            <Value type="EXAMPLE">Sweden</Value>
 
                             <Element>
                                 <Term>cbc:IdentificationCode</Term>
