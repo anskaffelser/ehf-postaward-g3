@@ -70,6 +70,7 @@
             <Element>
                 <Term>cbc:ID</Term>
                 <Name>Referenced document identifier</Name>
+                <Description>An identifier for the referenced document.</Description>
             </Element>
 
             <Element>
@@ -85,18 +86,17 @@
 
         <Element>
             <Term>cac:AccountingSupplierParty</Term>
-            <Name>Supplier</Name>
+            <Name>Seller</Name>
             <Description>The organization or person that deliver a item or service.</Description>
 
             <Element>
                 <Term>cac:Party</Term>
-                <Name>Supplier</Name>
-                <Description>An association to a supplier.</Description>
+                <Name>Party</Name>
 
                 <Element cardinality="0..1">
                     <Term>cbc:EndpointID</Term>
-                    <Name>Endpoint identifier</Name>
-                    <Description>An identifier indicating the suppliers electronic address for their
+                    <Name>Seller electronic address</Name>
+                    <Description>An identifier indicating seller's electronic address for their
                         messaging. The identifier must be entered as a numerical code according to ISO6523 and
                         consists of one prefix. The prefix specifies the issuer of the identifier, and the actual
                         identifier.</Description>
@@ -105,65 +105,69 @@
 
                 <Element cardinality="0..1">
                     <Term>cac:PartyIdentification</Term>
-                    <Name>Trader identifier</Name>
-                    <Description>The identification of a trader.</Description>
+                    <Name>Party identification</Name>
 
                     <Element>
                         <Term>cbc:ID</Term>
-                        <Name>Trader identifier</Name>
-                        <Description>Identifies the trader. One should enter the identification system when using this
+                        <Name>Seller identifier</Name>
+                        <Description>Identifies the seller. One should enter the identification system when using this
                             element.</Description>
+                        <Value type="EXAMPLE">7004837532</Value>
                     </Element>
                 </Element>
 
                 <Element>
                     <Term>cac:PartyName</Term>
-                    <Name>Trader name</Name>
+                    <Name>Party name</Name>
 
                     <Element>
                         <Term>cbc:Name</Term>
-                        <Name>Name</Name>
-                        <Description>The supplier's name.</Description>
+                        <Name>Seller trading name</Name>
+                        <Description>The seller's business name.</Description>
+                        <Value type="EXAMPLE">Seller business name AS</Value>
                     </Element>
                 </Element>
 
                 <Element>
                     <Term>cac:PostalAddress</Term>
-                    <Name>Address</Name>
-                    <Description>Entering the address.</Description>
+                    <Name>Seller postal address</Name>
+                    <Description>Information about the address of the seller.</Description>
 
                     <Element cardinality="0..1">
                         <Term>cbc:StreetName</Term>
-                        <Name>Address line 1</Name>
-                        <Description>The name of a street or road.</Description>
+                        <Name>Seller address line 1</Name>
+                        <Description>The name of a street or road. The main address line in an address.</Description>
+                        <Value type="EXAMPLE">Københavnsgate 23</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cbc:AdditionalStreetName</Term>
-                        <Name>Address line 2</Name>
+                        <Name>Seller address line 2</Name>
                         <Description>An additional address line in a postal address that can be used to give further
                             details supplementing the main line. Common use are secondary house number in a complex
                             or in a building.</Description>
+                        <Value type="EXAMPLE">Post box 34</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cbc:CityName</Term>
-                        <Name>Post location</Name>
-                        <Description>The post location of a city, town, or village.</Description>
-                        <Value type="EXAMPLE">Frogner</Value>
+                        <Name>Seller city</Name>
+                        <Description>The common name of the city, town or village, where the Seller's address is located.</Description>
+                        <Value type="EXAMPLE">Denmark</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cbc:PostalZone</Term>
-                        <Name>Post number</Name>
+                        <Name>Seller post code</Name>
                         <Description>The postal number for this address.</Description>
-                        <Value type="EXAMPLE">0612</Value>
+                        <Value type="EXAMPLE">8549</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cbc:CountrySubentity</Term>
-                        <Name>Country subdivision</Name>
+                        <Name>Seller country subdivision</Name>
                         <Description>For specifying a region, county, state, province etc. within a country by using text.</Description>
+                        <Value type="EXAMPLE">Region x</Value>
                     </Element>
 
                     <Element>
@@ -172,9 +176,10 @@
 
                         <Element>
                             <Term>cbc:Line</Term>
-                            <Name>Address line 3</Name>
+                            <Name>Seller address line 3</Name>
                             <Description>An additional address line in an address that can be used to give further
                                 details supplementing the main line.</Description>
+                            <Value type="EXAMPLE">Building 54</Value>
                         </Element>
                     </Element>
 
@@ -185,7 +190,7 @@
 
                         <Element cardinality="0..1">
                             <Term>cbc:IdentificationCode</Term>
-                            <Name>Country code</Name>
+                            <Name>Seller country code</Name>
                             <Description>A code that identifies the country.</Description>
                             <Reference type="CODE_LIST">ISO3166</Reference>
                         </Element>
@@ -194,42 +199,43 @@
 
                 <Element>
                     <Term>cac:PartyLegalEntity</Term>
-                    <Name>Supplier organization number</Name>
-                    <Description>Identifies the suppliers organization number through a national register (Brønnøysundregister).</Description>
+                    <Name>Party legal entity</Name>
+                    <Description>Identifies the seller's organization number through a national register (Brønnøysundregister).</Description>
 
                     <Element cardinality="0..1">
                         <Term>cbc:RegistrationName</Term>
-                        <Name>Organization name</Name>
-                        <Description>The name of the supplier's as registered with the specified organization number.</Description>
-                        <Value type="EXAMPLE">Supplier 1</Value>
+                        <Name>Seller name</Name>
+                        <Description>The name of the seller's as registered with the specified organization number.</Description>
+                        <Value type="EXAMPLE">Ola Nordmann</Value>
                     </Element>
 
                     <Element>
                         <Term>cbc:CompanyID</Term>
-                        <Name>Organization number</Name>
-                        <Description>The supplier's organization number. For Norwegian suppliers: only numbers are accepted.</Description>
+                        <Name>Seller legal registration identifier</Name>
+                        <Description>An identifier issued by an official registrar that identifies the Seller as a legal
+                            entity or person.. For Norwegian sellers: only numbers are accepted.</Description>
                         <Value type="EXAMPLE">999999999</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cac:RegistrationAddress</Term>
-                        <Name>Address</Name>
-                        <Description>The registration address of the legal supplier.</Description>
+                        <Name>Seller registration address</Name>
+                        <Description>The registration address of the legal seller.</Description>
 
                         <Element cardinality="0..1">
                             <Term>cbc:CityName</Term>
-                            <Name>Post location</Name>
-                            <Description>The post location of a city, town, or village.</Description>
+                            <Name>Seller city name</Name>
+                            <Description>The common name of the city, town or village, where the Seller's address is located.</Description>
                         </Element>
 
                         <Element cardinality="0..1">
                             <Term>cac:Country</Term>
-                            <Name>Country</Name>
+                            <Name>Seller country</Name>
                             <Description>The country in which this address is situated.</Description>
 
                             <Element>
                                 <Term>cbc:IdentificationCode</Term>
-                                <Name>Country code</Name>
+                                <Name>Seller country code</Name>
                                 <Description>A code signifying this country, and based on ISO3166-1. The code
                                     should be entered for the customer(CustomerParty) and the supplier
                                     (SupplierParty), to avoid warning messages from Schematron.</Description>
@@ -238,70 +244,100 @@
                             </Element>
                         </Element>
                     </Element>
+
+                    <Element>
+                        <Term>cac:Contact</Term>
+                        <Name>Seller contact information</Name>
+                        <Description>The seller's contact information.</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Seller reference identifier</Name>
+                            <Description>The seller's reference specified as "Their ref."</Description>
+                            <Value type="EXAMPLE">31x</Value>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:Telephone</Term>
+                            <Name>Seller contact telephone number</Name>
+                            <Description>The seller's contact information- telephone number.</Description>
+                            <Value type="EXAMPLE">98373628</Value>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:Telefax</Term>
+                            <Name>Seller contact telefax</Name>
+                            <Description>The seller's contact information- telefax number.</Description>
+                            <Value type="EXAMPLE">98373629</Value>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:ElectronicMail</Term>
+                            <Name>Seller contact email address</Name>
+                            <Description>The seller's contact information- electronic mail address.</Description>
+                            <Value type="EXAMPLE">seller@company.com</Value>
+                        </Element>
                 </Element>
             </Element>
         </Element>
 
         <Element>
             <Term>cac:AccountingCustomerParty</Term>
-            <Name>Customer</Name>
+            <Name>Buyer</Name>
             <Description>Denotes the customer.</Description>
 
             <Element>
                 <Term>cac:Party</Term>
-                <Name>Customer</Name>
-                <Description>Specification of the customer.</Description>
+                <Name>Party</Name>
+                <Description>Specification of the buyer.</Description>
 
                 <Element cardinality="0..1">
                     <Term>cbc:EndpointID</Term>
-                    <Name>Endpoint identifier</Name>
-                    <Description>An identifier indicating the suppliers electronic address for their messaging. The
+                    <Name>Buyer electronic address</Name>
+                    <Description>An identifier indicating the buyer's electronic address for their messaging. The
                         identifier must be entered as a numerical code according to ISO6523 and consists of one prefix.
                         The prefix specifies the issuer of the identifier, and the actual identifier.</Description>
-                    <Value type="EXAMPLE">9908:123456789</Value>
+                    <Value type="EXAMPLE">9123456789</Value>
                 </Element>
 
                 <Element cardinality="0..1">
                     <Term>cac:PartyIdentification</Term>
-                    <Name>Trader identification</Name>
-                    <Description>Identifier a trader.</Description>
+                    <Name>Party identification</Name>
 
                     <Element>
                         <Term>cbc:ID</Term>
-                        <Name>Customer number</Name>
-                        <Description>Identifies a customer with a number, which can be defined by itself or a unique
-                            identification issued by another. Denote the identification number as customer number in the
-                            invoice.</Description>
-                        <Value type="EXAMPLE">9908:123456789</Value>
+                        <Name>Buyer identifier</Name>
+                        <Description>Ab identifier of the buyer.</Description>
+                        <Value type="EXAMPLE">AE9908123456789</Value>
                     </Element>
                 </Element>
 
                 <Element>
                     <Term>cac:PartyName</Term>
-                    <Name>Trader name</Name>
-                    <Description>Must enter trader name.</Description>
+                    <Name>Party name</Name>
 
                     <Element>
                         <Term>cbc:Name</Term>
-                        <Name>Name</Name>
-                        <Description>The supplier's name.</Description>
+                        <Name>Buyer trading name</Name>
+                        <Description>The buyer's business name.</Description>
+                        <Value type="EXAMPLE">Buyer trading name</Value>
                     </Element>
                 </Element>
 
                 <Element>
                     <Term>cac:PostalAddress</Term>
-                    <Name>Address</Name>
-                    <Description>Entering the address.</Description>
+                    <Name>Buyer postal address</Name>
+                    <Description>Information about the address of the buyer.</Description>
 
                     <Element cardinality="0..1">
                         <Term>cbc:StreetName</Term>
-                        <Name>Address line 1</Name>
-                        <Description>The name of a street or road.</Description>
+                        <Name>Buyer address line 1</Name>
+                        <Description>The name of a street or road. The main address line in an address.</Description>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cbc:AdditionalStreetName</Term>
-                        <Name>Address line 2</Name>
+                        <Name>Buyer address line 2</Name>
                         <Description>An additional address line in a postal address that can be used to give further
                             details supplementing the main line. Common use are secondary house number in a complex
                             or in a building.</Description>
@@ -309,14 +345,14 @@
 
                     <Element cardinality="0..1">
                         <Term>cbc:CityName</Term>
-                        <Name>Post location</Name>
+                        <Name>Buyer city</Name>
                         <Description>The post location of a city, town, or village.</Description>
-                        <Value type="EXAMPLE">Frogner</Value>
+                        <Value type="EXAMPLE">Oslo</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cbc:PostalZone</Term>
-                        <Name>Post number</Name>
+                        <Name>Buyer post code</Name>
                         <Description>The postal number for this address.</Description>
                         <Value type="EXAMPLE">0612</Value>
                     </Element>
@@ -325,6 +361,7 @@
                         <Term>cbc:CountrySubentity</Term>
                         <Name>Country subdivision</Name>
                         <Description>For specifying a region, county, state, province etc. within a country by using text.</Description>
+                        <Value type="EXAMPLE">Region y</Value>
                     </Element>
 
                     <Element>
@@ -333,9 +370,10 @@
 
                         <Element>
                             <Term>cbc:Line</Term>
-                            <Name>Address line 3</Name>
+                            <Name>Buyer address line 3</Name>
                             <Description>An additional address line in an address that can be used to give further
                                 details supplementing the main line.</Description>
+                            <Value type="EXAMPLE">Building T3</Value>
                         </Element>
                     </Element>
 
@@ -346,7 +384,7 @@
 
                         <Element cardinality="0..1">
                             <Term>cbc:IdentificationCode</Term>
-                            <Name>Country code</Name>
+                            <Name>Buyer country code</Name>
                             <Description>A code that identifies the country.</Description>
                             <Reference type="CODE_LIST">ISO3166</Reference>
                         </Element>
@@ -355,42 +393,43 @@
 
                 <Element>
                     <Term>cac:PartyLegalEntity</Term>
-                    <Name>Legal trader</Name>
+                    <Name>Party legal entity</Name>
                     <Description>Identifies a legal trader through a national register (Brønnøysundregister).</Description>
 
                     <Element cardinality="0..1">
                         <Term>cbc:RegistrationName</Term>
-                        <Name>Registration name</Name>
-                        <Description>The name of the buyer as registered with the relevant legal authority.</Description>
+                        <Name>Buyer name</Name>
+                        <Description>The name of the buyer, which is registered with the relevant legal authority.</Description>
                     </Element>
 
                     <Element>
                         <Term>cbc:CompanyID</Term>
-                        <Name>Organization number</Name>
-                        <Description>The customer's organization number.</Description>
+                        <Name>Buyer legal registration identifier</Name>
+                        <Description>The buyer's organization number.</Description>
                         <Value type="EXAMPLE">888888888</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cac:RegistrationAddress</Term>
-                        <Name>Address</Name>
+                        <Name>Buyer registration address</Name>
                         <Description>The registration address of the legal buyer.</Description>
 
                         <Element cardinality="0..1">
                             <Term>cbc:CityName</Term>
-                            <Name>Post location</Name>
+                            <Name>Buyer city name</Name>
                             <Description>The post location of a city, town, or village.</Description>
-                            <Value type="EXAMPLE">Frogner</Value>
+                            <Value type="EXAMPLE">Stockholm</Value>
                         </Element>
 
                         <Element cardinality="0..1">
                             <Term>cac:Country</Term>
-                            <Name>Country</Name>
+                            <Name>Buyer country</Name>
                             <Description>The country in which this address is situated.</Description>
+                            <Value type="EXAMPLE">Sweden</Value>
 
                             <Element>
                                 <Term>cbc:IdentificationCode</Term>
-                                <Name>Country code</Name>
+                                <Name>Buyer country code</Name>
                                 <Description>A code signifying this country, and based on ISO3166-1. The code should be
                                     entered for the customer(CustomerParty) and the supplier (SupplierParty), to avoid
                                     warning messages from Schematron.</Description>
@@ -402,32 +441,35 @@
 
                 <Element>
                     <Term>cac:Contact</Term>
-                    <Name>Contact information</Name>
+                    <Name>Buyer contact information</Name>
                     <Description>The buyer's contact information.</Description>
 
                     <Element>
                         <Term>cbc:ID</Term>
-                        <Name>Reference</Name>
+                        <Name>Buyer reference identifier</Name>
                         <Description>The buyer's reference specified as "Their ref."</Description>
                         <Value type="EXAMPLE">3159bbx</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cbc:Telephone</Term>
-                        <Name>Telephone</Name>
+                        <Name>Buyer contact telephone number</Name>
                         <Description>The buyer's contact information- telephone number.</Description>
+                        <Value type="EXAMPLE">98373432</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cbc:Telefax</Term>
-                        <Name>Telefax</Name>
+                        <Name>Buyer contact telefax</Name>
                         <Description>The buyer's contact information- telefax number.</Description>
+                        <Value type="EXAMPLE">98373433</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cbc:ElectronicMail</Term>
-                        <Name>Electronic mail</Name>
+                        <Name>Buyer contact email address</Name>
                         <Description>The buyer's contact information- electronic mail address.</Description>
+                        <Value type="EXAMPLE">buyer@company.com</Value>
                     </Element>
                 </Element>
             </Element>
@@ -529,8 +571,8 @@
             <Element>
                 <Term>cbc:PaidAmount</Term>
                 <Name>Paid amount</Name>
-                <Description>The amount of this payment.</Description>
-                <Value type="EXAMPLE">250 kr</Value>
+                <Description>The sum of amounts which have been paid in advance. Must be rounded to maximum 2 decimals.</Description>
+                <Value type="EXAMPLE">250.00 kr</Value>
             </Element>
             
             <Element>
