@@ -76,7 +76,7 @@ An electronic sent reminder is regulated through §3a: https://lovdata.no/NL/lov
 = Process
 
 
-== The Reminder Process
+== The Reminder Process and Typical Use Case
 
 A supplier has sent an EHF invoice to get paid for an assignment or products ordered from contracting authority (CA).
 Payment terms is agreed upon in the contract.
@@ -87,8 +87,23 @@ regulation “Lov om inkassovirksomhet og annen inndriving av forfalte pengekrav
 EHF reminder is being sent to contracting authority through supplier access point. Contracting authority receives EHF
 reminder and pays the supplier the amount based on received invoice.
 
+== Reminder Process Diagram
+
+The following diagram show the choreography of the EHF reminder process.
+
 .EHF Reminder process.
 image::images/EHFReminder.png[align="center"]
+
+== Use case
+
+A supplier has sent an EHF invoice to get paid for an assignment or products ordered from contracting authority (CA).
+Payment terms is agreed upon in the contract.
+
+The supplier accounting system prepare an EHF reminder when deadline for payment is passed according to current
+regulation “Lov om inkassovirksomhet og annen inndriving av forfalte pengekrav (inkassoloven).”
+
+EHF reminder is being sent to contracting authority through supplier access point. Contracting authority receives EHF
+reminder and pays the supplier the amount based on received invoice.
 
 
 = Detailed descriptions
@@ -110,6 +125,10 @@ Payment receiver (PayeeParty):: Payment receiver is optional information in EHF.
 the seller is the payment receiver.
 ****
 
+The following diagram shows the business processes to the roles performed by the business partners.
+
+.EHF Reminder rolediagram.
+image::images/rolediagram.png[align="center"]
 
 === Supplier Information
 
@@ -282,13 +301,4 @@ those specified below leads to rejection of the XML instance document during val
 |===
 
 
-= Use case
 
-A supplier has sent an EHF invoice to get paid for an assignment or products ordered from contracting authority (CA).
-Payment terms is agreed upon in the contract.
-
-The supplier accounting system prepare an EHF reminder when deadline for payment is passed according to current
-regulation “Lov om inkassovirksomhet og annen inndriving av forfalte pengekrav (inkassoloven).”
-
-EHF reminder is being sent to contracting authority through supplier access point. Contracting authority receives EHF
-reminder and pays the supplier the amount based on received invoice.
