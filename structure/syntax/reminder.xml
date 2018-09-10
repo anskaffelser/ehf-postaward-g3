@@ -237,7 +237,7 @@
                                 <Term>cbc:IdentificationCode</Term>
                                 <Name>Seller country code</Name>
                                 <Description>A code signifying this country, and based on ISO3166-1. The code
-                                    should be entered for the customer(CustomerParty) and the supplier
+                                    should be entered for the buyer(CustomerParty) and the seller
                                     (SupplierParty), to avoid warning messages from Schematron.</Description>
                                 <Reference type="CODE_LIST">ISO3166</Reference>
                                 <Value type="EXAMPLE">NO</Value>
@@ -287,7 +287,6 @@
         <Element>
             <Term>cac:AccountingCustomerParty</Term>
             <Name>Buyer</Name>
-            <Description>Denotes the customer.</Description>
 
             <Element>
                 <Term>cac:Party</Term>
@@ -433,7 +432,7 @@
                                 <Term>cbc:IdentificationCode</Term>
                                 <Name>Buyer country code</Name>
                                 <Description>A code signifying this country, and based on ISO3166-1. The code should be
-                                    entered for the customer(CustomerParty) and the supplier (SupplierParty), to avoid
+                                    entered for the buyer (CustomerParty) and the seller (SupplierParty), to avoid
                                     warning messages from Schematron.</Description>
                                 <Value type="EXAMPLE">NO</Value>
                             </Element>
@@ -479,29 +478,29 @@
 
         <Element cardinality="0..1">
             <Term>cac:PayeeParty</Term>
-            <Name>Payment receiver</Name>
-            <Description>The payment receiver or trader issue an invoice. Can be a invoice-company. </Description>
+            <Name>Payee</Name>
+            <Description>The payment receiver or seller issue an invoice. Can be a invoice-company.</Description>
 
             <Element cardinality="0..1">
                 <Term>cac:PartyIdentification</Term>
-                <Name>Trader identifier</Name>
-                <Description>Identifies a trader.</Description>
+                <Name>Party identification</Name>
 
                 <Element>
                     <Term>cbc:ID</Term>
-                    <Name>ID</Name>
+                    <Name>Payee identifier</Name>
                     <Description>Identifies a payment receiver. If including this element, one should enter the identification system.</Description>
+                    <Value type="EXAMPLE">RE4928393</Value>
                 </Element>
             </Element>
 
             <Element cardinality="0..1">
                 <Term>cac:PartyName</Term>
-                <Name>Trader name</Name>
+                <Name>Party name</Name>
 
                 <Element>
                     <Term>cbc:Name</Term>
-                    <Name>Name</Name>
-                    <Description>The payment receiver's name.</Description>
+                    <Name>Payee name</Name>
+                    <Description>The name of the payee.</Description>
                 </Element>
             </Element>
         </Element>
@@ -652,7 +651,7 @@
                         <Name>ID</Name>
                         <Description>Identifier for tax category.</Description>
                         <Reference type="CODE_LIST">UNCL5305</Reference>
-                        <Value type="EXAMPLE">S</Value> <!--FYLL INN MER HER-->
+                        <Value type="EXAMPLE">S</Value>
                     </Element>
 
                     <Element>

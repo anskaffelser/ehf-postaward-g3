@@ -63,6 +63,15 @@ Payment Receiver::
 Person or organization that receives the payment
 ****
 
+= Background
+// Nytt
+
+If contracting authority does not pay the invoice sent from supplier according to payment terms, supplier can
+send a reminder. Regulation describing terms that must be fulfilled before sending EHF reminder you can find
+here: https://lovdata.no/dokument/NL/lov/1988-05-13-26/
+
+An electronic sent reminder is regulated through §3a: https://lovdata.no/NL/lov/1988-05-13-26/§3a
+
 
 = Process
 
@@ -272,3 +281,14 @@ those specified below leads to rejection of the XML instance document during val
 |0%
 |===
 
+
+= Use case
+
+A supplier has sent an EHF invoice to get paid for an assignment or products ordered from contracting authority (CA).
+Payment terms is agreed upon in the contract.
+
+The supplier accounting system prepare an EHF reminder when deadline for payment is passed according to current
+regulation “Lov om inkassovirksomhet og annen inndriving av forfalte pengekrav (inkassoloven).”
+
+EHF reminder is being sent to contracting authority through supplier access point. Contracting authority receives EHF
+reminder and pays the supplier the amount based on received invoice.
