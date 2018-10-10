@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project xmlns="urn:fdc:difi.no:2017:vefa:structure:Project-1">
 
-    <Name>EHF Reminder 2.0</Name>
+    <Name>EHF Post-Award G3</Name>
 
-    <Documentation path="guide/">Implementation guideline</Documentation>
+    <Documentation path="guide/billing/3.0/">EHF Billing 3.0 - Norwegian implementation of EN16931</Documentation>
+    <Documentation path="guide/reminder/2.0/">EHF Reminder 2.0 - Implementation Guideline</Documentation>
 
     <!-- Syntax -->
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/syntax/reminder.xml</Path>
+        <Path>structure/syntax/ehf-reminder-2.0.xml</Path>
         <Title>Reminder</Title>
     </Resource>
 
+    <!-- Code list -->
     <Resource>
         <Type>CodeList-1</Type>
         <Path>source/poacc-upgrade/structure/codelist/ISO3166-1_Alpha2.xml</Path>
     </Resource>
-
     <Resource>
         <Type>CodeList-1</Type>
         <Path>source/poacc-upgrade/structure/codelist/UNCL5305.xml</Path>
