@@ -1,0 +1,44 @@
+= Definitions
+
+****
+Reminder::
+A document that remind the customer that a payment is delayed.
+
+Invoice::
+A commercial document confirming a sale between a seller and a buyer. The invoice is issued by the seller and the buyer
+has to pay the claim.
+
+Electronic Invoice::
+An invoice transferred electronically from the issuer to the receiver. The invoice is imported into and processed by
+the receiver’s computerized accounting system.
+
+Credit note::
+A commercial document cancelling all or part of an invoice already issued. The Credit note must have a distinct
+reference to the originating invoice.
+
+Electronic Credit note::
+A credit note transferred electronically from the issuer to the receiver. The credit note is imported into and
+processed by the receiver’s computerized accounting system.
+
+Supplier::
+Person or company supplying goods or services on own or someone else’s behalf.
+
+Customer::
+Person or organization acquiring the ownership of a product or a service against agreed price and payment terms.
+
+Seller::
+Person or organization with the necessary authority to sign a contract and transfer the ownership of a product or
+service.
+
+Buyer::
+Person or organization acquiring the ownership of a product or a service for an agreed price and payment terms.
+
+Invoice Issuer::
+Person or organization that issues an invoice.
+
+Invoice Receiver::
+Person or organization that receives an invoice.
+
+Payment Receiver::
+Person or organization that receives the payment
+****

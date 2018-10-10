@@ -10,7 +10,6 @@
     <Resource>
         <Type>Syntax-1</Type>
         <Path>structure/syntax/ehf-reminder-2.0.xml</Path>
-        <Title>Reminder</Title>
     </Resource>
 
     <!-- Code list -->

@@ -1,12 +1,12 @@
-include::../../settings.adoc[]
-
-:shared-dir: ../../shared/en
+:shared-dir: ../../shared
 :lang: en
 :doctitle: EHF Billing 3.0
 
+include::{shared-dir}/settings.adoc[]
+
 = {doctitle}
 {name-difi-en}
-v3.0
+v3.0.0
 :doctype: book
 :icons: font
 :toc: left
@@ -32,4 +32,4 @@ OpenPEPPOL has created link:https://peppol.eu/peppol-bis-billing-3-0/[PEPPOL BIS
 Based on work done in PEPPOL BIS Billing 3.0, Difi has included Norwegian rules in PEPPOL BIS Billing 3.0 and does not see a need to implement a different CIUS targeting the Norwegian market. Implementation of EHF Billing 3.0 is therefore done by implementing PEPPOL BIS Billing 3.0 without extensions or extra rules.
 
 
-include::{shared-dir}/message/piwik.adoc[]
+include::{shared-dir}/google-analytics.adoc[]
