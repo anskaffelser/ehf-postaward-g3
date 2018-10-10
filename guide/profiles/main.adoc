@@ -1,0 +1,41 @@
+:shared-dir: ../shared
+:lang: en
+:doctitle: Profiles in EHF Post-Award G3
+
+include::{shared-dir}/settings.adoc[]
+
+= {doctitle}
+{name-difi-en}
+v1.0.0
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:source-language: xml
+:sectanchors:
+:sectnums:
+:title-logo-image: {shared-dir}/images/logo.jpg
+
+
+This document describes the profiles and its identifiers and document types part of EHF Post-Award G3.
+
+
+== Using this document
+
+This document describes what is needed to make correct configuration of receivers of EHF G3 formats in the Service Metadata Publisher (SMP).
+
+
+== Profiles
+
+IMPORTANT: Identifiers are strings without spaces. This part of the document contains identifiers where there may be used space to make the identifiers easier to read. *Make sure to remove any spaces in identifiers before use.*
+
+
+=== EHF Billing 3.0
+
+EHF Billing is in every way the same format as PEPPOL BIS Billing 3.0. Please see the link:http://docs.peppol.eu/poacc/billing/3.0/[PEPPOL BIS Billing 3.0 documentation] for information related to this profile.
+
+
+=== EHF Reminder 2.0
+
+_Not decided yet._

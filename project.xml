@@ -5,6 +5,7 @@
 
     <Documentation path="guide/billing/3.0/">EHF Billing 3.0 - Norwegian implementation of EN16931</Documentation>
     <Documentation path="guide/reminder/2.0/">EHF Reminder 2.0 - Implementation Guideline</Documentation>
+    <Documentation path="guide/profiles/">Profiles in EHF Post-Award G3</Documentation>
 
     <!-- Syntax -->
     <Resource>

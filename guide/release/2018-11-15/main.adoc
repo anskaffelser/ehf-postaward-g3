@@ -1,0 +1,21 @@
+:shared-dir: ../../shared
+:lang: en
+:doctitle: Release 2018-11-15
+
+include::{shared-dir}/settings.adoc[]
+
+= {doctitle}
+{name-difi-en}
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:source-language: xml
+:sectanchors:
+:title-logo-image: {shared-dir}/images/logo.jpg
+
+
+== EHF Reminder 2.0.0
+
+This is the initial release of EHF Reminder 2.0.
