@@ -5,12 +5,19 @@
 
     <Documentation path="guide/billing/3.0/">EHF Billing 3.0 - Norwegian implementation of EN16931</Documentation>
     <Documentation path="guide/reminder/2.0/">EHF Reminder 2.0 - Implementation Guideline</Documentation>
-    <Documentation path="guide/profiles/">Profiles in EHF Post-Award G3</Documentation>
+    <Documentation path="profiles/">Profiles in EHF Post-Award G3</Documentation>
 
     <!-- Syntax -->
     <Resource>
         <Type>Syntax-1</Type>
         <Path>structure/syntax/ehf-reminder-2.0.xml</Path>
+    </Resource>
+
+    <!-- Rules -->
+    <Resource>
+        <Identifier>t19-nogov</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>rules/ehf-reminder-2.0/sch/EHF-REMINDER.sch</Path>
     </Resource>
 
     <!-- Code list -->
@@ -21,6 +28,10 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>source/poacc-upgrade/structure/codelist/UNCL5305.xml</Path>
+    </Resource>
+    <Resource>
+        <Type>CodeList-1</Type>
+        <Path>source/poacc-upgrade/structure/codelist/ISO4217_2015.xml</Path>
     </Resource>
 
 </Project>

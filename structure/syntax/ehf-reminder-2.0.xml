@@ -63,6 +63,12 @@
             <Description>Free-form text to this reminder.</Description>
         </Element>
 
+        <Element>
+            <Term>cbc:DocumentCurrencyCode</Term>
+            <Reference type="CODE_LIST">ISO4217</Reference>
+            <Value type="EXAMPLE">NOK</Value>
+        </Element>
+
         <Element cardinality="1..n">
             <Term>cac:AdditionalDocumentReference</Term>
             <Name>Relevant document references</Name>
@@ -93,14 +99,20 @@
                 <Term>cac:Party</Term>
                 <Name>Party</Name>
 
-                <Element cardinality="0..1">
+                <Element>
                     <Term>cbc:EndpointID</Term>
                     <Name>Seller electronic address</Name>
                     <Description>An identifier indicating seller's electronic address for their
                         messaging. The identifier must be entered as a numerical code according to ISO6523 and
                         consists of one prefix. The prefix specifies the issuer of the identifier, and the actual
                         identifier.</Description>
-                    <Value type="EXAMPLE">9908:123456789</Value>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Value type="EXAMPLE">0192</Value>
+                    </Attribute>
+
+                    <Value type="EXAMPLE">987654321</Value>
                 </Element>
 
                 <Element cardinality="0..1">
@@ -112,6 +124,11 @@
                         <Name>Seller identifier</Name>
                         <Description>Identifies the seller. One should enter the identification system when using this
                             element.</Description>
+
+                        <Attribute usage="Optional">
+                            <Term>schemeID</Term>
+                        </Attribute>
+
                         <Value type="EXAMPLE">7004837532</Value>
                     </Element>
                 </Element>
@@ -266,13 +283,6 @@
                     </Element>
 
                     <Element cardinality="0..1">
-                        <Term>cbc:Telefax</Term>
-                        <Name>Seller contact telefax</Name>
-                        <Description>The seller's contact information- telefax number.</Description>
-                        <Value type="EXAMPLE">98373629</Value>
-                    </Element>
-
-                    <Element cardinality="0..1">
                         <Term>cbc:ElectronicMail</Term>
                         <Name>Seller contact email address</Name>
                         <Description>The seller's contact information- electronic mail address.</Description>
@@ -293,13 +303,19 @@
                 <Name>Party</Name>
                 <Description>Specification of the buyer.</Description>
 
-                <Element cardinality="0..1">
+                <Element>
                     <Term>cbc:EndpointID</Term>
                     <Name>Buyer electronic address</Name>
                     <Description>An identifier indicating the buyer's electronic address for their messaging. The
                         identifier must be entered as a numerical code according to ISO6523 and consists of one prefix.
                         The prefix specifies the issuer of the identifier, and the actual identifier.</Description>
-                    <Value type="EXAMPLE">9123456789</Value>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Value type="EXAMPLE">0192</Value>
+                    </Attribute>
+
+                    <Value type="EXAMPLE">913456789</Value>
                 </Element>
 
                 <Element cardinality="0..1">
@@ -310,6 +326,11 @@
                         <Term>cbc:ID</Term>
                         <Name>Buyer identifier</Name>
                         <Description>Ab identifier of the buyer.</Description>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                        </Attribute>
+
                         <Value type="EXAMPLE">AE9908123456789</Value>
                     </Element>
                 </Element>
@@ -389,6 +410,7 @@
                             <Name>Buyer country code</Name>
                             <Description>A code that identifies the country.</Description>
                             <Reference type="CODE_LIST">ISO3166</Reference>
+                            <Value type="EXAMPLE">NO</Value>
                         </Element>
                     </Element>
                 </Element>
@@ -460,13 +482,6 @@
                     </Element>
 
                     <Element cardinality="0..1">
-                        <Term>cbc:Telefax</Term>
-                        <Name>Buyer contact telefax</Name>
-                        <Description>The buyer's contact information- telefax number.</Description>
-                        <Value type="EXAMPLE">98373433</Value>
-                    </Element>
-
-                    <Element cardinality="0..1">
                         <Term>cbc:ElectronicMail</Term>
                         <Name>Buyer contact email address</Name>
                         <Description>The buyer's contact information- electronic mail address.</Description>
@@ -481,6 +496,14 @@
             <Name>Payee</Name>
             <Description>The payment receiver or seller issue an invoice. Can be a invoice-company.</Description>
 
+            <Element>
+                <Term>cbc:EndpointID</Term>
+
+                <Attribute>
+                    <Term>schemeID</Term>
+                </Attribute>
+            </Element>
+            
             <Element cardinality="0..1">
                 <Term>cac:PartyIdentification</Term>
                 <Name>Party identification</Name>
@@ -573,9 +596,16 @@
                 <Term>cbc:PaidAmount</Term>
                 <Name>Paid amount</Name>
                 <Description>The sum of amounts which have been paid in advance. Must be rounded to maximum 2 decimals.</Description>
-                <Value type="EXAMPLE">250.00 kr</Value>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="CODE_LIST">ISO4217</Reference>
+                    <Value type="EXAMPLE">NOK</Value>
+                </Attribute>
+
+                <Value type="EXAMPLE">250.00</Value>
             </Element>
-            
+
             <Element>
                 <Term>cbc:ReceivedDate</Term>
                 <Name>Received date</Name>
@@ -606,6 +636,13 @@
                 <Term>cbc:Amount</Term>
                 <Name>Document level charge amount</Name>
                 <Description>The amount of a charge, without VAT.</Description>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="CODE_LIST">ISO4217</Reference>
+                    <Value type="EXAMPLE">NOK</Value>
+                </Attribute>
+
                 <Value type="EXAMPLE">1000</Value>
             </Element>
         </Element>
@@ -619,7 +656,14 @@
                 <Term>cbc:TaxAmount</Term>
                 <Name>Total tax</Name>
                 <Description>Total amount for specified amount regime. EHF only denotes the VAT amount.</Description>
-                <Value type="EXAMPLE">962,0</Value>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="CODE_LIST">ISO4217</Reference>
+                    <Value type="EXAMPLE">NOK</Value>
+                </Attribute>
+
+                <Value type="EXAMPLE">962.00</Value>
             </Element>
 
             <Element cardinality="0..n">
@@ -631,14 +675,27 @@
                     <Term>cbc:TaxableAmount</Term>
                     <Name>Tax basis</Name>
                     <Description>VAT basis to calculate a tax for a given VAT category.</Description>
-                    <Value type="EXAMPLE">3400,00</Value>
+
+                    <Attribute>
+                        <Term>currencyID</Term>
+                        <Value type="EXAMPLE">NOK</Value>
+                    </Attribute>
+
+                    <Value type="EXAMPLE">3400.00</Value>
                 </Element>
 
                 <Element>
                     <Term>cbc:TaxAmount</Term>
                     <Name>Tax amount</Name>
                     <Description>The amount of this tax subtotal.</Description>
-                    <Value type="EXAMPLE">850,00</Value>
+
+                    <Attribute>
+                        <Term>currencyID</Term>
+                        <Reference type="CODE_LIST">ISO4217</Reference>
+                        <Value type="EXAMPLE">NOK</Value>
+                    </Attribute>
+
+                    <Value type="EXAMPLE">850.00</Value>
                 </Element>
 
                 <Element>
@@ -679,14 +736,28 @@
                 <Term>cbc:LineExtensionAmount</Term>
                 <Name>Line extension amount</Name>
                 <Description>Net of line amount, exclusive VAT.</Description>
-                <Value type="EXAMPLE">400,00</Value>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="CODE_LIST">ISO4217</Reference>
+                    <Value type="EXAMPLE">NOK</Value>
+                </Attribute>
+
+                <Value type="EXAMPLE">400.00</Value>
             </Element>
 
             <Element>
                 <Term>cbc:PayableAmount</Term>
                 <Name>Payable amount</Name>
                 <Description>Total amount to be paid.</Description>
-                <Value type="EXAMPLE">5162,00</Value>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="CODE_LIST">ISO4217</Reference>
+                    <Value type="EXAMPLE">NOK</Value>
+                </Attribute>
+
+                <Value type="EXAMPLE">5162.00</Value>
             </Element>
         </Element>
 
@@ -711,43 +782,26 @@
                 <Term>cbc:DebitLineAmount</Term>
                 <Name>Debit line amount</Name>
                 <Description>The amount debited on the reminder line.</Description>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="CODE_LIST">ISO4217</Reference>
+                    <Value type="EXAMPLE">NOK</Value>
+                </Attribute>
             </Element>
 
             <Element cardinality="0..1">
                 <Term>cbc:CreditLineAmount</Term>
                 <Name>Credit line amount</Name>
                 <Description>The amount credited on the reminder line.</Description>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="CODE_LIST">ISO4217</Reference>
+                    <Value type="EXAMPLE">NOK</Value>
+                </Attribute>
             </Element>
 
-            <!-- <Element>
-                <Term>cac:BillingReference</Term>
-                <Name>Billing reference</Name>
-                <Description>A reference to a billing document associated with the reminder line.</Description>
-
-                <Element cardinality="0..1">
-                    <Term>cac:InvoiceDocumentReference</Term>
-                    <Name>Document reference</Name>
-                    <Description>Reference to an invoice.</Description>
-
-                    <Element>
-                        <Term>cbc:ID</Term>
-                        <Name>Reference identifier</Name>
-                        <Description>Identifier for the referenced document.</Description>
-                    </Element>
-                </Element>
-
-                <Element cardinality="0..1">
-                    <Term>cac:CreditNoteDocumentReference</Term>
-                    <Name>Document reference</Name>
-                    <Description>Reference to a credit note.</Description>
-
-                    <Element>
-                        <Term>cbc:ID</Term>
-                        <Name>Reference identifier</Name>
-                        <Description>Identifier for the referenced credit note document.</Description>
-                    </Element>
-                </Element>
-            </Element> -->
         </Element>
     </Document>
 </Syntax>

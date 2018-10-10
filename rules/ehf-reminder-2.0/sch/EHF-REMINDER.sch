@@ -10,6 +10,14 @@
 
 	<include href="../../target/generated/reminder-basic.sch"/>
 
-	<!-- TODO -->
+
+	<pattern>
+		<rule context="cac:ReminderLine">
+			<assert id="EHF-R001"
+					test="count(cbc:DebitLineAmount | cbc:CreditLineAmount) = 1"
+					flag="fatal">Reminder line must contain either debit line amount or credit line amount.</assert>
+		</rule>
+	</pattern>
+
 
 </schema>

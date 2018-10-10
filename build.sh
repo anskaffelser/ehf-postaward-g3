@@ -35,7 +35,7 @@ docker run --rm -i \
 docker run --rm -i \
     -v $PROJECT/target/site:/src \
     alpine:3.6 \
-    mv /src/guide/release /src/release
+    mv /src/guide/release /src/guide/profiles /src/
 
 # Fix ownership
 docker run --rm -i \
