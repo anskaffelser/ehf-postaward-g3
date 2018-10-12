@@ -3,14 +3,31 @@
 
     <Name>EHF Post-Award G3</Name>
 
-    <Documentation path="guide/billing/3.0/">EHF Billing 3.0 - Norwegian implementation of EN16931</Documentation>
-    <Documentation path="guide/reminder/2.0/">EHF Reminder 2.0 - Implementation Guideline</Documentation>
-    <Documentation path="profiles/">Profiles in EHF Post-Award G3</Documentation>
+    <!-- Documentation -->
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>billing-3.0/norway/</Path>
+        <Title>Norwegian implementation of EN16931</Title>
+        <Tag>billing-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>reminder-2.0/guide/</Path>
+        <Title>Implementation Guideline</Title>
+        <Tag>reminder-2.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>profiles/</Path>
+        <Title>Profiles in EHF Post-Award G3</Title>
+    </Resource>
 
     <!-- Syntax -->
     <Resource>
         <Type>Syntax-1</Type>
         <Path>structure/syntax/ehf-reminder-2.0.xml</Path>
+        <Title>UBL Syntax for EHF for Reminder 2.0</Title>
+        <Tag>reminder-2.0</Tag>
     </Resource>
 
     <!-- Rules -->
@@ -18,6 +35,8 @@
         <Identifier>t19-nogov</Identifier>
         <Type>native:Schematron</Type>
         <Path>rules/ehf-reminder-2.0/sch/EHF-REMINDER.sch</Path>
+        <Title>Business rules for EHF Reminder 2.0</Title>
+        <Tag>reminder-2.0</Tag>
     </Resource>
 
     <!-- Code list -->
@@ -27,11 +46,21 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL5305.xml</Path>
+        <Path>source/poacc-upgrade/structure/codelist/ISO4217_2015.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/ISO4217_2015.xml</Path>
+        <Path>source/poacc-upgrade/structure/codelist/UNCL5305.xml</Path>
     </Resource>
+
+    <Tag>
+        <Identifier>billing-3.0</Identifier>
+        <Title>EHF Billing 3.0</Title>
+        <Description>Information related to implementation of EN16931 in Norway.</Description>
+    </Tag>
+    <Tag>
+        <Identifier>reminder-2.0</Identifier>
+        <Title>EHF Reminder 2.0</Title>
+    </Tag>
 
 </Project>
