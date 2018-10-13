@@ -25,17 +25,11 @@ docker run --rm -i \
 
 echo
 
-# Guides
+# Docs
 docker run --rm -i \
-    -v $PROJECT/guide:/documents/guide \
+    -v $PROJECT/docs:/documents \
     -v $PROJECT/target/site:/target \
     difi/asciidoctor
-
-# Move release documentation
-docker run --rm -i \
-    -v $PROJECT/target/site:/src \
-    alpine:3.6 \
-    mv /src/guide/release /src/guide/profiles /src/
 
 # Fix ownership
 docker run --rm -i \
