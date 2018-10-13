@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
-    <!-- <testfolder>test</testfolder>
-    <testfolder>unit</testfolder> -->
+    <!-- <testfolder>example</testfolder> -->
 
+    <configuration>
+        <identifier>ehf-postaward-common-2.0</identifier>
+        <title>EHF Post-Award Common 2.0</title>
+        <file source="sch/common/combined.sch" path="xsl/EHF-COMMON.xsl" infoUrl="/ehf/g3/rules/{}/"/>
+    </configuration>
     <configuration>
         <identifier>ehf-reminder-base-2.0</identifier>
         <title>EHF Reminder 2.0</title>
-        <file source="sch/EHF-REMINDER.sch" path="xsl/EHF-REMINDER.xsl" />
+        <file source="sch/EHF-REMINDER.sch" path="xsl/EHF-REMINDER.xsl" infoUrl="/ehf/g3/rules/{}/" />
     </configuration>
 
     <configuration>
