@@ -6,7 +6,7 @@ include::{shared-dir}/settings.adoc[]
 
 = {doctitle}
 {name-difi-en}
-v2.0.0
+v2.0.0 RC
 :doctype: book
 :icons: font
 :toc: left
