@@ -16,6 +16,10 @@ include::{shared-dir}/settings.adoc[]
 :title-logo-image: {shared-dir}/images/logo.jpg
 
 
-== EHF Reminder 2.0.0
+== EHF Reminder 2.0.0 RC
 
-This is the initial release of EHF Reminder 2.0.
+EHF Reminder 2.0.0 is released as a Release Candidate as part of this release.
+
+The intention is for the market to start implementing and to provide feedback which may be implemented as part of the final 2.0.0.
+
+Please register any feedback as link:https://github.com/difi/ehf-postaward-g3[issues on Github] no later than December 14st for consideration for 2.0.0.
