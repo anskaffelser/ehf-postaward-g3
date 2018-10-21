@@ -9,7 +9,7 @@
 	<ns prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
 
 	<include href="common/empty-elements.sch"/>
-	<include href="../../target/generated/reminder-basic.sch"/>
+	<include href="../../../target/generated/reminder-basic.sch"/>
 	<include href="business/EHF-REMINDER.sch"/>
 
 </schema>

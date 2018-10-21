@@ -42,7 +42,7 @@
     <Resource>
         <Identifier>common</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/sch/common/combined.sch</Path>
+        <Path>rules/reminder-2.0/sch/common/combined.sch</Path>
         <Title>EHF Post-Award Common 2.0</Title>
         <Description>Common rules for most transactions part of EHF Post-Award G3.</Description>
         <Tag>reminder-2.0</Tag>
@@ -50,7 +50,7 @@
     <Resource>
         <Identifier>t19-nogov</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/sch/business/EHF-REMINDER.sch</Path>
+        <Path>rules/reminder-2.0/sch/business/EHF-REMINDER.sch</Path>
         <Title>Business rules for EHF Reminder 2.0</Title>
         <Tag>reminder-2.0</Tag>
     </Resource>
@@ -67,6 +67,26 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>source/poacc-upgrade/structure/codelist/UNCL5305.xml</Path>
+    </Resource>
+
+    <!-- Files -->
+    <Resource>
+        <Type>native:File</Type>
+        <Title>Example files</Title>
+        <Description>Zip file containing examples of all document types part of EHF Post-Award G3.</Description>
+        <Property key="download">ehf-postaward-g3-examples.zip</Property>
+        <Property key="filename">examples.zip</Property>
+        <Property key="virtual">true</Property>
+        <Tag>reminder-2.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>native:File</Type>
+        <Title>Schematron files</Title>
+        <Description>Zip file containing Schematron files part of EHF Post-Award G3.</Description>
+        <Property key="download">ehf-postaward-g3-schematron.zip</Property>
+        <Property key="filename">schematron.zip</Property>
+        <Property key="virtual">true</Property>
+        <Tag>reminder-2.0</Tag>
     </Resource>
 
     <Tag>
