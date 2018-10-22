@@ -424,7 +424,7 @@
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Buyer country code</Name>
                             <Description>A code that identifies the country. The lists of valid countries are registered with the ISO 3166-1.
-                                Codes must be according to the alpha-2 representation.<</Description>
+                                Codes must be according to the alpha-2 representation.</Description>
                             <Reference type="CODE_LIST">ISO3166</Reference>
                             <Value type="EXAMPLE">NO</Value>
                         </Element>
@@ -516,12 +516,12 @@
                 <Term>cbc:EndpointID</Term>
                 <Name>Payee electronic address</Name>
                 <Description>Identifies the payee electronic address.</Description>
-                <Value type="EXAMPLE">7300010000001</Value>
 
                 <Attribute>
                     <Term>schemeID</Term>
-                    <Name>Payee electronic address</Name>
+                    <Description>Payee electronic address</Description>
                 </Attribute>
+                <Value type="EXAMPLE">7300010000001</Value>
             </Element>
             
             <Element cardinality="0..1">
@@ -543,14 +543,14 @@
                 <Element>
                     <Term>cbc:Name</Term>
                     <Name>Payee name</Name>
-                    <Description>The name of the payee.</Description>
+                    <Description>The business name of the payee.</Description>
                 </Element>
             </Element>
         </Element>
 
         <Element cardinality="1..n">
             <Term>cac:PaymentMeans</Term>
-            <Name>Name</Name>
+            <Name>Payment instructions</Name>
             <Description>Information about the payment.</Description>
 
             <Element>
@@ -619,6 +619,7 @@
 
                 <Attribute>
                     <Term>currencyID</Term>
+                    <Description>Mandatory attribute. Use codelist ISO4217.</Description>
                     <Reference type="CODE_LIST">ISO4217</Reference>
                     <Value type="EXAMPLE">NOK</Value>
                 </Attribute>
@@ -642,14 +643,15 @@
             <Element>
                 <Term>cbc:ChargeIndicator</Term>
                 <Name>Document level charge indicator</Name>
-                <Description>An indicator that this AllowanceCharge describes a charge (true).</Description>
+                <Description>An indicator that this Allowance charge describes a charge (use true).</Description>
                 <Value type="FIXED">true</Value>
             </Element>
 
             <Element>
                 <Term>cbc:AllowanceChargeReasonCode</Term>
                 <Name>Document level charge reason code</Name>
-                <Description>The reason for the document level charge, expressed as code (or text?)</Description>
+                <Description>The reason for the document level charge, expressed as code.</Description>
+                <Value type="EXAMPLE">Discount</Value>
             </Element>
 
             <Element>
@@ -659,6 +661,7 @@
 
                 <Attribute>
                     <Term>currencyID</Term>
+                    <Description>Mandatory attribute. Use codelist ISO4217.</Description>
                     <Reference type="CODE_LIST">ISO4217</Reference>
                     <Value type="EXAMPLE">NOK</Value>
                 </Attribute>
@@ -679,6 +682,7 @@
 
                 <Attribute>
                     <Term>currencyID</Term>
+                    <Description>Mandatory attribute. Use codelist ISO4217.</Description>
                     <Reference type="CODE_LIST">ISO4217</Reference>
                     <Value type="EXAMPLE">NOK</Value>
                 </Attribute>
@@ -698,6 +702,8 @@
 
                     <Attribute>
                         <Term>currencyID</Term>
+                        <Description>Mandatory attribute. Use codelist ISO4217.</Description>
+                        <Reference type="CODE_LIST">ISO4217</Reference>
                         <Value type="EXAMPLE">NOK</Value>
                     </Attribute>
 
@@ -707,10 +713,11 @@
                 <Element>
                     <Term>cbc:TaxAmount</Term>
                     <Name>Tax amount</Name>
-                    <Description>The amount of this tax subtotal.</Description>
+                    <Description>The total amount of this tax subtotal.</Description>
 
                     <Attribute>
                         <Term>currencyID</Term>
+                        <Description>Mandatory attribute. Use codelist ISO4217.</Description>
                         <Reference type="CODE_LIST">ISO4217</Reference>
                         <Value type="EXAMPLE">NOK</Value>
                     </Attribute>
@@ -726,7 +733,7 @@
                     <Element>
                         <Term>cbc:ID</Term>
                         <Name>ID</Name>
-                        <Description>Identifier for tax category.</Description>
+                        <Description>The identification code of a VAT category. Use codelist UNCL5305.</Description>
                         <Reference type="CODE_LIST">UNCL5305</Reference>
                         <Value type="EXAMPLE">S</Value>
                     </Element>
@@ -734,12 +741,12 @@
                     <Element>
                         <Term>cac:TaxScheme</Term>
                         <Name>Tax scheme</Name>
-                        <Description>The taxation scheme within this tax category.</Description>
+                        <Description>The taxation scheme within this VAT category.</Description>
 
                         <Element>
                             <Term>cbc:ID</Term>
                             <Name>ID</Name>
-                            <Description>Identifies the tax scheme.</Description>
+                            <Description>Identifies the tax scheme. Mandatory element, use "VAT."</Description>
                             <Value type="EXAMPLE">VAT</Value>
                         </Element>
                     </Element>
@@ -755,10 +762,11 @@
             <Element>
                 <Term>cbc:LineExtensionAmount</Term>
                 <Name>Line extension amount</Name>
-                <Description>Net of line amount, exclusive VAT.</Description>
+                <Description>The sum of all line net amounts in the reminder, exclusive VAT. Must be rounded to maximum two decimals.</Description>
 
                 <Attribute>
                     <Term>currencyID</Term>
+                    <Description>Mandatory attribute. Use codelist ISO4217.</Description>
                     <Reference type="CODE_LIST">ISO4217</Reference>
                     <Value type="EXAMPLE">NOK</Value>
                 </Attribute>
@@ -769,10 +777,11 @@
             <Element>
                 <Term>cbc:PayableAmount</Term>
                 <Name>Payable amount</Name>
-                <Description>Total amount to be paid.</Description>
+                <Description>The outstanding total amount that is requested to be paid. Must be rounded to maximum two decimals.</Description>
 
                 <Attribute>
                     <Term>currencyID</Term>
+                    <Description>Mandatory attribute. Use codelist ISO4217.</Description>
                     <Reference type="CODE_LIST">ISO4217</Reference>
                     <Value type="EXAMPLE">NOK</Value>
                 </Attribute>
@@ -788,14 +797,14 @@
 
             <Element>
                 <Term>cbc:ID</Term>
-                <Name>Line number</Name>
-                <Description>Identifies the reminder line.</Description>
+                <Name>Reminder line identifier</Name>
+                <Description>Identifies this reminder line.</Description>
             </Element>
 
             <Element cardinality="0..1">
                 <Term>cbc:Note</Term>
                 <Name>Note</Name>
-                <Description>Free-form text added to reminder line.</Description>
+                <Description>Free-form text that gives relevant information, which is not contained explicitly in other structures.</Description>
             </Element>
 
             <Element cardinality="0..1">
@@ -805,6 +814,7 @@
 
                 <Attribute>
                     <Term>currencyID</Term>
+                    <Description>Mandatory attribute. Use codelist ISO4217.</Description>
                     <Reference type="CODE_LIST">ISO4217</Reference>
                     <Value type="EXAMPLE">NOK</Value>
                 </Attribute>
@@ -817,6 +827,7 @@
 
                 <Attribute>
                     <Term>currencyID</Term>
+                    <Description>Mandatory attribute. Use codelist ISO4217.</Description>
                     <Reference type="CODE_LIST">ISO4217</Reference>
                     <Value type="EXAMPLE">NOK</Value>
                 </Attribute>
