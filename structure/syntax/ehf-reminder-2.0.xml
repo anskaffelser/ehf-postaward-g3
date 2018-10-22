@@ -30,15 +30,15 @@
 
         <Element>
             <Term>cbc:ID</Term>
-            <Name>Reminder number</Name>
-            <Description>A number that uniquely define the reminder.</Description>
+            <Name>Reminder identifier</Name>
+            <Description>An reminder must contain an identifier. The identifier is a number that uniquely define the reminder.</Description>
             <Value type="EXAMPLE">123456</Value>
         </Element>
 
         <Element>
             <Term>cbc:IssueDate</Term>
             <Name>Reminder date</Name>
-            <Description>The date on when the reminder was issued. (YYYY-MM-DD)</Description>
+            <Description>The date on when the reminder instance was issued. Format: YYYY-MM-DD.</Description>
             <Value type="EXAMPLE">2010-12-03</Value>
         </Element>
 
@@ -59,12 +59,15 @@
 
         <Element cardinality="0..1">
             <Term>cbc:Note</Term>
-            <Name>Reminder date</Name>
-            <Description>Free-form text to this reminder.</Description>
+            <Name>Reminder note</Name>
+            <Description>A textual note that gives relevant information about the reminder. Such as the reason
+                for the reminder.</Description>
         </Element>
 
         <Element>
             <Term>cbc:DocumentCurrencyCode</Term>
+            <Name>Reminder currency code</Name>
+            <Description>A code signifying the default currency for this reminder document. Use codelist ISO4217.</Description>
             <Reference type="CODE_LIST">ISO4217</Reference>
             <Value type="EXAMPLE">NOK</Value>
         </Element>
@@ -82,18 +85,21 @@
             <Element>
                 <Term>cbc:IssueDate</Term>
                 <Name>Referenced document issue date</Name>
+                <Description>The date on which the referenced document was issued.</Description>
+                <Value type="EXAMPLE">2010-12-01</Value>
             </Element>
 
             <Element>
                 <Term>cbc:DocumentTypeCode</Term>
                 <Name>Referenced document type</Name>
+                <Description>A description of the referenced reminder expressed as code.</Description>
             </Element>
         </Element>
 
         <Element>
             <Term>cac:AccountingSupplierParty</Term>
             <Name>Seller</Name>
-            <Description>The organization or person that deliver a item or service.</Description>
+            <Description>The organization or person that deliver an item or service.</Description>
 
             <Element>
                 <Term>cac:Party</Term>
@@ -109,6 +115,8 @@
 
                     <Attribute>
                         <Term>schemeID</Term>
+                        <Name>Seller electronic address identification scheme identifier</Name>
+                        <Description>The scheme identifier of the sellers's electronic address.</Description>
                         <Value type="EXAMPLE">0192</Value>
                     </Attribute>
 
@@ -127,6 +135,8 @@
 
                         <Attribute usage="Optional">
                             <Term>schemeID</Term>
+                            <Name>Seller identification scheme identifier</Name>
+                            <Description>The scheme identification of the seller's identifier.</Description>
                         </Attribute>
 
                         <Value type="EXAMPLE">7004837532</Value>
@@ -153,7 +163,7 @@
                     <Element cardinality="0..1">
                         <Term>cbc:StreetName</Term>
                         <Name>Seller address line 1</Name>
-                        <Description>The name of a street or road. The main address line in an address.</Description>
+                        <Description>The main address line in a postal address usually the street name and number.</Description>
                         <Value type="EXAMPLE">Københavnsgate 23</Value>
                     </Element>
 
@@ -176,14 +186,14 @@
                     <Element cardinality="0..1">
                         <Term>cbc:PostalZone</Term>
                         <Name>Seller post code</Name>
-                        <Description>The postal number for this address.</Description>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
                         <Value type="EXAMPLE">8549</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cbc:CountrySubentity</Term>
                         <Name>Seller country subdivision</Name>
-                        <Description>For specifying a region, county, state, province etc. within a country by using text.</Description>
+                        <Description>For specifying a region, county, state, province etc. within a country.</Description>
                         <Value type="EXAMPLE">Region x</Value>
                     </Element>
 
@@ -208,7 +218,8 @@
                         <Element cardinality="0..1">
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Seller country code</Name>
-                            <Description>A code that identifies the country.</Description>
+                            <Description>A code that identifies the country. The lists of valid countries are registered with the ISO 3166-1.
+                                Codes must be according to the alpha-2 representation.</Description>
                             <Reference type="CODE_LIST">ISO3166</Reference>
                         </Element>
                     </Element>
@@ -216,12 +227,12 @@
 
                 <Element>
                     <Term>cac:PartyLegalEntity</Term>
-                    <Name>Party legal entity</Name>
+                    <Name>Seller legal entity</Name>
                     <Description>Identifies the seller's organization number through a national register (Brønnøysundregister).</Description>
 
                     <Element cardinality="0..1">
                         <Term>cbc:RegistrationName</Term>
-                        <Name>Seller name</Name>
+                        <Name>Seller legal registration name</Name>
                         <Description>The name of the seller's as registered with the specified organization number.</Description>
                         <Value type="EXAMPLE">Ola Nordmann</Value>
                     </Element>
@@ -230,19 +241,19 @@
                         <Term>cbc:CompanyID</Term>
                         <Name>Seller legal registration identifier</Name>
                         <Description>An identifier issued by an official registrar that identifies the Seller as a legal
-                            entity or person.. For Norwegian sellers: only numbers are accepted.</Description>
+                            entity or person. For Norwegian sellers: only numbers are accepted.</Description>
                         <Value type="EXAMPLE">999999999</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cac:RegistrationAddress</Term>
-                        <Name>Seller registration address</Name>
+                        <Name>Seller legal registration address</Name>
                         <Description>The registration address of the legal seller.</Description>
 
                         <Element cardinality="0..1">
                             <Term>cbc:CityName</Term>
-                            <Name>Seller city name</Name>
-                            <Description>The common name of the city, town or village, where the Seller's address is located.</Description>
+                            <Name>Seller legal registration city name</Name>
+                            <Description>The common name of the city, town or village, where the Seller's legal registration address is located.</Description>
                         </Element>
 
                         <Element cardinality="0..1">
@@ -278,14 +289,14 @@
                     <Element cardinality="0..1">
                         <Term>cbc:Telephone</Term>
                         <Name>Seller contact telephone number</Name>
-                        <Description>The seller's contact information- telephone number.</Description>
+                        <Description>A phone number for the seller's contact information.</Description>
                         <Value type="EXAMPLE">98373628</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cbc:ElectronicMail</Term>
                         <Name>Seller contact email address</Name>
-                        <Description>The seller's contact information- electronic mail address.</Description>
+                        <Description>An electronic mail address for the seller's contact information.</Description>
                         <Value type="EXAMPLE">seller@company.com</Value>
                     </Element>
                 </Element>
@@ -312,7 +323,9 @@
 
                     <Attribute>
                         <Term>schemeID</Term>
-                        <Value type="EXAMPLE">0192</Value>
+                        <Name>Buyer electronic address identification scheme identifier</Name>
+                        <Description>The scheme identifier of the buyer's electronic address.</Description>
+                        <Value type="EXAMPLE">0088</Value>
                     </Attribute>
 
                     <Value type="EXAMPLE">913456789</Value>
@@ -325,10 +338,12 @@
                     <Element>
                         <Term>cbc:ID</Term>
                         <Name>Buyer identifier</Name>
-                        <Description>Ab identifier of the buyer.</Description>
+                        <Description>An identifier of the buyer.</Description>
 
                         <Attribute>
                             <Term>schemeID</Term>
+                            <Name>Buyer identification scheme identifier</Name>
+                            <Description>The scheme identification of the buyer's identifier.</Description>
                         </Attribute>
 
                         <Value type="EXAMPLE">AE9908123456789</Value>
@@ -355,7 +370,7 @@
                     <Element cardinality="0..1">
                         <Term>cbc:StreetName</Term>
                         <Name>Buyer address line 1</Name>
-                        <Description>The name of a street or road. The main address line in an address.</Description>
+                        <Description>The main address line in an address usually the street name and number.</Description>
                     </Element>
 
                     <Element cardinality="0..1">
@@ -369,14 +384,14 @@
                     <Element cardinality="0..1">
                         <Term>cbc:CityName</Term>
                         <Name>Buyer city</Name>
-                        <Description>The post location of a city, town, or village.</Description>
+                        <Description>The common name of the city, town or village, where the buyer's address is located.</Description>
                         <Value type="EXAMPLE">Oslo</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cbc:PostalZone</Term>
                         <Name>Buyer post code</Name>
-                        <Description>The postal number for this address.</Description>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
                         <Value type="EXAMPLE">0612</Value>
                     </Element>
 
@@ -408,7 +423,8 @@
                         <Element cardinality="0..1">
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Buyer country code</Name>
-                            <Description>A code that identifies the country.</Description>
+                            <Description>A code that identifies the country. The lists of valid countries are registered with the ISO 3166-1.
+                                Codes must be according to the alpha-2 representation.<</Description>
                             <Reference type="CODE_LIST">ISO3166</Reference>
                             <Value type="EXAMPLE">NO</Value>
                         </Element>
@@ -477,14 +493,14 @@
                     <Element cardinality="0..1">
                         <Term>cbc:Telephone</Term>
                         <Name>Buyer contact telephone number</Name>
-                        <Description>The buyer's contact information- telephone number.</Description>
+                        <Description>A phone number of the buyer's contact information.</Description>
                         <Value type="EXAMPLE">98373432</Value>
                     </Element>
 
                     <Element cardinality="0..1">
                         <Term>cbc:ElectronicMail</Term>
                         <Name>Buyer contact email address</Name>
-                        <Description>The buyer's contact information- electronic mail address.</Description>
+                        <Description>An electronic mail address of the buyer's contact information.</Description>
                         <Value type="EXAMPLE">buyer@company.com</Value>
                     </Element>
                 </Element>
@@ -494,13 +510,17 @@
         <Element cardinality="0..1">
             <Term>cac:PayeeParty</Term>
             <Name>Payee</Name>
-            <Description>The payment receiver or seller issue an invoice. Can be a invoice-company.</Description>
+            <Description>The payment receiver or seller issue an invoice. Can be an invoice-company.</Description>
 
             <Element>
                 <Term>cbc:EndpointID</Term>
+                <Name>Payee electronic address</Name>
+                <Description>Identifies the payee electronic address.</Description>
+                <Value type="EXAMPLE">7300010000001</Value>
 
                 <Attribute>
                     <Term>schemeID</Term>
+                    <Name>Payee electronic address</Name>
                 </Attribute>
             </Element>
             
