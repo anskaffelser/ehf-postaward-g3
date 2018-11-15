@@ -16,6 +16,11 @@ include::{shared-dir}/settings.adoc[]
 :title-logo-image: {shared-dir}/images/logo.jpg
 
 
+== EHF Billing 3.0.1
+
+include::../../billing-3.0/norway/changelog/2018-11-15-3.0.1.adoc[]
+
+
 == EHF Reminder 2.0.0 RC
 
 EHF Reminder 2.0.0 is released as a Release Candidate as part of this release.

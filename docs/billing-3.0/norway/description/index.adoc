@@ -1,0 +1,7 @@
+= Description
+
+:leveloffset: +1
+
+include::foretaksregisteret.adoc[]
+
+:leveloffset: -1

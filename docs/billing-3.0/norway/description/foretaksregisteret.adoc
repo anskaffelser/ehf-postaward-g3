@@ -1,0 +1,42 @@
+= Applying "Foretaksregisteret"
+
+//From the PEPPOL BIS Billing 3.0 document we want to highlight an important Norwegian rule (Rule "NO-R-002"), as this rule is required in any Norwegian billing format.
+
+Most Norwegian invoices and credit notes need to apply the text "Foretaksregisteret" according to nation requirement:
+
+[quote]
+____
+Dersom selger er aksjeselskap, allmennaksjeselskap eller filial av utenlandsk selskap skal også ordet «Foretaksregisteret» fremgå av salgsdokumentet, jf. foretaksregisterloven § 10-2.
+____
+
+[source,xml]
+.UBL example of applying "Foretaksregisteret" in invoice/credit note.
+----
+<cac:AccountingSupplierParty>
+  <cac:Party>
+    <!-- ... -->
+    <cac:PostalAddress>
+      <!-- ... -->
+      <cac:Country>
+        <cbc:IdentificationCode>NO</cbc:IdentificationCode> <1>
+      </cac:Country>
+    </cac:PostalAddress>
+    <cac:PartyTaxScheme>
+      <cbc:CompanyID>NO111222333MVA</cbc:CompanyID> <2>
+      <cac:TaxScheme>
+        <cbc:ID>VAT</cbc:ID>
+      </cac:TaxScheme>
+    </cac:PartyTaxScheme>
+    <cac:PartyTaxScheme>
+      <cbc:CompanyID>Foretaksregisteret</cbc:CompanyID> <3>
+      <cac:TaxScheme>
+        <cbc:ID>TAX</cbc:ID>
+      </cac:TaxScheme>
+    </cac:PartyTaxScheme>
+    <!-- ... -->
+  </cac:Party>
+</cac:AccountingSupplierParty>
+----
+<1> Identification code shows the invoice country code, here NO = Norway.
+<2> The two first letters implies a country when using VAT as identifier element.
+<3> Shows how to imaplement according to rule "NO-R-002" (Foretaksregisteret).

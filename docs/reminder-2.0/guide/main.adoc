@@ -262,6 +262,3 @@ those specified below leads to rejection of the XML instance document during val
 |Export if goods and services
 |0%
 |===
-
-
-include::{shared-dir}/google-analytics.adoc[]

@@ -1,0 +1,13 @@
+[cols="1,9,2", options="header"]
+|===
+| Issue | Description | Type
+
+| -
+| Adding formal Norwegian name.
+| Guide
+
+| -
+| Adding description on how to apply "Foretaksregisteret".
+|
+
+|===

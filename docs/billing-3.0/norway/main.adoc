@@ -6,7 +6,7 @@ include::{shared-dir}/settings.adoc[]
 
 = {doctitle}
 {name-difi-en}
-v3.0.0
+v3.0.1
 :doctype: book
 :icons: font
 :toc: left
@@ -24,6 +24,8 @@ This document describes the new version of EHF Invoice and Credit Note, now rena
 
 EHF Billing is the implementation of link:https://standards.cen.eu/dyn/www/f?p=204:110:0::::FSP_PROJECT,FSP_ORG_ID:60602,1883209&cs=104E4C4FA3744A8DEA8E98A7B500306FD[EN 16931 Electronic invoicing] according to link:http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32014L0055&from=EN[EU Directive 2014/55/EU] for the Norwegian market.
 
+When referenced in Norwegian, this specification is named *EHF Fakturering 3.0*.
+
 
 == Implementation
 
@@ -32,51 +34,10 @@ OpenPEPPOL has created link:https://peppol.eu/peppol-bis-billing-3-0/[PEPPOL BIS
 Based on work done in PEPPOL BIS Billing 3.0, Difi has included Norwegian rules in PEPPOL BIS Billing 3.0 and does not see a need to implement a different CIUS targeting the Norwegian market. Implementation of EHF Billing 3.0 is therefore done by implementing PEPPOL BIS Billing 3.0 without extensions or extra rules.
 
 
-include::{shared-dir}/google-analytics.adoc[]
+:leveloffset: +1
 
+include::changelog/index.adoc[]
 
-== Description
+include::description/index.adoc[]
 
-
-=== Applying "Foretaksregisteret"
-
-//From the PEPPOL BIS Billing 3.0 document we want to highlight an important Norwegian rule (Rule "NO-R-002"), as this rule is required in any Norwegian billing format.
-
-Most Norwegian invoices and credit notes need to apply the text "Foretaksregisteret" according to nation requirement:
-
-[quote]
-____
-Dersom selger er aksjeselskap, allmennaksjeselskap eller filial av utenlandsk selskap skal også ordet «Foretaksregisteret» fremgå av salgsdokumentet, jf. foretaksregisterloven § 10-2.
-____
-
-[source,xml]
-.UBL example of applying "Foretaksregisteret" in invoice/credit note.
-----
-<cac:AccountingSupplierParty>
-  <cac:Party>
-    <!-- ... -->
-    <cac:PostalAddress>
-      <!-- ... -->
-      <cac:Country>
-        <cbc:IdentificationCode>NO</cbc:IdentificationCode> <1>
-      </cac:Country>
-    </cac:PostalAddress>
-    <cac:PartyTaxScheme>
-      <cbc:CompanyID>NO111222333</cbc:CompanyID> <2>
-      <cac:TaxScheme>
-        <cbc:ID>VAT</cbc:ID>
-      </cac:TaxScheme>
-    </cac:PartyTaxScheme>
-    <cac:PartyTaxScheme>
-      <cbc:CompanyID>Foretaksregisteret</cbc:CompanyID> <3>
-      <cac:TaxScheme>
-        <cbc:ID>TAX</cbc:ID>
-      </cac:TaxScheme>
-    </cac:PartyTaxScheme>
-    <!-- ... -->
-  </cac:Party>
-</cac:AccountingSupplierParty>
-----
-<1>Identification code shows the invoice country code, here NO = Norway.
-<2>The two first letters implies a country when using VAT as identifier element.
-<3>Shows how to use rule "NO-R-002" (Foretaksregisteret).
+:leveloffset: -1
