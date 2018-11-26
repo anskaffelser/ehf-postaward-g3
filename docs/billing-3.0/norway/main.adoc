@@ -40,6 +40,6 @@ include::changelog/index.adoc[]
 
 include::description/index.adoc[]
 
-include::appendix/example-files.adoc[]
+include::appendix/index.adoc[]
 
 :leveloffset: -1
