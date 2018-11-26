@@ -6,6 +6,4 @@ is regarding to EHF faktura 2.0, while link:https://github.com/difi/ehf-postawar
 have been changed from EHF faktura 2.0 to valid EHF Fakturering/PEPPOL BIS 3.0.
 In addition, both example files include sequence number to help the reader to understand the differences of EHF 2.0 and EHF 3.0.
 
-//give reader a view of elements that have been changed from EHF 2.0 to EHF 3.0.
-
 
