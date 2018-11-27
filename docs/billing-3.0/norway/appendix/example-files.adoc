@@ -1,12 +1,13 @@
 = Appendix A: Example files
 
-The example files are published on GitHub. Remark that there are two example files:
+The example files are published on GitHub. There are two example files:
 
 * link:https://github.com/difi/ehf-postaward-g3/tree/master/docs/billing-3.0/norway/rules/example[ehf-2-faktura-1.xml]
 is regarding to EHF faktura 2.0,
 * link:https://github.com/difi/ehf-postaward-g3/tree/master/docs/billing-3.0/norway/rules/example[ehf-3-faktura-1.xml]
 have been changed from EHF faktura 2.0 to valid EHF Fakturering/PEPPOL BIS 3.0.
 
-In addition, both example files include sequence number to help the reader to understand the differences of EHF 2.0 and EHF 3.0.
+
+In addition, both example files include sequence number to help the reader to understand the differences between EHF 2.0 and EHF 3.0.
 
 
