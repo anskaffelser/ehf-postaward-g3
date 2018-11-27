@@ -1,4 +1,4 @@
-= Appendix A: Example files
+= Appendix
 
 
 :leveloffset: +1
