@@ -59,10 +59,10 @@
 	<cac:AccountingSupplierParty>
 		<cac:Party>			
 			<!-- 9 -->
-			<cbc:EndpointID schemeID="0192">123456785</cbc:EndpointID>
+			<cbc:EndpointID schemeID="NO:ORGNR">123456785</cbc:EndpointID>
 			<cac:PartyIdentification>			
 				<!-- 10 -->
-				<cbc:ID schemeID="0088">1238764941386</cbc:ID>
+				<cbc:ID schemeID="GLN">1238764941386</cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
 				<!-- 11 -->
