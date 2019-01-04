@@ -2,35 +2,46 @@
 <Reminder xmlns="urn:oasis:names:specification:ubl:schema:xsd:Reminder-2"
         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
-    <cbc:UBLVersionID>2.2</cbc:UBLVersionID>
     <cbc:CustomizationID>urn:fdc:difi.no:2017:ehf:reminder:2.0</cbc:CustomizationID>
     <cbc:ProfileID>urn:fdc:difi.no:2017:ehf:profile:02:1.0</cbc:ProfileID>
     <cbc:ID>123456</cbc:ID>
     <cbc:IssueDate>2018-12-04</cbc:IssueDate>
-    <cbc:ReminderTypeCode>999</cbc:ReminderTypeCode>
+    <cbc:ReminderTypeCode>71</cbc:ReminderTypeCode>
     <cbc:ReminderSequenceNumeric>3</cbc:ReminderSequenceNumeric>
-    <cbc:Note>Filling some information.</cbc:Note>
+    <cbc:Note>Reminder for pencil orders.</cbc:Note>
+    <cbc:DocumentCurrencyCode>NOK</cbc:DocumentCurrencyCode>
+
+    <cac:AdditionalDocumentReference>
+        <cbc:ID>1122</cbc:ID>
+        <cbc:IssueDate>2018-11-05</cbc:IssueDate>
+        <cbc:DocumentTypeCode>Ref. payment 1234</cbc:DocumentTypeCode>
+    </cac:AdditionalDocumentReference>
 
     <cac:AccountingSupplierParty>
         <cac:Party>
             <cbc:EndpointID schemeID="0192">987654325</cbc:EndpointID>
             <cac:PartyIdentification>
-                <cbc:ID>STT134</cbc:ID>
+                <cbc:ID schemeID="0192">987654325</cbc:ID>
             </cac:PartyIdentification>
             <cac:PartyName>
-                <cbc:Name>Penner og sånt AS</cbc:Name>
+                <cbc:Name>Penner AS</cbc:Name>
             </cac:PartyName>
             <cac:PostalAddress>
                 <cbc:StreetName>Dronningsgate 12</cbc:StreetName>
+                <cbc:AdditionalStreetName>Building A</cbc:AdditionalStreetName>
                 <cbc:CityName>Trondheim</cbc:CityName>
                 <cbc:PostalZone>7030</cbc:PostalZone>
+                <cbc:CountrySubentity>Region A</cbc:CountrySubentity>
+                <cac:AddressLine>
+                    <cbc:Line>Building 2</cbc:Line>
+                </cac:AddressLine>
                 <cac:Country>
                     <cbc:IdentificationCode>NO</cbc:IdentificationCode>
                 </cac:Country>
             </cac:PostalAddress>
             <cac:PartyLegalEntity>
                 <cbc:RegistrationName>Selger AS</cbc:RegistrationName>
-                <cbc:CompanyID>54321</cbc:CompanyID>
+                <cbc:CompanyID>543214571</cbc:CompanyID>
                 <cac:RegistrationAddress>
                     <cbc:CityName>Oslo</cbc:CityName>
                     <cac:Country>
@@ -38,29 +49,39 @@
                     </cac:Country>
                 </cac:RegistrationAddress>
             </cac:PartyLegalEntity>
+            <cac:Contact>
+                <cbc:ID>1234</cbc:ID>
+                <cbc:Telephone>95412452</cbc:Telephone>
+                <cbc:ElectronicMail>hansen@selger.no</cbc:ElectronicMail>
+            </cac:Contact>
         </cac:Party>
     </cac:AccountingSupplierParty>
 
     <cac:AccountingCustomerParty>
         <cac:Party>
-            <cbc:EndpointID>9908:123456789</cbc:EndpointID>
+            <cbc:EndpointID schemeID="0192">123456785</cbc:EndpointID>
             <cac:PartyIdentification>
-                <cbc:ID>345KS5324</cbc:ID>
+                <cbc:ID schemeID="0192">123456785</cbc:ID>
             </cac:PartyIdentification>
             <cac:PartyName>
                 <cbc:Name>Pennalhuset AS</cbc:Name>
             </cac:PartyName>
             <cac:PostalAddress>
                 <cbc:StreetName>Heimdalsgata 37</cbc:StreetName>
+                <cbc:AdditionalStreetName>Building A</cbc:AdditionalStreetName>
                 <cbc:CityName>Oslo</cbc:CityName>
                 <cbc:PostalZone>0578</cbc:PostalZone>
+                <cbc:CountrySubentity>Oslo</cbc:CountrySubentity>
+                <cac:AddressLine>
+                    <cbc:Line>2nd floor</cbc:Line>
+                </cac:AddressLine>
                 <cac:Country>
                     <cbc:IdentificationCode>NO</cbc:IdentificationCode>
                 </cac:Country>
             </cac:PostalAddress>
             <cac:PartyLegalEntity>
-                <cbc:RegistrationName>Energidrikk AS</cbc:RegistrationName>
-                <cbc:CompanyID>1234</cbc:CompanyID>
+                <cbc:RegistrationName>Pennalhuset AS</cbc:RegistrationName>
+                <cbc:CompanyID>123444444</cbc:CompanyID>
                 <cac:RegistrationAddress>
                     <cbc:CityName>Bergen</cbc:CityName>
                     <cac:Country>
@@ -70,21 +91,27 @@
             </cac:PartyLegalEntity>
             <cac:Contact>
                 <cbc:ID>3159bbx</cbc:ID>
-                <cbc:Telephone>517287</cbc:Telephone>
-                <cbc:Telefax>517288</cbc:Telefax>
-                <cbc:ElectronicMail>jenny@energidrikk.no</cbc:ElectronicMail>
+                <cbc:Telephone>22114455</cbc:Telephone>
+                <cbc:ElectronicMail>jenny@pennalhuset.no</cbc:ElectronicMail>
             </cac:Contact>
         </cac:Party>
     </cac:AccountingCustomerParty>
 
+    <cac:PayeeParty>
+        <cbc:EndpointID schemeID="0192">7300010000001</cbc:EndpointID>
+        <cac:PartyIdentification>
+            <cbc:ID schemeID="0192">7300010000001</cbc:ID>
+        </cac:PartyIdentification>
+    </cac:PayeeParty>
+
     <cac:PaymentMeans>
-        <cbc:PaymentMeansCode></cbc:PaymentMeansCode>
-        <cbc:PaymentID></cbc:PaymentID>
+        <cbc:PaymentMeansCode>X</cbc:PaymentMeansCode>
+        <cbc:PaymentID>123</cbc:PaymentID>
         <cac:PayeeFinancialAccount>
-            <cbc:ID></cbc:ID>
-            <cbc:Name></cbc:Name>
+            <cbc:ID>1234</cbc:ID>
+            <cbc:Name>Penny Wilson</cbc:Name>
             <cac:FinancialInstitutionBranch>
-                <cbc:ID></cbc:ID>
+                <cbc:ID>1547</cbc:ID>
             </cac:FinancialInstitutionBranch>
         </cac:PayeeFinancialAccount>
     </cac:PaymentMeans>
@@ -93,10 +120,22 @@
         <cbc:Note>Adding reminder with 2 percentage.</cbc:Note>
     </cac:PaymentTerms>
 
+    <cac:PrepaidPayment>
+        <cbc:PaidAmount currencyID="NOK">100.00</cbc:PaidAmount>
+        <cbc:ReceivedDate>2018-12-25</cbc:ReceivedDate>
+    </cac:PrepaidPayment>
+
+    <cac:AllowanceCharge>
+        <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+        <cbc:AllowanceChargeReasonCode>Discount</cbc:AllowanceChargeReasonCode>
+        <cbc:Amount currencyID="NOK">40.00</cbc:Amount>
+    </cac:AllowanceCharge>
+
     <cac:TaxTotal>
-        <cbc:TaxAmount currencyID="NOK">962.0</cbc:TaxAmount>
+        <cbc:TaxAmount currencyID="NOK">20.0</cbc:TaxAmount>
         <cac:TaxSubtotal>
-            <cbc:TaxAmount currencyID="NOK">3400.00</cbc:TaxAmount>
+            <cbc:TaxableAmount currencyID="NOK">30.00</cbc:TaxableAmount>
+            <cbc:TaxAmount currencyID="NOK">50.00</cbc:TaxAmount>
             <cac:TaxCategory>
                 <cbc:ID>S</cbc:ID>
                 <cac:TaxScheme>
@@ -107,30 +146,21 @@
     </cac:TaxTotal>
 
     <cac:LegalMonetaryTotal>
-        <cbc:LineExtensionAmount currencyID="NOK">400.00</cbc:LineExtensionAmount>
-        <cbc:PayableAmount currencyID="NOK">5162.00</cbc:PayableAmount>
+        <cbc:LineExtensionAmount currencyID="NOK">100.00</cbc:LineExtensionAmount>
+        <cbc:PayableAmount currencyID="NOK">520.00</cbc:PayableAmount>
     </cac:LegalMonetaryTotal>
 
     <cac:ReminderLine>
         <cbc:ID>1</cbc:ID>
         <cbc:Note>Applies to reminder 12345</cbc:Note>
         <cbc:DebitLineAmount currencyID="NOK">100</cbc:DebitLineAmount>
-        <cac:BillingReference>
-            <cac:InvoiceDocumentReference>
-                <cbc:ID>1232</cbc:ID>
-            </cac:InvoiceDocumentReference>
-        </cac:BillingReference>
     </cac:ReminderLine>
-
 
     <cac:ReminderLine>
-        <cbc:ID>2</cbc:ID>
-        <cbc:Note>Applies to creditnote 6545</cbc:Note>
-        <cbc:CreditLineAmount currencyID="NOK">100</cbc:CreditLineAmount>
-        <cac:BillingReference>
-            <cac:CreditNoteDocumentReference>
-                <cbc:ID>53234</cbc:ID>
-            </cac:CreditNoteDocumentReference>
-        </cac:BillingReference>
+        <cbc:ID>1</cbc:ID>
+        <cbc:Note>Applies to reminder 12345</cbc:Note>
+        <cbc:DebitLineAmount currencyID="NOK">50</cbc:DebitLineAmount>
     </cac:ReminderLine>
+
+
 </Reminder>
