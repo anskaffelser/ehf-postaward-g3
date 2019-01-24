@@ -51,6 +51,7 @@
             </cac:PartyLegalEntity>
             <cac:Contact>
                 <cbc:ID>1234</cbc:ID>
+                <cbc:Name>Hans Hansen</cbc:Name>
                 <cbc:Telephone>95412452</cbc:Telephone>
                 <cbc:ElectronicMail>hansen@selger.no</cbc:ElectronicMail>
             </cac:Contact>
@@ -91,8 +92,9 @@
             </cac:PartyLegalEntity>
             <cac:Contact>
                 <cbc:ID>3159bbx</cbc:ID>
+                <cbc:Name>Jenny Jensen</cbc:Name>
                 <cbc:Telephone>22114455</cbc:Telephone>
-                <cbc:ElectronicMail>jenny@pennalhuset.no</cbc:ElectronicMail>
+                <cbc:ElectronicMail>jensen@pennalhuset.no</cbc:ElectronicMail>
             </cac:Contact>
         </cac:Party>
     </cac:AccountingCustomerParty>
