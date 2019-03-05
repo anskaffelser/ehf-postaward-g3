@@ -27,6 +27,11 @@ EHF Billing is the implementation of link:https://standards.cen.eu/dyn/www/f?p=2
 When referenced in Norwegian, this specification is named *EHF Fakturering 3.0*.
 
 
+[NOTE]
+
+Use link:https://github.com/difi/ehf-postaward-g3/issues[Github issue link] to report bugs, issues or comments to this specification.
+
+
 == Implementation
 
 OpenPEPPOL has created link:https://peppol.eu/peppol-bis-billing-3-0/[PEPPOL BIS Billing 3.0], a Core Invoice Usage Specification (CIUS) as implementation of EN 16931, for cross border using in PEPPOL. The new PEPPOL BIS Billing 3.0 support inclusion of national rules based on origin country of seller.
