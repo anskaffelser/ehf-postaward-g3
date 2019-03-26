@@ -198,18 +198,19 @@ The payment instructions in EHF Reminder need to be specified under the element 
 ----
 <cac:PaymentMeans>
     <cbc:PaymentMeansCode>50</cbc:PaymentMeansCode> <1>
-    <cbc:PaymentID>1. warning</cbc:PaymentID>
+    <cbc:PaymentID>12345678</cbc:PaymentID>
     <cac:PayeeFinancialAccount>
-            <cbc:ID>05111125551</cbc:ID> <1>
+            <cbc:ID>05111125551</cbc:ID> <2>
             <cbc:Name>Ola Nordmenn</cbc:Name>
             <cac:FinancialInstitutionBranch>
-                <cbc:ID>Bank X</cbc:ID>
+                <cbc:ID>BIC32201</cbc:ID> <3>
             </cac:FinancialInstitutionBranch>
     </cac:PayeeFinancialAccount>
 </cac:PaymentMeans>
 ----
 <1> Payment means code
-<2> The account number, IBAN or a national account number (BBAN)
+<2> The account number, IBAN (International Bank Account Number) or a national account number (BBAN = Basic Bank Account Number)
+<3> BIC or a national clearing code
 
 
 == Allowance Charge

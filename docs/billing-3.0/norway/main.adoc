@@ -29,7 +29,10 @@ When referenced in Norwegian, this specification is named *EHF Fakturering 3.0*.
 
 [NOTE]
 
-Use link:https://github.com/difi/ehf-postaward-g3/issues[Github issue link] to report bugs, issues or comments to this specification.
+Since EHF Fakturering 3.0 is equal to PEPPOL BIS Billing 3.0 all the issues, bugs or comments to the specification need to be reported
+link:https://openpeppol.atlassian.net/servicedesk/customer/portal/1[here], by using "Request for Change (RFC)".
+
+// Use link:https://github.com/difi/ehf-postaward-g3/issues[Github issue link] to report bugs, issues or comments to this specification.
 
 
 == Implementation
