@@ -25,7 +25,7 @@
             <Term>cbc:ProfileID</Term>
             <Name>Profile identifier</Name>
             <Description>Identifies the business process context in which the transaction appears.</Description>
-            <Value type="FIXED">urn:fdc:difi.no:2017:ehf:profile:02:1.0</Value>
+            <Value type="FIXED">urn:fdc:difi.no:2019:ehf:postaward:g3:06:1.0</Value>
         </Element>
 
         <Element>

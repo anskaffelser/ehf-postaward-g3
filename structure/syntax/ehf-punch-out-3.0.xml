@@ -29,7 +29,7 @@
 			<DataType>Identifier</DataType>
 			<Reference type="BUSINESS_TERM">tir77-006</Reference>
 
-			<Value type="FIXED">urn:fdc:peppol.eu:poacc:bis:punch_out:3</Value>
+			<Value type="FIXED">urn:fdc:difi.no:2019:ehf:postaward:g3:04:1.0</Value>
 		</Element>
 		<Element>
 			<Term>cbc:ID</Term>

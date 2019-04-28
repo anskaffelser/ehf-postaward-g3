@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+  <package>EHF Catalogue 3.0.0</package>
+  <package>EHF Despatch Advice 3.0.0</package>
+  <package>EHF Ordering 3.0.0</package>
+  <package>EHF Order Agreement 3.0.0</package>
+  <package>EHF Punch Out 3.0.0</package>
+
+</buildConfigurations>

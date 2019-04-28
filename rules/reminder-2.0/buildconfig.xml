@@ -4,20 +4,15 @@
     <!-- <testfolder>example</testfolder> -->
 
     <configuration>
-        <identifier>ehf-postaward-common-2.0</identifier>
-        <title>EHF Post-Award Common 2.0</title>
-        <file source="sch/common/combined.sch" path="xsl/EHF-COMMON.xsl" infoUrl="/ehf/g3/rules/{}/"/>
-    </configuration>
-    <configuration>
         <identifier>ehf-reminder-base-2.0</identifier>
         <title>EHF Reminder 2.0</title>
-        <file source="sch/EHF-REMINDER-2.0.sch" path="xsl/EHF-REMINDER.xsl" infoUrl="/ehf/g3/rules/{}/" />
+        <file source="sch/EHF-REMINDER-2.0.sch" path="xsl/EHF-REMINDER-2.0.xsl" infoUrl="/ehf/g3/rules/{}/" />
     </configuration>
 
     <configuration>
-        <identifier>ehf-reminder-02-2.0</identifier>
-        <title>EHF Reminder 2.0 (Profile 02)</title>
-        <profileId>urn:fdc:difi.no:2017:ehf:profile:02:1.0</profileId>
+        <identifier>ehf-reminder-06-2.0</identifier>
+        <title>EHF Reminder 2.0 (Profile 06)</title>
+        <profileId>urn:fdc:difi.no:2019:ehf:postaward:g3:06:1.0</profileId>
         <customizationId>urn:fdc:difi.no:2017:ehf:reminder:2.0</customizationId>
         <inherit>ubl-reminder-2.1</inherit>
         <inherit>ehf-reminder-base-2.0</inherit>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <!-- <testfolder>example</testfolder> -->
+
+    <configuration>
+        <identifier>ehf-punch-out-base-3.0</identifier>
+        <title>EHF Punch Out 3.0</title>
+        <file source="sch/EHF-PUNCH-OUT-3.0.sch" path="xsl/EHF-PUNCH-OUT-3.0.xsl" infoUrl="/ehf/g3/rules/{}/" />
+    </configuration>
+
+    <configuration>
+        <identifier>ehf-punch-out-04-3.0</identifier>
+        <title>EHF Punch Out 3.0 (Profile 04)</title>
+        <profileId>urn:fdc:difi.no:2019:ehf:postaward:g3:04:1.0</profileId>
+        <customizationId>urn:fdc:peppol.eu:poacc:trns:punch_out:3:extended:urn:fdc:difi.no:2017:ehf:spec:3.0</customizationId>
+        <inherit>ubl-catalogue-2.1</inherit>
+        <inherit>ehf-punch-out-base-3.0</inherit>
+    </configuration>
+
+</buildConfigurations>

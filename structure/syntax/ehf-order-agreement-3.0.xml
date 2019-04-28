@@ -30,7 +30,7 @@
                 It enables the buyer to process the document in an appropriate way.</Description>
 			<DataType>Identifier</DataType>
 			<Reference type="BUSINESS_TERM">tir110-008</Reference>
-			<Value type="FIXED">urn:fdc:peppol.eu:poacc:bis:order_agreement:3</Value>
+			<Value type="FIXED">urn:fdc:difi.no:2019:ehf:postaward:g3:03:1.0</Value>
 		</Element>
 		<Element>
 			<Term>cbc:ID</Term>

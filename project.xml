@@ -84,9 +84,14 @@
     <Resource>
         <Identifier>common</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/reminder-2.0/sch/common/combined.sch</Path>
+        <Path>rules/_common/sch/parts/combined.sch</Path>
         <Title>EHF Post-Award Common 2.0</Title>
         <Description>Common rules for most transactions part of EHF Post-Award G3.</Description>
+        <Tag>catalogue-3.0</Tag>
+        <Tag>despatch-advice-3.0</Tag>
+        <Tag>ordering-3.0</Tag>
+        <Tag>order-agreement-3.0</Tag>
+        <Tag>punch-out-3.0</Tag>
         <Tag>reminder-2.0</Tag>
     </Resource>
     <Resource>
@@ -299,6 +304,11 @@
         <Property key="download">ehf-postaward-g3-examples.zip</Property>
         <Property key="filename">examples.zip</Property>
         <Property key="virtual">true</Property>
+        <Tag>catalogue-3.0</Tag>
+        <Tag>despatch-advice-3.0</Tag>
+        <Tag>ordering-3.0</Tag>
+        <Tag>order-agreement-3.0</Tag>
+        <Tag>punch-out-3.0</Tag>
         <Tag>reminder-2.0</Tag>
     </Resource>
     <Resource>
@@ -308,6 +318,11 @@
         <Property key="download">ehf-postaward-g3-schematron.zip</Property>
         <Property key="filename">schematron.zip</Property>
         <Property key="virtual">true</Property>
+        <Tag>catalogue-3.0</Tag>
+        <Tag>despatch-advice-3.0</Tag>
+        <Tag>ordering-3.0</Tag>
+        <Tag>order-agreement-3.0</Tag>
+        <Tag>punch-out-3.0</Tag>
         <Tag>reminder-2.0</Tag>
     </Resource>
 

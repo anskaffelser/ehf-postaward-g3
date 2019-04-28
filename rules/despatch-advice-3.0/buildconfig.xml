@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <!-- <testfolder>example</testfolder> -->
+
+    <configuration>
+        <identifier>ehf-despatch-advice-base-3.0</identifier>
+        <title>EHF Despatch Advice 3.0</title>
+        <file source="sch/EHF-DESPATCH-ADVICE-3.0.sch" path="xsl/EHF-DESPATCH-ADVICE-3.0.xsl" infoUrl="/ehf/g3/rules/{}/" />
+    </configuration>
+
+    <configuration>
+        <identifier>ehf-despatch-advice-01-3.0</identifier>
+        <title>EHF Despatch Advice 3.0 (Profile 05)</title>
+        <profileId>urn:fdc:difi.no:2019:ehf:postaward:g3:05:1.0</profileId>
+        <customizationId>urn:fdc:peppol.eu:poacc:trns:despatch_advice:3:extended:urn:fdc:difi.no:2017:ehf:spec:3.0</customizationId>
+        <inherit>ubl-despatchadvice-2.1</inherit>
+        <inherit>ehf-despatch-advice-base-3.0</inherit>
+    </configuration>
+
+</buildConfigurations>
