@@ -11,7 +11,7 @@
     <configuration>
         <identifier>ehf-reminder-base-2.0</identifier>
         <title>EHF Reminder 2.0</title>
-        <file source="sch/EHF-REMINDER.sch" path="xsl/EHF-REMINDER.xsl" infoUrl="/ehf/g3/rules/{}/" />
+        <file source="sch/EHF-REMINDER-2.0.sch" path="xsl/EHF-REMINDER.xsl" infoUrl="/ehf/g3/rules/{}/" />
     </configuration>
 
     <configuration>

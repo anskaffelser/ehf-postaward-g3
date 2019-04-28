@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Syntax xmlns="urn:fdc:difi.no:2017:vefa:structure:Syntax-1">
 
-    <Term>reminder</Term>
+    <Term>reminder-2.0</Term>
     <Name>EHF Reminder 2.0</Name>
 
     <Property key="sch:prefix">EHF-REMINDER</Property>
@@ -523,7 +523,7 @@
                 </Attribute>
                 <Value type="EXAMPLE">7300010000001</Value>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cac:PartyIdentification</Term>
                 <Name>Party identification</Name>
