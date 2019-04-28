@@ -143,7 +143,7 @@
                     </Element>
                 </Element>
 
-                <Element>
+                <Element cardinality="0..1">
                     <Term>cac:PartyName</Term>
                     <Name>Party name</Name>
 
@@ -197,7 +197,7 @@
                         <Value type="EXAMPLE">Region x</Value>
                     </Element>
 
-                    <Element>
+                    <Element cardinality="0..1">
                         <Term>cac:AddressLine</Term>
                         <Name>Address line</Name>
 
@@ -210,12 +210,12 @@
                         </Element>
                     </Element>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cac:Country</Term>
                         <Name>Country</Name>
                         <Description>The country in which this address is situated.</Description>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Seller country code</Name>
                             <Description>A code that identifies the country. The lists of valid countries are registered with the ISO 3166-1.
@@ -287,6 +287,13 @@
                     </Element>
 
                     <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Seller contact point</Name>
+                        <Description>A contact name for the seller's contact information.</Description>
+                        <Value type="EXAMPLE">Jenny Jensen</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
                         <Term>cbc:Telephone</Term>
                         <Name>Seller contact telephone number</Name>
                         <Description>A phone number for the seller's contact information.</Description>
@@ -350,7 +357,7 @@
                     </Element>
                 </Element>
 
-                <Element>
+                <Element cardinality="0..1">
                     <Term>cac:PartyName</Term>
                     <Name>Party name</Name>
 
@@ -402,7 +409,7 @@
                         <Value type="EXAMPLE">Region y</Value>
                     </Element>
 
-                    <Element>
+                    <Element cardinality="0..1">
                         <Term>cac:AddressLine</Term>
                         <Name>Address line</Name>
 
@@ -420,7 +427,7 @@
                         <Name>Country</Name>
                         <Description>The country in which this address is situated.</Description>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Buyer country code</Name>
                             <Description>A code that identifies the country. The lists of valid countries are registered with the ISO 3166-1.
@@ -491,6 +498,13 @@
                     </Element>
 
                     <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Seller contact point</Name>
+                        <Description>A contact name for the seller's contact information.</Description>
+                        <Value type="EXAMPLE">Hans Hansen</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
                         <Term>cbc:Telephone</Term>
                         <Name>Buyer contact telephone number</Name>
                         <Description>A phone number of the buyer's contact information.</Description>
@@ -557,12 +571,16 @@
                 <Term>cbc:PaymentMeansCode</Term>
                 <Name>Payment means type code</Name>
                 <Description>The means, expressed as code, for how a payment is expected to be or has been settled.</Description>
+                <Reference type="CODE_LIST">UNCL4461</Reference>
+                <!-- Her må vi kanskje legge til @name (Ref. Billing 3.0)-->
+                <Value type="EXAMPLE">50</Value>
             </Element>
 
             <Element cardinality="0..1">
                 <Term>cbc:PaymentID</Term>
                 <Name>Payment identifier</Name>
                 <Description>Identifies the payment by using means of payment.</Description>
+                <Value type="EXAMPLE">1234531545</Value>
             </Element>
 
             <Element>
@@ -573,13 +591,15 @@
                 <Element>
                     <Term>cbc:ID</Term>
                     <Name>Payment account identifier</Name>
-                    <Description>Identifies the financial payment account, i.e. the bank account number.</Description>
+                    <Description>Identifies the financial payment account, such as IBAN (International Bank Account Number) or BBAN (Basic Bank Account Number).</Description>
+                    <Value type="EXAMPLE">54120145214</Value> <!-- Et annet eksempel: NO99991122222 -->
                 </Element>
 
                 <Element cardinality="0..1">
                     <Term>cbc:Name</Term>
                     <Name>Payment account name</Name>
                     <Description>The name of the financial payment account.</Description>
+                    <Value type="EXAMPLE">Henrik Hansen</Value>
                 </Element>
 
                 <Element cardinality="0..1">
@@ -590,7 +610,8 @@
                     <Element>
                         <Term>cbc:ID</Term>
                         <Name>Payment service provider identifier</Name>
-                        <Description>An identifier for the payment service provider where a payment is located.</Description>
+                        <Description>An identifier for the payment service provider where a payment is located, such as a BIC or a national clearing code.</Description>
+                        <Value type="EXAMPLE">BIC32202</Value>
                     </Element>
                 </Element>
             </Element>
@@ -599,12 +620,13 @@
         <Element>
             <Term>cac:PaymentTerms</Term>
             <Name>Payment terms</Name>
-            <Description>Payment terms according to invoice.</Description>
+            <!-- <Description>Payment terms according to invoice.</Description> -->
 
             <Element>
                 <Term>cbc:Note</Term>
                 <Name>Note</Name>
-                <Description>Textual description of the payment terms.</Description>
+                <Description>A textual description of the payment terms.</Description>
+                <Value type="EXAMPLE">Payment need to be payed within 20 days.</Value>
             </Element>
         </Element>
 
@@ -651,7 +673,7 @@
                 <Term>cbc:AllowanceChargeReasonCode</Term>
                 <Name>Document level charge reason code</Name>
                 <Description>The reason for the document level charge, expressed as code.</Description>
-                <Value type="EXAMPLE">Discount</Value>
+                <Value type="EXAMPLE">Reminder</Value>
             </Element>
 
             <Element>

@@ -244,6 +244,10 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
+        <Path>structure/codelist/reminder-2.0/UNCL4461.xml</Path>
+    </Resource>
+    <Resource>
+        <Type>CodeList-1</Type>
         <Path>source/poacc-upgrade/structure/codelist/UNCL5189.xml</Path>
     </Resource>
     <Resource>

@@ -1,0 +1,10 @@
+[appendix]
+= Example files
+
+Example files provided for implementers familiar with example files provided by EHF Invoice and Credit Note 2.0:
+
+* link:files/ehf-2-faktura-1.xml[Original file] from EHF Invoice and Credit Note 2.0.
+* link:files/ehf-3-faktura-1.xml[Converted file] according to EHF/PEPPOL BIS Billing 3.0.
+
+Please see comments inside example files for guidance.
+

@@ -102,22 +102,27 @@ image::images/rolediagram.png[align="center"]
     <cac:Party>
         <cbc:EndpointID schemeID="0192">987654325</cbc:EndpointID>
         <cac:PartyIdentification>
-            <cbc:ID>STT134</cbc:ID>
+            <cbc:ID schemeID="0192">987654325</cbc:ID>
         </cac:PartyIdentification>
         <cac:PartyName>
             <cbc:Name>Penner og sånt AS</cbc:Name>
         </cac:PartyName>
         <cac:PostalAddress>
             <cbc:StreetName>Dronningsgate 12</cbc:StreetName>
+            <cbc:AdditionalStreetName>Building C</cbc:AdditionalStreetName>
             <cbc:CityName>Trondheim</cbc:CityName>
             <cbc:PostalZone>7030</cbc:PostalZone>
+            <cbc:CountrySubentity>Trondheim</CountrySubentity>
+            <cac:AddressLine>
+                <cbc:Line>1st floor</cbc:Line>
+            </cac:AddressLine>
             <cac:Country>
                 <cbc:IdentificationCode>NO</cbc:IdentificationCode>
             </cac:Country>
         </cac:PostalAddress>
         <cac:PartyLegalEntity>
             <cbc:RegistrationName>Selger AS</cbc:RegistrationName>
-            <cbc:CompanyID>54321</cbc:CompanyID>
+            <cbc:CompanyID>999999999</cbc:CompanyID>
             <cac:RegistrationAddress>
                 <cbc:CityName>Oslo</cbc:CityName>
                 <cac:Country>
@@ -125,6 +130,12 @@ image::images/rolediagram.png[align="center"]
                 </cac:Country>
             </cac:RegistrationAddress>
         </cac:PartyLegalEntity>
+        <cac:Contact>
+            <cbc:ID>22DA14</cbc:ID>
+            <cbc:Name>Hans Hansen</cbc:Name>
+            <cbc:Telephone>22222222</cbc:Telephone>
+            <cbc:ElectronicMail>hans.hansen@pennerogsant.no</cbc:ElectronicMail>
+        </cac:Contact>
     </cac:Party>
 </cac:AccountingSupplierParty>
 ----
@@ -136,24 +147,29 @@ image::images/rolediagram.png[align="center"]
 ----
 <cac:AccountingCustomerParty>
     <cac:Party>
-        <cbc:EndpointID>9908:123456789</cbc:EndpointID>
+        <cbc:EndpointID schemeID="0192">123456785</cbc:EndpointID>
         <cac:PartyIdentification>
-            <cbc:ID>345KS5324</cbc:ID>
+            <cbc:ID schemeID="0192">123456785</cbc:ID>
         </cac:PartyIdentification>
         <cac:PartyName>
             <cbc:Name>Pennalhuset AS</cbc:Name>
         </cac:PartyName>
         <cac:PostalAddress>
             <cbc:StreetName>Heimdalsgata 37</cbc:StreetName>
+            <cbc:AdditionalStreetName>Building A</cbc:AdditionalStreetName>
             <cbc:CityName>Oslo</cbc:CityName>
             <cbc:PostalZone>0578</cbc:PostalZone>
+            <cbc:CountrySubentity>Trondheim</CountrySubentity>
+            <cac:AddressLine>
+                <cbc:Line>2nd floor</cbc:Line>
+            </cac:AddressLine>
             <cac:Country>
                 <cbc:IdentificationCode>NO</cbc:IdentificationCode>
             </cac:Country>
         </cac:PostalAddress>
         <cac:PartyLegalEntity>
             <cbc:RegistrationName>Energidrikk AS</cbc:RegistrationName>
-            <cbc:CompanyID>1234</cbc:CompanyID>
+            <cbc:CompanyID>123455555</cbc:CompanyID>
             <cac:RegistrationAddress>
                 <cbc:CityName>Bergen</cbc:CityName>
                 <cac:Country>
@@ -163,27 +179,69 @@ image::images/rolediagram.png[align="center"]
         </cac:PartyLegalEntity>
         <cac:Contact>
             <cbc:ID>3159bbx</cbc:ID>
+            <cbc:Name>Heidi Seiers</cbc:Name>
             <cbc:Telephone>517287</cbc:Telephone>
-            <cbc:Telefax>517288</cbc:Telefax>
-            <cbc:ElectronicMail>jenny@energidrikk.no</cbc:ElectronicMail>
+            <cbc:ElectronicMail>heidi.seiers@pennalhuset.no</cbc:ElectronicMail>
         </cac:Contact>
     </cac:Party>
 </cac:AccountingCustomerParty>
 ----
 
 
-== Invoice- Credit note Reference
 
-The invoice reference and/or credit note reference on line level (BillingReference) must be send. See example below.
+== Payment Instructions
 
+The payment instructions in EHF Reminder need to be specified under the element "cac:PaymentMeans".
+
+[source,xml]
+.Example: Payment instructions.
+----
+<cac:PaymentMeans>
+    <cbc:PaymentMeansCode>50</cbc:PaymentMeansCode> <1>
+    <cbc:PaymentID>12345678</cbc:PaymentID>
+    <cac:PayeeFinancialAccount>
+            <cbc:ID>05111125551</cbc:ID> <2>
+            <cbc:Name>Ola Nordmenn</cbc:Name>
+            <cac:FinancialInstitutionBranch>
+                <cbc:ID>BIC32201</cbc:ID> <3>
+            </cac:FinancialInstitutionBranch>
+    </cac:PayeeFinancialAccount>
+</cac:PaymentMeans>
+----
+<1> Payment means code
+<2> The account number, IBAN (International Bank Account Number) or a national account number (BBAN = Basic Bank Account Number)
+<3> BIC or a national clearing code
+
+
+== Allowance Charge
+
+To send a reminder with a charge (called "gebyr" in Norwegian) we can use the class-element "AllowanceCharge" on document level.
+
+
+[source,xml]
+.Example: Allowance charge (reminder amount).
+----
+<cac:AllowanceCharge>
+    <cbc:ChargeIndicator>True</cbc:ChargeIndicator> <1>
+    <cbc:AllowanceChargeReasonCode>Reminder</cbc:AllowanceChargeReasonCode>
+    <cbc:Amount currencyID ="NOK">70</cbc:Amount> <2>
+</cac:AllowanceCharge>
+----
+<1> Using fixed value "True" such that allowance charge describes a charge.
+<2> The amount of a charge.
+
+
+
+//== Invoice- Credit note Reference
+//There is mandatory to send invoice reference and/or credit note reference on line level (called "BillingReference").
 // LEGG TIL EKSEMPEL.
 
 
 == Debit and Credit Line Amount
 
-// Beskriv hva dette er.
+The line amount, referring to outstanding invoice, specifies in the element "DebitLineAmount".
+Similarly for Credit note in the element "CreditLineAmount".
 
-ReminderLine consist of DebitLineAmount and CreditLineAmount. The BillingReference (reference to a billing)
 
 [source,xml]
 .Example: Debit line amount.
@@ -191,14 +249,10 @@ ReminderLine consist of DebitLineAmount and CreditLineAmount. The BillingReferen
 <cac:ReminderLine>
     <cbc:ID>1</cbc:ID>
     <cbc:Note>Purring 12345</cbc:Note>
-    <cbc:DebitLineAmount currencyID="NOK">100</cbc:DebitLineAmount>
-    <cac:BillingReference>
-        <cac:InvoiceDocumentReference>
-            <cbc:ID>43232</cbc:ID>
-        </cac:InvoiceDocumentReference>
-    </cac:BillingReference>
+    <cbc:DebitLineAmount currencyID="NOK">500</cbc:DebitLineAmount> <1>
 </cac:ReminderLine>
 ----
+<1> Debit line amount with correct currency.
 
 [source,xml]
 .Example: Credit line amount.
@@ -206,14 +260,27 @@ ReminderLine consist of DebitLineAmount and CreditLineAmount. The BillingReferen
 <cac:ReminderLine>
     <cbc:ID>2</cbc:ID>
     <cbc:Note>Kreditnota 6545</cbc:Note>
-    <cbc:CreditLineAmount currencyID="NOK">100</cbc:CreditLineAmount>
-    <cac:BillingReference>
-        <cac:CreditNoteDocumentReference>
-            <cbc:ID>53234</cbc:ID>
-        </cac:CreditNoteDocumentReference>
-    </cac:BillingReference>
+    <cbc:CreditLineAmount currencyID="NOK">100</cbc:CreditLineAmount> <1>
 </cac:ReminderLine>
 ----
+<1> Credit line amount with correct currency.
+
+
+The total amount of debit line amount minus the total amount of credit line amount MUST be referred in the element "LineExtensionAmount"
+under the the element "LegalMonetaryTotal" on document level.
+
+[source,xml]
+.Example: Credit line amount.
+----
+<cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="NOK">400<cbc:LineExtensionAmount> <1>
+    <cbc:PayableAmount currencyID="NOK">100<cbc:PayableAmount> <2>
+</cac:LegalMonetaryTotal>
+----
+<1> The sum of all line net amounts in the reminder (total amount of debit line amount minus the total amount of credit line).
+<2> The outstanding total amount that is requested to be paid.
+
+
 
 
 == Value Added Tax (Norwegian MVA)
