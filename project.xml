@@ -12,6 +12,12 @@
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
+        <Path>ordering-3.0/guideline/</Path>
+        <Title>Implementation Guideline</Title>
+        <Tag>ordering-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
         <Path>reminder-2.0/guide/</Path>
         <Title>Implementation Guideline</Title>
         <Tag>reminder-2.0</Tag>
@@ -85,7 +91,7 @@
         <Identifier>common</Identifier>
         <Type>native:Schematron</Type>
         <Path>rules/_common/sch/parts/combined.sch</Path>
-        <Title>EHF Post-Award Common 2.0</Title>
+        <Title>EHF Post-Award Common 3.0</Title>
         <Description>Common rules for most transactions part of EHF Post-Award G3.</Description>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
