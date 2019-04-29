@@ -7,6 +7,7 @@ include::{shared-dir}/settings.adoc[]
 = {doctitle}
 {name-difi-en}
 v3.0.0 RC
+:description: This document describes the new version of EHF Punch out (called "EHF Punch Out"). The document is part of Norwegian "Agency of Public Management and eGovernment" (Difi) standardization work related to electronic commerce.
 :doctype: book
 :icons: font
 :toc: left
@@ -23,6 +24,7 @@ include::changelog/index.adoc[]
 
 // include::description/index.adoc[]
 
+include::../../../source/poacc-upgrade/guides/profiles/18-punchout/principles/index.adoc[]
 
 include::../../../source/poacc-upgrade/guides/profiles/18-punchout/process/index.adoc[]
 
@@ -31,6 +33,6 @@ include::../../../source/poacc-upgrade/guides/profiles/18-punchout/description/i
 
 include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[]
 
-// include::appendix/index.adoc[]
+include::appendix/index.adoc[]
 
 :leveloffset: -1

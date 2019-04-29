@@ -7,6 +7,7 @@ include::{shared-dir}/settings.adoc[]
 = {doctitle}
 {name-difi-en}
 v3.0.0 RC
+:description: This document describes the new version of EHF Catalogue (called "EHF Katalog"). The document is part of Norwegian "Agency of Public Management and eGovernment" (Difi) standardization work related to electronic commerce.
 :doctype: book
 :icons: font
 :toc: left
@@ -23,7 +24,9 @@ include::changelog/index.adoc[]
 
 // include::description/index.adoc[]
 
-include::../../../source/poacc-upgrade/guides/profiles/28-ordering/process/index.adoc[]
+include::../../../source/poacc-upgrade/guides/profiles/1-catalogueonly/principles/index.adoc[]
+
+include::../../../source/poacc-upgrade/guides/profiles/1-catalogueonly/process/index.adoc[]
 
 :snippet-dir: ../../../../rules/snippets/order
 include::../../../source/poacc-upgrade/guides/transactions/19-catalogue/description/index.adoc[]
@@ -31,8 +34,8 @@ include::../../../source/poacc-upgrade/guides/transactions/19-catalogue/descript
 :snippet-response-dir: ../../../../rules/snippets/order-response
 include::../../../source/poacc-upgrade/guides/transactions/58-catalogue-response/description/index.adoc[]
 
-include::../../shared/datatypes/index.adoc[]
+include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[]
 
-// include::appendix/index.adoc[]
+include::appendix/index.adoc[]
 
 :leveloffset: -1

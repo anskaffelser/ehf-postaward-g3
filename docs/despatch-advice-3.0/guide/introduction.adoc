@@ -1,6 +1,0 @@
-[preface]
-= Introduction
-
-The purpose of this document is to describe the Despatch Advice messages between the supplier and the receiver in a
-procurement process. 
-

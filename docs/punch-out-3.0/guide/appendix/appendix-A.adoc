@@ -1,0 +1,7 @@
+
+
+This implementation guide builds on UBL 2.2 Schemas, available from OASIS.
+
+These schemas are used when performing syntax validation.
+
+Please see the link:http://docs.oasis-open.org/ubl/UBL-2.2.html[homepage] for information about the standard or link:http://docs.oasis-open.org/ubl/os-UBL-2.2/[further resources available].
