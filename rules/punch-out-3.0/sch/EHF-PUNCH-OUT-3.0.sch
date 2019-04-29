@@ -21,7 +21,7 @@
 
 	<include href="../../_common/sch/parts/empty-elements.sch"/>
 	<include href="../../../target/generated/t77-basic.sch"/>
-	<include href="../../../source/poacc-upgrade/rules/sch/parts/PEPPOL-M-T77.sch"/>
+	<include href="../../../target/schematron-peppol/PEPPOL-M-T77.sch"/>
 	<!-- <include href="business/EHF-REMINDER.sch"/> -->
 
 </schema>

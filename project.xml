@@ -134,42 +134,42 @@
     <Resource>
         <Identifier>t01-peppol</Identifier>
         <Type>native:Schematron</Type>
-        <Path>source/poacc-upgrade/rules/sch/parts/PEPPOL-M-T01.sch</Path>
+        <Path>target/schematron-peppol/PEPPOL-M-T01.sch</Path>
         <Title>Business rules for PEPPOL Order transaction 3.0 </Title>
         <Tag>ordering-3.0</Tag>
     </Resource>
     <Resource>
         <Identifier>t16-peppol</Identifier>
         <Type>native:Schematron</Type>
-        <Path>source/poacc-upgrade/rules/sch/parts/PEPPOL-M-T16.sch</Path>
+        <Path>target/schematron-peppol/PEPPOL-M-T16.sch</Path>
         <Title>Business rules for PEPPOL Despatch Advice transaction 3.0</Title>
         <Tag>despatch-advice-3.0</Tag>
     </Resource>
     <Resource>
         <Identifier>t19-peppol</Identifier>
         <Type>native:Schematron</Type>
-        <Path>source/poacc-upgrade/rules/sch/parts/PEPPOL-M-T19.sch</Path>
+        <Path>target/schematron-peppol/PEPPOL-M-T19.sch</Path>
         <Title>Business rules for PEPPOL Catalogue transaction 3.0</Title>
         <Tag>catalogue-3.0</Tag>
     </Resource>
     <Resource>
         <Identifier>t76-peppol</Identifier>
         <Type>native:Schematron</Type>
-        <Path>source/poacc-upgrade/rules/sch/parts/PEPPOL-M-T76.sch</Path>
+        <Path>target/schematron-peppol/PEPPOL-M-T76.sch</Path>
         <Title>Business rules for PEPPOL Order Response transaction 3.0</Title>
         <Tag>ordering-3.0</Tag>
     </Resource>
     <Resource>
         <Identifier>t77-peppol</Identifier>
         <Type>native:Schematron</Type>
-        <Path>source/poacc-upgrade/rules/sch/parts/PEPPOL-M-T77.sch</Path>
+        <Path>target/schematron-peppol/PEPPOL-M-T77.sch</Path>
         <Title>Business rules for PEPPOL Punch Out transaction 3.0</Title>
         <Tag>punch-out-3.0</Tag>
     </Resource>
     <Resource>
         <Identifier>t110-peppol</Identifier>
         <Type>native:Schematron</Type>
-        <Path>source/poacc-upgrade/rules/sch/parts/PEPPOL-M-T110.sch</Path>
+        <Path>target/schematron-peppol/PEPPOL-M-T110.sch</Path>
         <Title>Business rules for PEPPOL Order Agreement transaction 3.0</Title>
         <Tag>order-agreement-3.0</Tag>
     </Resource>
