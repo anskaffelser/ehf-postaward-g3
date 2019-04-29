@@ -1,0 +1,33 @@
+:shared-dir: ../../shared
+:lang: en
+:doctitle: EHF Punch Out 3.0
+
+include::{shared-dir}/settings.adoc[]
+
+= {doctitle}
+{name-difi-en}
+v3.0.0 RC
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:source-language: xml
+:sectanchors:
+:sectnums:
+:title-logo-image: {shared-dir}/images/logo.jpg
+
+:leveloffset: +1
+
+include::changelog/index.adoc[]
+
+// include::description/index.adoc[]
+
+include::../../../source/poacc-upgrade/guides/profiles/18-punchout/process/index.adoc[]
+
+:snippet-dir: ../../../../rules/snippets/punch-out
+include::../../../source/poacc-upgrade/guides/profiles/18-punchout/description/index.adoc[]
+
+// include::appendix/index.adoc[]
+
+:leveloffset: -1
