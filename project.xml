@@ -22,6 +22,30 @@
         <Title>Implementation Guideline</Title>
         <Tag>reminder-2.0</Tag>
     </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>catalogue-3.0/guide/</Path>
+        <Title>Implementation Guideline</Title>
+        <Tag>catalogue-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>despatch-advice-3.0/guide/</Path>
+        <Title>Implementation Guideline</Title>
+        <Tag>despatch-advice-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>order-agreement-3.0/guide/</Path>
+        <Title>Implementation Guideline</Title>
+        <Tag>order-agreement-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>punch-out-3.0/guide/</Path>
+        <Title>Implementation Guideline</Title>
+        <Tag>punch-out-3.0</Tag>
+    </Resource>
     <!-- <Resource>
         <Type>Doc-1</Type>
         <Path>profiles/</Path>
