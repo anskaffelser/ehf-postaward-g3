@@ -23,10 +23,13 @@ include::changelog/index.adoc[]
 
 // include::description/index.adoc[]
 
+
 include::../../../source/poacc-upgrade/guides/profiles/18-punchout/process/index.adoc[]
 
 :snippet-dir: ../../../../rules/snippets/punch-out
 include::../../../source/poacc-upgrade/guides/profiles/18-punchout/description/index.adoc[]
+
+include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[]
 
 // include::appendix/index.adoc[]
 

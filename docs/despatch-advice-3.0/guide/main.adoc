@@ -1,0 +1,37 @@
+:shared-dir: ../../shared
+:lang: en
+:doctitle: EHF Despatch Advice 3.0
+
+include::{shared-dir}/settings.adoc[]
+
+= {doctitle}
+{name-difi-en}
+v3.0.0 RC
+:description: This document describes the new version of EHF Despatch Advice (called "EHF Pakkseddel"). The document is part of Norwegian "Agency of Public Management and eGovernment" (Difi) standardization work related to electronic commerce.
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:source-language: xml
+:sectanchors:
+:sectnums:
+:title-logo-image: {shared-dir}/images/logo.jpg
+
+:leveloffset: +1
+
+include::changelog/index.adoc[]
+
+// include::description/index.adoc[]
+include::../../../source/poacc-upgrade/guides/profiles/30-despatchadvice/principles/index.adoc[]
+
+include::../../../source/poacc-upgrade/guides/profiles/30-despatchadvice/process/index.adoc[]
+
+:snippet-dir: ../../../../rules/snippets/punch-out
+include::../../../source/poacc-upgrade/guides/profiles/30-despatchadvice/description/index.adoc[]
+
+include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[]
+
+// include::appendix/index.adoc[]
+
+:leveloffset: -1

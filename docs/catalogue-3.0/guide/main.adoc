@@ -31,6 +31,7 @@ include::../../../source/poacc-upgrade/guides/transactions/19-catalogue/descript
 :snippet-response-dir: ../../../../rules/snippets/order-response
 include::../../../source/poacc-upgrade/guides/transactions/58-catalogue-response/description/index.adoc[]
 
+include::../../shared/datatypes/index.adoc[]
 
 // include::appendix/index.adoc[]
 

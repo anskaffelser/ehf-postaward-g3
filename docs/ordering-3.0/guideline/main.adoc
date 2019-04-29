@@ -31,6 +31,9 @@ include::../../../source/poacc-upgrade/guides/transactions/01-order/description/
 :snippet-response-dir: ../../../../rules/snippets/order-response
 include::../../../source/poacc-upgrade/guides/transactions/76-order-response/description/index.adoc[]
 
+include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[]
+
 // include::appendix/index.adoc[]
+
 
 :leveloffset: -1
