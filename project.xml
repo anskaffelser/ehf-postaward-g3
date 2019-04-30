@@ -232,6 +232,11 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>source/poacc-upgrade/structure/codelist/ISO4217_2015.xml</Path>
+        <Tag>catalogue-3.0</Tag>
+        <Tag>despatch-advice-3.0</Tag>
+        <Tag>ordering-3.0</Tag>
+        <Tag>order-agreement-3.0</Tag>
+        <Tag>punch-out-3.0</Tag>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
@@ -332,6 +337,11 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>source/poacc-upgrade/structure/codelist/UNECERec20-11e.xml</Path>
+        <Tag>catalogue-3.0</Tag>
+        <Tag>despatch-advice-3.0</Tag>
+        <Tag>ordering-3.0</Tag>
+        <Tag>order-agreement-3.0</Tag>
+        <Tag>punch-out-3.0</Tag>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
