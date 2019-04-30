@@ -7,7 +7,7 @@ include::{shared-dir}/settings.adoc[]
 = {doctitle}
 {name-difi-en}
 v3.0.0 RC
-:description: This document describes the new version of EHF Order Agreement (called "EHF Order"). The document is part of Norwegian "Agency of Public Management and eGovernment" (Difi) standardization work related to electronic commerce.
+:description: This document describes the new version of EHF Order Agreement (called "EHF Orderforslag" in Norwegian). The document is part of Norwegian "Agency of Public Management and eGovernment" (Difi) standardization work related to electronic commerce.
 :doctype: book
 :icons: font
 :toc: left
