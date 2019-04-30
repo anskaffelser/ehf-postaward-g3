@@ -80,7 +80,7 @@ done
 )
 trigger_scripts() (
 test ! -r /target/env || . /target/env
-for file in $(find /src/scripts/$1 -type f -name *.sh -maxdepth 1 | sort); do
+for file in $(find /src/.build/$1-scripts -type f -name *.sh -maxdepth 1 | sort); do
 echo "> $(basename $file)"
 . $file
 done

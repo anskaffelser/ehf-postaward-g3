@@ -62,7 +62,7 @@ ownership:
 	$(call docker_run,ownership,Fixing ownership,\
 			-v $(PROJECT):/src \
 			alpine:3.8 \
-			chown -R $(shell id -g ${USER}).$(shell id -g ${USER}) /src/target)
+			chown -R $(shell id -u).$(shell id -g) /src/target)
 serve:
 	$(call docker_run,serve,Serve serve,\
 			-v $(PROJECT):/src \
@@ -89,7 +89,7 @@ env:
 			--entrypoint sh \
 			-w /src \
 			alpine/git \
-			.build/ehf.sh trigger_environment)
+			/src/.build/ehf.sh trigger_environment)
 RULE_DOCS=$(shell test -e $(PROJECT)/$(DOCS_FOLDER) && echo true || echo false)
 docs:
 ifeq "$(RULE_DOCS)" "true"
@@ -130,29 +130,29 @@ ifeq "$(RULE_XSD)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			klakegg/schematron:dev \
-			sh .build/ehf.sh trigger_xsd)
+			sh /src/.build/ehf.sh trigger_xsd)
 else
 	$(call skip,xsds)
 endif
-RULE_SCRIPTS_PRE=$(shell test -d $(PROJECT)/scripts/pre && find $(PROJECT)/scripts/pre -maxdepth 1 -name '*.sh' | wc -l | xargs test "0" != && echo true || echo false)
+RULE_SCRIPTS_PRE=$(shell test -d $(PROJECT)/.build/pre-scripts && find $(PROJECT)/.build/pre-scripts -maxdepth 1 -name '*.sh' | wc -l | xargs test "0" != && echo true || echo false)
 scripts_pre:
 ifeq "$(RULE_SCRIPTS_PRE)" "true"
 	$(call docker_run,scripts_pre,Running pre scripts,\
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			klakegg/schematron:dev \
-			sh .build/ehf.sh trigger_scripts pre)
+			sh /src/.build/ehf.sh trigger_scripts pre)
 else
 	$(call skip,pre scripts)
 endif
-RULE_SCRIPTS_POST=$(shell test -d $(PROJECT)/scripts/post && find $(PROJECT)/scripts/post -maxdepth 1 -name '*.sh' | wc -l | xargs test "0" != && echo true || echo false)
+RULE_SCRIPTS_POST=$(shell test -d $(PROJECT)/.build/post-scripts && find $(PROJECT)/.build/post-scripts -maxdepth 1 -name '*.sh' | wc -l | xargs test "0" != && echo true || echo false)
 scripts_post:
 ifeq "$(RULE_SCRIPTS_POST)" "true"
 	$(call docker_run,scripts_post,Running post scripts,\
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			klakegg/schematron:dev \
-			sh .build/ehf.sh trigger_scripts post)
+			sh /src/.build/ehf.sh trigger_scripts post)
 else
 	$(call skip,post scripts)
 endif
@@ -175,7 +175,7 @@ ifeq "$(RULE_SCHEMATRON)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			klakegg/schematron:dev \
-			sh .build/ehf.sh trigger_schematron)
+			sh /src/.build/ehf.sh trigger_schematron)
 else
 	$(call skip,schematron)
 endif
@@ -186,7 +186,7 @@ ifeq "$(RULE_EXAMPLE)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			klakegg/schematron:dev \
-			sh .build/ehf.sh trigger_examples)
+			sh /src/.build/ehf.sh trigger_examples)
 else
 	$(call skip,example files)
 endif
