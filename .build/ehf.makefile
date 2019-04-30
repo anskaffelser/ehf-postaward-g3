@@ -53,7 +53,7 @@ clean:
 ifeq "$(RULE_CLEAN)" "true"
 	$(call docker_run,clean,Removing old target folder,\
 			-v $(PROJECT):/src \
-			alpine:3.8 \
+			difi/ehfbuild \
 			rm -rf /src/target)
 else
 	$(call skip,cleaning)
@@ -61,7 +61,7 @@ endif
 ownership:
 	$(call docker_run,ownership,Fixing ownership,\
 			-v $(PROJECT):/src \
-			alpine:3.8 \
+			difi/ehfbuild \
 			chown -R $(shell id -u).$(shell id -g) /src/target)
 serve:
 	$(call docker_run,serve,Serve serve,\
@@ -72,12 +72,10 @@ serve:
 			python3 -m http.server 8000 -b 0.0.0.0)
 pull:
 	$(call fold_start,docker_pull,Pulling Docker images)
-	$(call docker_pull,alpine:3.8)
 	$(call docker_pull,difi/vefa-structure:0.7)
 	$(call docker_pull,difi/vefa-validator)
-	$(call docker_pull,klakegg/schematron:dev)
+	$(call docker_pull,difi/ehfbuild)
 	$(call docker_pull,asciidoctor/docker-asciidoctor)
-	$(call docker_pull,alpine/git)
 	$(call fold_end,docker_pull)
 env:
 	$(call docker_run,environment,Creating environment file,\
@@ -88,7 +86,7 @@ env:
 			-e RELEASE="$(RELEASE)" \
 			--entrypoint sh \
 			-w /src \
-			alpine/git \
+			difi/ehfbuild \
 			/src/.build/ehf.sh trigger_environment)
 RULE_DOCS=$(shell test -e $(PROJECT)/$(DOCS_FOLDER) && echo true || echo false)
 docs:
@@ -129,7 +127,7 @@ ifeq "$(RULE_XSD)" "true"
 	$(call docker_run,xsd,Packaging XSD files,\
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
-			klakegg/schematron:dev \
+			difi/ehfbuild \
 			sh /src/.build/ehf.sh trigger_xsd)
 else
 	$(call skip,xsds)
@@ -140,7 +138,7 @@ ifeq "$(RULE_SCRIPTS_PRE)" "true"
 	$(call docker_run,scripts_pre,Running pre scripts,\
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
-			klakegg/schematron:dev \
+			difi/ehfbuild \
 			sh /src/.build/ehf.sh trigger_scripts pre)
 else
 	$(call skip,pre scripts)
@@ -151,7 +149,7 @@ ifeq "$(RULE_SCRIPTS_POST)" "true"
 	$(call docker_run,scripts_post,Running post scripts,\
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
-			klakegg/schematron:dev \
+			difi/ehfbuild \
 			sh /src/.build/ehf.sh trigger_scripts post)
 else
 	$(call skip,post scripts)
@@ -163,7 +161,7 @@ ifeq "$(RULE_STATIC)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			-w /src/static \
-			klakegg/schematron:dev \
+			difi/ehfbuild \
 			sh /src/.build/ehf.sh trigger_static)
 else
 	$(call skip,static)
@@ -174,7 +172,7 @@ ifeq "$(RULE_SCHEMATRON)" "true"
 	$(call docker_run,schematron,Packaging Schematron files,\
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
-			klakegg/schematron:dev \
+			difi/ehfbuild \
 			sh /src/.build/ehf.sh trigger_schematron)
 else
 	$(call skip,schematron)
@@ -185,7 +183,7 @@ ifeq "$(RULE_EXAMPLE)" "true"
 	$(call docker_run,examples,Packaging example files,\
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
-			klakegg/schematron:dev \
+			difi/ehfbuild \
 			sh /src/.build/ehf.sh trigger_examples)
 else
 	$(call skip,example files)
