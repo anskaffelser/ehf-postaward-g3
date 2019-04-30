@@ -19,8 +19,7 @@ v3.0.0 RC
 :sectanchors:
 :sectnums:
 :title-logo-image: {shared-dir}/images/logo.jpg
-:catalogue-path: ../../../source/poacc-upgrade/transactions/19-catalogue
-:response-path: ../../../source/poacc-upgrade/transactions/58-catalogue-response
+
 
 {description}
 
@@ -29,7 +28,8 @@ v3.0.0 RC
 include::changelog/index.adoc[]
 
 // include::description/index.adoc[]
-
+:catalogue-path: ../../../source/poacc-upgrade/transactions/19-catalogue
+:response-path: ../../../source/poacc-upgrade/transactions/58-catalogue-response
 include::../../../source/poacc-upgrade/guides/profiles/1-catalogueonly/principles/index.adoc[]
 
 include::../../../source/poacc-upgrade/guides/profiles/1-catalogueonly/process/index.adoc[]
