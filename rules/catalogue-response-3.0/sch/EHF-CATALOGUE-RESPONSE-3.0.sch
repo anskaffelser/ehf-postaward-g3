@@ -15,13 +15,15 @@
 
 	<!-- Functions -->
 
-	<xi:include href="../../../source/poacc-upgrade/rules/sch/parts/function/gln.xml"/>
+	<xi:include href="../../_common/sch/function/gln.xml"/>
+	<xi:include href="../../_common/sch/function/mod11.xml"/>
 	<xi:include href="../../../source/poacc-upgrade/rules/sch/parts/function/slack.xml"/>
 
 	<!-- Rules -->
 
 	<include href="../../_common/sch/parts/empty-elements.sch"/>
 	<include href="../../../target/generated/t58-basic.sch"/>
+	<include href="../../_common/sch/parts/identifiers.sch"/>
 	<!-- <include href="business/EHF-REMINDER.sch"/> -->
 
 </schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <testfolder>unit</testfolder>
+
+    <configuration>
+        <identifier>ehf-common-base-3.0</identifier>
+        <title>EHF Common 3.0</title>
+        <file source="sch/parts/combined.sch" path="xsl/EHF-COMMON-3.0.xsl" infoUrl="/ehf/g3/rules/{}/" />
+    </configuration>
+
+</buildConfigurations>

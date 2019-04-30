@@ -15,7 +15,8 @@
 
 	<!-- Functions -->
 
-	<xi:include href="../../../source/poacc-upgrade/rules/sch/parts/function/gln.xml"/>
+	<xi:include href="../../_common/sch/function/gln.xml"/>
+	<xi:include href="../../_common/sch/function/mod11.xml"/>
 	<xi:include href="../../../source/poacc-upgrade/rules/sch/parts/function/slack.xml"/>
 	<xi:include href="../../../source/poacc-upgrade/rules/sch/parts/function/cat2str.xml"/>
 
@@ -23,6 +24,7 @@
 
 	<include href="../../_common/sch/parts/empty-elements.sch"/>
 	<include href="../../../target/generated/t110-basic.sch"/>
+	<include href="../../_common/sch/parts/identifiers.sch"/>
 	<include href="../../../target/schematron-peppol/PEPPOL-M-T110.sch"/>
 	<!-- <include href="business/EHF-REMINDER.sch"/> -->
 
