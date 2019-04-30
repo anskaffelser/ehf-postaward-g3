@@ -89,7 +89,7 @@ env:
 			--entrypoint sh \
 			-w /src \
 			alpine/git \
-			tools/ehf.sh trigger_environment)
+			.build/ehf.sh trigger_environment)
 RULE_DOCS=$(shell test -e $(PROJECT)/$(DOCS_FOLDER) && echo true || echo false)
 docs:
 ifeq "$(RULE_DOCS)" "true"
@@ -99,7 +99,7 @@ ifeq "$(RULE_DOCS)" "true"
 			-w /src/$(DOCS_FOLDER) \
 			-e DIAGRAM=true \
 			asciidoctor/docker-asciidoctor \
-			sh /src/tools/ehf.sh trigger_asciidoctor)
+			sh /src/.build/ehf.sh trigger_asciidoctor)
 else
 	$(call skip,documentation)
 endif
@@ -130,7 +130,7 @@ ifeq "$(RULE_XSD)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			klakegg/schematron:dev \
-			sh tools/ehf.sh trigger_xsd)
+			sh .build/ehf.sh trigger_xsd)
 else
 	$(call skip,xsds)
 endif
@@ -141,7 +141,7 @@ ifeq "$(RULE_SCRIPTS_PRE)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			klakegg/schematron:dev \
-			sh tools/ehf.sh trigger_scripts pre)
+			sh .build/ehf.sh trigger_scripts pre)
 else
 	$(call skip,pre scripts)
 endif
@@ -152,7 +152,7 @@ ifeq "$(RULE_SCRIPTS_POST)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			klakegg/schematron:dev \
-			sh tools/ehf.sh trigger_scripts post)
+			sh .build/ehf.sh trigger_scripts post)
 else
 	$(call skip,post scripts)
 endif
@@ -164,7 +164,7 @@ ifeq "$(RULE_STATIC)" "true"
 			-v $(PROJECT)/target:/target \
 			-w /src/static \
 			klakegg/schematron:dev \
-			sh /src/tools/ehf.sh trigger_static)
+			sh /src/.build/ehf.sh trigger_static)
 else
 	$(call skip,static)
 endif
@@ -175,7 +175,7 @@ ifeq "$(RULE_SCHEMATRON)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			klakegg/schematron:dev \
-			sh tools/ehf.sh trigger_schematron)
+			sh .build/ehf.sh trigger_schematron)
 else
 	$(call skip,schematron)
 endif
@@ -186,7 +186,7 @@ ifeq "$(RULE_EXAMPLE)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			klakegg/schematron:dev \
-			sh tools/ehf.sh trigger_examples)
+			sh .build/ehf.sh trigger_examples)
 else
 	$(call skip,example files)
 endif

@@ -1,0 +1,55 @@
+:shared-dir: ../../shared
+:lang: en
+:doctitle: Release 2019-05-30
+
+include::{shared-dir}/settings.adoc[]
+
+= {doctitle}
+{name-difi-en}
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:source-language: xml
+:sectanchors:
+:title-logo-image: {shared-dir}/images/logo.jpg
+
+
+//== EHF Billing 3.0.1
+
+//include::../../billing-3.0/norway/changelog/2018-11-15-3.0.1.adoc[]
+
+
+== EHF Catalogue 3.0.0 RC
+
+include::../../catalogue-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
+
+
+== EHF Despatch Advice 3.0.0 RC
+
+include::../../despatch-advice-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
+
+
+== EHF Ordering 3.0.0 RC
+
+include::../../ordering-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
+
+
+== EHF Order Agreement 3.0.0 RC
+
+include::../../ordering-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
+
+
+== EHF Punch Out 3.0.0 RC
+
+include::../../ordering-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
+
+
+//== EHF Reminder 2.0.0 RC
+
+//EHF Reminder 2.0.0 is released as a Release Candidate as part of this release.
+
+//The intention is for the market to start implementing and to provide feedback which may be implemented as part of the final 2.0.0.
+
+//Please register any feedback as link:https://github.com/difi/ehf-postaward-g3[issues on Github] no later than December 14st for consideration for 2.0.0.

@@ -28,7 +28,6 @@
 			<Description>Identifies the BII profile or business process context in which the transaction appears.</Description>
 			<DataType>Identifier</DataType>
 			<Reference type="BUSINESS_TERM">tir19-001</Reference>
-			<Reference type="RULE">PEPPOL-T19-R017</Reference>
 			<Value type="FIXED">urn:fdc:difi.no:2019:ehf:postaward:g3:01:1.0</Value>
 		</Element>
 

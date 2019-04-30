@@ -32,17 +32,17 @@ append IDENTIFIER "$IDENTIFIER"
 append RELEASE "$RELEASE"
 append TIMESTAMP "$(date -u +"%Y-%m-%d %H:%Mz")"
 append TITLE "$TITLE"
-test ! -r /src/tools/script/environment.sh || . /src/tools/script/environment.sh
+test ! -r /src/.build/script/environment.sh || . /src/.build/script/environment.sh
 )
 trigger_examples() (
 test ! -r /target/env || . /target/env
 rm -rf /target/examples
 mkdir -p /target/examples /target/site/files
-test ! -r /src/tools/template/examples-readme || cat /src/tools/template/examples-readme | envsubst > /target/examples/README
+test ! -r /src/.build/template/examples-readme || cat /src/.build/template/examples-readme | envsubst > /target/examples/README
 for folder in $(find /src/rules -mindepth 2 -maxdepth 2 -name example -type d | sort); do
 cp -r $folder/* /target/examples/
 done
-test ! -r /src/tools/script/examples.sh || . /src/tools/script/examples.sh
+test ! -r /src/.build/script/examples.sh || . /src/.build/script/examples.sh
 cd /target/examples
 rm -rf /target/examples.zip
 zip -9 -r /target/examples.zip *
@@ -52,12 +52,12 @@ trigger_schematron() (
 test ! -r /target/env || . /target/env
 rm -rf /target/schematron
 mkdir -p /target/schematron /target/site/files
-test ! -r /src/tools/template/schematron-readme || cat /src/tools/template/schematron-readme | envsubst > /target/schematron/README
+test ! -r /src/.build/template/schematron-readme || cat /src/.build/template/schematron-readme | envsubst > /target/schematron/README
 for sch in $(ls /src/rules/*/sch/*.sch | sort); do
 echo "Prepare: $sch"
 schematron prepare $sch /target/schematron/$(basename $sch)
 done
-test ! -r /src/tools/script/schematron.sh || . /src/tools/script/schematron.sh
+test ! -r /src/.build/script/schematron.sh || . /src/.build/script/schematron.sh
 cd /target/schematron
 rm -rf /target/schematron.zip
 zip -9 -r /target/schematron.zip *
