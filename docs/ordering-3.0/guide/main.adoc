@@ -19,6 +19,12 @@ v3.0.0 RC
 :sectnums:
 :title-logo-image: {shared-dir}/images/logo.jpg
 
+
+//Variables
+:source-path: ../../../source/poacc-upgrade/guides
+:snippet-dir: ../../../../rules/snippets/order
+:snippet-response-dir: ../../../../rules/snippets/order-response
+
 {description}
 
 :leveloffset: +1
@@ -27,19 +33,15 @@ include::changelog/index.adoc[]
 
 // include::description/index.adoc[]
 
-include::../../../source/poacc-upgrade/guides/profiles/28-ordering/principles/index.adoc[]
+include::{source-path}/profiles/28-ordering/principles/index.adoc[]
 
-include::../../../source/poacc-upgrade/guides/profiles/28-ordering/process/index.adoc[]
+include::{source-path}/profiles/28-ordering/process/index.adoc[]
 
-:snippet-dir: ../../../../rules/snippets/order
-include::../../../source/poacc-upgrade/guides/transactions/01-order/description/index.adoc[]
+include::{source-path}/transactions/01-order/description/index.adoc[]
 
-:snippet-response-dir: ../../../../rules/snippets/order-response
-include::../../../source/poacc-upgrade/guides/transactions/76-order-response/description/index.adoc[]
+include::{source-path}/transactions/76-order-response/description/index.adoc[]
 
-include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[]
-
-include::appendix/index.adoc[]
+include::appendix.adoc[]
 
 
 

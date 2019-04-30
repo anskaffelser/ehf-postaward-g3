@@ -19,6 +19,10 @@ v3.0.0 RC
 :sectnums:
 :title-logo-image: {shared-dir}/images/logo.jpg
 
+//Variables
+:source-path: ../../../source/poacc-upgrade/guides
+:snippet-dir: ../../../../rules/snippets/punchout
+
 {description}
 
 :leveloffset: +1
@@ -27,15 +31,12 @@ include::changelog/index.adoc[]
 
 // include::description/index.adoc[]
 
-include::../../../source/poacc-upgrade/guides/profiles/18-punchout/principles/index.adoc[]
+include::{source-path}/profiles/18-punchout/principles/index.adoc[]
 
-include::../../../source/poacc-upgrade/guides/profiles/18-punchout/process/index.adoc[]
+include::{source-path}/profiles/18-punchout/process/index.adoc[]
 
-:snippet-dir: ../../../../rules/snippets/punchout
-include::../../../source/poacc-upgrade/guides/profiles/18-punchout/description/index.adoc[]
+include::{source-path}/profiles/18-punchout/description/index.adoc[]
 
-include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[]
-
-include::appendix/index.adoc[]
+include::appendix.adoc[]
 
 :leveloffset: -1

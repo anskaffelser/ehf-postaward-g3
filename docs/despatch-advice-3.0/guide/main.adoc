@@ -19,6 +19,11 @@ v3.0.0 RC
 :sectnums:
 :title-logo-image: {shared-dir}/images/logo.jpg
 
+
+//Variables
+:source-path: ../../../source/poacc-upgrade/guides
+:snippet-dir: ../../../../rules/snippets/despatch
+
 {description}
 
 :leveloffset: +1
@@ -26,15 +31,12 @@ v3.0.0 RC
 include::changelog/index.adoc[]
 
 // include::description/index.adoc[]
-include::../../../source/poacc-upgrade/guides/profiles/30-despatchadvice/principles/index.adoc[]
+include::{source-path}/profiles/30-despatchadvice/principles/index.adoc[]
 
-include::../../../source/poacc-upgrade/guides/profiles/30-despatchadvice/process/index.adoc[]
+include::{source-path}/profiles/30-despatchadvice/process/index.adoc[]
 
-:snippet-dir: ../../../../rules/snippets/despatch
-include::../../../source/poacc-upgrade/guides/profiles/30-despatchadvice/description/index.adoc[]
+include::{source-path}/profiles/30-despatchadvice/description/index.adoc[]
 
-include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[]
-
-include::appendix/index.adoc[]
+include::appendix.adoc[]
 
 :leveloffset: -1
