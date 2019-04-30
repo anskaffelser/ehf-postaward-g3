@@ -28,7 +28,7 @@ include::../../../source/poacc-upgrade/guides/profiles/18-punchout/principles/in
 
 include::../../../source/poacc-upgrade/guides/profiles/18-punchout/process/index.adoc[]
 
-:snippet-dir: ../../../../rules/snippets/punch-out
+:snippet-dir: ../../../../rules/snippets/punchout
 include::../../../source/poacc-upgrade/guides/profiles/18-punchout/description/index.adoc[]
 
 include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[]

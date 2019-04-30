@@ -28,11 +28,10 @@ include::../../../source/poacc-upgrade/guides/profiles/1-catalogueonly/principle
 
 include::../../../source/poacc-upgrade/guides/profiles/1-catalogueonly/process/index.adoc[]
 
-:snippet-dir: ../../../../rules/snippets/order
+:snippet-dir: ../../../../rules/snippets/catalogue
+:snippet-response-dir: ../../../../rules/snippets/catalogue-response
 include::../../../source/poacc-upgrade/guides/transactions/19-catalogue/description/index.adoc[]
 
-:snippet-response-dir: ../../../../rules/snippets/order-response
-include::../../../source/poacc-upgrade/guides/transactions/58-catalogue-response/description/index.adoc[]
 
 include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[]
 

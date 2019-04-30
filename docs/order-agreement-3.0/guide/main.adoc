@@ -28,7 +28,7 @@ include::../../../source/poacc-upgrade/guides/profiles/42-orderagreement/princip
 
 include::../../../source/poacc-upgrade/guides/profiles/42-orderagreement/process/index.adoc[]
 
-:snippet-dir: ../../../../rules/snippets/punch-out
+:snippet-dir: ../../../../rules/snippets/order-agreement
 include::../../../source/poacc-upgrade/guides/profiles/42-orderagreement/description/index.adoc[]
 
 include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[]

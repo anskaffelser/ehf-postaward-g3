@@ -27,7 +27,7 @@ include::../../../source/poacc-upgrade/guides/profiles/30-despatchadvice/princip
 
 include::../../../source/poacc-upgrade/guides/profiles/30-despatchadvice/process/index.adoc[]
 
-:snippet-dir: ../../../../rules/snippets/punch-out
+:snippet-dir: ../../../../rules/snippets/despatch
 include::../../../source/poacc-upgrade/guides/profiles/30-despatchadvice/description/index.adoc[]
 
 include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[]
