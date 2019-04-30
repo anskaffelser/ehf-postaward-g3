@@ -38,12 +38,12 @@ include::../../ordering-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
 
 == EHF Order Agreement 3.0.0 RC
 
-include::../../ordering-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
+include::../../order-agreement-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
 
 
 == EHF Punch Out 3.0.0 RC
 
-include::../../ordering-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
+include::../../punch-out-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
 
 
 //== EHF Reminder 2.0.0 RC
