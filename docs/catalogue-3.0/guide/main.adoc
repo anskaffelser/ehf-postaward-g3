@@ -5,7 +5,6 @@
 include::{shared-dir}/settings.adoc[]
 include::../../../source/poacc-upgrade/guides/shared/links.adoc[]
 
-
 = {doctitle}
 {name-difi-en}
 v3.0.0 RC
@@ -20,6 +19,13 @@ v3.0.0 RC
 :sectnums:
 :title-logo-image: {shared-dir}/images/logo.jpg
 
+// Variables
+:source-path: ../../../source/poacc-upgrade/guides
+:catalogue-path: ../../transactions/19-catalogue
+:response-path: ../../transactions/58-catalogue-response
+:snippet-dir: ../../../../rules/snippets/catalogue
+:snippet-response-dir: ../../../../rules/snippets/catalogue-response
+
 
 {description}
 
@@ -27,20 +33,12 @@ v3.0.0 RC
 
 include::changelog/index.adoc[]
 
-// include::description/index.adoc[]
-:catalogue-path: ../../../guides/transactions/19-catalogue
-:response-path: ../../../guides/transactions/58-catalogue-response
-include::../../../source/poacc-upgrade/guides/profiles/1-catalogueonly/principles/index.adoc[]
+include::{source-path}/profiles/1-catalogueonly/principles/index.adoc[]
 
-include::../../../source/poacc-upgrade/guides/profiles/1-catalogueonly/process/index.adoc[]
+include::{source-path}/profiles/1-catalogueonly/process/index.adoc[]
 
-:snippet-dir: ../../../../rules/snippets/catalogue
-:snippet-response-dir: ../../../../rules/snippets/catalogue-response
-include::../../../source/poacc-upgrade/guides/transactions/19-catalogue/description/index.adoc[]
+include::{source-path}/transactions/19-catalogue/description/index.adoc[]
 
-
-include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[]
-
-include::appendix/index.adoc[]
+include::appendix.adoc[]
 
 :leveloffset: -1

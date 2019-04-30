@@ -13,7 +13,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
 			<cac:Party>
-				<cbc:EndpointID schemeID="NO:ORGNR">123456785</cbc:EndpointID>
+				<cbc:EndpointID schemeID="0192">123456785</cbc:EndpointID>
 			</cac:Party>
 
 		</Invoice>
@@ -28,12 +28,12 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
 			<cac:Party>
-				<cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
-				<cbc:EndpointID schemeID="NO:ORGNR">123.456.785</cbc:EndpointID>
-				<cbc:EndpointID schemeID="NO:ORGNR">123 456 785</cbc:EndpointID>
-				<cbc:EndpointID schemeID="NO:ORGNR">NO123456785</cbc:EndpointID>
-				<cbc:EndpointID schemeID="NO:ORGNR">123456785MVA</cbc:EndpointID>
-				<cbc:EndpointID schemeID="NO:ORGNR">NO123456785MVA</cbc:EndpointID>
+				<cbc:EndpointID schemeID="0192">123456789</cbc:EndpointID>
+				<cbc:EndpointID schemeID="0192">123.456.785</cbc:EndpointID>
+				<cbc:EndpointID schemeID="0192">123 456 785</cbc:EndpointID>
+				<cbc:EndpointID schemeID="0192">NO123456785</cbc:EndpointID>
+				<cbc:EndpointID schemeID="0192">123456785MVA</cbc:EndpointID>
+				<cbc:EndpointID schemeID="0192">NO123456785MVA</cbc:EndpointID>
 			</cac:Party>
 
 		</Invoice>
