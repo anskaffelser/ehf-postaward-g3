@@ -7,14 +7,16 @@ RELEASE := $(if $(RELEASE),$(RELEASE),Unofficial)
 DOCS_FOLDER := $(if $(DOCS_FOLDER),$(DOCS_FOLDER),docs)
 RULES_FOLDER := $(if $(RULES_FOLDER),$(RULES_FOLDER),rules)
 RULES_IDENT := $(if $(RULES_IDENT),$(RULES_IDENT),rules)
-BUILD = structure example schematron xsd rules docs static
+BUILD = structure example schematron xsd xslt rules docs static
 .DEFAULT_GOAL = default
 define docker_pull
 	@docker pull $(1)
 endef
 define docker_run
 	$(call fold_start,$(1),$(2))
+	$(call scripts,$(1),pre)
 	@docker run --rm -i $(3) || touch $(PROJECT)/.failed
+	$(call scripts,$(1),post)
 	$(call fold_end,$(1))
 	@if [ -e $(PROJECT)/.failed ]; then \
 		rm $(PROJECT)/.failed; \
@@ -41,6 +43,16 @@ endef
 endif
 define skip
 	@echo "\033[2;37mSkipping $(1)\033[0m"
+endef
+define scripts
+	@test -d $(PROJECT)/.build/$(1)-$(2)-scripts \
+		&& find $(PROJECT)/.build/$(1)-$(2)-scripts -maxdepth 1 -name '*.sh' | wc -l | xargs test "0" != \
+		&& docker run --rm -i \
+				-v $(PROJECT):/src \
+				-v $(PROJECT)/target:/target \
+				difi/ehfbuild \
+				sh /src/.build/ehf.sh trigger_scripts $(1)-$(2) \
+		|| true
 endef
 ifeq "${TRAVIS}" "true"
 default: pull build
@@ -132,25 +144,36 @@ ifeq "$(RULE_XSD)" "true"
 else
 	$(call skip,xsds)
 endif
-RULE_SCRIPTS_PRE=$(shell test -d $(PROJECT)/.build/pre-scripts && find $(PROJECT)/.build/pre-scripts -maxdepth 1 -name '*.sh' | wc -l | xargs test "0" != && echo true || echo false)
+RULE_XSLT=$(shell test -d $(PROJECT)/xslt && find $(PROJECT)/xslt -mindepth 1 -maxdepth 1 -type d | wc -l | xargs test '0' != && echo true || echo "false")
+xslt:
+ifeq "$(RULE_XSLT)" "true"
+	$(call docker_run,xslt,Packaging XSLT files,\
+			-v $(PROJECT):/src \
+			-v $(PROJECT)/target:/target \
+			difi/ehfbuild \
+			sh /src/.build/ehf.sh trigger_xslt)
+else
+	$(call skip,xslts)
+endif
+RULE_SCRIPTS_PRE=$(shell test -d $(PROJECT)/.build/project-pre-scripts && find $(PROJECT)/.build/project-pre-scripts -maxdepth 1 -name '*.sh' | wc -l | xargs test "0" != && echo true || echo false)
 scripts_pre:
 ifeq "$(RULE_SCRIPTS_PRE)" "true"
 	$(call docker_run,scripts_pre,Running pre scripts,\
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			difi/ehfbuild \
-			sh /src/.build/ehf.sh trigger_scripts pre)
+			sh /src/.build/ehf.sh trigger_scripts project-pre)
 else
 	$(call skip,pre scripts)
 endif
-RULE_SCRIPTS_POST=$(shell test -d $(PROJECT)/.build/post-scripts && find $(PROJECT)/.build/post-scripts -maxdepth 1 -name '*.sh' | wc -l | xargs test "0" != && echo true || echo false)
+RULE_SCRIPTS_POST=$(shell test -d $(PROJECT)/.build/project-post-scripts && find $(PROJECT)/.build/project-post-scripts -maxdepth 1 -name '*.sh' | wc -l | xargs test "0" != && echo true || echo false)
 scripts_post:
 ifeq "$(RULE_SCRIPTS_POST)" "true"
 	$(call docker_run,scripts_post,Running post scripts,\
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			difi/ehfbuild \
-			sh /src/.build/ehf.sh trigger_scripts post)
+			sh /src/.build/ehf.sh trigger_scripts project-post)
 else
 	$(call skip,post scripts)
 endif
@@ -188,4 +211,4 @@ ifeq "$(RULE_EXAMPLE)" "true"
 else
 	$(call skip,example files)
 endif
-.PHONY: default build clean ownership serve pull env docs rules structure xsd scripts_pre scripts_post static schematron example
+.PHONY: default build clean ownership serve pull env docs rules structure xsd xslt scripts_pre scripts_post static schematron example

@@ -78,9 +78,25 @@ zip -9 -r /target/xsd/$name.zip *
 cp /target/xsd/$name.zip /target/site/files/xsd-$name.zip
 done
 )
+trigger_xslt() (
+test ! -r /target/env || . /target/env
+rm -rf /target/xslt
+mkdir -p /target/xslt /target/site/files
+for folder in $(find /src/xslt -mindepth 1 -maxdepth 1 -type d | sort); do
+name=$(basename $folder)
+echo "Packaging $name"
+cp -r $folder /tmp/$name
+cd /tmp/$name
+test ! -e prepare.sh || . prepare.sh
+rm -rf prepare.sh
+zip -9 -r /target/xslt/$name.zip *
+cp /target/xslt/$name.zip /target/site/files/xslt-$name.zip
+done
+)
 trigger_scripts() (
 test ! -r /target/env || . /target/env
 for file in $(find /src/.build/$1-scripts -type f -name *.sh -maxdepth 1 | sort); do
+cd /src
 echo "> $(basename $file)"
 . $file
 done
