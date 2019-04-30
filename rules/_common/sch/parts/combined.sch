@@ -14,7 +14,7 @@
 
 	<!-- Functions -->
 
-	<xi:include href="../function/gln.xml"/>
+	<xi:include href="../function/mod11.xml"/>
 
 	<!-- Rules -->
 
