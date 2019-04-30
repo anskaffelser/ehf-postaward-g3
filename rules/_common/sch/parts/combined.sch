@@ -8,6 +8,6 @@
 	<ns prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
 
 	<include href="empty-elements.sch"/>
-	<include href="identifiers"/>
+	<include href="identifiers.sch"/>
 
 </schema>
