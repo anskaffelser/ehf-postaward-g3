@@ -39,7 +39,8 @@ include::../../../source/poacc-upgrade/guides/transactions/76-order-response/des
 
 include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[]
 
-include::appendix/Appendix-A.adoc[]
+include::appendix/index.adoc[]
+
 
 
 :leveloffset: -1

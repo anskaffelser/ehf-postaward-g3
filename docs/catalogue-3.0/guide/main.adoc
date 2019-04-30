@@ -4,6 +4,8 @@
 
 include::{shared-dir}/settings.adoc[]
 include::../../../source/poacc-upgrade/guides/shared/links.adoc[]
+:catalogue-path: ../../../source/poacc-upgrade/transactions/19-catalogue
+:response-path: ../../../source/poacc-upgrade/transactions/58-catalogue-response
 
 = {doctitle}
 {name-difi-en}
