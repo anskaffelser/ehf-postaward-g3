@@ -1,5 +1,5 @@
 
-include::../../shared/appendix/ubl-2.2.adoc[]
+include::../../_common/appendix/ubl-2.2.adoc[]
 
-include::../../shared/appendix/semantic-datatypes.adoc[]
+include::../../_common/appendix/semantic-datatypes.adoc[]
 

@@ -1,4 +1,4 @@
-:shared-dir: ../../shared
+:shared-dir: ../../_common
 :lang: en
 :doctitle: EHF Catalogue 3.0
 

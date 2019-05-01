@@ -1,4 +1,4 @@
-:shared-dir: ../../shared
+:shared-dir: ../../_common
 :lang: en
 :doctitle: EHF Punch Out 3.0
 

@@ -46,11 +46,6 @@
         <Title>Implementation Guideline</Title>
         <Tag>punch-out-3.0</Tag>
     </Resource>
-    <!-- <Resource>
-        <Type>Doc-1</Type>
-        <Path>profiles/</Path>
-        <Title>Profiles in EHF Post-Award G3</Title>
-    </Resource> -->
     <Resource>
         <Type>Doc-1</Type>
         <Path>release/2018-11-15</Path>
@@ -75,49 +70,49 @@
     <!-- Syntax -->
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/syntax/ehf-catalogue-3.0.xml</Path>
+        <Path>structure/catalogue-3.0/syntax/ehf-catalogue-3.0.xml</Path>
         <Title>EHF Catalogue 3.0</Title>
         <Tag>catalogue-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/syntax/ehf-catalogue-response-3.0.xml</Path>
+        <Path>structure/catalogue-3.0/syntax/ehf-catalogue-response-3.0.xml</Path>
         <Title>EHF Catalogue Response 3.0</Title>
         <Tag>catalogue-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/syntax/ehf-despatch-advice-3.0.xml</Path>
+        <Path>structure/despatch-advice-3.0/syntax/ehf-despatch-advice-3.0.xml</Path>
         <Title>EHF Despatch Advice 3.0</Title>
         <Tag>despatch-advice-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/syntax/ehf-order-3.0.xml</Path>
+        <Path>structure/ordering-3.0/syntax/ehf-order-3.0.xml</Path>
         <Title>EHF Order 3.0</Title>
         <Tag>ordering-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/syntax/ehf-order-response-3.0.xml</Path>
+        <Path>structure/ordering-3.0/syntax/ehf-order-response-3.0.xml</Path>
         <Title>EHF Order Response 3.0</Title>
         <Tag>ordering-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/syntax/ehf-order-agreement-3.0.xml</Path>
+        <Path>structure/order-agreement-3.0/syntax/ehf-order-agreement-3.0.xml</Path>
         <Title>EHF Order Agreement 3.0</Title>
         <Tag>order-agreement-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/syntax/ehf-punch-out-3.0.xml</Path>
+        <Path>structure/punch-out-3.0/syntax/ehf-punch-out-3.0.xml</Path>
         <Title>EHF Punch Out 3.0</Title>
         <Tag>punch-out-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/syntax/ehf-reminder-2.0.xml</Path>
+        <Path>structure/reminder-2.0/syntax/ehf-reminder-2.0.xml</Path>
         <Title>EHF Reminder 2.0</Title>
         <Tag>reminder-2.0</Tag>
     </Resource>
@@ -296,7 +291,7 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>structure/codelist/reminder-2.0/UNCL4461.xml</Path>
+        <Path>structure/reminder-2.0/codelist/UNCL4461.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>

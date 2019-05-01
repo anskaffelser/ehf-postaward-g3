@@ -1,4 +1,4 @@
-:shared-dir: ../../shared
+:shared-dir: ../../_common
 :lang: en
 :doctitle: EHF Reminder 2.0
 

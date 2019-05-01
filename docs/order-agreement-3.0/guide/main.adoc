@@ -1,4 +1,4 @@
-:shared-dir: ../../shared
+:shared-dir: ../../_common
 :lang: en
 :doctitle: EHF Order Agreement 3.0
 
