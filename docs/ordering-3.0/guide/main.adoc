@@ -24,7 +24,6 @@ v3.0.0 RC
 :source-path: ../../../source/poacc-upgrade/guides
 :snippet-dir: ../../../../rules/snippets/order
 :snippet-response-dir: ../../../../rules/snippets/order-response
-:process-path: ../../../rules
 
 {description}
 
@@ -36,7 +35,7 @@ include::changelog/index.adoc[]
 
 include::{source-path}/profiles/28-ordering/principles/index.adoc[]
 
-include::{process-path}/ordering-3.0/usecase/index.adoc[]
+include::usecase/index.adoc[]
 
 include::{source-path}/transactions/01-order/description/index.adoc[]
 
