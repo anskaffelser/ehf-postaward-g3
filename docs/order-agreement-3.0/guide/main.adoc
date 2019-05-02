@@ -22,6 +22,7 @@ v3.0.0 RC
 //Variables
 :source-path: ../../../source/poacc-upgrade/guides
 :snippet-dir: ../../../../rules/snippets/order-agreement
+:process-path: ../../../rules
 
 {description}
 
@@ -33,7 +34,7 @@ include::changelog/index.adoc[]
 
 include::{source-path}/profiles/42-orderagreement/principles/index.adoc[]
 
-include::{source-path}/profiles/42-orderagreement/process/index.adoc[]
+include::{process-path}/order-agreement-3.0/usecase/index.adoc[]
 
 include::{source-path}/profiles/42-orderagreement/description/index.adoc[]
 

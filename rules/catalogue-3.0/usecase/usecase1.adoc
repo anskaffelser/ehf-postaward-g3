@@ -1,0 +1,42 @@
+= use case 1 – A new catalogue from the Seller and accept from the Buyer
+
+This use case includes a simple catalogue containing mandatory information and information required to get a high performance from the buyers search engine.
+The catalogue contains both products and services.
+This is the first catalogue to the receiver.
+
+
+****
+
+Description::
+The provider sends a catalogue to the receiver.
+The catalogue contains the articles that the buyer and seller have agreed on in a contract.
+This is the first catalogue being sent on this contract.
+After receiving the catalogue, the buyer accepts the catalogue using a response message.
+
+Parties involved::
+Catalogue Provider (same legal entity as the Supplier/Seller in this use case) +
+Catalogue Receiver (same legal entity as the Customer/Buyer in this use case)
+
+Assumptions::
+.  The Seller and the Buyer have a contract of products and services that the buyer may purchase from the Seller.
+.  The parties have agreed to exchange the catalogue and catalogue response messages
+.  The articles are
+..  Physical articles (pens and papers)
+..  Fruits
+..  Services
+
+Flow::
+.  The Seller identifies the contracted items
+.  The Provider creates a Catalogue message
+.  The Provider sends the message to the Receiver
+.  The Buyer verifies the content in the message consider to accept or reject the catalogue.
+.  The Buyer sends a Catalogue response with accept.
+.  The Buyer inserts the articles from the catalogue message in the local ERP-system.
+
+Result::
+.  The Buyer have all the articles and the contracted prices in the ERP-system and may start ordering
+.  The ordering process is easy when you have all necessary information in the ERP-system.
+
+****
+
+

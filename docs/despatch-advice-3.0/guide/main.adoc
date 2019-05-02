@@ -22,6 +22,7 @@ v3.0.0 RC
 
 //Variables
 :source-path: ../../../source/poacc-upgrade/guides
+:process-path: ../../../rules
 :snippet-dir: ../../../../rules/snippets/despatch
 
 {description}
@@ -33,7 +34,7 @@ include::changelog/index.adoc[]
 // include::description/index.adoc[]
 include::{source-path}/profiles/30-despatchadvice/principles/index.adoc[]
 
-include::{source-path}/profiles/30-despatchadvice/process/index.adoc[]
+include::{process-path}/despatch-advice-3.0/usecase/index.adoc[]
 
 include::{source-path}/profiles/30-despatchadvice/description/index.adoc[]
 

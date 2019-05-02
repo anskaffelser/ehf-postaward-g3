@@ -1,0 +1,32 @@
+= Use case 5 – Catalogue with all information
+
+This is an Update of a previous sent catalogue and not based on any of the other uses cases.
+The catalogue includes all possible information in a BIS catalogue.
+Some information may not be relevant, but is in the catalogue for giving an example.
+
+****
+
+Description::
+The provider sends a catalogue deletion to the receiver.
+
+Parties involved::
+Supplier/Seller +
+Catalogue Receiver +
+Customer/Buyer +
+
+Assumptions::
+.  The Seller has previously sent a catalogue to the Buyer which has been accepted.
+.  The Seller needs to send a new article to update the previous catalogue.
+
+Flow::
+.  The Seller identifies the article to be added
+.  The Provider creates a Catalogue message
+.  The Provider sends the message to the Receiver
+.  The Buyer verifies the content in the message and considers the catalogue acceptable.
+.  The Buyer sends a Catalogue response with accept.
+.  The Buyer inserts/updates the information from the catalogue message in the local ERP-system..
+
+Result::
+.  The Buyer have the articles and the contracted prices in the ERP-system and may start ordering.
+
+****

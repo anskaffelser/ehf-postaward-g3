@@ -1,0 +1,62 @@
+= Use case 3 - Despatch with Logistic units using GS1 Keys
+
+This use case is a refined use of the Despatch Advice where several GS1 keys are applied within the Despatch Advice to identify various entities in the despatch advice, namely; Parties, Endpoints, Shipment id, consignment ids, logistic unit ids and product identification.
+
+****
+
+Description::
+Describes a complete process whereby a Despatch party generates a Despatch Advice based on information about the order and the product.
+The Despatch Advice enables the supplier (carrier) to provide detailed information about the content of a shipment and enables a Buyer to reconcile, or confirm, the physical shipment against the order; it provides a mirror of the shipment’s packaging details and structure of the delivery.
+The Despatch Advice is sent by the Despatch party to the Consignee party when the goods are sent.
+
+Parties involved::
+Despatch party In UBL: DespatchSupplierParty) (Different legal entity than the Seller in this use case) +
+Seller (In UBL: SellerSupplierParty) +
+Consignee party (In UBL: DeliveryCustomerParty) (Different legal entity than the Buyer in this use) +
+Buyer (In UBL: BuyerCustomerParty)
+
+Pre Conditions::
+Master data alignment of locations (GLNs) and products (GTINs).
+
+Post Conditions::
+Despatch advice is received by the receiver of the goods.
+
+Assumptions::
+..  The Despatch Advice has one shipment id (GSIN) assigned by the seller
+..  The Despatch Advice has one consignment id which has been assigned by the carrier (GINC)
+..  One delivery point (no cross docking) which is identified by a GLN.
+..  The four despatch lines are each an orderable unit – a GTIN.
+..  Two ordered units (GTINS) are packed on each pallet.
+..  There are two pallets in the shipment.
+..  Each standard pallet is assigned one logistics’ unit id (SSCC).
+..  A logistics’ label has been applied to each of the pallets where the SSCC is used rendered as clear text numbers, address details and GS1 128 barcode
++
+_Relationship between the GTIN and the SSCC keys_
++
+image:images/gtin-scss.png[image,width=271,height=93]
+
+
+Flow::
+The Seller has accepted the order without changes.
+
+.  The Seller collects the ordered goods
+.  The ordered goods consist of one pallet per ordered 2 line items.
+.  The Despatch party loads the goods onto the transport.
+.  The Despatch party sends the Despatch advice to the Consignee
+.  The Consignee party receives the Despatch advice message.
+..  The Consignee party uses the content in the Despatch advice message for registration receipt.
+
+
+Result::
+.  The Despatch advice message helped the Consignee party to prepare for receipt of goods:
+..  At the right time
+..  At the right location (address)
+.  The Despatch advice helped the Consignee party in the process of receipt registration to identify the:
+..  Order
+..  The order lines
+..  The logistics’ handling units
+..  The goods description
+..  The delivered quantity
+..  The parties involved in the process
+
+****
