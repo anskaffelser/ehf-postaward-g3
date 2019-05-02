@@ -37,7 +37,7 @@ A seller may either:
 
 :leveloffset: +1
 
-include::../../../source/poacc-upgrade/guides/shared/bpmn/bpmn-legend.adoc[]
+include::../../../../source/poacc-upgrade/guides/shared/bpmn/bpmn-legend.adoc[]
 
 :leveloffset: -1
 
