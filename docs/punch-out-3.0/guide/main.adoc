@@ -27,10 +27,6 @@ v3.0.0 RC
 
 :leveloffset: +1
 
-include::changelog/index.adoc[]
-
-// include::description/index.adoc[]
-
 include::{source-path}/profiles/18-punchout/principles/index.adoc[]
 
 include::usecase/index.adoc[]

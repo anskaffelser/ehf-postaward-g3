@@ -66,6 +66,16 @@
         <Tag>order-agreement-3.0</Tag>
         <Tag>punch-out-3.0</Tag>
     </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>changelog</Path>
+        <Title>Changelog</Title>
+        <Tag>catalogue-3.0</Tag>
+        <Tag>despatch-advice-3.0</Tag>
+        <Tag>ordering-3.0</Tag>
+        <Tag>order-agreement-3.0</Tag>
+        <Tag>punch-out-3.0</Tag>
+    </Resource>
 
     <!-- Syntax -->
     <Resource>
