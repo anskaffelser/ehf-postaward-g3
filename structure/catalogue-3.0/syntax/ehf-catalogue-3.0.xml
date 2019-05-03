@@ -155,9 +155,9 @@
 					<Name>Scheme identifier</Name>
 					<Description>Scheme identifier for the electronic address</Description>
 					<Reference type="CODE_LIST">eas</Reference>
-					<Value type="EXAMPLE">0088</Value>
+					<Value type="EXAMPLE">0192</Value>
 				</Attribute>
-				<Value type="EXAMPLE">7300010000001</Value>
+				<Value type="EXAMPLE">987654325</Value>
 			</Element>
 			<Element cardinality="0..1">
 				<Term>cac:PartyIdentification</Term>
@@ -175,9 +175,9 @@
 						<Description>Scheme identifier of the Provider identification</Description>
 
 						<Reference type="CODE_LIST">ICD</Reference>
-						<Value type="EXAMPLE">0184</Value>
+						<Value type="EXAMPLE">0192</Value>
 					</Attribute>
-					<Value type="EXAMPLE">12345678</Value>
+					<Value type="EXAMPLE">123456785</Value>
 				</Element>
 			</Element>
 			<Element cardinality="0..1">
@@ -285,9 +285,9 @@
 						<Name>Provider legal registration identifier identification scheme identifier</Name>
 						<Description>The identification scheme identifier of the provider legal registration identifier.</Description>
 						<Reference type="CODE_LIST">ICD</Reference>
-						<Value type="EXAMPLE">0002</Value>
+						<Value type="EXAMPLE">0192</Value>
 					</Attribute>
-					<Value type="EXAMPLE">8346294</Value>
+					<Value type="EXAMPLE">987654325</Value>
 				</Element>
 				<Element cardinality="0..1">
 					<Term>cac:RegistrationAddress</Term>
@@ -338,9 +338,9 @@
 					<Name>Scheme identifier</Name>
 					<Description>Scheme identifier for the electronic address</Description>
 					<Reference type="CODE_LIST">eas</Reference>
-					<Value type="EXAMPLE">0088</Value>
+					<Value type="EXAMPLE">0192</Value>
 				</Attribute>
-				<Value type="EXAMPLE">7300010000001</Value>
+				<Value type="EXAMPLE">987654325</Value>
 			</Element>
 			<Element cardinality="0..1">
 				<Term>cac:PartyIdentification</Term>
@@ -358,9 +358,9 @@
 						<Description>Scheme identifier for Receiver identifier</Description>
 
 						<Reference type="CODE_LIST">ICD</Reference>
-						<Value type="EXAMPLE">0184</Value>
+						<Value type="EXAMPLE">0192</Value>
 					</Attribute>
-					<Value type="EXAMPLE">45645678</Value>
+					<Value type="EXAMPLE">123456785</Value>
 				</Element>
 			</Element>
 			<Element cardinality="0..1">
@@ -467,9 +467,9 @@
 						<Name>Provider legal registration identifier identification scheme identifier</Name>
 						<Description>The identification scheme identifier of the provider legal registration identifier.</Description>
 						<Reference type="CODE_LIST">ICD</Reference>
-						<Value type="EXAMPLE">0002</Value>
+						<Value type="EXAMPLE">0192</Value>
 					</Attribute>
-					<Value type="EXAMPLE">239478234</Value>
+					<Value type="EXAMPLE">987654325</Value>
 				</Element>
 				<Element cardinality="0..1">
 					<Term>cac:RegistrationAddress</Term>
@@ -523,9 +523,9 @@
 						<Name>Scheme identifier</Name>
 						<Description>Scheme identifier for the electronic address</Description>
 						<Reference type="CODE_LIST">eas</Reference>
-						<Value type="EXAMPLE">0088</Value>
+						<Value type="EXAMPLE">0192</Value>
 					</Attribute>
-					<Value type="EXAMPLE">7300010000001</Value>
+					<Value type="EXAMPLE">123456785</Value>
 				</Element>
 
 				<Element cardinality="0..1">
@@ -545,9 +545,9 @@
 							<Description>Scheme identifier for Catalogue supplier identifier</Description>
 
 							<Reference type="CODE_LIST">ICD</Reference>
-							<Value type="EXAMPLE">0184</Value>
+							<Value type="EXAMPLE">0192</Value>
 						</Attribute>
-						<Value type="EXAMPLE">11223344</Value>
+						<Value type="EXAMPLE">123456785</Value>
 					</Element>
 				</Element>
 				<Element cardinality="0..1">
@@ -693,9 +693,9 @@
 						<Name>Scheme identifier</Name>
 						<Description>Scheme identifier for the electronic address</Description>
 						<Reference type="CODE_LIST">eas</Reference>
-						<Value type="EXAMPLE">0088</Value>
+						<Value type="EXAMPLE">0192</Value>
 					</Attribute>
-					<Value type="EXAMPLE">7300010000001</Value>
+					<Value type="EXAMPLE">987654325</Value>
 				</Element>
 				<Element cardinality="0..1">
 					<Term>cac:PartyIdentification</Term>
@@ -714,9 +714,9 @@
 							<Description>Scheme identifier for Catalogue customer identifier</Description>
 
 							<Reference type="CODE_LIST">ICD</Reference>
-							<Value type="EXAMPLE">0184</Value>
+							<Value type="EXAMPLE">0192</Value>
 						</Attribute>
-						<Value type="EXAMPLE">DK93287241</Value>
+						<Value type="EXAMPLE">123456785</Value>
 					</Element>
 				</Element>
 				<Element cardinality="0..1">
@@ -1491,9 +1491,9 @@
 							<Name>Item standard identifier identification scheme identifier</Name>
 							<Description>The identification scheme identifier of the Item standard identifier</Description>
 							<Reference type="CODE_LIST">ICD</Reference>
-							<Value type="EXAMPLE">0160</Value>
+							<Value type="EXAMPLE">0192</Value>
 						</Attribute>
-						<Value type="EXAMPLE">05704066204093</Value>
+						<Value type="EXAMPLE">987654325</Value>
 					</Element>
 				</Element>
 				<Element cardinality="0..n">

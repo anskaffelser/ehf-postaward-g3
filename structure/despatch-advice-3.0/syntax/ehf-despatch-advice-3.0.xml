@@ -97,9 +97,9 @@
 						<Name>Scheme identifier</Name>
 						<Description>Scheme identifier for electronic address</Description>
 						<Reference type="CODE_LIST">eas</Reference>
-						<Value type="EXAMPLE">0088</Value>
+						<Value type="EXAMPLE">0192</Value>
 					</Attribute>
-					<Value type="EXAMPLE">7300010000001</Value>
+					<Value type="EXAMPLE">987654325</Value>
 				</Element>
 
 
@@ -117,9 +117,9 @@
 							<Name>Scheme identifier</Name>
 							<Description>Scheme identifier for party identification</Description>
 							<Reference type="CODE_LIST">ICD</Reference>
-							<Value type="EXAMPLE">0184</Value>
+							<Value type="EXAMPLE">0192</Value>
 						</Attribute>
-						<Value type="EXAMPLE">DK88777654</Value>
+						<Value type="EXAMPLE">123456785</Value>
 					</Element>
 				</Element>
 
@@ -263,9 +263,9 @@
 						<Name>Scheme identifier</Name>
 						<Description>Scheme identifier for electronic address</Description>
 						<Reference type="CODE_LIST">eas</Reference>
-						<Value type="EXAMPLE">0088</Value>
+						<Value type="EXAMPLE">0192</Value>
 					</Attribute>
-					<Value type="EXAMPLE">7300010000001</Value>
+					<Value type="EXAMPLE">987654325</Value>
 				</Element>
 
 				<Element cardinality="0..1">
@@ -282,9 +282,9 @@
 							<Name>Scheme identifier</Name>
 							<Description>Scheme identifier for party identification</Description>
 							<Reference type="CODE_LIST">ICD</Reference>
-							<Value type="EXAMPLE">0184</Value>
+							<Value type="EXAMPLE">0192</Value>
 						</Attribute>
-						<Value type="EXAMPLE">DK88777654</Value>
+						<Value type="EXAMPLE">123456785</Value>
 					</Element>
 				</Element>
 
@@ -437,9 +437,9 @@
 							<Name>Scheme identifier</Name>
 							<Description>Scheme identifier for party identification</Description>
 							<Reference type="CODE_LIST">ICD</Reference>
-							<Value type="EXAMPLE">0184</Value>
+							<Value type="EXAMPLE">0192</Value>
 						</Attribute>
-						<Value type="EXAMPLE">DK88777654</Value>
+						<Value type="EXAMPLE">987654325</Value>
 					</Element>
 				</Element>
 				<Element cardinality="0..1">
@@ -555,9 +555,9 @@
 							<Name>Scheme identifier</Name>
 							<Description>Scheme identifier for party identification</Description>
 							<Reference type="CODE_LIST">ICD</Reference>
-							<Value type="EXAMPLE">0184</Value>
+							<Value type="EXAMPLE">0192</Value>
 						</Attribute>
-						<Value type="EXAMPLE">DK88777654</Value>
+						<Value type="EXAMPLE">123456785</Value>
 					</Element>
 				</Element>
 				<Element cardinality="0..1">
@@ -669,9 +669,9 @@
 							<Name>Scheme identifier</Name>
 							<Description>Scheme identifier for party identification</Description>
 							<Reference type="CODE_LIST">ICD</Reference>
-							<Value type="EXAMPLE">0184</Value>
+							<Value type="EXAMPLE">0192</Value>
 						</Attribute>
-						<Value type="EXAMPLE">DK88777654</Value>
+						<Value type="EXAMPLE">987654325</Value>
 					</Element>
 				</Element>
 				<Element cardinality="0..1">
@@ -1151,9 +1151,9 @@
 							<Description>The identification scheme identifier of the Item standard
 								identifier</Description>
 							<Reference type="CODE_LIST">ICD</Reference>
-							<Value type="EXAMPLE">0160</Value>
+							<Value type="EXAMPLE">0192</Value>
 						</Attribute>
-						<Value type="EXAMPLE">05704066204093</Value>
+						<Value type="EXAMPLE">123456785</Value>
 					</Element>
 					<Element cardinality="0..1">
 						<Term>cbc:ExtendedID</Term>
