@@ -68,7 +68,7 @@
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
-        <Path>changelog</Path>
+        <Path>changelog/</Path>
         <Title>Changelog</Title>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>

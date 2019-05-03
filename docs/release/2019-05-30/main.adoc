@@ -23,27 +23,27 @@ include::{shared-dir}/settings.adoc[]
 
 == EHF Catalogue 3.0.0 RC
 
-include::../../catalogue-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
+include::../../catalogue-3.0/changelog/2019-05-30-3.0.0-RC.adoc[]
 
 
 == EHF Despatch Advice 3.0.0 RC
 
-include::../../despatch-advice-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
+include::../../despatch-advice-3.0/changelog/2019-05-30-3.0.0-RC.adoc[]
 
 
 == EHF Ordering 3.0.0 RC
 
-include::../../ordering-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
+include::../../ordering-3.0/changelog/2019-05-30-3.0.0-RC.adoc[]
 
 
 == EHF Order Agreement 3.0.0 RC
 
-include::../../order-agreement-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
+include::../../order-agreement-3.0/changelog/2019-05-30-3.0.0-RC.adoc[]
 
 
 == EHF Punch Out 3.0.0 RC
 
-include::../../punch-out-3.0/guide/changelog/2019-05-30-3.0.0-RC.adoc[]
+include::../../punch-out-3.0/changelog/2019-05-30-3.0.0-RC.adoc[]
 
 
 //== EHF Reminder 2.0.0 RC
