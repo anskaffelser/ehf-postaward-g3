@@ -68,13 +68,37 @@
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
-        <Path>changelog/</Path>
+        <Path>ordering-3.0/changelog/</Path>
+        <Title>Changelog</Title>
+        <Tag>changelog</Tag>
+        <Tag>ordering-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>despatch-advice-3.0/changelog/</Path>
+        <Title>Changelog</Title>
+        <Tag>changelog</Tag>
+        <Tag>despatch-advice-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>catalogue-3.0/changelog/</Path>
         <Title>Changelog</Title>
         <Tag>changelog</Tag>
         <Tag>catalogue-3.0</Tag>
-        <Tag>despatch-advice-3.0</Tag>
-        <Tag>ordering-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>order-agreement-3.0/changelog/</Path>
+        <Title>Changelog</Title>
+        <Tag>changelog</Tag>
         <Tag>order-agreement-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>punch-out-3.0/changelog/</Path>
+        <Title>Changelog</Title>
+        <Tag>changelog</Tag>
         <Tag>punch-out-3.0</Tag>
     </Resource>
 
