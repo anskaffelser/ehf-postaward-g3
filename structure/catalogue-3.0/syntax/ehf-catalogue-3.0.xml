@@ -154,8 +154,7 @@
 					<Term>schemeID</Term>
 					<Name>Scheme identifier</Name>
 					<Description>Scheme identifier for the electronic address</Description>
-					<Reference type="CODE_LIST">eas</Reference>
-					<Value type="EXAMPLE">0192</Value>
+					<Value type="FIXED">0192</Value>
 				</Attribute>
 				<Value type="EXAMPLE">987654325</Value>
 			</Element>
@@ -337,8 +336,7 @@
 					<Term>schemeID</Term>
 					<Name>Scheme identifier</Name>
 					<Description>Scheme identifier for the electronic address</Description>
-					<Reference type="CODE_LIST">eas</Reference>
-					<Value type="EXAMPLE">0192</Value>
+					<Value type="FIXED">0192</Value>
 				</Attribute>
 				<Value type="EXAMPLE">987654325</Value>
 			</Element>
@@ -522,8 +520,7 @@
 						<Term>schemeID</Term>
 						<Name>Scheme identifier</Name>
 						<Description>Scheme identifier for the electronic address</Description>
-						<Reference type="CODE_LIST">eas</Reference>
-						<Value type="EXAMPLE">0192</Value>
+						<Value type="FIXED">0192</Value>
 					</Attribute>
 					<Value type="EXAMPLE">123456785</Value>
 				</Element>
@@ -692,8 +689,7 @@
 						<Term>schemeID</Term>
 						<Name>Scheme identifier</Name>
 						<Description>Scheme identifier for the electronic address</Description>
-						<Reference type="CODE_LIST">eas</Reference>
-						<Value type="EXAMPLE">0192</Value>
+						<Value type="FIXED">0192</Value>
 					</Attribute>
 					<Value type="EXAMPLE">987654325</Value>
 				</Element>
