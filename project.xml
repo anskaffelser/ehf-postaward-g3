@@ -70,6 +70,7 @@
         <Type>Doc-1</Type>
         <Path>changelog/</Path>
         <Title>Changelog</Title>
+        <Tag>changelog</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -416,6 +417,11 @@
         <Identifier>release</Identifier>
         <Title>Release notes</Title>
         <Description>All release notes part of EHF Post-Award G3.</Description>
+    </Tag>
+    <Tag>
+        <Identifier>changelog</Identifier>
+        <Title>Changelog</Title>
+        <Description>Changelog of EHF Post-Award G3.</Description>
     </Tag>
 
 </Project>
