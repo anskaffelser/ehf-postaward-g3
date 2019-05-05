@@ -3,40 +3,29 @@
 
     <package>EHF Catalogue 3.0.0 RC</package>
 
-    <!-- <testfolder>example</testfolder> -->
+    <testfolder>example</testfolder>
+    <testfolder>usecase</testfolder>
 
     <!-- EHF Catalogue 3.0 -->
-
-    <configuration>
-        <identifier>ehf-catalogue-base-3.0</identifier>
-        <title>EHF Catalogue 3.0</title>
-        <file source="sch/EHF-CATALOGUE-3.0.sch" path="xsl/EHF-CATALOGUE-3.0.xsl" infoUrl="/ehf/g3/rules/{}/" />
-    </configuration>
 
     <configuration>
         <identifier>ehf-catalogue-01-3.0</identifier>
         <title>EHF Catalogue 3.0 (Profile 01)</title>
         <profileId>urn:fdc:difi.no:2019:ehf:postaward:g3:01:1.0</profileId>
         <customizationId>urn:fdc:peppol.eu:poacc:trns:catalogue:3:extended:urn:fdc:difi.no:2017:ehf:spec:3.0</customizationId>
-        <inherit>ubl-catalogue-2.1</inherit>
-        <inherit>ehf-catalogue-base-3.0</inherit>
+        <inherit>ubl-2.2</inherit>
+        <file path="sch/EHF-CATALOGUE-3.0.sch" infoUrl="/ehf/g3/rules/{}/" />
     </configuration>
 
     <!-- EHF Catalogue Response 3.0 -->
-
-    <configuration>
-        <identifier>ehf-catalogue-response-base-3.0</identifier>
-        <title>EHF Catalogue Response 3.0</title>
-        <file source="sch/EHF-CATALOGUE-RESPONSE-3.0.sch" path="xsl/EHF-CATALOGUE-RESPONSE-3.0.xsl" infoUrl="/ehf/g3/rules/{}/" />
-    </configuration>
 
     <configuration>
         <identifier>ehf-catalogue-response-01-3.0</identifier>
         <title>EHF Catalogue Response 3.0 (Profile 01)</title>
         <profileId>urn:fdc:difi.no:2019:ehf:postaward:g3:01:1.0</profileId>
         <customizationId>urn:fdc:peppol.eu:poacc:trns:catalogue_response:3:extended:urn:fdc:difi.no:2017:ehf:spec:3.0</customizationId>
-        <inherit>ubl-applicationresponse-2.1</inherit>
-        <inherit>ehf-catalogue-response-base-3.0</inherit>
+        <inherit>ubl-2.2</inherit>
+        <file path="sch/EHF-CATALOGUE-RESPONSE-3.0.sch" infoUrl="/ehf/g3/rules/{}/" />
     </configuration>
 
 </buildConfigurations>
