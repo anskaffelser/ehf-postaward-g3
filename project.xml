@@ -221,23 +221,37 @@
         <Title>Business rules for PEPPOL Order Agreement transaction 3.0</Title>
         <Tag>order-agreement-3.0</Tag>
     </Resource>
+    <Resource>
+        <Identifier>tz02-cen</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>target/schematron-peppol/CEN-EN16931-UBL.sch</Path>
+        <Title>Business rules for CEN EN 16931</Title>
+        <Tag>invoice-z02-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Identifier>tz02-peppol</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>target/schematron-peppol/PEPPOL-EN16931-UBL.sch</Path>
+        <Title>Business rules for PEPPOL BIS Billing 3.0</Title>
+        <Tag>invoice-z02-3.0</Tag>
+    </Resource>
 
     <!-- Code list -->
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/ActionCode_header.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/ActionCode_header.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/ActionCode_line.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/ActionCode_line.xml</Path>
     </Resource>
     <!-- <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/ClarificationListID.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/ClarificationListID.xml</Path>
     </Resource> -->
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/eas.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/eas.xml</Path>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -246,11 +260,11 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/GS17009.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/GS17009.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/ICD.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/ICD.xml</Path>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -259,15 +273,15 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/Image.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/Image.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/ISO3166-1_Alpha2.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/ISO3166-1_Alpha2.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/ISO4217_2015.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/ISO4217_2015.xml</Path>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -276,7 +290,7 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/MimeCode.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/MimeCode.xml</Path>
         <Tag>catalogue-3.0</Tag>
         <Tag>ordering-3.0</Tag>
         <Tag>order-agreement-3.0</Tag>
@@ -284,51 +298,51 @@
     </Resource>
     <!-- <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/OPStatusAction.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/OPStatusAction.xml</Path>
     </Resource> -->
     <!-- <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/OPStatusReason.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/OPStatusReason.xml</Path>
     </Resource> -->
     <!-- <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/StatusReason.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/StatusReason.xml</Path>
     </Resource> -->
     <!-- <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/TransactionConditions.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/TransactionConditions.xml</Path>
     </Resource> -->
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/TrueFalse.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/TrueFalse.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL1001_T01.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL1001_T01.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL1001.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL1001.xml</Path>
     </Resource>
     <!-- <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL1225.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL1225.xml</Path>
     </Resource> -->
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL1229.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL1229.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL4343-T76.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL4343-T76.xml</Path>
     </Resource>
     <!-- <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL4343-T111.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL4343-T111.xml</Path>
     </Resource> -->
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL4343.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL4343.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
@@ -336,27 +350,27 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL5189.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL5189.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL5305.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL5305.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL5387.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL5387.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL6313-T16.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL6313-T16.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL6313.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL6313.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL7143.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL7143.xml</Path>
         <Tag>catalogue-3.0</Tag>
         <Tag>ordering-3.0</Tag>
         <Tag>order-agreement-3.0</Tag>
@@ -364,15 +378,15 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL7161.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL7161.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNCL8273.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNCL8273.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNECERec20-11e.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNECERec20-11e.xml</Path>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -381,7 +395,7 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>source/poacc-upgrade/structure/codelist/UNECERec21-9e.xml</Path>
+        <Path>_source/poacc-upgrade/structure/codelist/UNECERec21-9e.xml</Path>
     </Resource>
 
     <!-- Files -->

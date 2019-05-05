@@ -17,8 +17,8 @@
 
 	<xi:include href="../../_common/sch/function/gln.xml"/>
 	<xi:include href="../../_common/sch/function/mod11.xml"/>
-	<xi:include href="../../../source/poacc-upgrade/rules/sch/parts/function/slack.xml"/>
-	<xi:include href="../../../source/poacc-upgrade/rules/sch/parts/function/cat2str.xml"/>
+	<xi:include href="../../../_source/poacc-upgrade/rules/sch/parts/function/slack.xml"/>
+	<xi:include href="../../../_source/poacc-upgrade/rules/sch/parts/function/cat2str.xml"/>
 
 	<!-- Rules -->
 

@@ -3,6 +3,9 @@
    <Term>z02-invoice</Term>
    <Name>EHF Z02 Invoice</Name>
 
+   <Property key="sch:prefix">EHF-TZ02</Property>
+   <Property key="sch:identifier">tz02-basic</Property>
+
    <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</Namespace>
    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
    <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>
@@ -19,18 +22,16 @@
          <Reference type="BUSINESS_TERM">BT-24</Reference>
          <Reference type="RULE">PEPPOL-EN16931-R004</Reference>
          <Reference type="RULE">BR-01</Reference>
-         <Value type="DEFAULT">urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0</Value>
+         <Value type="FIXED">urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0:extended:urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0</Value>
       </Element>
       <Element>
          <Term>cbc:ProfileID</Term>
          <Name>Business process type</Name>
-         <Description>Identifies the business process context in which the transaction appears, to enable the Buyer to
-                process the Invoice in an appropriate way.
-            </Description>
+         <Description>Identifies the business process context in which the transaction appears, to enable the Buyer to process the Invoice in an appropriate way.</Description>
          <DataType>Text</DataType>
          <Reference type="BUSINESS_TERM">BT-23</Reference>
          <Reference type="RULE">PEPPOL-EN16931-R001</Reference>
-         <Value type="DEFAULT">urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</Value>
+         <Value type="FIXED">urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</Value>
       </Element>
       <Element>
          <Term>cbc:ID</Term>
