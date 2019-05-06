@@ -12,8 +12,10 @@
 
     <xsl:param name="ID"/>
     <xsl:param name="Note"/>
-    <xsl:param name="ResponseCode"/>
+    <xsl:param name="cbc:ResponseCode"/>
+    <xsl:param name="Response"/>
     <xsl:param name="VersionID"/>
+    <xsl:param name="InputCode"/>
 
     <xsl:template match="/ubl:*">
         <ApplicationResponse>
@@ -35,7 +37,7 @@
             <cbc:IssueTime><xsl:value-of select="format-dateTime(current-dateTime(),
                           '[H01]:[m01]:[s01]')"/></cbc:IssueTime>
 
-            <cbc:Note><xsl:value-of select="cbc:Note"/></cbc:Note>
+            <!--<cbc:Note>...</cbc:Note>-->
 
 
             <xsl:apply-templates select="cac:ReceiverParty"/>
@@ -45,7 +47,7 @@
 
             <cac:DocumentResponse>
                 <cac:Response>
-                    <cbc:ResponseCode><xsl:value-of select="cbc:ResponseCode"/></cbc:ResponseCode>
+                    <cbc:ResponseCode>AP</cbc:ResponseCode>
                 </cac:Response>
                 <cac:DocumentReference>
                     <cbc:ID>
@@ -73,15 +75,13 @@
 
     <xsl:template match="cac:ProviderParty">
         <cac:ReceiverParty>
-            <xsl:apply-templates select="cbc:EndpointID"/>
-            <xsl:apply-templates select="cac:PartyIdentification"/>
+                <xsl:apply-templates select="cbc:EndpointID"/>
+                <xsl:apply-templates select="cac:PartyIdentification"/>
             <cac:PartyLegalEntity>
                 <xsl:apply-templates select="cac:PartyLegalEntity/cbc:RegistrationName"/>
             </cac:PartyLegalEntity>
         </cac:ReceiverParty>
     </xsl:template>
-
-
 
     <xsl:template match="cbc:*">
         <xsl:element name="cbc:{local-name()}">

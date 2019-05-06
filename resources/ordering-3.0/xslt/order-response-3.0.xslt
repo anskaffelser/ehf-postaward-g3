@@ -16,7 +16,7 @@
     <xsl:param name="Note"/>
     <xsl:param name="CustomerReference"/>
     <xsl:param name="Quantity"/>
-
+    <xsl:param name="cac:OrderLine"/>
 
     <xsl:template match="/ubl:*">
         <OrderResponse>
@@ -42,7 +42,7 @@
                           '[H01]:[m01]:[s01]')"/></cbc:IssueTime>
 
 
-            <cbc:OrderResponseCode><xsl:value-of select="cbc:OrderResponseCode"/></cbc:OrderResponseCode>
+            <cbc:OrderResponseCode>AP</cbc:OrderResponseCode>
 
             <cbc:Note><xsl:value-of select="cbc:Note"/></cbc:Note>
 
@@ -62,42 +62,110 @@
 
             <xsl:apply-templates select="cac:Delivery/cac:RequestedDeliveryPeriod"/>
 
+
+            <!--
             <cac:OrderLine>
+
                 <cac:LineItem>
                     <cbc:ID>
                         <xsl:value-of select="cbc:ID"/>
                     </cbc:ID>
+
                     <cbc:Note>
                         <xsl:value-of select="cac:OrderLine/cac:LineItem/cbc:Note"/>
                     </cbc:Note>
+
                     <cbc:LineStatusCode>
                         <xsl:value-of select="cac:OrderLine/cac:LineItem/cbc:LineStatusCode"/>
                     </cbc:LineStatusCode>
 
-                     <xsl:apply-templates select="cac:OrderLine/cac:LineItem"/>
+                    <xsl:apply-templates select="cac:OrderLine/cac:LineItem"/>
 
                     <cbc:MaximumBackOrderQuantity>
                         <xsl:value-of select="cac:OrderLine/cac:LineItem/cbc:MaximumBackorderQuantity"/>
                     </cbc:MaximumBackOrderQuantity>
 
-
-                    <xsl:apply-templates select="cac:OrderLine/cac:LineItem/cac:Delivery/cac:RequestedDeliveryPeriod"/>
-
+                    <xsl:apply-templates select="cac:OrderLine/cac:LineItem/cac:Delivery"/>
 
                     <xsl:apply-templates select="cac:OrderLine/cac:LineItem/cac:Price"/>
 
                     <cac:Item>
                         <xsl:apply-templates select="cac:OrderLine/cac:LineItem/cac:Item"/>
                     </cac:Item>
-
-
                 </cac:LineItem>
+
             </cac:OrderLine>
+          -->
+
+            <xsl:apply-templates select="cac:OrderLine"/>
 
 
         </OrderResponse>
     </xsl:template>
 
+   <xsl:template match="cac:OrderLine">
+       <cac:OrderLine>
+           <cac:LineItem>
+               <cbc:ID>
+                   <xsl:value-of select="cac:LineItem/cbc:ID"/>
+               </cbc:ID>
+
+               <cbc:LineStatusCode>5</cbc:LineStatusCode>
+
+               <xsl:apply-templates select="cac:LineItem/cbc:Quantity"/>
+
+
+               <cac:Delivery>
+                   <cac:PromisedDeliveryPeriod>
+                       <xsl:apply-templates select="cac:LineItem/cac:Delivery/cac:RequestedDeliveryPeriod/cbc:StartDate"/>
+                       <xsl:apply-templates select="cac:LineItem/cac:Delivery/cac:RequestedDeliveryPeriod/cbc:EndDate"/>
+                   </cac:PromisedDeliveryPeriod>
+               </cac:Delivery>
+
+               <cac:Price>
+                   <xsl:apply-templates select="cac:LineItem/cac:Price/cbc:PriceAmount"/>
+                   <xsl:apply-templates select="cac:LineItem/cac:Price/cbc:BaseQuantity"/>
+               </cac:Price>
+
+               <cac:Item>
+                   <xsl:apply-templates select="cac:LineItem/cac:Item/cbc:Name"/>
+                   <xsl:apply-templates select="cac:LineItem/cac:Item/cac:BuyersItemIdentification"/>
+                   <xsl:apply-templates select="cac:LineItem/cac:Item/cac:SellersItemIdentification"/>
+                   <xsl:apply-templates select="cac:LineItem/cac:Item/cac:StandardItemIdentification"/>
+               </cac:Item>
+
+           </cac:LineItem>
+
+           <cac:SellerSubstitutedLineItem>
+               <xsl:apply-templates select="cac:LineItem/cbc:ID"/>
+               <cac:Item>
+                   <xsl:apply-templates select="cac:LineItem/cac:Item/cbc:Name"/>
+                   <xsl:apply-templates select="cac:LineItem/cac:Item/cac:SellersItemIdentification"/>
+                   <xsl:apply-templates select="cac:LineItem/cac:Item/cac:StandardItemIdentification"/>
+                   <xsl:apply-templates select="cac:LineItem/cac:Item/cac:CommodityClassification"/>
+                   <xsl:apply-templates select="cac:LineItem/cac:Item/cac:ClassifiedTaxCategory"/>
+                   <xsl:apply-templates select="cac:LineItem/cac:Item/cac:AdditionalItemProperty"/>
+               </cac:Item>
+           </cac:SellerSubstitutedLineItem>
+
+            <cac:OrderLineReference>
+                <cbc:LineID>
+                    <xsl:value-of select="cac:LineItem/cbc:ID/text()"/>
+                </cbc:LineID>
+            </cac:OrderLineReference>
+       </cac:OrderLine>
+
+   </xsl:template>
+
+    <!--
+    <xsl:template match="cac:OrderLine/cac:SellerSubstitutedLineItem">
+        <xsl:apply-templates select="cbc:ID"/>
+        <xsl:apply-templates select="cac:Item"/>
+    </xsl:template>
+
+    <xsl:template match="cac:OrderLine/cac:OrderLineReference">
+        <xsl:apply-templates select="cbc:LineID"/>
+    </xsl:template>
 
     <xsl:template match="cac:OrderLine/cac:LineItem">
         <xsl:apply-templates select="cbc:Quantity"/>
@@ -117,25 +185,15 @@
         </cac:Price>
     </xsl:template>
 
-
-    <xsl:template match="cac:Delivery/cac:RequestedDeliveryPeriod">
+    <xsl:template match="cac:OrderLine/cac:LineItem/cac:Delivery">
         <cac:Delivery>
             <cac:PromisedDeliveryPeriod>
-                <xsl:apply-templates select="cbc:StartDate"/>
-                <xsl:apply-templates select="cbc:EndDate"/>
+                <xsl:apply-templates select="cac:RequestedDeliveryPeriod/cbc:StartDate"/>
+                <xsl:apply-templates select="cac:RequestedDeliveryPeriod/cbc:EndDate"/>
             </cac:PromisedDeliveryPeriod>
         </cac:Delivery>
     </xsl:template>
-
-    <xsl:template match="cac:OrderLine/cac:LineItem/cac:Delivery/cac:RequestedDeliveryPeriod">
-        <cac:Delivery>
-            <cac:PromisedDeliveryPeriod>
-                <xsl:apply-templates select="cbc:StartDate"/>
-                <xsl:apply-templates select="cbc:EndDate"/>
-            </cac:PromisedDeliveryPeriod>
-        </cac:Delivery>
-    </xsl:template>
-
+-->
 
     <xsl:template match="cac:SellerSupplierParty">
         <cac:SellerSupplierParty>
@@ -159,6 +217,15 @@
                 </cac:PartyLegalEntity>
             </cac:Party>
         </cac:BuyerCustomerParty>
+    </xsl:template>
+
+    <xsl:template match="cac:Delivery/cac:RequestedDeliveryPeriod">
+        <cac:Delivery>
+            <cac:PromisedDeliveryPeriod>
+                <xsl:apply-templates select="cbc:StartDate"/>
+                <xsl:apply-templates select="cbc:EndDate"/>
+            </cac:PromisedDeliveryPeriod>
+        </cac:Delivery>
     </xsl:template>
 
     <xsl:template match="cbc:*">
