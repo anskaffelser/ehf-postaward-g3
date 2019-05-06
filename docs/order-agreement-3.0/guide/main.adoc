@@ -3,7 +3,7 @@
 :doctitle: EHF Order Agreement 3.0
 
 include::{shared-dir}/settings.adoc[]
-include::../../../source/poacc-upgrade/guides/shared/links.adoc[]
+include::../../../_source/poacc-upgrade/guides/shared/links.adoc[]
 
 = {doctitle}
 {name-difi-en}
