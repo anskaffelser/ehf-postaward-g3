@@ -1,4 +1,4 @@
 [appendix]
 = Semantic datatypes
 
-include::../../../source/poacc-upgrade/guides/shared/datatypes/index.adoc[lines=3..]
+include::../../../_source/poacc-upgrade/guides/shared/datatypes/index.adoc[lines=3..]
