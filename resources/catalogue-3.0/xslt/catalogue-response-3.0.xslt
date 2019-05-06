@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                xmlns="urn:oasis:names:specification:ubl:schema:xsd:Order-2"
+                xmlns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"
                 xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-                xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:TendererQualification-2"
+                xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2"
                 exclude-result-prefixes="xs ubl">
 
     <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
@@ -17,8 +17,8 @@
 
     <xsl:template match="/ubl:*">
         <ApplicationResponse>
-            <cbc:CustomizationID>urn:fdc:peppol.eu:poacc:trns:catalogue_response:3</cbc:CustomizationID>
-            <cbc:ProfileID>urn:fdc:peppol.eu:poacc:bis:catalogue_only:3</cbc:ProfileID>
+            <cbc:CustomizationID>urn:fdc:peppol.eu:poacc:trns:catalogue_response:3:extended:urn:fdc:difi.no:2017:ehf:spec:3.0</cbc:CustomizationID>
+            <cbc:ProfileID>urn:fdc:difi.no:2019:ehf:postaward:g3:01:1.0</cbc:ProfileID>
 
             <xsl:choose>
                 <xsl:when test = "$ID != '' " >
@@ -39,7 +39,8 @@
 
 
             <xsl:apply-templates select="cac:ReceiverParty"/>
-            <xsl:apply-templates select="cac:SenderParty"/>
+
+            <xsl:apply-templates select="cac:ProviderParty"/>
 
 
             <cac:DocumentResponse>
@@ -51,32 +52,36 @@
                         <xsl:value-of select="cbc:ID"/>
                     </cbc:ID>
                     <cbc:VersionID>
-                        <xsl:value-of select="$VersionID"/>
+                        <xsl:value-of select="cbc:VersionID"/>
                     </cbc:VersionID>
                 </cac:DocumentReference>
             </cac:DocumentResponse>
 
 
-
         </ApplicationResponse>
-    </xsl:template>
-
-
-    <xsl:template match="cac:SenderParty">
-        <cac:ReceiverParty>
-            <xsl:apply-templates select="cac:Party/cbc:EndpointID"/>
-            <xsl:apply-templates select="cac:Party/cac:PartyIdentification"/>
-            <xsl:apply-templates select="cac:Party/cac:PartyLegalEntity"/>
-        </cac:ReceiverParty>
     </xsl:template>
 
     <xsl:template match="cac:ReceiverParty">
         <cac:SenderParty>
-            <xsl:apply-templates select="cac:Party/cbc:EndpointID"/>
-            <xsl:apply-templates select="cac:Party/cac:PartyIdentification"/>
-            <xsl:apply-templates select="cac:Party/cac:PartyLegalEntity"/>
+            <xsl:apply-templates select="cbc:EndpointID"/>
+            <xsl:apply-templates select="cac:PartyIdentification"/>
+            <cac:PartyLegalEntity>
+                <xsl:apply-templates select="cac:PartyLegalEntity/cbc:RegistrationName"/>
+            </cac:PartyLegalEntity>
         </cac:SenderParty>
     </xsl:template>
+
+    <xsl:template match="cac:ProviderParty">
+        <cac:ReceiverParty>
+            <xsl:apply-templates select="cbc:EndpointID"/>
+            <xsl:apply-templates select="cac:PartyIdentification"/>
+            <cac:PartyLegalEntity>
+                <xsl:apply-templates select="cac:PartyLegalEntity/cbc:RegistrationName"/>
+            </cac:PartyLegalEntity>
+        </cac:ReceiverParty>
+    </xsl:template>
+
+
 
     <xsl:template match="cbc:*">
         <xsl:element name="cbc:{local-name()}">
