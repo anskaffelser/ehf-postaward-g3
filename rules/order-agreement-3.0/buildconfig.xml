@@ -10,7 +10,7 @@
         <title>EHF Order Agreement 3.0 (Profile 03)</title>
         <profileId>urn:fdc:difi.no:2019:ehf:postaward:g3:03:1.0</profileId>
         <customizationId>urn:fdc:peppol.eu:poacc:trns:order_agreement:3:extended:urn:fdc:difi.no:2017:ehf:spec:3.0</customizationId>
-        <inherit>ubl-order-2.2</inherit>
+        <inherit>ubl-2.2</inherit>
         <file path="sch/EHF-ORDER-AGREEMENT-3.0.sch" infoUrl="/ehf/g3/rules/{}/" />
     </configuration>
 
