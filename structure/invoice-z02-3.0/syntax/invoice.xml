@@ -85,7 +85,7 @@
          <Reference type="RULE">PEPPOL-EN16931-R002</Reference>
          <Value type="EXAMPLE">Please note our new phone number 33 44 55 66</Value>
       </Element>
-      <Element cardinality="0..1">
+      <Element tag="x" cardinality="0..1">
          <Term>cbc:TaxPointDate</Term>
          <Name>Value added tax point date</Name>
          <Description>The date when the VAT becomes accountable for the Seller and for the Buyer in so far as that date
@@ -109,7 +109,7 @@
          <Reference type="CODE_LIST">ISO4217</Reference>
          <Value type="EXAMPLE">EUR</Value>
       </Element>
-      <Element cardinality="0..1">
+      <Element tag="x" cardinality="0..1">
          <Term>cbc:TaxCurrencyCode</Term>
          <Name>VAT accounting currency code</Name>
          <Description>The currency used for VAT accounting and reporting purposes as accepted or required in the country
@@ -204,7 +204,7 @@
             <Value type="EXAMPLE">112233</Value>
          </Element>
       </Element>
-      <Element cardinality="0..n">
+      <Element tag="x" cardinality="0..n">
          <Term>cac:BillingReference</Term>
          <Name>PRECEDING INVOICE REFERENCE</Name>
          <Description>A group of business terms providing information on one or more preceding Invoices.</Description>
@@ -233,7 +233,7 @@
             </Element>
          </Element>
       </Element>
-      <Element cardinality="0..1">
+      <Element tag="x" cardinality="0..1">
          <Term>cac:DespatchDocumentReference</Term>
          <Name>DESPATCH ADVICE REFERENCE</Name>
          <Element>
@@ -245,7 +245,7 @@
             <Value type="EXAMPLE">desp98</Value>
          </Element>
       </Element>
-      <Element cardinality="0..1">
+      <Element tag="x" cardinality="0..1">
          <Term>cac:ReceiptDocumentReference</Term>
          <Name>RECEIPT ADVICE REFERENCE</Name>
          <Element>
@@ -257,7 +257,7 @@
             <Value type="EXAMPLE">rec98</Value>
          </Element>
       </Element>
-      <Element cardinality="0..1">
+      <Element tag="x" cardinality="0..1">
          <Term>cac:OriginatorDocumentReference</Term>
          <Name>TENDER OR LOT REFERENCE</Name>
          <Element>
@@ -269,7 +269,7 @@
             <Value type="EXAMPLE">PPID-123</Value>
          </Element>
       </Element>
-      <Element cardinality="0..1">
+      <Element tag="x" cardinality="0..1">
          <Term>cac:ContractDocumentReference</Term>
          <Name>CONTRACT REFERENCE</Name>
          <Element>
@@ -893,7 +893,7 @@
          <Term>cac:PayeeParty</Term>
          <Name>PAYEE</Name>
          <Description>A group of business terms providing information about the Payee, i.e. the role that receives the
-            payment.  Shall be used when the Payee is different from the Seller.
+            payment. Shall be used when the Payee is different from the Seller.
         </Description>
          <Reference type="BUSINESS_TERM">BG-10</Reference>
          <Element cardinality="0..1">
@@ -954,7 +954,7 @@
             </Element>
          </Element>
       </Element>
-      <Element cardinality="0..1">
+      <Element tag="x" cardinality="0..1">
          <Term>cac:TaxRepresentativeParty</Term>
          <Name>SELLER TAX REPRESENTATIVE PARTY</Name>
          <Description>A group of business terms providing information about the Seller's tax representative.
@@ -1106,7 +1106,7 @@
             </Element>
          </Element>
       </Element>
-      <Element cardinality="0..1">
+      <Element tag="x" cardinality="0..1">
          <Term>cac:Delivery</Term>
          <Name>DELIVERY INFORMATION</Name>
          <Description>A group of business terms providing information about where and when the goods and services
@@ -1276,7 +1276,7 @@
             <Reference type="BUSINESS_TERM">BT-83</Reference>
             <Value type="EXAMPLE">432948234234234</Value>
          </Element>
-         <Element cardinality="0..1">
+         <Element tag="x" cardinality="0..1">
             <Term>cac:CardAccount</Term>
             <Name>PAYMENT CARD INFORMATION</Name>
             <Description>A group of business terms providing information about card used for payment contemporaneous with
@@ -1348,7 +1348,7 @@
                </Element>
             </Element>
          </Element>
-         <Element cardinality="0..1">
+         <Element tag="x" cardinality="0..1">
             <Term>cac:PaymentMandate</Term>
             <Name>DIRECT DEBIT</Name>
             <Description>A group of business terms to specify a direct debit.</Description>
@@ -1376,7 +1376,7 @@
             </Element>
          </Element>
       </Element>
-      <Element cardinality="0..1">
+      <Element tag="x" cardinality="0..1">
          <Term>cac:PaymentTerms</Term>
          <Name>PAYMENT TERMS</Name>
          <Element>
@@ -1391,7 +1391,7 @@
             <Value type="EXAMPLE">Net within 30 days</Value>
          </Element>
       </Element>
-      <Element cardinality="0..n">
+      <Element tag="x" cardinality="0..n">
          <Term>cac:AllowanceCharge</Term>
          <Name>DOCUMENT LEVEL ALLOWANCES AND CHARGES</Name>
          <Description>A group of business terms providing information about allowances applicable to the Invoice as a
@@ -1852,7 +1852,7 @@
             </Attribute>
             <Value type="EXAMPLE">1000.0</Value>
          </Element>
-         <Element cardinality="0..1">
+         <Element tag="x" cardinality="0..1">
             <Term>cbc:PayableRoundingAmount</Term>
             <Name>Rounding amount</Name>
             <Description>The amount to be added to the invoice total to round the amount to be paid. Must be rounded to maximum 2 decimals.</Description>
@@ -2000,7 +2000,7 @@
                <Value type="EXAMPLE">2017-10-15</Value>
             </Element>
          </Element>
-         <Element cardinality="0..1">
+         <Element tag="x" cardinality="0..1">
             <Term>cac:OrderLineReference</Term>
             <Name>ORDER LINE REFERENCE</Name>
             <Element>
@@ -2012,7 +2012,7 @@
                <Value type="EXAMPLE">3</Value>
             </Element>
          </Element>
-         <Element cardinality="0..1">
+         <Element tag="x" cardinality="0..1">
             <Term>cac:DocumentReference</Term>
             <Name>LINE OBJECT IDENTIFIER</Name>
             <Element>
@@ -2039,12 +2039,11 @@
                <Value type="DEFAULT">130</Value>
             </Element>
          </Element>
-         <Element cardinality="0..n">
+         <Element tag="x" cardinality="0..n">
             <Term>cac:AllowanceCharge</Term>
             <Name>INVOICE LINE ALLOWANCES OR CHARGES</Name>
             <Description>A group of business terms providing information about allowances or charges applicable to the individual
-            Invoice line.
-        </Description>
+            Invoice line. </Description>
             <Reference type="BUSINESS_TERM">BG-27</Reference>
             <Reference type="BUSINESS_TERM">BG-28</Reference>
             <Element>
@@ -2177,7 +2176,7 @@
                   <Value type="EXAMPLE">123455</Value>
                </Element>
             </Element>
-            <Element cardinality="0..1">
+            <Element tag="x" cardinality="0..1">
                <Term>cac:SellersItemIdentification</Term>
                <Name>SELLERS ITEM IDENTIFICATION</Name>
                <Element>
@@ -2189,7 +2188,7 @@
                   <Value type="EXAMPLE">9873242</Value>
                </Element>
             </Element>
-            <Element cardinality="0..1">
+            <Element tag="x" cardinality="0..1">
                <Term>cac:StandardItemIdentification</Term>
                <Name>STANDARD ITEM IDENTIFICATION</Name>
                <Element>
@@ -2209,7 +2208,7 @@
                   <Value type="EXAMPLE">10986700</Value>
                </Element>
             </Element>
-            <Element cardinality="0..1">
+            <Element tag="x" cardinality="0..1">
                <Term>cac:OriginCountry</Term>
                <Name>ORIGIN COUNTRY</Name>
                <Element>
@@ -2223,7 +2222,7 @@
                   <Value type="EXAMPLE">CN</Value>
                </Element>
             </Element>
-            <Element cardinality="0..n">
+            <Element tag="x" cardinality="0..n">
                <Term>cac:CommodityClassification</Term>
                <Name>COMMODITY CLASSIFICATION</Name>
                <Element>
@@ -2296,7 +2295,7 @@
                   </Element>
                </Element>
             </Element>
-            <Element cardinality="0..n">
+            <Element tag="x" cardinality="0..n">
                <Term>cac:AdditionalItemProperty</Term>
                <Name>ITEM ATTRIBUTES</Name>
                <Description>A group of business terms providing information about properties of the goods and services
@@ -2370,7 +2369,7 @@
                </Attribute>
                <Value type="EXAMPLE">1</Value>
             </Element>
-            <Element cardinality="0..1">
+            <Element tag="x" cardinality="0..1">
                <Term>cac:AllowanceCharge</Term>
                <Name>ALLOWANCE</Name>
                <Element>
