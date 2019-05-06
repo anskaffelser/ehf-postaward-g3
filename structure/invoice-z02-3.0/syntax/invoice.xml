@@ -63,7 +63,7 @@
          <Reference type="RULE">BR-CO-25</Reference>
          <Value type="EXAMPLE">2017-11-01</Value>
       </Element>
-      <Element>
+      <Element tag="x">
          <Term>cbc:InvoiceTypeCode</Term>
          <Name>Invoice type code</Name>
          <Description>A code specifying the functional type of the Invoice.</Description>
@@ -385,7 +385,7 @@
          <Element>
             <Term>cac:Party</Term>
             <Name>PARTY</Name>
-            <Element>
+            <Element tag="x">
                <Term>cbc:EndpointID</Term>
                <Name>Seller electronic address</Name>
                <Description>Identifies the Seller's electronic address to which a business document may be delivered.</Description>
@@ -396,8 +396,7 @@
                   <Term>schemeID</Term>
                   <Name>Seller electronic address identification scheme identifier</Name>
                   <Description>The identification scheme identifier of the Seller electronic address</Description>
-                  <Reference type="CODE_LIST">eaid</Reference>
-                  <Value type="EXAMPLE">0088</Value>
+                  <Value type="FIXED">0192</Value>
                </Attribute>
                <Value type="EXAMPLE">7300010000001</Value>
             </Element>
@@ -413,7 +412,7 @@
                   <Reference type="BUSINESS_TERM">BT-29</Reference>
                   <Reference type="BUSINESS_TERM">BT-90</Reference>
                   <Reference type="RULE">BR-CO-26</Reference>
-                  <Attribute usage="Optional">
+                  <Attribute tag="x" usage="Optional">
                      <Term>schemeID</Term>
                      <Name>Seller or bank assigned creditor identifier identification scheme identifier</Name>
                      <Description>The identification scheme identifier of the Seller identifier. For bank assigned creditor identifier (BT-90), value MUST be "SEPA"</Description>
@@ -520,7 +519,7 @@
                   </Element>
                </Element>
             </Element>
-            <Element cardinality="0..2">
+            <Element tag="x" cardinality="0..2">
                <Term>cac:PartyTaxScheme</Term>
                <Name>PARTY VAT/TAX IDENTIFIERS</Name>
                <Element>
@@ -577,7 +576,7 @@
                   </Element>
                </Element>
             </Element>
-            <Element>
+            <Element tag="x">
                <Term>cac:PartyLegalEntity</Term>
                <Name>PARTY LEGAL ENTITY</Name>
                <Element>
@@ -622,7 +621,7 @@
                   <Value type="EXAMPLE">Share capital</Value>
                </Element>
             </Element>
-            <Element cardinality="0..1">
+            <Element tag="x" cardinality="0..1">
                <Term>cac:Contact</Term>
                <Name>SELLER CONTACT</Name>
                <Description>A group of business terms providing contact information about the Seller.</Description>
@@ -673,10 +672,9 @@
                   <Term>schemeID</Term>
                   <Name>Buyer electronic address identification scheme identifier</Name>
                   <Description>The identification scheme identifier of the Buyer electronic address.</Description>
-                  <Reference type="CODE_LIST">eaid</Reference>
-                  <Value type="EXAMPLE">0192</Value>
+                  <Value type="FIXED">0192</Value>
                </Attribute>
-               <Value type="EXAMPLE">987654321</Value>
+               <Value type="EXAMPLE">987654325</Value>
             </Element>
             <Element cardinality="0..1">
                <Term>cac:PartyIdentification</Term>
@@ -889,7 +887,7 @@
             </Element>
          </Element>
       </Element>
-      <Element cardinality="0..1">
+      <Element tag="x" cardinality="0..1">
          <Term>cac:PayeeParty</Term>
          <Name>PAYEE</Name>
          <Description>A group of business terms providing information about the Payee, i.e. the role that receives the
@@ -1906,7 +1904,7 @@
             <Reference type="RULE">BR-21</Reference>
             <Value type="EXAMPLE">12</Value>
          </Element>
-         <Element cardinality="0..1">
+         <Element tag="x" cardinality="0..1">
             <Term>cbc:Note</Term>
             <Name>Invoice line note</Name>
             <Description>A textual note that gives unstructured information that is relevant to the Invoice line.
