@@ -44,8 +44,6 @@ Based on work done in PEPPOL BIS Billing 3.0, Difi has included Norwegian rules 
 
 :leveloffset: +1
 
-include::changelog/index.adoc[]
-
 include::description/index.adoc[]
 
 include::appendix/index.adoc[]

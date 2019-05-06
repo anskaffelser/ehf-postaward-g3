@@ -20,7 +20,7 @@ v3.0.0 RC
 :title-logo-image: {shared-dir}/images/logo.jpg
 
 //Variables
-:source-path: ../../../source/poacc-upgrade/guides
+:source-path: ../../../_source/poacc-upgrade/guides
 :snippet-dir: ../../../../rules/snippets/order-agreement
 
 {description}

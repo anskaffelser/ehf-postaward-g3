@@ -21,7 +21,7 @@ v3.0.0 RC
 
 
 //Variables
-:source-path: ../../../source/poacc-upgrade/guides
+:source-path: ../../../_source/poacc-upgrade/guides
 :snippet-dir: ../../../../rules/snippets/order
 :snippet-response-dir: ../../../../rules/snippets/order-response
 

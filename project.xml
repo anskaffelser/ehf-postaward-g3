@@ -101,6 +101,13 @@
         <Tag>changelog</Tag>
         <Tag>punch-out-3.0</Tag>
     </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>billing-3.0/norway/changelog/</Path>
+        <Title>Changelog</Title>
+        <Tag>changelog</Tag>
+        <Tag>billing-3.0</Tag>
+    </Resource>
 
     <!-- Syntax -->
     <Resource>
