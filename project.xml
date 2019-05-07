@@ -48,6 +48,12 @@
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
+        <Path>invoice-z02-3.0/guide/</Path>
+        <Title>Implementation Guideline</Title>
+        <Tag>invoice-z02-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
         <Path>release/2018-11-15</Path>
         <Title>Release 2018-11-15</Title>
         <Description>Release notes describing changes related to EHF Post-Award G3 in release '2018-11-15'.</Description>
@@ -101,6 +107,12 @@
         <Path>billing-3.0/norway/changelog/</Path>
         <Title>Changelog</Title>
         <Tag>billing-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>invoice-z02-3.0/changelog/</Path>
+        <Title>Changelog</Title>
+        <Tag>invoice-z02-3.0</Tag>
     </Resource>
 
     <!-- Syntax -->
