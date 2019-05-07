@@ -1,0 +1,34 @@
+:shared-dir: ../../_common
+:lang: en
+:doctitle: EHF Z02 Invoice 3.0
+
+include::{shared-dir}/settings.adoc[]
+
+= {doctitle}
+{name-difi-en}
+v3.0.0 RC
+:description: This document describes the new version of EHF Z02 Invoice (called "EHF Anmodningsfakturering"). The document is part of Norwegian "Agency of Public Management and eGovernment" (Difi) standardization work related to electronic commerce.
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:source-language: xml
+:sectanchors:
+:sectnums:
+:title-logo-image: {shared-dir}/images/logo.jpg
+
+
+//Variables
+
+{description}
+
+:leveloffset: +1
+
+
+//include::usecase/index.adoc[]
+
+
+include::appendix.adoc[]
+
+:leveloffset: -1
