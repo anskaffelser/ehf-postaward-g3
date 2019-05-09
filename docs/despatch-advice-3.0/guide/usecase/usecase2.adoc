@@ -1,8 +1,5 @@
 = Use case 2 - Simple Despatch with outstanding quantity
 
-This use case is a simple Despatch where there are no transport handling units, but an outstanding quantity on line level.
-There are various examples on use of the outstanding quantity and outstanding reason There are four parties (legal entities) in this use case.
-
 ****
 
 Description::

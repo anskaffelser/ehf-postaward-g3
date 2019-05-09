@@ -1,0 +1,28 @@
+= Use case 1 - Victims of violence
+
+
+****
+
+Description::
+This use case illustrates the use of Z02 Invoice, where the supplier issues and sends an invoice to the customer and the customer
+receives the invoice and process it in the invoice system.
+
+Parties involved::
+Supplier party (In UBL: AccountingSupplierParty) +
+Customer party (In UBL: CustomerCustomerParty)
+
+Assumptions::
+. A man has been physically injured after a violence episode.
+. The man receives a financial compensation on 5000 Kroner from the Government.
+
+Flow::
+. The Supplier (the man) issues and sends an invoice to the customer.
+. The Customer receives the invoice and process it in the system.
+. The Customer checks the details and approves the invoice.
+. The Customer sends the invoice to the accounting system and pays the invoice.
+
+Result::
+. The Customer receives and pays the invoice by checking the details in the data system.
+. The Supplier (the man) receives the financial compensation in few days, not weeks.
+
+****

@@ -1,12 +1,18 @@
 
 = Process and typical Use Cases
 
+== Process Diagram
 
+The following diagram illustrates the basic EHF Z02 Invoice process.
+
+//LEGG TIL PROSESSDIAGRAM- TODO: JAN
 
 == Typical use cases
 
 :leveloffset: +1
 
+include::usecase1.adoc[]
 
+include::usecase2.adoc[]
 
 :leveloffset: -1

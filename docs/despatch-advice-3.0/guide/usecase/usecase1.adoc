@@ -1,7 +1,5 @@
 = Use case 1 - Simple Despatch
 
-This use case is a simple Despatch where no handling units are used in the Despatch Advice.
-There are only two parties (legal entities) in this use case.
 
 ****
 

@@ -5,7 +5,7 @@
 				xmlns:u="utils"
 				schemaVersion="iso" queryBinding="xslt2">
 
-	<title>EHF Despatch Advice 3.0</title>
+	<title>EHF Z02 Invoice 3.0</title>
 
 	<ns prefix="cbc" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"/>
 	<ns prefix="cac" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"/>
@@ -23,6 +23,6 @@
 	<include href="../../_common/sch/parts/empty-elements.sch"/>
 	<include href="../../../target/generated/tz02-basic.sch"/>
 	<include href="../../_common/sch/parts/identifiers.sch"/>
-	<!-- <include href="business/invoice.sch"/> -->
+	<include href="business/invoice.sch"/>
 
 </schema>

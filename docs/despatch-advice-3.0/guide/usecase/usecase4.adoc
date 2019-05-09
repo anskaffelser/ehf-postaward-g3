@@ -1,7 +1,5 @@
 = Use case 4 - Despatch with weight, length and/or volume based items (ie vegetables, meat)
 
-This use case demonstrates the use of the Despatch Advice, where the Seller is despatching items which are priced on weight, length and/or volume.
-
 ****
 
 Description::

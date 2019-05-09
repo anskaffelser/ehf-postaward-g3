@@ -1,0 +1,10 @@
+= Detailed Descriptions
+
+This chapter describes selected parts of the information contents of the EHF Z02 Invoice.
+
+
+:leveloffset: +1
+
+include::partiesandroles.adoc[]
+
+:leveloffset: -1

@@ -1,7 +1,5 @@
 = Use case 5 – Advanced Despatch demonstrating most of the business terms
 
-This use case is a relatively more complex use of the Despatch Advice which will demonstrate the use of most of the business terms available in the electronic Despatch Advice message.
-
 ****
 
 Description::

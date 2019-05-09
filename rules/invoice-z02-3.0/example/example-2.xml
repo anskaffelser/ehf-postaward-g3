@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+         xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+    <cbc:CustomizationID>urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0</cbc:CustomizationID>
+    <cbc:ProfileID>urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</cbc:ProfileID>
+    <cbc:ID>555-45</cbc:ID>
+    <cbc:IssueDate>2018-05-01</cbc:IssueDate>
+    <cbc:DueDate>2018-05-01</cbc:DueDate>
+    <cbc:Note>Loss a sheep- case 32.</cbc:Note>
+    <cbc:DocumentCurrencyCode>NOK</cbc:DocumentCurrencyCode>
+    <cbc:AccountingCost>111:542::yu45</cbc:AccountingCost>
+    <cbc:BuyerReference>yui147</cbc:BuyerReference>
+
+    <cac:InvoicePeriod>
+        <cbc:StartDate>2018-05-01</cbc:StartDate>
+        <cbc:EndDate>2018-05-30</cbc:EndDate>
+        <cbc:DescriptionCode>25</cbc:DescriptionCode>
+    </cac:InvoicePeriod>
+
+    <cac:OrderReference>
+        <cbc:ID>45</cbc:ID>
+        <cbc:SalesOrderID>1111</cbc:SalesOrderID>
+    </cac:OrderReference>
+
+    <cac:AdditionalDocumentReference>
+        <cbc:ID>TR142</cbc:ID>
+        <cbc:DocumentTypeCode>130</cbc:DocumentTypeCode>
+        <cbc:DocumentDescription>Report</cbc:DocumentDescription>
+        <cac:Attachment>
+            <cbc:EmbeddedDocumentBinaryObject mimeCode="text/csv" filename="z-report.csv">UmVwb3J0IG9uIHBlcnNvbmFsIGludm9pY2UgZGVsaXZlcnkK</cbc:EmbeddedDocumentBinaryObject>
+            <cac:ExternalReference>
+                <cbc:URI>http://www.z-report.no</cbc:URI>
+            </cac:ExternalReference>
+        </cac:Attachment>
+    </cac:AdditionalDocumentReference>
+
+    <cac:ProjectReference>
+        <cbc:ID>JH-01</cbc:ID>
+    </cac:ProjectReference>
+
+    <cac:AccountingSupplierParty>
+        <cac:Party>
+            <cac:PartyIdentification>
+                <cbc:ID schemeID="NO:ORGNR">445566778</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name>XYZ Advokatfirmaet</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:StreetName>Storoveien 54</cbc:StreetName>
+                <cbc:AdditionalStreetName>Building C</cbc:AdditionalStreetName>
+                <cbc:CityName>Oslo</cbc:CityName>
+                <cbc:PostalZone>0487</cbc:PostalZone>
+                <cbc:CountrySubentity>Oslo</cbc:CountrySubentity>
+                <cac:Country>
+                    <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:PostalAddress>
+        </cac:Party>
+    </cac:AccountingSupplierParty>
+
+    <cac:AccountingCustomerParty>
+        <cac:Party>
+            <cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
+            <cac:PartyIdentification>
+                <cbc:ID schemeID="NO:ORGNR">123456789</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name>Dyrevelferdsetaten</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:StreetName>Karl Johans gate 14</cbc:StreetName>
+                <cbc:AdditionalStreetName>Building A</cbc:AdditionalStreetName>
+                <cbc:CityName>Oslo</cbc:CityName>
+                <cbc:PostalZone>0154</cbc:PostalZone>
+                <cac:Country>
+                    <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>Dyrevelferdsetaten</cbc:RegistrationName>
+                <cbc:CompanyID schemeID="NO:ORGNR">123456789</cbc:CompanyID>
+            </cac:PartyLegalEntity>
+            <cac:Contact>
+                <cbc:Name>Ola Nordmann</cbc:Name>
+                <cbc:Telephone>22334455</cbc:Telephone>
+                <cbc:ElectronicMail>ola.nordmann@staten.no</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:AccountingCustomerParty>
+
+    <cac:PaymentMeans>
+        <cbc:PaymentMeansCode name="Payment to bank account">42</cbc:PaymentMeansCode>
+        <cbc:PaymentID>9871235</cbc:PaymentID>
+        <cac:PayeeFinancialAccount>
+            <cbc:ID>05124152142</cbc:ID>
+            <cbc:Name>Jenny Sihjort Johansen</cbc:Name>
+            <cac:FinancialInstitutionBranch>
+                <cbc:ID>BIC12345</cbc:ID>
+            </cac:FinancialInstitutionBranch>
+        </cac:PayeeFinancialAccount>
+    </cac:PaymentMeans>
+
+    <cac:LegalMonetaryTotal>
+        <cbc:LineExtensionAmount currencyID="NOK">8000.00</cbc:LineExtensionAmount>
+        <cbc:PrepaidAmount currencyID="NOK">0.00</cbc:PrepaidAmount>
+        <cbc:PayableAmount currencyID="NOK">8000.00</cbc:PayableAmount>
+    </cac:LegalMonetaryTotal>
+
+    <cac:InvoiceLine>
+        <cbc:ID>1</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NAR">1</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="NOK">5000.00</cbc:LineExtensionAmount>
+        <cbc:AccountingCost>154</cbc:AccountingCost>
+        <cac:InvoicePeriod>
+            <cbc:StartDate>2018-05-01</cbc:StartDate>
+            <cbc:EndDate>2018-05-15</cbc:EndDate>
+        </cac:InvoicePeriod>
+        <cac:Item>
+            <cbc:Description>Compensation of losing a sheep.</cbc:Description>
+            <cbc:Name>Jerry Jerringsen</cbc:Name>
+            <cac:BuyersItemIdentification>
+                <cbc:ID>123451</cbc:ID>
+            </cac:BuyersItemIdentification>
+            <cac:SellersItemIdentification>
+                <cbc:ID>111111</cbc:ID>
+            </cac:SellersItemIdentification>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="NOK">5000.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+</Invoice>
