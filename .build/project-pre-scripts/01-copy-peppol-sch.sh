@@ -35,10 +35,10 @@ cp \
   /target/schematron-peppol/PEPPOL-M-T110.sch
 
 # Invoice Z02
-cp \
-  /src/_source/poacc-billing/rules/sch/CEN-EN16931-UBL.sch \
-  /target/schematron-peppol/CEN-EN16931-UBL.sch
-schutil exclude \
-  /src/_source/poacc-billing/rules/sch/PEPPOL-EN16931-UBL.sch \
-  /target/schematron-peppol/PEPPOL-EN16931-UBL.sch \
-  PEPPOL-EN16931-R007
+#cp \
+#  /src/_source/poacc-billing/rules/sch/CEN-EN16931-UBL.sch \
+#  /target/schematron-peppol/CEN-EN16931-UBL.sch
+#schutil exclude \
+#  /src/_source/poacc-billing/rules/sch/PEPPOL-EN16931-UBL.sch \
+#  /target/schematron-peppol/PEPPOL-EN16931-UBL.sch \
+#  PEPPOL-EN16931-R007

@@ -11,8 +11,8 @@
         <profileId>urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</profileId>
         <customizationId>urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0:extended:urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0</customizationId>
         <inherit>ubl-2.2</inherit>
-        <file source="../../target/schematron-peppol/CEN-EN16931-UBL.sch" path="sch/CEN-EN16931-UBL.sch" infoUrl="/ehf/g3/rules/{}/" />
-        <file source="../../target/schematron-peppol/PEPPOL-EN16931-UBL.sch" path="sch/PEPPOL-EN16931-UBL.sch" infoUrl="/ehf/g3/rules/{}/" />
+        <!-- <file source="../../target/schematron-peppol/CEN-EN16931-UBL.sch" path="sch/CEN-EN16931-UBL.sch" infoUrl="/ehf/g3/rules/{}/" /> -->
+        <!-- <file source="../../target/schematron-peppol/PEPPOL-EN16931-UBL.sch" path="sch/PEPPOL-EN16931-UBL.sch" infoUrl="/ehf/g3/rules/{}/" /> -->
         <file path="sch/EHF-Z02-INVOICE-3.0.sch" infoUrl="/ehf/g3/rules/{}/" />
     </configuration>
 
