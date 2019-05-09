@@ -42,7 +42,7 @@
     <cac:AccountingSupplierParty>
         <cac:Party>
             <cac:PartyIdentification>
-                <cbc:ID schemeID="NO:ORGNR">445566778</cbc:ID>
+                <cbc:ID schemeID="0192">987654325</cbc:ID>
             </cac:PartyIdentification>
             <cac:PartyName>
                 <cbc:Name>XYZ Advokatfirmaet</cbc:Name>
@@ -62,9 +62,9 @@
 
     <cac:AccountingCustomerParty>
         <cac:Party>
-            <cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
+            <cbc:EndpointID schemeID="0192">123456785</cbc:EndpointID>
             <cac:PartyIdentification>
-                <cbc:ID schemeID="NO:ORGNR">123456789</cbc:ID>
+                <cbc:ID schemeID="0192">123456785</cbc:ID>
             </cac:PartyIdentification>
             <cac:PartyName>
                 <cbc:Name>Dyrevelferdsetaten</cbc:Name>
@@ -78,10 +78,6 @@
                     <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
                 </cac:Country>
             </cac:PostalAddress>
-            <cac:PartyLegalEntity>
-                <cbc:RegistrationName>Dyrevelferdsetaten</cbc:RegistrationName>
-                <cbc:CompanyID schemeID="NO:ORGNR">123456789</cbc:CompanyID>
-            </cac:PartyLegalEntity>
             <cac:Contact>
                 <cbc:Name>Ola Nordmann</cbc:Name>
                 <cbc:Telephone>22334455</cbc:Telephone>

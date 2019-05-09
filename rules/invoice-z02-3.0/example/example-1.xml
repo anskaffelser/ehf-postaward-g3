@@ -42,7 +42,7 @@
     <cac:AccountingSupplierParty>
         <cac:Party>
             <cac:PartyIdentification>
-                <cbc:ID schemeID="NO:ORGNR">998877665</cbc:ID>
+                <cbc:ID schemeID="0192">123456785</cbc:ID>
             </cac:PartyIdentification>
             <cac:PartyName>
                 <cbc:Name>Advokatfirmaet Z</cbc:Name>
@@ -67,7 +67,7 @@
         <cac:Party>
             <cbc:EndpointID schemeID="0192">987654325</cbc:EndpointID>
             <cac:PartyIdentification>
-                <cbc:ID schemeID="NO:ORGNR">123456789</cbc:ID>
+                <cbc:ID schemeID="0192">987654325</cbc:ID>
             </cac:PartyIdentification>
             <cac:PartyName>
                 <cbc:Name>Statens sivilrettsforvaltning</cbc:Name>
