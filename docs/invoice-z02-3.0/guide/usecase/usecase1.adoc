@@ -1,5 +1,4 @@
-= Use case 1 - Victims of violence
-
+== Use case 1 - Victims of violence
 
 ****
 

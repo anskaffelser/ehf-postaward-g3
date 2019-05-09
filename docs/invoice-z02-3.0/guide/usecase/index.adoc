@@ -9,9 +9,11 @@ The following diagram illustrates the basic EHF Z02 Invoice process.
 
 == Typical use cases
 
-:leveloffset: +1
+:leveloffset: +
 
 include::usecase1.adoc[]
+
+{empty} +
 
 include::usecase2.adoc[]
 

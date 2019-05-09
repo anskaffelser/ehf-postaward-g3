@@ -7,4 +7,6 @@ This chapter describes selected parts of the information contents of the EHF Z02
 
 include::partiesandroles.adoc[]
 
+include::totals.adoc[]
+
 :leveloffset: -1

@@ -1,0 +1,18 @@
+
+[[totals]]
+== UBL syntax calculation formulas
+
+The following elements show the legal monetary totals for an invoice
+[cols="3,5", options="header"]
+|===
+| Element
+| Formula
+
+| <cbc:LineExtensionAmount>
+| stem:[sum("cac:InvoiceLine/cbc:LineExtensionAmount")]
+
+| <cbc:PayableAmount>
+| stem:[ \ "cac:LegalMonetaryTotal/cbc:PrepaidAmount"]
+
+|===
+

@@ -1,4 +1,4 @@
-= Use case 1 - Victims of violence
+== Use case 2 - A farmer has lost a sheep
 
 ****
 

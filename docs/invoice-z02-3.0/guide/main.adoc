@@ -25,9 +25,9 @@ v3.0.0 RC
 
 :leveloffset: +1
 
+include::usecase/index.adoc[]
 
-//include::usecase/index.adoc[]
-
+include::descriptions/index.adoc[]
 
 include::appendix.adoc[]
 
