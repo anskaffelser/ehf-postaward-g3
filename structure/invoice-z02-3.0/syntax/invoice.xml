@@ -22,7 +22,7 @@
          <Reference tag="x" type="BUSINESS_TERM">BT-24</Reference>
          <Reference tag="x" type="RULE">PEPPOL-EN16931-R004</Reference>
          <Reference tag="x" type="RULE">BR-01</Reference>
-         <Value type="FIXED">urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0:extended:urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0</Value>
+         <Value type="FIXED">urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0</Value>
       </Element>
       <Element>
          <Term>cbc:ProfileID</Term>
@@ -819,7 +819,7 @@
                   </Element>
                </Element>
             </Element>
-            <Element>
+            <Element tag="x">
                <Term>cac:PartyLegalEntity</Term>
                <Name>PARTY LEGAL ENTITY</Name>
                <Element>
