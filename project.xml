@@ -180,6 +180,7 @@
         <Description>Common rules for most transactions part of EHF Post-Award G3.</Description>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
+        <Tag>invoice-z02-3.0</Tag>
         <Tag>ordering-3.0</Tag>
         <Tag>order-agreement-3.0</Tag>
         <Tag>punch-out-3.0</Tag>
@@ -233,20 +234,6 @@
         <Path>target/schematron-peppol/PEPPOL-M-T110.sch</Path>
         <Title>Business rules for PEPPOL Order Agreement transaction 3.0</Title>
         <Tag>order-agreement-3.0</Tag>
-    </Resource>
-    <Resource>
-        <Identifier>tz02-cen</Identifier>
-        <Type>native:Schematron</Type>
-        <Path>target/schematron-peppol/CEN-EN16931-UBL.sch</Path>
-        <Title>Business rules for CEN EN 16931</Title>
-        <Tag>invoice-z02-3.0</Tag>
-    </Resource>
-    <Resource>
-        <Identifier>tz02-peppol</Identifier>
-        <Type>native:Schematron</Type>
-        <Path>target/schematron-peppol/PEPPOL-EN16931-UBL.sch</Path>
-        <Title>Business rules for PEPPOL BIS Billing 3.0</Title>
-        <Tag>invoice-z02-3.0</Tag>
     </Resource>
 
     <!-- Code list -->
