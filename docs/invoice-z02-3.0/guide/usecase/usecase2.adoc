@@ -8,7 +8,7 @@ receives the invoice and process it in the invoice system.
 
 Parties involved::
 Supplier party (In UBL: AccountingSupplierParty) +
-Customer party (In UBL: CustomerCustomerParty)
+Customer party (In UBL: AccountingCustomerParty)
 
 Assumptions::
 . A farmer has lost a sheep.
