@@ -12,4 +12,4 @@ The supplier is the legal person or organisation who provides a product or servi
 
 The following diagram illustrates the parties and roles involved in the Z02 Invoice.
 
-//LEGG TIL ROLLEDIAGRAM. TODO: JAN
+//LEGG TIL ROLLEDIAGRAM.

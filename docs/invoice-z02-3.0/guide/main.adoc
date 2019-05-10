@@ -3,6 +3,7 @@
 :doctitle: EHF Z02 Invoice 3.0
 
 include::{shared-dir}/settings.adoc[]
+include::../../../_source/poacc-billing/guide/shared/settings.adoc[]
 
 = {doctitle}
 {name-difi-en}
@@ -12,16 +13,16 @@ v3.0.0 RC
 :icons: font
 :toc: left
 :stem:
-:toclevels: 2
+:toclevels: 3
 :source-highlighter: coderay
 :source-language: xml
 :sectanchors:
 :sectnums:
 :title-logo-image: {shared-dir}/images/logo.jpg
 
-
 //Variables
 :snippet-dir: ../../rules/snippets
+
 
 {description}
 

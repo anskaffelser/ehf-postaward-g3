@@ -5,11 +5,11 @@
 
 The following diagram illustrates the basic EHF Z02 Invoice process.
 
-//LEGG TIL PROSESSDIAGRAM- TODO: JAN
+//LEGG TIL PROSESSDIAGRAM
 
 == Typical use cases
 
-:leveloffset: +
+:leveloffset: +1
 
 include::usecase1.adoc[]
 
