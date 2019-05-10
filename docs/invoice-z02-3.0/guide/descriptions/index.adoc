@@ -7,6 +7,11 @@ This chapter describes selected parts of the information contents of the EHF Z02
 
 include::partiesandroles.adoc[]
 
+include::payment.adoc[]
+
+//include::../../../../_source/poacc-billing/guide/syntax/uom.adoc[]
+include::uom.adoc[]
+
 include::totals.adoc[]
 
 :leveloffset: -1
