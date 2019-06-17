@@ -42,3 +42,14 @@ cp \
 #  /src/_source/poacc-billing/rules/sch/PEPPOL-EN16931-UBL.sch \
 #  /target/schematron-peppol/PEPPOL-EN16931-UBL.sch \
 #  PEPPOL-EN16931-R007
+
+
+# Reminder
+schutil exclude \
+  /src/_source/poacc-billing/rules/sch/CEN-EN16931-UBL.sch \
+  /target/schematron-peppol/REMINDER-CEN-EN16931-UBL.sch \
+  BR-04
+schutil exclude \
+  /src/_source/poacc-billing/rules/sch/PEPPOL-EN16931-UBL.sch \
+  /target/schematron-peppol/REMINDER-PEPPOL-EN16931-UBL.sch \
+  PEPPOL-EN16931-R007,PEPPOL-EN16931-CL003

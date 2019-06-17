@@ -17,13 +17,6 @@ include::simpleprocess.adoc[]
 
 include::advancedprocess.adoc[]
 
-:leveloffset: -1
-
-[[typical-use-cases]]
-== Typical use cases
-
-:leveloffset: +1
-
 include::usecase1.adoc[]
 
 include::usecase2.adoc[]

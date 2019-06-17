@@ -1,2 +1,10 @@
 
 :name-difi-en: Agency of Public Management and eGovernment
+:author: {name-difi-en}
+
+:ubl: http://docs.oasis-open.org/ubl/UBL-2.2.html[UBL 2.2]
+:ubl-catalogue: http://docs.oasis-open.org/ubl/os-UBL-2.2/xsd/maindoc/UBL-Catalogue-2.2.xsd[UBL Catalogue 2.2]
+:ubl-order: http://docs.oasis-open.org/ubl/os-UBL-2.2/xsd/maindoc/UBL-Order-2.2.xsd[UBL Order 2.2]
+:ubl-order-response: http://docs.oasis-open.org/ubl/os-UBL-2.2/xsd/maindoc/UBL-OrderResponse-2.2.xsd[UBL Order Response 2.2]
+:ubl-appl-resp: http://docs.oasis-open.org/ubl/os-UBL-2.2/xsd/maindoc/UBL-ApplicationResponse-2.2.xsd[UBL Application Response 2.2]
+:ubl-despatch-advice: http://docs.oasis-open.org/ubl/os-UBL-2.2/xsd/maindoc/UBL-DespatchAdvice-2.2.xsd[UBL Despatch Advice 2.2]

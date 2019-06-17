@@ -2,8 +2,8 @@
 :lang: en
 :doctitle: EHF Z02 Invoice 3.0
 
+include::../../../_source/poacc-upgrade/guides/shared/links.adoc[]
 include::{shared-dir}/settings.adoc[]
-include::../../../_source/poacc-billing/guide/shared/settings.adoc[]
 
 = {doctitle}
 {name-difi-en}

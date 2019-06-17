@@ -1,0 +1,11 @@
+= Changelog [[changelog]]
+
+:sectnums!:
+:leveloffset: +1
+
+= Version 3.0.0 RC (2019-05-30) [[changelog-3.0.0-RC]]
+
+include::2019-05-30-3.0.0-RC.adoc[]
+
+:sectnums:
+:leveloffset: -1

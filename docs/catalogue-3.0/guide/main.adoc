@@ -2,8 +2,8 @@
 :lang: en
 :doctitle: EHF Catalogue 3.0
 
-include::{shared-dir}/settings.adoc[]
 include::../../../_source/poacc-upgrade/guides/shared/links.adoc[]
+include::{shared-dir}/settings.adoc[]
 
 = {doctitle}
 {name-difi-en}

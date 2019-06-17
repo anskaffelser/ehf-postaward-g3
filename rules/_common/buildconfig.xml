@@ -6,7 +6,7 @@
     <configuration>
         <identifier>ehf-common-base-3.0</identifier>
         <title>EHF Common 3.0</title>
-        <file source="sch/parts/combined.sch" path="xsl/EHF-COMMON-3.0.xsl"/>
+        <file source="sch/parts/combined.sch" path="testing/COMMON.sch"/>
     </configuration>
 
 </buildConfigurations>
