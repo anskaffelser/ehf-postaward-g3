@@ -16,9 +16,9 @@ include::{shared-dir}/settings.adoc[]
 :title-logo-image: {shared-dir}/images/logo.jpg
 
 
-//== EHF Billing 3.0.1
+== EHF Billing 3.0.2
 
-//include::../../billing-3.0/norway/changelog/2018-11-15-3.0.1.adoc[]
+include::../../billing-3.0/norway/changelog/2019-05-30-3.0.2.adoc[]
 
 
 == EHF Catalogue 3.0.0 RC

@@ -121,7 +121,7 @@ The following changes are made to cardinalities in EHF Reminder 3.0 compared to 
 
 == Code lists
 
-A new code list is introduced as an addition to codes part of UNCL7161 named "Reminder charge reason code" used to indicate charges added as part of the reminder. The new code list contains only the code "REM", and is used in BT-98|BT-105.
+A new code list is introduced as an addition to codes part of UNCL7161 named "Reminder charge reason code" used to indicate charges added as part of the reminder. The new code list contains only the code "REM", and is used in BT-105.
 
 
 = Description
@@ -142,8 +142,9 @@ To send a reminder with a charge (called "gebyr" in Norwegian) we use the elemen
   <cbc:AllowanceChargeReasonCode>REM</cbc:AllowanceChargeReasonCode>
   <cbc:Amount currencyID="NOK">70</cbc:Amount> <2>
   <cac:TaxCategory>
-    <cbc:ID>S</cbc:ID>
-    <cbc:Percent>25.0</cbc:Percent>
+    <cbc:ID>E</cbc:ID>
+    <cbc:Percent>0</cbc:Percent>
+    <cbc:TaxExemptionReason>Exempt</cbc:TaxExemptionReason>
     <cac:TaxScheme>
       <cbc:ID>VAT</cbc:ID>
     </cac:TaxScheme>

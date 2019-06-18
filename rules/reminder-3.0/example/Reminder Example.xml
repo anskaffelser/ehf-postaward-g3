@@ -100,7 +100,7 @@
         <cbc:Amount currencyID="NOK">25</cbc:Amount>
         <cac:TaxCategory>
             <cbc:ID>S</cbc:ID>
-            <cbc:Percent>25.0</cbc:Percent>
+            <cbc:Percent>25</cbc:Percent>
             <cac:TaxScheme>
                 <cbc:ID>VAT</cbc:ID>
             </cac:TaxScheme>
@@ -111,21 +111,33 @@
         <cbc:AllowanceChargeReason>Late payment</cbc:AllowanceChargeReason>
         <cbc:Amount currencyID="NOK">100</cbc:Amount>
         <cac:TaxCategory>
-            <cbc:ID>S</cbc:ID>
-            <cbc:Percent>25.0</cbc:Percent>
+            <cbc:ID>E</cbc:ID>
+            <cbc:Percent>0</cbc:Percent>
             <cac:TaxScheme>
                 <cbc:ID>VAT</cbc:ID>
             </cac:TaxScheme>
         </cac:TaxCategory>
     </cac:AllowanceCharge>
     <cac:TaxTotal>
-        <cbc:TaxAmount currencyID="NOK">356.25</cbc:TaxAmount>
+        <cbc:TaxAmount currencyID="NOK">331.25</cbc:TaxAmount>
         <cac:TaxSubtotal>
-            <cbc:TaxableAmount currencyID="NOK">1425</cbc:TaxableAmount>
-            <cbc:TaxAmount currencyID="NOK">356.25</cbc:TaxAmount>
+            <cbc:TaxableAmount currencyID="NOK">1325</cbc:TaxableAmount>
+            <cbc:TaxAmount currencyID="NOK">331.25</cbc:TaxAmount>
             <cac:TaxCategory>
                 <cbc:ID>S</cbc:ID>
-                <cbc:Percent>25.0</cbc:Percent>
+                <cbc:Percent>25</cbc:Percent>
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:TaxCategory>
+        </cac:TaxSubtotal>
+        <cac:TaxSubtotal>
+            <cbc:TaxableAmount currencyID="NOK">100</cbc:TaxableAmount>
+            <cbc:TaxAmount currencyID="NOK">0</cbc:TaxAmount>
+            <cac:TaxCategory>
+                <cbc:ID>E</cbc:ID>
+                <cbc:Percent>0</cbc:Percent>
+                <cbc:TaxExemptionReason>Exempt</cbc:TaxExemptionReason>
                 <cac:TaxScheme>
                     <cbc:ID>VAT</cbc:ID>
                 </cac:TaxScheme>
@@ -135,9 +147,9 @@
     <cac:LegalMonetaryTotal>
         <cbc:LineExtensionAmount currencyID="NOK">1300</cbc:LineExtensionAmount>
         <cbc:TaxExclusiveAmount currencyID="NOK">1425</cbc:TaxExclusiveAmount>
-        <cbc:TaxInclusiveAmount currencyID="NOK">1781.25</cbc:TaxInclusiveAmount>
+        <cbc:TaxInclusiveAmount currencyID="NOK">1756.25</cbc:TaxInclusiveAmount>
         <cbc:ChargeTotalAmount currencyID="NOK">125</cbc:ChargeTotalAmount>
-        <cbc:PayableAmount currencyID="NOK">1781.25</cbc:PayableAmount>
+        <cbc:PayableAmount currencyID="NOK">1756.25</cbc:PayableAmount>
     </cac:LegalMonetaryTotal>
     <cac:InvoiceLine>
         <cbc:ID>1</cbc:ID>
@@ -148,7 +160,7 @@
                 <cbc:Name>item name</cbc:Name>
                 <cac:ClassifiedTaxCategory>
                     <cbc:ID>S</cbc:ID>
-                    <cbc:Percent>25.0</cbc:Percent>
+                    <cbc:Percent>25</cbc:Percent>
                     <cac:TaxScheme>
                         <cbc:ID>VAT</cbc:ID>
                     </cac:TaxScheme>
@@ -166,7 +178,7 @@
             <cbc:Name>item name 2</cbc:Name>
             <cac:ClassifiedTaxCategory>
                 <cbc:ID>S</cbc:ID>
-                <cbc:Percent>25.0</cbc:Percent>
+                <cbc:Percent>25</cbc:Percent>
                 <cac:TaxScheme>
                     <cbc:ID>VAT</cbc:ID>
                 </cac:TaxScheme>

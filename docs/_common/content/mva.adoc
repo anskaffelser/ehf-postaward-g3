@@ -1,0 +1,17 @@
+[cols="1,5,2",options="header"]
+.Valid VAT categories and rates
+|===
+| VAT category
+| Description
+| Rate as of January 1, 2019
+
+s| S | Output VAT, regular rate | 25%
+s| S | Output VAT, reduced rate, middle | 15%
+s| S | Output VAT, reduced rate, raw fish | 11,11%
+s| S | Output VAT, reduced rate, low | 12%
+s| E | VAT excempt | 0%
+s| Z | VAT excempt (Goods and services not included in the VAT regulations) | 0%
+s| K | Emission allowances for private or public businesses  – buyer calculates VAT | 0%
+s| AE | Reversed VAT | 0%
+s| G | Export of goods and services | 0%
+|===

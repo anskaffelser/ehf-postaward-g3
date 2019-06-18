@@ -1,0 +1,13 @@
+[cols="1,9,2", options="header"]
+|===
+| Issue | Description | Type
+
+| -
+| Adding section "Standard documentation" as part of "Implementation".
+| Guide
+
+| -
+| Adding section "Value Added Tax" as part of "Description".
+| Guide
+
+|===

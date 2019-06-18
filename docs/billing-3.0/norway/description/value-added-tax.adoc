@@ -1,0 +1,12 @@
+= Value Added Tax (Norwegian MVA)
+
+Norwegian tax categories are mapped according to this table for use with PEPPOL BIS Billing 3.0:
+
+include::../{shared-dir}/content/mva.adoc[]
+
+IMPORTANT: Rounding of amount related to VAT must follow the link:https://www.skatteetaten.no/rettskilder/type/uttalelser/prinsipputtalelser/prinsipputtalelse-vedrorende-oreavrunding-av-vederlag-i-salgsdokumentet[statement of principal] (link:https://www.skatteetaten.no/en/rettskilder/type/uttalelser/prinsipputtalelser/statement-of-principle-regarding-rounding-off-remuneration-in-the-sales-document[english translation]).
+
+IMPORTANT: Rates used in the invoice/credit note must follow the official rates defined by link:https://www.skatteetaten.no/[The Norwegian Tax Administration].
+Implementers in need of exempt is required to request such an exempt using link:https://www.altinn.no/skjemaoversikt/skatteetaten/kontaktskjema---skatteetaten-naringsdrivende-/[RF-1306] before invoicing.
+In the case of exempt is the rate (not amount) to be changed accordingly due to rules in EN16931.
+Documentation of exempt must be shared with Difi upon request.
