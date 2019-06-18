@@ -10,3 +10,5 @@ IMPORTANT: Rates used in the invoice/credit note must follow the official rates 
 Implementers in need of exempt is required to request such an exempt using link:https://www.altinn.no/skjemaoversikt/skatteetaten/kontaktskjema---skatteetaten-naringsdrivende-/[RF-1306] before invoicing.
 In the case of exempt is the rate (not amount) to be changed accordingly due to rules in EN16931.
 Documentation of exempt must be shared with Difi upon request.
+
+Please see the link:http://docs.peppol.eu/poacc/billing/3.0/bis/#_value_added_tax_vat[PEPPOL BIS Billing 3.0 documentation] for more information about value added tax.

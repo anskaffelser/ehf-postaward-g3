@@ -51,7 +51,7 @@ Norwegian organizations may download the following parts of EN16931 for free fro
 * link:https://www.standard.no/nettbutikk/produktkatalogen/produktpresentasjon/?ProductID=934421[Electronic invoicing - Part 1: Semantic data model of the core elements of an electronic invoice]
 * link:https://www.standard.no/nettbutikk/produktkatalogen/produktpresentasjon/?ProductID=937500[Electronic invoicing - Part 2: List of syntaxes that comply with EN 16931-1]
 
-link:https://www.standard.no/nettbutikk/sokeresultater/?search=cen+16931[Other parts of EN16931] is available for a fee.
+link:https://www.standard.no/nettbutikk/sokeresultater/?search=cen+16931[Other parts of EN 16931] is available for a fee.
 
 
 include::description/index.adoc[]

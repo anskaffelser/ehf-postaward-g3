@@ -8,7 +8,7 @@
    <Property key="sch:identifier">reminder-basic</Property>
 
    <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</Namespace>
-   <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
+   <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2</Namespace>
    <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>
 
    <Document>
@@ -29,7 +29,7 @@
          <Term>cbc:ProfileID</Term>
          <Name>Business process type</Name>
          <Description>Identifies the business process context in which the transaction appears, to enable the Buyer to
-                process the Invoice in an appropriate way.
+                process the Reminder in an appropriate way.
             </Description>
          <DataType>Text</DataType>
          <Reference type="BUSINESS_TERM">BT-23</Reference>
@@ -78,10 +78,8 @@
       </Element>
       <Element cardinality="0..1">
          <Term>cbc:Note</Term>
-         <Name>Invoice note</Name>
-         <Description>A textual note that gives unstructured information that is relevant to the Invoice as a whole.Such as the reason for any correction or
-                assignment note in case the invoice has been factored.
-            </Description>
+         <Name>Reminder note</Name>
+         <Description>A textual note that gives unstructured information that is relevant to the Reminder as a whole.</Description>
          <DataType>Text</DataType>
          <Reference type="BUSINESS_TERM">BT-22</Reference>
          <Reference type="RULE">PEPPOL-EN16931-R002</Reference>
@@ -91,7 +89,7 @@
          <Term>cbc:TaxPointDate</Term>
          <Name>Value added tax point date</Name>
          <Description>The date when the VAT becomes accountable for the Seller and for the Buyer in so far as that date
-                can be determined and differs from the date of issue of the invoice, according to the VAT directive.This element is required if the Value added tax point date is different from the Invoice issue date.
+                can be determined and differs from the date of issue of the reminder, according to the VAT directive. This element is required if the Value added tax point date is different from the Reminder issue date.
             </Description>
          <DataType>Date</DataType>
          <Reference type="BUSINESS_TERM">BT-7</Reference>
@@ -100,9 +98,9 @@
       </Element>
       <Element>
          <Term>cbc:DocumentCurrencyCode</Term>
-         <Name>Invoice currency code</Name>
-         <Description>The currency in which all Invoice amounts are given, except for the Total VAT amount in accounting
-                currency. Only one currency shall be used in the Invoice, except for the VAT accounting currency code (BT-6) and the invoice total VAT amount in accounting currency (BT-111).
+         <Name>Reminder currency code</Name>
+         <Description>The currency in which all Reminder amounts are given, except for the Total VAT amount in accounting
+                currency. Only one currency shall be used in the Reminder, except for the VAT accounting currency code (BT-6) and the invoice total VAT amount in accounting currency (BT-111).
             </Description>
          <DataType>Code</DataType>
          <Reference type="BUSINESS_TERM">BT-5</Reference>
@@ -1268,7 +1266,7 @@
          <Element cardinality="0..1">
             <Term>cbc:PaymentID</Term>
             <Name>Remittance information</Name>
-            <Description>A textual value used to establish a link between the payment and the Invoice, issued by the
+            <Description>A textual value used to establish a link between the payment and the Reminder, issued by the
                 Seller. Used for creditor's critical reconciliation information. This information element helps the Seller to assign an incoming payment to the relevant payment process.
             </Description>
             <DataType>Text</DataType>
@@ -1393,9 +1391,9 @@
       <Element cardinality="0..n">
          <Term>cac:AllowanceCharge</Term>
          <Name>DOCUMENT LEVEL ALLOWANCES AND CHARGES</Name>
-         <Description>A group of business terms providing information about allowances applicable to the Invoice as a
+         <Description>A group of business terms providing information about allowances applicable to the Reminder as a
             whole. A group of business terms providing information about charges and taxes other than VAT, applicable
-            to the Invoice as a whole.
+            to the Reminder as a whole.
         </Description>
          <Reference type="BUSINESS_TERM">BG-20</Reference>
          <Reference type="BUSINESS_TERM">BG-21</Reference>
@@ -1560,8 +1558,8 @@
          <Reference type="RULE">PEPPOL-EN16931-R054</Reference>
          <Element>
             <Term>cbc:TaxAmount</Term>
-            <Name>Invoice total VAT amount, Invoice total VAT amount in accounting currency</Name>
-            <Description>The total VAT amount for the Invoice or the VAT total amount expressed in the accounting currency accepted or required in the country of
+            <Name>Reminder total VAT amount, Reminder total VAT amount in accounting currency</Name>
+            <Description>The total VAT amount for the Reminder or the VAT total amount expressed in the accounting currency accepted or required in the country of
                 the Seller. Must be rounded to maximum 2 decimals</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-110, BT-111</Reference>
@@ -1735,8 +1733,8 @@
          <Reference type="BUSINESS_TERM">BG-22</Reference>
          <Element>
             <Term>cbc:LineExtensionAmount</Term>
-            <Name>Sum of Invoice line net amount</Name>
-            <Description>Sum of all Invoice line net amounts in the Invoice. Must be rounded to maximum 2 decimals.</Description>
+            <Name>Sum of Reminder line net amount</Name>
+            <Description>Sum of all Reminder line net amounts in the Reminder. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-106</Reference>
             <Reference type="RULE">BR-12</Reference>
@@ -1755,8 +1753,8 @@
          </Element>
          <Element>
             <Term>cbc:TaxExclusiveAmount</Term>
-            <Name>Invoice total amount without VAT</Name>
-            <Description>The total amount of the Invoice without VAT. Must be rounded to maximum 2 decimals.</Description>
+            <Name>Reminder total amount without VAT</Name>
+            <Description>The total amount of the Reminder without VAT. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-109</Reference>
             <Reference type="RULE">BR-13</Reference>
@@ -1775,8 +1773,8 @@
          </Element>
          <Element>
             <Term>cbc:TaxInclusiveAmount</Term>
-            <Name>Invoice total amount with VAT</Name>
-            <Description>The total amount of the Invoice with VAT. Must be rounded to maximum 2 decimals.</Description>
+            <Name>Reminder total amount with VAT</Name>
+            <Description>The total amount of the Reminder with VAT. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-112</Reference>
             <Reference type="RULE">BR-14</Reference>
@@ -1796,7 +1794,7 @@
          <Element cardinality="0..1">
             <Term>cbc:AllowanceTotalAmount</Term>
             <Name>Sum of allowances on document level</Name>
-            <Description>Sum of all allowances on document level in the Invoice. Must be rounded to maximum 2 decimals.</Description>
+            <Description>Sum of all allowances on document level in the Reminder. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-107</Reference>
             <Reference type="RULE">BR-CO-11</Reference>
@@ -1815,7 +1813,7 @@
          <Element cardinality="0..1">
             <Term>cbc:ChargeTotalAmount</Term>
             <Name>Sum of charges on document level</Name>
-            <Description>Sum of all charges on document level in the Invoice. Must be rounded to maximum 2 decimals.</Description>
+            <Description>Sum of all charges on document level in the Reminder. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-108</Reference>
             <Reference type="RULE">BR-CO-12</Reference>
@@ -1852,7 +1850,7 @@
          <Element cardinality="0..1">
             <Term>cbc:PayableRoundingAmount</Term>
             <Name>Rounding amount</Name>
-            <Description>The amount to be added to the invoice total to round the amount to be paid. Must be rounded to maximum 2 decimals.</Description>
+            <Description>The amount to be added to the reminder total to round the amount to be paid. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-114</Reference>
             <Reference type="RULE">BR-DEC-17</Reference>
@@ -1891,7 +1889,7 @@
       <Element cardinality="1..n">
          <Term>cac:InvoiceLine</Term>
          <Name>INVOICE LINE</Name>
-         <Description>A group of business terms providing information on individual Invoice lines.</Description>
+         <Description>A group of business terms providing information on individual Invoice lines in original Invoice.</Description>
          <Reference type="BUSINESS_TERM">BG-25</Reference>
          <Reference type="RULE">BR-16</Reference>
          <Element>
