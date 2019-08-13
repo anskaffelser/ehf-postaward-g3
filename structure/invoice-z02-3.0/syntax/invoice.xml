@@ -269,13 +269,13 @@
             <Value type="EXAMPLE">PPID-123</Value>
          </Element>
       </Element>
-      <Element tag="x" cardinality="0..1">
+      <Element cardinality="0..1">
          <Term>cac:ContractDocumentReference</Term>
          <Name>CONTRACT REFERENCE</Name>
          <Element>
             <Term>cbc:ID</Term>
-            <Name>Contract reference</Name>
-            <Description>The identification of a contract.</Description>
+            <Name>Case/affair reference</Name>
+            <Description>The identification of a case/affair in the internal system of the paying party.</Description>
             <DataType>Document Reference</DataType>
             <Reference tag="x" type="BUSINESS_TERM">BT-12</Reference>
             <Value type="EXAMPLE">123Contractref</Value>
