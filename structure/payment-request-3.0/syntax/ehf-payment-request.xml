@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Syntax xmlns="urn:fdc:difi.no:2017:vefa:structure:Syntax-1">
-   <Term>z02-invoice</Term>
-   <Name>EHF Z02 Invoice</Name>
+   <Term>payment-request</Term>
+   <Name>EHF Payment Request</Name>
 
-   <Property key="sch:prefix">EHF-TZ02</Property>
-   <Property key="sch:identifier">tz02-basic</Property>
+   <Property key="sch:prefix">EHF-PR</Property>
+   <Property key="sch:identifier">pr-basic</Property>
 
    <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</Namespace>
    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2</Namespace>
@@ -195,7 +195,7 @@
             <Reference tag="x" type="RULE">PEPPOL-EN16931-R003</Reference>
             <Value type="EXAMPLE">98776</Value>
          </Element>
-         <Element cardinality="0..1">
+         <Element tag="x" cardinality="0..1">
             <Term>cbc:SalesOrderID</Term>
             <Name>Sales order reference</Name>
             <Description>An identifier of a referenced sales order, issued by the Seller.</Description>

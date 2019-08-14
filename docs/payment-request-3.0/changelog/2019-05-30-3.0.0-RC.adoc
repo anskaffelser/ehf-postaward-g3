@@ -5,7 +5,7 @@
 | Issue | Description | Type
 
 | -
-| Initial documentation based on PEPPOL BIS Despatch Advice 3.0.
+| Initial documentation based on PEPPOL BIS Billing 3.0.
 |
 
 |===

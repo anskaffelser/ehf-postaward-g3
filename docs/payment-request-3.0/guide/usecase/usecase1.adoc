@@ -1,0 +1,27 @@
+== Use case 1 - Victims of violence
+
+****
+
+Description::
+This use case illustrates the use of Payment Request, where the supplier issues and sends an request to the customer and the customer
+receives the request and process it in the request system.
+
+Parties involved::
+Supplier party (In UBL: AccountingSupplierParty) +
+Customer party (In UBL: AccountingCustomerParty)
+
+Assumptions::
+. A man has been physically injured after a violence episode.
+. The man receives a financial compensation on 5000 Kroner from the Government.
+
+Flow::
+. The Supplier (the man) issues and sends an request to the customer.
+. The Customer receives the request and process it in the system.
+. The Customer checks the details and approves the request.
+. The Customer sends the request to the accounting system and pays the request.
+
+Result::
+. The Customer receives and pays the request by checking the details in the data system.
+. The Supplier (the man) receives the financial compensation in few days, not weeks.
+
+****

@@ -1,12 +1,12 @@
 :shared-dir: ../../_common
 :lang: en
-:doctitle: Changelog EHF Z02 Invoice 3.0
+:doctitle: Changelog EHF Payment Request 3.0
 
 include::{shared-dir}/settings.adoc[]
 
 = {doctitle}
 {name-difi-en}
-:description: This document describes the changelog of EHF Z02 Invoice (called "EHF Anmodningsfakturering"). The document is part of Norwegian "Agency of Public Management and eGovernment" (Difi) standardization work related to electronic commerce.
+:description: This document describes the changelog of EHF Payment Request. The document is part of Norwegian "Agency of Public Management and eGovernment" (Difi) standardization work related to electronic commerce.
 :doctype: book
 :icons: font
 :toc: left

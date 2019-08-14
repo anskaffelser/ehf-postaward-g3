@@ -21,8 +21,8 @@
 	<!-- Rules -->
 
 	<include href="../../_common/sch/parts/empty-elements.sch"/>
-	<include href="../../../target/generated/tz02-basic.sch"/>
+	<include href="../../../target/generated/pr-basic.sch"/>
 	<include href="../../_common/sch/parts/identifiers.sch"/>
-	<include href="business/invoice.sch"/>
+	<include href="business/payment-request.sch"/>
 
 </schema>

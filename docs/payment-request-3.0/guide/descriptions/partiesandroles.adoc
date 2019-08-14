@@ -1,6 +1,6 @@
 = Parties and Roles
 
-The important parties and roles in Z02 Invoice is described below.
+The important parties and roles in Payment Request is described below.
 
 ****
 Customer::
@@ -10,6 +10,6 @@ Supplier::
 The supplier is the legal person or organisation who provides a product or service.
 ****
 
-The following diagram illustrates the parties and roles involved in the Z02 Invoice.
+The following diagram illustrates the parties and roles involved in the Payment Request.
 
 //LEGG TIL ROLLEDIAGRAM.

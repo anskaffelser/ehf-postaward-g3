@@ -1,7 +1,7 @@
 
 = Detailed Descriptions
 
-This chapter describes selected parts of the information contents of the EHF Z02 Invoice.
+This chapter describes selected parts of the information contents of the EHF Payment Request.
 
 :leveloffset: +1
 
