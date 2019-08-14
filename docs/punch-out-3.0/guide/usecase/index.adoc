@@ -18,7 +18,7 @@ When the the buyer checks out of the website, a transaction (Punch Out) with ite
 
 :leveloffset: +1
 
-include::../../../../source/poacc-upgrade/guides/shared/bpmn/bpmn-legend.adoc[]
+include::../../../../_source/poacc-upgrade/guides/shared/bpmn/bpmn-legend.adoc[]
 
 :leveloffset: -1
 

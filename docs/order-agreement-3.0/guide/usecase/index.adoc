@@ -25,7 +25,7 @@ The diagrams are expressed in the BPMN notation. The diagram below serves as an 
 
 :leveloffset: +1
 
-include::../../../../source/poacc-upgrade/guides/shared/bpmn/bpmn-legend.adoc[]
+include::../../../../_source/poacc-upgrade/guides/shared/bpmn/bpmn-legend.adoc[]
 
 
 :leveloffset: -1
