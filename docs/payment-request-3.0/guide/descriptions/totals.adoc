@@ -1,7 +1,7 @@
 
 = UBL syntax calculation formulas
 
-The following elements show the legal monetary totals for an invoice
+The following elements show the legal monetary totals for a payment request
 [cols="3,5", options="header"]
 |===
 | Element

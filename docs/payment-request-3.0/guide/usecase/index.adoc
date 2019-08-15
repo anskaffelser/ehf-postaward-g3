@@ -3,7 +3,7 @@
 
 == Process Diagram
 
-The following diagram illustrates the basic EHF Z02 Invoice process.
+The following diagram illustrates the basic EHF Payment Request process.
 
 //LEGG TIL PROSESSDIAGRAM
 
