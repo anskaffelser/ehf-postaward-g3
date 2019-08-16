@@ -1,105 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-    xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-    <cbc:CustomizationID>urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0</cbc:CustomizationID>
-    <cbc:ProfileID>urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</cbc:ProfileID>
-    <cbc:ID>Snippet1</cbc:ID>
-    <cbc:IssueDate>2017-11-13</cbc:IssueDate>
-    <cbc:DueDate>2017-12-01</cbc:DueDate>
-    <cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode>
-    <cbc:AccountingCost>4025:123:4343</cbc:AccountingCost>
-    <cbc:BuyerReference>0150abc</cbc:BuyerReference>
 
-    <cac:AccountingSupplierParty>
-        <cac:Party>
-            <cac:PartyIdentification>
-                <cbc:ID>99887766</cbc:ID>
-            </cac:PartyIdentification>
-            <cac:PartyName>
-                <cbc:Name>SupplierTradingName Ltd.</cbc:Name>
-            </cac:PartyName>
-            <cac:PostalAddress>
-                <cbc:StreetName>Main street 1</cbc:StreetName>
-                <cbc:AdditionalStreetName>Postbox 123</cbc:AdditionalStreetName>
-                <cbc:CityName>London</cbc:CityName>
-                <cbc:PostalZone>GB 123 EW</cbc:PostalZone>
-                <cac:Country>
-                    <cbc:IdentificationCode>GB</cbc:IdentificationCode>
-                </cac:Country>
-            </cac:PostalAddress>
-        </cac:Party>
-    </cac:AccountingSupplierParty>
+<StandardBusinessDocument xmlns = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+    <StandardBusinessDocumentHeader>
+        <HeaderVersion>1.0</HeaderVersion>
+        <Sender>
+            <Identifier Authority="iso6523-actorid-upis">0192:123456785</Identifier>
+        </Sender>
+        <Receiver>
+            <Identifier Authority="iso6523-actorid-upis">0192:123456785</Identifier>
+        </Receiver>
+        <DocumentIdentification>
+            <Standard>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</Standard>
+            <TypeVersion>2.2</TypeVersion>
+            <InstanceIdentifier>51ddd910-9a95-4b0f-ab01-b3cc0db59d01</InstanceIdentifier> <!-- Version 4 UUID -->
+            <Type>Invoice</Type>
+            <CreationDateAndTime>2019-08-14T13:30:00Z</CreationDateAndTime>
+        </DocumentIdentification>
 
-    <cac:AccountingCustomerParty>
-        <cac:Party>
-            <cbc:EndpointID schemeID="0002">FR23342</cbc:EndpointID>
-            <cac:PartyIdentification>
-                <cbc:ID schemeID="0002">FR23342</cbc:ID>
-            </cac:PartyIdentification>
-            <cac:PartyName>
-                <cbc:Name>BuyerTradingName AS</cbc:Name>
-            </cac:PartyName>
-            <cac:PostalAddress>
-                <cbc:StreetName>Hovedgatan 32</cbc:StreetName>
-                <cbc:AdditionalStreetName>Po box 878</cbc:AdditionalStreetName>
-                <cbc:CityName>Stockholm</cbc:CityName>
-                <cbc:PostalZone>456 34</cbc:PostalZone>
-                <cac:Country>
-                    <cbc:IdentificationCode>SE</cbc:IdentificationCode>
-                </cac:Country>
-            </cac:PostalAddress>
-            <cac:Contact>
-                <cbc:Name>Lisa Johnson</cbc:Name>
-                <cbc:Telephone>23434234</cbc:Telephone>
-                <cbc:ElectronicMail>lj@buyer.se</cbc:ElectronicMail>
-            </cac:Contact>
-        </cac:Party>
-    </cac:AccountingCustomerParty>
+        <BusinessScope>
+            <Scope>
+                <Type>DOCUMENTID</Type>
+                <InstanceIdentifier>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0::2.2</InstanceIdentifier>
+            </Scope>
+            <scope>
+                <Type>PROCESSID</Type>
+                <InstanceIdentifier>urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</InstanceIdentifier>
+            </scope>
+        </BusinessScope>
+    </StandardBusinessDocumentHeader>
 
-    <cac:PaymentMeans>
-        <cbc:PaymentMeansCode name="Credit transfer">30</cbc:PaymentMeansCode>
-        <cbc:PaymentID>Snippet1</cbc:PaymentID>
-        <cac:PayeeFinancialAccount>
-            <cbc:ID>IBAN32423940</cbc:ID>
-            <cbc:Name>AccountName</cbc:Name>
-            <cac:FinancialInstitutionBranch>
-                <cbc:ID>BIC324098</cbc:ID>
-            </cac:FinancialInstitutionBranch>
-        </cac:PayeeFinancialAccount>
-    </cac:PaymentMeans>
+    <Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+        xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+        xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+        <cbc:CustomizationID>urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0</cbc:CustomizationID>
+        <cbc:ProfileID>urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</cbc:ProfileID>
+        <cbc:ID>Snippet1</cbc:ID>
+        <cbc:IssueDate>2017-11-13</cbc:IssueDate>
+        <cbc:DueDate>2017-12-01</cbc:DueDate>
+        <cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode>
+        <cbc:AccountingCost>4025:123:4343</cbc:AccountingCost>
+        <cbc:BuyerReference>0150abc</cbc:BuyerReference>
 
-    <cac:LegalMonetaryTotal>
-        <cbc:LineExtensionAmount currencyID="EUR">1300</cbc:LineExtensionAmount>
-        <cbc:PayableAmount currencyID="EUR">1300</cbc:PayableAmount>
-    </cac:LegalMonetaryTotal>
+        <cac:AccountingSupplierParty>
+            <cac:Party>
+                <cac:PartyIdentification>
+                    <cbc:ID>99887766</cbc:ID>
+                </cac:PartyIdentification>
+                <cac:PartyName>
+                    <cbc:Name>SupplierTradingName Ltd.</cbc:Name>
+                </cac:PartyName>
+                <cac:PostalAddress>
+                    <cbc:StreetName>Main street 1</cbc:StreetName>
+                    <cbc:AdditionalStreetName>Postbox 123</cbc:AdditionalStreetName>
+                    <cbc:CityName>London</cbc:CityName>
+                    <cbc:PostalZone>GB 123 EW</cbc:PostalZone>
+                    <cac:Country>
+                        <cbc:IdentificationCode>GB</cbc:IdentificationCode>
+                    </cac:Country>
+                </cac:PostalAddress>
+            </cac:Party>
+        </cac:AccountingSupplierParty>
 
-    <cac:InvoiceLine>
-        <cbc:ID>1</cbc:ID>
-        <cbc:InvoicedQuantity unitCode="DAY">7</cbc:InvoicedQuantity>
-        <cbc:LineExtensionAmount currencyID= "EUR">2800</cbc:LineExtensionAmount>
-        <cbc:AccountingCost>Konteringsstreng</cbc:AccountingCost>
-        <cac:Item>
-            <cbc:Description>Description of item</cbc:Description>
-            <cbc:Name>item name</cbc:Name>
-        </cac:Item>
-        <cac:Price>
-            <cbc:PriceAmount currencyID="EUR">2800</cbc:PriceAmount>
-        </cac:Price>
-    </cac:InvoiceLine>
+        <cac:AccountingCustomerParty>
+            <cac:Party>
+                <cbc:EndpointID schemeID="0002">FR23342</cbc:EndpointID>
+                <cac:PartyIdentification>
+                    <cbc:ID schemeID="0002">FR23342</cbc:ID>
+                </cac:PartyIdentification>
+                <cac:PartyName>
+                    <cbc:Name>BuyerTradingName AS</cbc:Name>
+                </cac:PartyName>
+                <cac:PostalAddress>
+                    <cbc:StreetName>Hovedgatan 32</cbc:StreetName>
+                    <cbc:AdditionalStreetName>Po box 878</cbc:AdditionalStreetName>
+                    <cbc:CityName>Stockholm</cbc:CityName>
+                    <cbc:PostalZone>456 34</cbc:PostalZone>
+                    <cac:Country>
+                        <cbc:IdentificationCode>SE</cbc:IdentificationCode>
+                    </cac:Country>
+                </cac:PostalAddress>
+                <cac:Contact>
+                    <cbc:Name>Lisa Johnson</cbc:Name>
+                    <cbc:Telephone>23434234</cbc:Telephone>
+                    <cbc:ElectronicMail>lj@buyer.se</cbc:ElectronicMail>
+                </cac:Contact>
+            </cac:Party>
+        </cac:AccountingCustomerParty>
 
-    <cac:InvoiceLine>
-        <cbc:ID>2</cbc:ID>
-        <cbc:InvoicedQuantity unitCode="DAY">-3</cbc:InvoicedQuantity>
-        <cbc:LineExtensionAmount currencyID="EUR">-1500</cbc:LineExtensionAmount>
+        <cac:PaymentMeans>
+            <cbc:PaymentMeansCode name="Credit transfer">30</cbc:PaymentMeansCode>
+            <cbc:PaymentID>Snippet1</cbc:PaymentID>
+            <cac:PayeeFinancialAccount>
+                <cbc:ID>IBAN32423940</cbc:ID>
+                <cbc:Name>AccountName</cbc:Name>
+                <cac:FinancialInstitutionBranch>
+                    <cbc:ID>BIC324098</cbc:ID>
+                </cac:FinancialInstitutionBranch>
+            </cac:PayeeFinancialAccount>
+        </cac:PaymentMeans>
 
-        <cac:Item>
-            <cbc:Description>Description 2</cbc:Description>
-            <cbc:Name>item name 2</cbc:Name>
-        </cac:Item>
-        <cac:Price>
-            <cbc:PriceAmount currencyID="EUR">-1500</cbc:PriceAmount>
-        </cac:Price>
-    </cac:InvoiceLine>
+        <cac:LegalMonetaryTotal>
+            <cbc:LineExtensionAmount currencyID="EUR">1300</cbc:LineExtensionAmount>
+            <cbc:PayableAmount currencyID="EUR">1300</cbc:PayableAmount>
+        </cac:LegalMonetaryTotal>
 
-</Invoice>
+        <cac:InvoiceLine>
+            <cbc:ID>1</cbc:ID>
+            <cbc:InvoicedQuantity unitCode="DAY">7</cbc:InvoicedQuantity>
+            <cbc:LineExtensionAmount currencyID= "EUR">2800</cbc:LineExtensionAmount>
+            <cbc:AccountingCost>Konteringsstreng</cbc:AccountingCost>
+            <cac:Item>
+                <cbc:Description>Description of item</cbc:Description>
+                <cbc:Name>item name</cbc:Name>
+            </cac:Item>
+            <cac:Price>
+                <cbc:PriceAmount currencyID="EUR">2800</cbc:PriceAmount>
+            </cac:Price>
+        </cac:InvoiceLine>
+
+        <cac:InvoiceLine>
+            <cbc:ID>2</cbc:ID>
+            <cbc:InvoicedQuantity unitCode="DAY">-3</cbc:InvoicedQuantity>
+            <cbc:LineExtensionAmount currencyID="EUR">-1500</cbc:LineExtensionAmount>
+
+            <cac:Item>
+                <cbc:Description>Description 2</cbc:Description>
+                <cbc:Name>item name 2</cbc:Name>
+            </cac:Item>
+            <cac:Price>
+                <cbc:PriceAmount currencyID="EUR">-1500</cbc:PriceAmount>
+            </cac:Price>
+        </cac:InvoiceLine>
+
+    </Invoice>
+</StandardBusinessDocument>

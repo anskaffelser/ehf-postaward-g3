@@ -9,6 +9,7 @@
    <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</Namespace>
    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2</Namespace>
    <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>
+   <Namespace prefix="xs">http://www.w3.org/2001/XMLSchema</Namespace>
    <Namespace prefix="sh">http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader</Namespace>
 
    <Document>

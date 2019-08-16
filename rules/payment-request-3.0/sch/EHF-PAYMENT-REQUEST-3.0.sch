@@ -5,11 +5,12 @@
 				xmlns:u="utils"
 				schemaVersion="iso" queryBinding="xslt2">
 
-	<title>EHF Z02 Invoice 3.0</title>
+	<title>EHF Payment Request 3.0</title>
 
 	<ns prefix="cbc" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"/>
 	<ns prefix="cac" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"/>
 	<ns prefix="ubl" uri="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2"/>
+	<ns prefix="sh" uri="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"/>
 	<ns prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
 	<ns prefix="u" uri="utils"/>
 
