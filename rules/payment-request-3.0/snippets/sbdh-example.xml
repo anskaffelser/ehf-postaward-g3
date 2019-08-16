@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- tag::SBDH[] -->
+
+<StandardBusinessDocument xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns ="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"> <!--1-->
+    <StandardBusinessDocumentHeader> <!--2-->
+        <HeaderVersion>1.0</HeaderVersion>
+        <Sender>
+            <Identifier Authority="iso6523-actorid-upis">0192:123456785</Identifier> <!--3-->
+        </Sender>
+        <Receiver>
+            <Identifier Authority="iso6523-actorid-upis">0192:123456785</Identifier> <!--4-->
+        </Receiver>
+        <DocumentIdentification>
+            <Standard>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</Standard> <!--5-->
+            <TypeVersion>2.2</TypeVersion>
+            <InstanceIdentifier>51ddd910-9a95-4b0f-ab01-b3cc0db59d01</InstanceIdentifier> <!--6-->
+            <Type>Invoice</Type>
+            <CreationDateAndTime>2019-08-14T13:30:00Z</CreationDateAndTime> <!--7-->
+        </DocumentIdentification>
+
+        <BusinessScope> <!--8-->
+            <Scope>
+                <Type>DOCUMENTID</Type> <!--9-->
+                <InstanceIdentifier>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0::2.2</InstanceIdentifier> <!--10-->
+            </Scope>
+            <scope>
+                <Type>PROCESSID</Type> <!--11-->
+                <InstanceIdentifier>urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</InstanceIdentifier> <!--12-->
+            </scope>
+        </BusinessScope>
+    </StandardBusinessDocumentHeader>
+
+
+
+    <Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+             xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"> <!--12-->
+
+        <!-- Rest of the Invoice input -->
+
+    </Invoice>
+
+</StandardBusinessDocument>
+
+<!-- end::SBDH[] -->

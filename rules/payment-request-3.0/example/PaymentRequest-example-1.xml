@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StandardBusinessDocument xmlns = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+
+<StandardBusinessDocument
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
     <StandardBusinessDocumentHeader>
         <HeaderVersion>1.0</HeaderVersion>
         <Sender>
@@ -11,7 +14,7 @@
         <DocumentIdentification>
             <Standard>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</Standard>
             <TypeVersion>2.2</TypeVersion>
-            <InstanceIdentifier>51ddd910-9a95-4b0f-ab01-b3cc0db59d01</InstanceIdentifier>
+            <InstanceIdentifier>dc2879e4-6513-4b04-9142-ee44dc1413b2</InstanceIdentifier>
             <Type>Invoice</Type>
             <CreationDateAndTime>2019-07-10T10:30:00Z</CreationDateAndTime>
         </DocumentIdentification>
@@ -20,10 +23,12 @@
             <Scope>
                 <Type>DOCUMENTID</Type>
                 <InstanceIdentifier>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0::2.2</InstanceIdentifier>
+                <Identifier>busdox-docid-qns</Identifier>
             </Scope>
             <scope>
                 <Type>PROCESSID</Type>
                 <InstanceIdentifier>urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</InstanceIdentifier>
+                <Identifier>cenbii-procid-ubl</Identifier>
             </scope>
         </BusinessScope>
     </StandardBusinessDocumentHeader>
@@ -31,7 +36,8 @@
     <Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
              xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
              xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-        <cbc:CustomizationID>urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0</cbc:CustomizationID>
+
+        <cbc:CustomizationID>urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0</cbc:CustomizationID>
         <cbc:ProfileID>urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</cbc:ProfileID>
         <cbc:ID>1234</cbc:ID>
         <cbc:IssueDate>2018-10-01</cbc:IssueDate>

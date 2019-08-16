@@ -10,10 +10,10 @@
    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2</Namespace>
    <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>
    <Namespace prefix="xs">http://www.w3.org/2001/XMLSchema</Namespace>
-   <Namespace prefix="sh">http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader</Namespace>
+   <Namespace>http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader</Namespace>
 
    <Document>
-      <Term>sh:StandardBusinessDocument</Term>
+      <Term>StandardBusinessDocument</Term>
       <Element>
          <Term>StandardBusinessDocumentHeader</Term>
          <Name>Standard Business Document Header</Name>
@@ -114,11 +114,12 @@
             <Element cardinality="2..n">
                <Term>Scope</Term>
                <Name>Scope</Name>
+               <Description>Information about the enveloped business message. Need different scope element for different processes.</Description>
 
                <Element>
                   <Term>Type</Term>
                   <Name>Type</Name>
-                  <Description>The type of business scope. Use codelist "Business Identifiers", where we MUST use two scope elements one for "DOCUMENTID" and
+                  <Description>The type of business scope, used to understand element InstanceIdentifier. Use codelist "Business Identifiers", where we MUST use two scope elements one for "DOCUMENTID" and
                   one for "PROCESSID".</Description>
                   <Reference type="CODE_LIST">Business_Identifier</Reference>
                   <Value type="EXAMPLE">DOCUMENTID</Value>
@@ -127,8 +128,8 @@
                <Element>
                   <Term>InstanceIdentifier</Term>
                   <Name>Instance Identifier</Name>
-                  <Description>The ProcessID (ProfileID) or DocumentID corresponding to the enveloped business message. Use
-                     codelist "Instance Identifier" and find right code to processID and documentID.</Description>
+                  <Description>Process identifier and document identifier that corresponds to the enveloped business message. Use
+                     codelist "Instance Identifier" and find right code to ProcessID and DocumentID.</Description>
                   <Reference type="CODE_LIST">Instance_Identifier</Reference>
                   <Value type="EXAMPLE">urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0::2.2</Value>
                </Element>

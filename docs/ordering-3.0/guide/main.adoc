@@ -12,6 +12,7 @@ v3.0.0 RC
 :doctype: book
 :icons: font
 :toc: left
+:stem:
 :toclevels: 2
 :source-highlighter: coderay
 :source-language: xml

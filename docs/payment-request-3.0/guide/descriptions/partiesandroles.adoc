@@ -12,4 +12,5 @@ The supplier is the legal person or organisation who provides a product or servi
 
 The following diagram illustrates the parties and roles involved in the Payment Request.
 
-//LEGG TIL ROLLEDIAGRAM.
+.EHF Payment Request rolediagram.
+image::images/rolediagram.png[align="center",1200, 800]

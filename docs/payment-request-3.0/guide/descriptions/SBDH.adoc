@@ -1,0 +1,29 @@
+= Standard Business Document Header (SBDH)
+
+
+SKRIV OM HVA SBDH ER.
+
+
+Read more about SBDH from link::https://peppol.eu/downloads/the-peppol-edelivery-network-specifications/[PEPPOL'S homepage] or
+link::https://www.gs1.org/standards/edi-xml-gdsn-gs1-uncefact-xml-profiles/sbdh-technical-specifications/1-3[technical specification from GS1].
+
+
+.Example of how to implement SBDH.
+[source, xml, indent=0]
+----
+include::../../../../rules/payment-request-3.0/snippets/sbdh-example.xml[tags=SBDH]
+----
+<1> Standard business document header namespace.
+<2> Standard business document header element that contains information about the business document.
+<3> Sender of the message *must* use attribute "Authority= iso6523-actorid-upis" together with a value "0192:NNNNNNNNN",
+where _N = Organisation number_. *Note that*: Senders organisation number MUST be the same as Receivers organisation number.
+<4> Receiver of the message *must* use attribute "Authority= iso6523-actorid-upis" together with a value "0192:NNNNNNNNN",
+    where _N = Organisation number_. *Note that*: Receivers organisation number MUST be the same as Senders organisation number.
+<5> Invoice Namespace fra OASIS 2.2
+<6> Universal Unique Identifier (UUID), recommend version 4 UUID.
+<7> Date and time for when this envelope was created. Use format: "2019-05-20T09:00:00Z", where Z indicates UTC.
+<8> Determine the scope of the business message (envelope). Element "BusinessScope" MUST contain two scope elements:Document identifier (DOCUMENTID) and Process identifier (PROCESSID).
+<9> The first scope element "DOCUMENTID",document identifier, selected from codelist "Business Identifiers".
+<10> DocumentID's instance identifier, from codelist "Instance Identifier".
+<11> Second scope element "PROCESSID", process identifier, selected from codelist "Business Identifiers".
+<12> ProcessID's instance identifier, from codelist "Instance Identifier".

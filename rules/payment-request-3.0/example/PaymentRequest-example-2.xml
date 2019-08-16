@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<StandardBusinessDocument xmlns = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+<StandardBusinessDocument
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
     <StandardBusinessDocumentHeader>
         <HeaderVersion>1.0</HeaderVersion>
         <Sender>
@@ -12,7 +14,7 @@
         <DocumentIdentification>
             <Standard>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</Standard>
             <TypeVersion>2.2</TypeVersion>
-            <InstanceIdentifier>51ddd910-9a95-4b0f-ab01-b3cc0db59d01</InstanceIdentifier> <!-- Version 4 UUID -->
+            <InstanceIdentifier>9b53760d-38bd-4634-9dd9-9233a6dc4d96</InstanceIdentifier> <!-- Version 4 UUID -->
             <Type>Invoice</Type>
             <CreationDateAndTime>2019-08-14T13:30:00Z</CreationDateAndTime>
         </DocumentIdentification>
@@ -29,10 +31,12 @@
         </BusinessScope>
     </StandardBusinessDocumentHeader>
 
-    <Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    <ubl:Invoice
+        xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-        xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-        <cbc:CustomizationID>urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0</cbc:CustomizationID>
+        xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+        <cbc:CustomizationID>urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0</cbc:CustomizationID> <!-- urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0 -->
         <cbc:ProfileID>urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</cbc:ProfileID>
         <cbc:ID>Snippet1</cbc:ID>
         <cbc:IssueDate>2017-11-13</cbc:IssueDate>
@@ -132,5 +136,5 @@
             </cac:Price>
         </cac:InvoiceLine>
 
-    </Invoice>
+    </ubl:Invoice>
 </StandardBusinessDocument>

@@ -5,7 +5,8 @@
 
 The following diagram illustrates the basic EHF Payment Request process.
 
-//LEGG TIL PROSESSDIAGRAM
+.EHF Payment Request process diagram.
+image::images/processdiagram.png[align="center",1200, 800]
 
 == Typical use cases
 
