@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<StandardBusinessDocument
-        xmlns:xs="http://www.w3.org/2001/XMLSchema"
-        xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
-    <StandardBusinessDocumentHeader>
+<StandardBusinessDocument>
+    <StandardBusinessDocumentHeader xmlns = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
         <HeaderVersion>1.0</HeaderVersion>
         <Sender>
             <Identifier Authority="iso6523-actorid-upis">0192:123456785</Identifier>

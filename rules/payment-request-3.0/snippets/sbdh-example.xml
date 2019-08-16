@@ -2,9 +2,8 @@
 
 <!-- tag::SBDH[] -->
 
-<StandardBusinessDocument xmlns:xs="http://www.w3.org/2001/XMLSchema"
-        xmlns ="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"> <!--1-->
-    <StandardBusinessDocumentHeader> <!--2-->
+<StandardBusinessDocument> <!--1-->
+    <StandardBusinessDocumentHeader xmlns = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"> <!--2-->
         <HeaderVersion>1.0</HeaderVersion>
         <Sender>
             <Identifier Authority="iso6523-actorid-upis">0192:123456785</Identifier> <!--3-->
