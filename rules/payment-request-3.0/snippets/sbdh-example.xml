@@ -3,7 +3,8 @@
 <!-- tag::SBDH[] -->
 
 <StandardBusinessDocument> <!--1-->
-    <StandardBusinessDocumentHeader xmlns = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"> <!--2-->
+    <StandardBusinessDocumentHeader xmlns = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+                                    xmlns:xs="http://www.w3.org/2001/XMLSchema"> <!--2-->
         <HeaderVersion>1.0</HeaderVersion>
         <Sender>
             <Identifier Authority="iso6523-actorid-upis">0192:123456785</Identifier> <!--3-->
@@ -22,7 +23,7 @@
         <BusinessScope> <!--8-->
             <Scope>
                 <Type>DOCUMENTID</Type> <!--9-->
-                <InstanceIdentifier>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0::2.2</InstanceIdentifier> <!--10-->
+                <InstanceIdentifier>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0::2.2</InstanceIdentifier> <!--10-->
             </Scope>
             <scope>
                 <Type>PROCESSID</Type> <!--11-->

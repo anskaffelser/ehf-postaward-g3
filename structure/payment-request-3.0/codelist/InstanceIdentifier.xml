@@ -7,7 +7,7 @@
     <Agency>Difi</Agency>
 
     <Code>
-        <Id>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0::2.2</Id>
+        <Id>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0::2.2</Id>
         <Name>Document identifier</Name>
         <Description>Document identifier</Description>
         <Description>Specifies document identifier value. DOCUMENTID has format "(syntax specific id)##(customization id)::(version)", where version = UBL version.</Description>

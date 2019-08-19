@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<StandardBusinessDocument>
-    <StandardBusinessDocumentHeader xmlns = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+<StandardBusinessDocument xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                          xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+    <StandardBusinessDocumentHeader>
         <HeaderVersion>1.0</HeaderVersion>
         <Sender>
             <Identifier Authority="iso6523-actorid-upis">0192:123456785</Identifier>
@@ -20,12 +21,12 @@
         <BusinessScope>
             <Scope>
                 <Type>DOCUMENTID</Type>
-                <InstanceIdentifier>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0::2.2</InstanceIdentifier>
+                <InstanceIdentifier>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0::2.2</InstanceIdentifier>
             </Scope>
-            <scope>
+            <Scope>
                 <Type>PROCESSID</Type>
                 <InstanceIdentifier>urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</InstanceIdentifier>
-            </scope>
+            </Scope>
         </BusinessScope>
     </StandardBusinessDocumentHeader>
 
@@ -34,7 +35,7 @@
         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
         xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
-        <cbc:CustomizationID>urn:fdc:difi.no:2017:ehf:spec:z02-invoice:3.0</cbc:CustomizationID> <!-- urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0 -->
+        <cbc:CustomizationID>urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0</cbc:CustomizationID> <!-- urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0 -->
         <cbc:ProfileID>urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</cbc:ProfileID>
         <cbc:ID>Snippet1</cbc:ID>
         <cbc:IssueDate>2017-11-13</cbc:IssueDate>
