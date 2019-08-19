@@ -38,7 +38,7 @@
              xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
              xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"> <!--12-->
 
-        <!-- Rest of the Invoice input -->
+        <!-- Rest of the Payment Request input -->
 
     </Invoice>
 

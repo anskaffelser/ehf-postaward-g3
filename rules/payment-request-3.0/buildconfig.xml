@@ -5,10 +5,11 @@
 
     <testfolder>example</testfolder>
     <testfolder>usecase</testfolder>
+    <testfolder>snippets</testfolder>
 
     <configuration>
         <identifier>ehf-payment-request-07-3.0</identifier>
-        <title>EHF Z02 Invoice 3.0 (Profile 07)</title>
+        <title>EHF Payment Request 3.0 (Profile 07)</title>
         <profileId>urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</profileId>
         <customizationId>urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0</customizationId>
         <inherit>ubl-2.2</inherit>
