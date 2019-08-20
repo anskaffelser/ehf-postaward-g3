@@ -418,16 +418,6 @@
         <Path>structure/reminder-3.0/codelist/UNCL7161_REMINDER.xml</Path>
         <Tag>reminder-3.0</Tag>
     </Resource>
-    <Resource>
-        <Type>CodeList-1</Type>
-        <Path>structure/payment-request-3.0/codelist/BusinessIdentifier.xml</Path>
-        <Tag>payment-request-3.0</Tag>
-    </Resource>
-    <Resource>
-        <Type>CodeList-1</Type>
-        <Path>structure/payment-request-3.0/codelist/InstanceIdentifier.xml</Path>
-        <Tag>payment-request-3.0</Tag>
-    </Resource>
 
     <!-- Files -->
     <Resource>
