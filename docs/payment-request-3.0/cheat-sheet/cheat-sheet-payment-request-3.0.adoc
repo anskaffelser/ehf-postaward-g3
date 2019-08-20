@@ -1,0 +1,83 @@
+
+= Cheat Sheet Payment Request 3.0 (Betalingsanmodning)
+
+== Generell informasjon på hodenivå
+[cols="2,2"]
+|===
+|Beskrivelse | XPath
+
+|CustomizationID:
+
+ urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0 |cbc:CustomizationID
+|ProfileID:
+
+ urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0 | cbc:ProfileID
+|Payment Request identifikator |cbc:ID
+|Dato ved opprettelse av dokumentet, på formen: YYYY-MM-DD |cbc:IssueDate
+|Valuta brukt i dokumentet. Kodeliste: "Currency codes (ISO 4217)" |cbc:DocumentCurrencyCode
+|===
+
+
+== Internt økonomisystem
+[cols="2,2"]
+|===
+|Beskrivelse | XPath
+
+| Identifikator/kundenummer |cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/ID[@schemeID = 0192]
+| Navn | cac:AccountingSupplierParty/cac:Party/cac:PartyName/Name
+| Postadressen| cac:AccountingSupplierParty/cac:Party/cac:PostalAddress
+
+|===
+
+
+== Internt fagsystem
+[cols="2,2"]
+|===
+|Beskrivelse | XPath
+
+|Elektronisk addresse |cac:AccountingCustomerParty/cac:Party/cbc:EndpointID[@schemeID=0192]
+|Identifikator |cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID[@schemeID = 0192]
+|Navn |cac:AccountingCustomerParty/cac:Party/cac:PartyName/Name
+|Postadresse |cac:AccountingCustomerParty/cac:Party/cac:PostalAddress
+|Kontaktinformasjon | cac:AccountingCustomerParty/cac:Party/cac:Contact
+
+|===
+
+
+== Betalingsinformasjon
+[cols="2,2"]
+|===
+|Beskrivelse | XPath
+
+|Kodeliste: Payment means code (UNCL4461) |cac:PaymentMeans/cbc:PaymentMeansCode[@name]
+|IBAN eller BBAN kontonummer |cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID
+|Navnet på kontoeieren |cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:Name
+|BIC eller nasjonal deklareringskode |cac:PaymentMeans/cac:PayeeFinancialAccount/cac:FinancialInstitutionBranch/cbc:ID
+|===
+
+
+== Totalt skyldig beløp
+[cols="2,2"]
+|===
+|Beskrivelse | XPath
+
+|Totalt nettobeløp (sum totale fakturabeløp inkl. alle fakturalinjer) |cac:LegalMonetaryTotal/cbc:LineExtensionAmount[@currencyID]
+|Gjenstående beløp |cac:LegalMonetaryTotal/cbc:PayableAmount[@currencyID]
+
+|===
+
+
+== Betalingsanmodning på linjenivå
+[cols="2,2"]
+|===
+|Beskrivelse | XPath
+
+|Payment request på linje nivå |cac:InvoiceLine
+|Payment request identifikator på linjenivå |cac:InvoiceLine/cbc:ID
+|Antall produkter/tjenester som belastes på linjenivå |cac:InvoiceLine/cbc:InvoicedQuantity[@unitCode]
+|Totale netto summen på linjenivå |cac:InvoiceLine/cbc:LineExtensionAmount[@currencyID]
+|Navnet på produktet/tjenesten |cac:InvoiceLine/cac:Item/cbc:Name
+|Netto prisen på produktet/tjenesten |cac:InvoiceLine/cac:Price/cbc:PriceAmount[@currencyID]
+|Antall produkt/tjeneste |cac:InvoiceLine/cac:Price/cbc:PriceAmount[@currencyID]/cbc:BaseQuantity[@unitCode]
+
+|===
