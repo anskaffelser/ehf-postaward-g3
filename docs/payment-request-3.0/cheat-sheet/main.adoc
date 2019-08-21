@@ -18,7 +18,7 @@ Jukselapp for formatet EHF Payment Request 3.0 (norsk: Betalingsforespørsel). F
 
 | Intern referanse for ruting
 | ubl:Invoice/cbc:BuyerReference
-| `3150Kr`
+| `3150oKr`
 
 | Ordre-referanse
 | ubl:Invoice/cac:OrderReference/cbc:ID
@@ -35,7 +35,7 @@ Jukselapp for formatet EHF Payment Request 3.0 (norsk: Betalingsforespørsel). F
 
 == Generell Informasjon på Hodenivå
 
-[cols="3,5,2", options="header"]
+[cols="5,3,2", options="header"]
 |===
 |Beskrivelse
 |Plassering
@@ -66,7 +66,6 @@ Jukselapp for formatet EHF Payment Request 3.0 (norsk: Betalingsforespørsel). F
 
 == Betalingsmottaker
 
-Utbetalende organisasjon er normalt den samme organisasjonen som lager forespørselen.
 
 [cols="3,5,2", options="header"]
 |===
@@ -84,39 +83,45 @@ Utbetalende organisasjon er normalt den samme organisasjonen som lager forespør
 
 | Egen postadresse
 | cac:AccountingCustomerParty/cac:Party/cac:PostalAddress
-| link:../../syntax/payment-request/ubl-Invoice/cac-AccountingCustomerParty/cac-Party/cac-PostalAddress/[Se felter]
+| link:../../syntax/payment-request/cac-AccountingCustomerParty/cac-Party/cac-PostalAddress/[Se felter]
 
 | Kontaktperson om relevent
 | cac:AccountingCustomerParty/cac:Party/cac:PostalAddress
-| link:../../syntax/payment-request/ubl-Invoice/cac-AccountingCustomerParty/cac-Party/cac-Contact/[Se felter]
+| link:../../syntax/payment-request/cac-AccountingCustomerParty/cac-Party/cac-Contact/[Se felter]
 
 |===
 
 
 == Utbetalende Organisasjon
 
-[cols="3,5,2", options="header"]
+Utbetalende organisasjon er normalt den samme organisasjonen som lager forespørselen.
+
+[cols="2,5,2", options="header"]
 |===
 |Beskrivelse
 |Plassering
 |Eksempel
 
-|Elektronisk addresse
-|cac:AccountingCustomerParty/cac:Party/cbc:EndpointID[@schemeID=0192] +
-cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID[@schemeID = 0192]
+|Organisasjonsnummer
+|cac:AccountingCustomerParty/cac:Party/cbc:EndpointID +
+cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID
 |`123456785`
 
+|Navn
+|cac:AccountingCustomerParty/cac:Party/cac:PartyName/Name
+|`Direktoratet for forbedring`
 
-|Navn |cac:AccountingCustomerParty/cac:Party/cac:PartyName/Name
-|Postadresse |cac:AccountingCustomerParty/cac:Party/cac:PostalAddress
-|Kontaktinformasjon | cac:AccountingCustomerParty/cac:Party/cac:Contact
+|Postadresse
+|cac:AccountingCustomerParty/cac:Party/cac:PostalAddress
+|link:../../syntax/payment-request/cac-AccountingSupplierParty/cac-Party/cac-PostalAddress/[Se felter]
+
 
 |===
 
 
 == Betalingsinformasjon
 
-[cols="3,5,2", options="header"]
+[cols="4,5,1", options="header"]
 |===
 
 |Beskrivelse
@@ -133,7 +138,7 @@ cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID[@schemeID = 019
 
 |Navnet på kontoeieren
 |cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:Name
-|`Kontonavn`
+|`Ola Nordmann`
 
 |BIC eller nasjonal deklareringskode
 |cac:PaymentMeans/cac:PayeeFinancialAccount/cac:FinancialInstitutionBranch/cbc:ID
@@ -144,7 +149,7 @@ cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID[@schemeID = 019
 
 == Totalt skyldig beløp
 
-[cols="3,5,2", options="header"]
+[cols="4,5,1", options="header"]
 |===
 |Beskrivelse
 |Plassering
@@ -152,7 +157,7 @@ cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID[@schemeID = 019
 
 |Totalt nettobeløp (sum totale fakturabeløp inkl. alle fakturalinjer)
 |cac:LegalMonetaryTotal/cbc:LineExtensionAmount
-|`1000.00 Kr`
+|`1000.00Kr`
 
 |Gjenstående beløp
 |cac:LegalMonetaryTotal/cbc:PayableAmount
@@ -163,7 +168,7 @@ cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID[@schemeID = 019
 
 == Betalingsanmodning på linjenivå
 
-[cols="3,5,2", options="header"]
+[cols="4,5,1", options="header"]
 |===
 |Beskrivelse
 |Plassering
@@ -191,7 +196,7 @@ cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID[@schemeID = 019
 |`500Kr`
 
 |Antall produkt/tjeneste
-|cac:InvoiceLine/cac:Price/cbc:PriceAmount[@currencyID]/cbc:BaseQuantity
+|cac:InvoiceLine/cac:Price/cbc:PriceAmount/cbc:BaseQuantity
 |`4`
 
 |===
