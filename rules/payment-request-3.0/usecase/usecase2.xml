@@ -15,12 +15,11 @@
     <cac:InvoicePeriod>
         <cbc:StartDate>2018-05-01</cbc:StartDate>
         <cbc:EndDate>2018-05-30</cbc:EndDate>
-        <cbc:DescriptionCode>25</cbc:DescriptionCode>
+        <cbc:DescriptionCode>35</cbc:DescriptionCode>
     </cac:InvoicePeriod>
 
     <cac:OrderReference>
         <cbc:ID>45</cbc:ID>
-        <cbc:SalesOrderID>1111</cbc:SalesOrderID>
     </cac:OrderReference>
 
     <cac:AdditionalDocumentReference>
@@ -28,7 +27,7 @@
         <cbc:DocumentTypeCode>130</cbc:DocumentTypeCode>
         <cbc:DocumentDescription>Report</cbc:DocumentDescription>
         <cac:Attachment>
-            <cbc:EmbeddedDocumentBinaryObject mimeCode="text/csv" filename="z-report.csv">UmVwb3J0IG9uIHBlcnNvbmFsIGludm9pY2UgZGVsaXZlcnkK</cbc:EmbeddedDocumentBinaryObject>
+            <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" filename="z-report.pdf">UmVwb3J0IG9uIHBlcnNvbmFsIGludm9pY2UgZGVsaXZlcnkK</cbc:EmbeddedDocumentBinaryObject>
             <cac:ExternalReference>
                 <cbc:URI>http://www.z-report.no</cbc:URI>
             </cac:ExternalReference>
