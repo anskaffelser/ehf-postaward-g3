@@ -222,7 +222,7 @@
 			<!-- 35 Due date moved from payment means class to document level, see no 35 in line 15-->
 			
 			<!-- 36 attribute schemeID not used -->
-			<cbc:ID>NO9386011117947</cbc:ID>
+			<cbc:ID>86011117947</cbc:ID>
 			<cac:FinancialInstitutionBranch>
 				<!-- 37 BIC moved to financialInstitutionBranch/ID-->
 				<cbc:ID>DNBANOKK</cbc:ID>

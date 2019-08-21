@@ -221,7 +221,7 @@
 		<cbc:PaymentID>0003434323213231</cbc:PaymentID>
 		<cac:PayeeFinancialAccount>
 			<!-- 36 -->
-			<cbc:ID schemeID="IBAN">NO9386011117947</cbc:ID>
+			<cbc:ID schemeID="BBAN">86011117947</cbc:ID>
 			<cac:FinancialInstitutionBranch>
 				<!-- 37 -->
 				<cbc:ID>9710</cbc:ID>
