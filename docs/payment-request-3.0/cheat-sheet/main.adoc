@@ -1,5 +1,37 @@
 
-= Cheat Sheet Payment Request 3.0 (Betalingsanmodning)
+= Cheat Sheet for EHF Payment Request 3.0
+
+Jukselapp for formatet EHF Payment Request 3.0 (norsk: Betalingsforespørsel). Formatet brukes til å understøtte prosessen med å flytte informasjon om utbetaling innvilget i et fagsystem til økonomisystemet for effektuering.
+
+
+== Referanser
+
+[cols="2,2,1", options="header"]
+|===
+| Innhold
+| Plassering
+| Eksempel
+
+| Konteringsstreng
+| ubl:Invoice/cbc:AccountingCost
+| `NS4102;Konto=4010;Avd=25;Prod=542`
+
+| Intern referanse for ruting
+| ubl:Invoice/cbc:BuyerReference
+| `3150okr`
+
+| Ordre-referanse
+| ubl:Invoice/cac:OrderReference/cbc:ID
+| `836209`
+
+| Internt saksnummer fra fagsystem
+| ubl:Invoice/cac:ContractDocumentReference/cbc:ID
+| `SST-26385`
+
+| Prosjekt-referanse
+| ubl:Invoice/cac:ProjectReference/cbc:ID
+| `P3749`
+|===
 
 == Generell informasjon på hodenivå
 [cols="2,2"]
@@ -18,19 +50,37 @@
 |===
 
 
-== Internt økonomisystem
-[cols="2,2"]
+== Utbetalende organisasjon
+
+Utbetalende organisasjon er normalt den samme organisasjonen som lager forespørselen.
+
+[cols="3,5,2", options="header"]
 |===
-|Beskrivelse | XPath
+| Innhold
+| Plassering
+| Eksempel
 
-| Identifikator/kundenummer |cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/ID[@schemeID = 0192]
-| Navn | cac:AccountingSupplierParty/cac:Party/cac:PartyName/Name
-| Postadressen| cac:AccountingSupplierParty/cac:Party/cac:PostalAddress
+| Eget organisasjonsnummer
+| cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID +
+cac:AccountingSupplierParty/cac:Party/cbc:EndpointID
+| `987654325`
+
+| Eget navn
+| cac:AccountingCustomerParty/cac:Party/cac:PartyName/cbc:Name
+| `Direktoratet for forbedring`
+
+| Egen postadresse
+| cac:AccountingCustomerParty/cac:Party/cac:PostalAddress
+| link:../../syntax/payment-request/ubl-Invoice/cac-AccountingCustomerParty/cac-Party/cac-PostalAddress/[Se felter]
+
+| Kontaktperson om relevent
+| cac:AccountingCustomerParty/cac:Party/cac:PostalAddress
+| link:../../syntax/payment-request/ubl-Invoice/cac-AccountingCustomerParty/cac-Party/cac-Contact/[Se felter]
 
 |===
 
 
-== Internt fagsystem
+== Betalingsmottaker
 [cols="2,2"]
 |===
 |Beskrivelse | XPath

@@ -48,6 +48,12 @@
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
+        <Path>payment-request-3.0/cheat-sheet/</Path>
+        <Title>Cheat Sheet (Norwegian)</Title>
+        <Tag>payment-request-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
         <Path>reminder-3.0/guide/</Path>
         <Title>Implementation Guideline</Title>
         <Tag>reminder-3.0</Tag>
