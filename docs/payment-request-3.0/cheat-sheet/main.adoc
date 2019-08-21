@@ -18,7 +18,7 @@ Jukselapp for formatet EHF Payment Request 3.0 (norsk: Betalingsforespørsel). F
 
 | Intern referanse for ruting
 | ubl:Invoice/cbc:BuyerReference
-| `3150okr`
+| `3150Kr`
 
 | Ordre-referanse
 | ubl:Invoice/cac:OrderReference/cbc:ID
@@ -33,24 +33,38 @@ Jukselapp for formatet EHF Payment Request 3.0 (norsk: Betalingsforespørsel). F
 | `P3749`
 |===
 
-== Generell informasjon på hodenivå
-[cols="2,2"]
+== Generell Informasjon på Hodenivå
+
+[cols="3,5,2", options="header"]
 |===
-|Beskrivelse | XPath
+|Beskrivelse
+|Plassering
+|Eksempel
 
-|CustomizationID:
+|Spesifikasjons identifikator (CustomizationID)
+|ubl:Invoice/cbc:CustomizationID
+|`urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0`
 
- urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0 |cbc:CustomizationID
-|ProfileID:
+|Profil identifikator (ProfileID)
+|ubl:Invoice/cbc:ProfileID
+|`urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0`
 
- urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0 | cbc:ProfileID
-|Payment Request identifikator |cbc:ID
-|Dato ved opprettelse av dokumentet, på formen: YYYY-MM-DD |cbc:IssueDate
-|Valuta brukt i dokumentet. Kodeliste: "Currency codes (ISO 4217)" |cbc:DocumentCurrencyCode
+|Payment Request identifikator
+|ubl:Invoice/cbc:ID
+|`123`
+
+|Dato ved opprettelse av dokumentet, på formen: YYYY-MM-DD
+|ubl:Invoice/cbc:IssueDate
+|`2019-02-25`
+
+|Valuta brukt i dokumentet. Kodeliste: "Currency codes (ISO 4217)"
+|cbc:DocumentCurrencyCode
+|`NOK`
+
 |===
 
 
-== Utbetalende organisasjon
+== Betalingsmottaker
 
 Utbetalende organisasjon er normalt den samme organisasjonen som lager forespørselen.
 
@@ -61,8 +75,7 @@ Utbetalende organisasjon er normalt den samme organisasjonen som lager forespør
 | Eksempel
 
 | Eget organisasjonsnummer
-| cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID +
-cac:AccountingSupplierParty/cac:Party/cbc:EndpointID
+| cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID
 | `987654325`
 
 | Eget navn
@@ -80,13 +93,20 @@ cac:AccountingSupplierParty/cac:Party/cbc:EndpointID
 |===
 
 
-== Betalingsmottaker
-[cols="2,2"]
-|===
-|Beskrivelse | XPath
+== Utbetalende Organisasjon
 
-|Elektronisk addresse |cac:AccountingCustomerParty/cac:Party/cbc:EndpointID[@schemeID=0192]
-|Identifikator |cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID[@schemeID = 0192]
+[cols="3,5,2", options="header"]
+|===
+|Beskrivelse
+|Plassering
+|Eksempel
+
+|Elektronisk addresse
+|cac:AccountingCustomerParty/cac:Party/cbc:EndpointID[@schemeID=0192] +
+cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID[@schemeID = 0192]
+|`123456785`
+
+
 |Navn |cac:AccountingCustomerParty/cac:Party/cac:PartyName/Name
 |Postadresse |cac:AccountingCustomerParty/cac:Party/cac:PostalAddress
 |Kontaktinformasjon | cac:AccountingCustomerParty/cac:Party/cac:Contact
@@ -95,39 +115,83 @@ cac:AccountingSupplierParty/cac:Party/cbc:EndpointID
 
 
 == Betalingsinformasjon
-[cols="2,2"]
-|===
-|Beskrivelse | XPath
 
-|Kodeliste: Payment means code (UNCL4461) |cac:PaymentMeans/cbc:PaymentMeansCode[@name]
-|IBAN eller BBAN kontonummer |cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID
-|Navnet på kontoeieren |cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:Name
-|BIC eller nasjonal deklareringskode |cac:PaymentMeans/cac:PayeeFinancialAccount/cac:FinancialInstitutionBranch/cbc:ID
+[cols="3,5,2", options="header"]
+|===
+
+|Beskrivelse
+|Plassering
+|Eksempel
+
+|Kodeliste: Payment means code (UNCL4461)
+|cac:PaymentMeans/cbc:PaymentMeansCode
+|`30`
+
+|IBAN eller BBAN kontonummer
+|cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID
+|`9542157`
+
+|Navnet på kontoeieren
+|cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:Name
+|`Kontonavn`
+
+|BIC eller nasjonal deklareringskode
+|cac:PaymentMeans/cac:PayeeFinancialAccount/cac:FinancialInstitutionBranch/cbc:ID
+|`BIC11111`
+
 |===
 
 
 == Totalt skyldig beløp
-[cols="2,2"]
-|===
-|Beskrivelse | XPath
 
-|Totalt nettobeløp (sum totale fakturabeløp inkl. alle fakturalinjer) |cac:LegalMonetaryTotal/cbc:LineExtensionAmount[@currencyID]
-|Gjenstående beløp |cac:LegalMonetaryTotal/cbc:PayableAmount[@currencyID]
+[cols="3,5,2", options="header"]
+|===
+|Beskrivelse
+|Plassering
+|Eksempel
+
+|Totalt nettobeløp (sum totale fakturabeløp inkl. alle fakturalinjer)
+|cac:LegalMonetaryTotal/cbc:LineExtensionAmount
+|`1000.00 Kr`
+
+|Gjenstående beløp
+|cac:LegalMonetaryTotal/cbc:PayableAmount
+|`10.00Kr`
 
 |===
 
 
 == Betalingsanmodning på linjenivå
-[cols="2,2"]
-|===
-|Beskrivelse | XPath
 
-|Payment request på linje nivå |cac:InvoiceLine
-|Payment request identifikator på linjenivå |cac:InvoiceLine/cbc:ID
-|Antall produkter/tjenester som belastes på linjenivå |cac:InvoiceLine/cbc:InvoicedQuantity[@unitCode]
-|Totale netto summen på linjenivå |cac:InvoiceLine/cbc:LineExtensionAmount[@currencyID]
-|Navnet på produktet/tjenesten |cac:InvoiceLine/cac:Item/cbc:Name
-|Netto prisen på produktet/tjenesten |cac:InvoiceLine/cac:Price/cbc:PriceAmount[@currencyID]
-|Antall produkt/tjeneste |cac:InvoiceLine/cac:Price/cbc:PriceAmount[@currencyID]/cbc:BaseQuantity[@unitCode]
+[cols="3,5,2", options="header"]
+|===
+|Beskrivelse
+|Plassering
+|Eksempel
+
+
+|Betalingsforespørsel (Payment request) identifikator på linjenivå
+|cac:InvoiceLine/cbc:ID
+|`2`
+
+|Antall produkter/tjenester som belastes på linjenivå
+|cac:InvoiceLine/cbc:InvoicedQuantity
+|`50`
+
+|Totale netto summen på linjenivå
+|cac:InvoiceLine/cbc:LineExtensionAmount
+|`2000Kr`
+
+|Navnet på produktet/tjenesten/personen
+|cac:InvoiceLine/cac:Item/cbc:Name
+|`Sau`
+
+|Netto prisen på produktet/tjenesten
+|cac:InvoiceLine/cac:Price/cbc:PriceAmount
+|`500Kr`
+
+|Antall produkt/tjeneste
+|cac:InvoiceLine/cac:Price/cbc:PriceAmount[@currencyID]/cbc:BaseQuantity
+|`4`
 
 |===
