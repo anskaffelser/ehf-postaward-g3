@@ -18,12 +18,11 @@
     <cac:InvoicePeriod>
         <cbc:StartDate>2018-10-01</cbc:StartDate>
         <cbc:EndDate>2018-10-30</cbc:EndDate>
-        <cbc:DescriptionCode>25</cbc:DescriptionCode>
+        <cbc:DescriptionCode>35</cbc:DescriptionCode>
     </cac:InvoicePeriod>
 
     <cac:OrderReference>
         <cbc:ID>007</cbc:ID>
-        <cbc:SalesOrderID>123456</cbc:SalesOrderID>
     </cac:OrderReference>
 
     <cac:AdditionalDocumentReference>
@@ -31,7 +30,6 @@
         <cbc:DocumentTypeCode>130</cbc:DocumentTypeCode>
         <cbc:DocumentDescription>Report</cbc:DocumentDescription>
         <cac:Attachment>
-            <cbc:EmbeddedDocumentBinaryObject mimeCode="text/csv" filename="abc-rapport.csv">UmVwb3J0IG9uIHBlcnNvbmFsIGludm9pY2UgZGVsaXZlcnkK</cbc:EmbeddedDocumentBinaryObject>
             <cac:ExternalReference>
                 <cbc:URI>http://www.rapport.no</cbc:URI>
             </cac:ExternalReference>
