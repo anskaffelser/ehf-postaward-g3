@@ -86,7 +86,7 @@ Jukselapp for formatet EHF Payment Request 3.0 (norsk: Betalingsforespørsel). F
 | link:../../syntax/payment-request/cac-AccountingCustomerParty/cac-Party/cac-PostalAddress/[Se felter]
 
 | Kontaktperson om relevent
-| cac:AccountingCustomerParty/cac:Party/cac:PostalAddress
+| cac:AccountingCustomerParty/cac:Party/cac:Contact
 | link:../../syntax/payment-request/cac-AccountingCustomerParty/cac-Party/cac-Contact/[Se felter]
 
 |===
