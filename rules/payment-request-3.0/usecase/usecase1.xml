@@ -6,7 +6,6 @@
     <cbc:ProfileID>urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</cbc:ProfileID>
     <cbc:ID>1234</cbc:ID>
     <cbc:IssueDate>2019-02-01</cbc:IssueDate>
-    <cbc:DueDate>2019-02-01</cbc:DueDate>
     <cbc:Note>Case nr.234 - Victim of violent compensation</cbc:Note>
     <cbc:DocumentCurrencyCode>NOK</cbc:DocumentCurrencyCode>
     <cbc:AccountingCost>154:124:4875</cbc:AccountingCost>
@@ -14,13 +13,12 @@
 
     <cac:InvoicePeriod>
         <cbc:StartDate>2019-02-01</cbc:StartDate>
-        <cbc:EndDate>2019-02-30</cbc:EndDate>
-        <cbc:DescriptionCode>25</cbc:DescriptionCode>
+        <cbc:EndDate>2019-02-15</cbc:EndDate>
+        <cbc:DescriptionCode>35</cbc:DescriptionCode>
     </cac:InvoicePeriod>
 
     <cac:OrderReference>
         <cbc:ID>10</cbc:ID>
-        <cbc:SalesOrderID>123</cbc:SalesOrderID>
     </cac:OrderReference>
 
     <cac:AdditionalDocumentReference>
@@ -28,7 +26,7 @@
         <cbc:DocumentTypeCode>130</cbc:DocumentTypeCode>
         <cbc:DocumentDescription>Hospital report</cbc:DocumentDescription>
         <cac:Attachment>
-            <cbc:EmbeddedDocumentBinaryObject mimeCode="text/csv" filename="hospital-rapport.csv">aG9zcGl0YWwgcmVwb3J0IGFib3V0IHRoZSBpbmp1cmVkIHZpY2l0bQ==</cbc:EmbeddedDocumentBinaryObject>
+            <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" filename="hospital-rapport.pdf">aG9zcGl0YWwgcmVwb3J0IGFib3V0IHRoZSBpbmp1cmVkIHZpY2l0bQ==</cbc:EmbeddedDocumentBinaryObject>
             <cac:ExternalReference>
                 <cbc:URI>http://www.hospital-report.no/injured/victim</cbc:URI>
             </cac:ExternalReference>

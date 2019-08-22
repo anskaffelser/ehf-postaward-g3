@@ -5,7 +5,6 @@
 
     <testfolder>example</testfolder>
     <testfolder>usecase</testfolder>
-    <testfolder>snippets</testfolder>
 
     <configuration>
         <identifier>ehf-payment-request-07-3.0</identifier>
