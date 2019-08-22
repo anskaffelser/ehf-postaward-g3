@@ -9,8 +9,6 @@ include::partiesandroles.adoc[]
 
 include::payment.adoc[]
 
-include::uom.adoc[]
-
 include::totals.adoc[]
 
 :leveloffset: -1

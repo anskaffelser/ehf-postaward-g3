@@ -10,8 +10,6 @@ The following elements show the legal monetary totals for a payment request
 | <cbc:LineExtensionAmount>
 | stem:[sum("cac:InvoiceLine/cbc:LineExtensionAmount")]
 
-| <cbc:PayableAmount>
-| stem:[\"cac:LegalMonetaryTotal/cbc:PrepaidAmount"]
 
 |===
 

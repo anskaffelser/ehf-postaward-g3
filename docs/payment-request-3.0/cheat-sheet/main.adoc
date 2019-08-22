@@ -113,7 +113,7 @@ cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID
 
 |Postadresse
 |cac:AccountingCustomerParty/cac:Party/cac:PostalAddress
-|link:../../syntax/payment-request/cac-AccountingSupplierParty/cac-Party/cac-PostalAddress/[Se felter]
+|link:../../syntax/payment-request/cac-AccountingCustomerParty/cac-Party/cac-PostalAddress/[Se felter]
 
 
 |===

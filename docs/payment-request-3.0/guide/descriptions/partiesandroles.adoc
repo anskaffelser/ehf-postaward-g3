@@ -3,14 +3,22 @@
 The important parties and roles in Payment Request is described below.
 
 ****
-Customer::
-The customer is the legal person or organisation who is in demand of a product or service. Examples of customer roles: buyer, consignee, debtor, contracting authority.
+Payment Party::
+Payment party is the party that organize the payment to the applicant.
 
-Supplier::
-The supplier is the legal person or organisation who provides a product or service.
+Applicant::
+The applicant is a person, project or organization that seeking financial support.
+
+Review party::
+Review party is evaluating if the applicant is entitled to financial support.
+
+Party on behalf of applicant::
+The party on behalf of applicant is an organisation that either is a support for the applicant or an organizational unit
+that applicant belongs to.
 ****
 
-The following diagram illustrates the parties and roles involved in the Payment Request.
+The following diagram illustrates the parties and roles involved in the Payment Request. Note that payment party is often from
+same organisation as applicant.
 
 .EHF Payment Request rolediagram.
 image::images/rolediagram.png[align="center",1200, 800]

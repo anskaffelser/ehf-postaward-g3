@@ -1,27 +1,37 @@
-== Use case 2 - A farmer has lost a sheep
+== Use case 2 - Research project funds
 
 ****
 
 Description::
-This use case illustrates the use of Payment Request, where the supplier issues and sends an request to the customer and the customer
-receives the request and process it in the request system.
+This use case illustrates the use of Payment Request, where a research project from University of Tromso is applying
+for funding for the project.
 
 Parties involved::
-Supplier party (In UBL: AccountingSupplierParty) +
-Customer party (In UBL: AccountingCustomerParty)
+Applicant +
+Payment Party +
+Party on behalf of applicant +
+Review Party
 
 Assumptions::
-. A farmer has lost a sheep.
-. The farmer receives a financial compensation on 8000 Kroner from the Government.
+. An applicant apply for research project funding.
+. This research project is related to University of Tromso (Party on behalf of applicant).
+. The Norwegian Ministry of Education and Research (Review Party) provide 10000kr in funding for research project.
+. The applicant receives funds (money) from the Payment Party's accounting system.
+
 
 Flow::
-. The Supplier (farmer) issues and sends an request to the customer.
-. The Customer receives the request and process it in the system.
-. The Customer checks the details and approves the request.
-. The Customer sends the request to the accounting system and pays the request.
+. An applicant apply for research funds through the party on behalf of applicant (University of Tromso).
+. The University (Party on behalf of applicant) sends an application to The Norwegian Ministry of Education and Research (Review Party).
+. The Review party evaluate the application and compare against a list of criteria.
+. The Review party approve the application and send an EHF Payment Requst to their accounting system (Payment Party).
+. The Payment party receives the electronic message, then prepare a payment to the applicant.
+. Finally, the payment party sends payment to the applicant.
+
 
 Result::
-. The Customer receives and pays the request by checking the details in the data system.
-. The Supplier (farmer) receives the financial compensation in few days, not weeks.
+. The Applicant receives funds from the Norwegian Ministraty of Education and Research's accounting system (Payment Party).
+. The Applicant receives the financial support in few days by using electronic processes.
+
+
 
 ****
