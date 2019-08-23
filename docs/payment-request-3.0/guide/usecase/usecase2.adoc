@@ -3,8 +3,8 @@
 ****
 
 Description::
-This use case illustrates the use of Payment Request, where a research project from University of Tromso is applying
-for funding for the project.
+This use case illustrates the use of Payment Request, where a research project from University of Tromso apply
+for funding.
 
 Parties involved::
 Applicant +
@@ -15,8 +15,8 @@ Review Party
 Assumptions::
 . An applicant apply for research project funding.
 . This research project is related to University of Tromso (Party on behalf of applicant).
-. The Norwegian Ministry of Education and Research (Review Party) provide 10000kr in funding for research project.
-. The applicant receives funds (money) from the Payment Party's accounting system.
+. The Norwegian Ministry of Education and Research (Review Party) provide 10000kr in funding for research projects that
+fulfil the criterias.
 
 
 Flow::
@@ -24,7 +24,7 @@ Flow::
 . The University (Party on behalf of applicant) sends an application to The Norwegian Ministry of Education and Research (Review Party).
 . The Review party evaluate the application and compare against a list of criteria.
 . The Review party approve the application and send an EHF Payment Requst to their accounting system (Payment Party).
-. The Payment party receives the electronic message, then prepare a payment to the applicant.
+. The Payment party receives the electronic message from the Review party and prepare a payment to the applicant.
 . Finally, the payment party sends payment to the applicant.
 
 

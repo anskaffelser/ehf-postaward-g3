@@ -3,7 +3,7 @@
 ****
 
 Description::
-This use case illustrates the use of Payment Request, where an applicant (victim of violent) receives financial compensasion.
+This use case illustrates the use of Payment Request, where a victim of violent receives financial compensasion.
 
 Parties involved::
 Applicant +
@@ -12,16 +12,14 @@ Party on behalf of applicant +
 Review Party
 
 Assumptions::
-. An applicant has been physically injured after a violence episode.
-. The Norwegian National Courts Administration (Party on behalf of applicant) approves that the applicant receives 100000 Kr
-in financial compensation.
-. The applicant receives financial compensasion from the Payment Party's accounting system.
+. A victim of violence (applicant) has been physically injured after a violence episode.
+. A court order decide that the applicant receives 100000 Kr in financial compensation.
 
-Flow::
-. A court order decide that a man (applicant) receives 100000Kr in financial compensation after a violence episode.
+
+Flow:
 . The Norwegian National Courts Administration (Party on behalf of applicant and Review Party) sends EHF Payment Request
-to the accounting system (Payment party).
-. The payment party receives the electronic message, then prepare a payment to the victim of violent (applicant).
+to their accounting system (Payment party).
+. The payment party receives the electronic message and prepare a payment to the victim of violent (applicant).
 . The payment party sends payment to the victim of violent (applicant).
 
 

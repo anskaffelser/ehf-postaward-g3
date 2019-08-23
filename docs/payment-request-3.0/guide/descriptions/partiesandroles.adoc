@@ -13,12 +13,12 @@ Review party::
 Review party is evaluating if the applicant is entitled to financial support.
 
 Party on behalf of applicant::
-The party on behalf of applicant is an organisation that either is a support for the applicant or an organizational unit
+The party on behalf of applicant is an organisation that either supports the applicant or the organizational unit
 that applicant belongs to.
 ****
 
-The following diagram illustrates the parties and roles involved in the Payment Request. Note that payment party is often from
-same organisation as applicant.
+The following diagram illustrates the parties and roles involved in the Payment Request.
+Note that payment party is often from same organisation as applicant.
 
 .EHF Payment Request rolediagram.
 image::images/rolediagram.png[align="center",1200, 800]
