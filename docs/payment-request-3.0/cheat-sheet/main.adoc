@@ -73,19 +73,19 @@ Jukselapp for formatet EHF Payment Request 3.0 (norsk: Betalingsforespørsel). F
 | Plassering
 | Eksempel
 
-| Eget organisasjonsnummer
+| Søkerens personnummer/organisasjonsnummer
 | cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID
 | `987654325`
 
-| Eget navn
+| Navnet på søkeren (Projektet/Personen/Organisasjonen)
 | cac:AccountingCustomerParty/cac:Party/cac:PartyName/cbc:Name
 | `Direktoratet for forbedring`
 
-| Egen postadresse
+| Søkerens postadresse
 | cac:AccountingCustomerParty/cac:Party/cac:PostalAddress
 | link:../../syntax/payment-request/cac-AccountingCustomerParty/cac-Party/cac-PostalAddress/[Se felter]
 
-| Kontaktperson om relevent
+| Søkerens kontaktinformasjon om relevent
 | cac:AccountingCustomerParty/cac:Party/cac:Contact
 | link:../../syntax/payment-request/cac-AccountingCustomerParty/cac-Party/cac-Contact/[Se felter]
 
@@ -102,16 +102,16 @@ Utbetalende organisasjon er normalt den samme organisasjonen som lager forespør
 |Plassering
 |Eksempel
 
-|Organisasjonsnummer
+|Eget Organisasjonsnummer
 |cac:AccountingCustomerParty/cac:Party/cbc:EndpointID +
 cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID
 |`123456785`
 
-|Navn
+|Eget Navn
 |cac:AccountingCustomerParty/cac:Party/cac:PartyName/Name
 |`Direktoratet for forbedring`
 
-|Postadresse
+|Eget Postadresse
 |cac:AccountingCustomerParty/cac:Party/cac:PostalAddress
 |link:../../syntax/payment-request/cac-AccountingCustomerParty/cac-Party/cac-PostalAddress/[Se felter]
 
