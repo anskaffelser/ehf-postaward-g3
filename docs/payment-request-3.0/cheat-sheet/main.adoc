@@ -61,6 +61,12 @@ Jukselapp for formatet EHF Payment Request 3.0 (norsk: Betalingsforespørsel). F
 |cbc:DocumentCurrencyCode
 |`NOK`
 
+|Betalingsperiode (startdato - sluttdato)
+|ubl:Invoice/cac:InvoicePeriod/cbc:StartDate +
+ubl:Invoice/cac:InvoicePeriod/cbc:EndDate
+|`2019-03-12` +
+`2019-03-26`
+
 |===
 
 
@@ -128,7 +134,8 @@ cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID
 |Plassering
 |Eksempel
 
-|Kodeliste: Payment means code (UNCL4461)
+|Betalingsmetode +
+Kodeliste: Payment means code (UNCL4461)
 |cac:PaymentMeans/cbc:PaymentMeansCode
 |`30`
 
@@ -140,7 +147,7 @@ cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID
 |cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:Name
 |`Ola Nordmann`
 
-|BIC eller nasjonal deklareringskode
+|BIC eller Nasjonal deklareringskode
 |cac:PaymentMeans/cac:PayeeFinancialAccount/cac:FinancialInstitutionBranch/cbc:ID
 |`BIC11111`
 
@@ -155,7 +162,8 @@ cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID
 |Plassering
 |Eksempel
 
-|Totalt nettobeløp (sum totale fakturabeløp inkl. alle fakturalinjer)
+|Totalt nettobeløp +
+(Summen av det totale fakturabeløpet inkl. alle fakturalinjer)
 |cac:LegalMonetaryTotal/cbc:LineExtensionAmount
 |`1000.00`
 
@@ -168,7 +176,7 @@ cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID
 
 == Betalingsanmodning på linjenivå
 
-[cols="4,5,1", options="header"]
+[cols="4,5,2", options="header"]
 |===
 |Beskrivelse
 |Plassering
@@ -189,13 +197,20 @@ cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID
 
 |Navnet på produktet/tjenesten/personen
 |cac:InvoiceLine/cac:Item/cbc:Name
-|`Prosjekt X`
+|`ProsjektX`
+
+|Betalingsperiode (startdato - sluttdato)
+|ubl:Invoice/cac:InvoicePeriod/cbc:StartDate +
+ubl:Invoice/cac:InvoicePeriod/cbc:EndDate
+|`2019-05-10` +
+`2019-05-20`
+
 
 |Netto prisen på produktet/tjenesten
 |cac:InvoiceLine/cac:Price/cbc:PriceAmount
 |`500`
 
-|Antall produkt/tjeneste
+|Antall produkter/tjenester prisen gjelder for
 |cac:InvoiceLine/cac:Price/cbc:PriceAmount/cbc:BaseQuantity
 |`1`
 
