@@ -15,7 +15,7 @@ NOTE: SBDH is *RECOMMENDED* to be used in combination with EHF Payment Request.
 
 The use of SBDH follows the link:https://peppol.eu/downloads/the-peppol-edelivery-network-specifications/[specification provided by OpenPEPPOL].
 
-EHF Payment Request 3.0 is different from most transmissions in the PEPPOL Network as both sender party's identifier and receiver party's identifier MUST have identifier.
+EHF Payment Request 3.0 is different from most transmissions in the PEPPOL Network as both sender party's identifier and receiver party's identifier MUST have same identifier.
 
 The following example describes the SBDH implementation, and notice how the key data is implemented.
 
@@ -59,8 +59,8 @@ The following example describes the SBDH implementation, and notice how the key 
   </Invoice>
 </StandardBusinessDocument>
 ----
-<1> Identification of the sender, where the value MYST be the organization number of the handling organization (`0192:[organization number]`).
-<2> Identification of the receiver, where the value MYST be the organization number of the handling organization (`0192:[organization number]`).
+<1> Identification of the sender, where the value MUST be the organization number of the handling organization (`0192:[organization number]`).
+<2> Identification of the receiver, where the value MUST be the organization number of the handling organization (`0192:[organization number]`).
 <3> Universal Unique Identifier (UUID), recommend version 4 UUID.
 <4> Date and time for when this envelope was created. Use format: `YYYY-MM-DDThh:mm:ssZ`, where T indicate a divider and Z indicates UTC.
 <5> Document type identifier for EHF Payment Request 3.0.

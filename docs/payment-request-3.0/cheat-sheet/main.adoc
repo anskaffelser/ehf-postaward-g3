@@ -75,7 +75,7 @@ Jukselapp for formatet EHF Payment Request 3.0 (norsk: Betalingsforespørsel). F
 
 | Søkerens personnummer/organisasjonsnummer
 | cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID
-| `987654325`
+| `01040811111`
 
 | Navnet på søkeren (Projektet/Personen/Organisasjonen)
 | cac:AccountingCustomerParty/cac:Party/cac:PartyName/cbc:Name
@@ -157,11 +157,11 @@ cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID
 
 |Totalt nettobeløp (sum totale fakturabeløp inkl. alle fakturalinjer)
 |cac:LegalMonetaryTotal/cbc:LineExtensionAmount
-|`1000.00Kr`
+|`1000.00`
 
 |Gjenstående beløp
 |cac:LegalMonetaryTotal/cbc:PayableAmount
-|`10.00Kr`
+|`10.00`
 
 |===
 
@@ -185,18 +185,18 @@ cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/ID
 
 |Totale netto summen på linjenivå
 |cac:InvoiceLine/cbc:LineExtensionAmount
-|`2000Kr`
+|`2000`
 
 |Navnet på produktet/tjenesten/personen
 |cac:InvoiceLine/cac:Item/cbc:Name
-|`Sau`
+|`Prosjekt X`
 
 |Netto prisen på produktet/tjenesten
 |cac:InvoiceLine/cac:Price/cbc:PriceAmount
-|`500Kr`
+|`500`
 
 |Antall produkt/tjeneste
 |cac:InvoiceLine/cac:Price/cbc:PriceAmount/cbc:BaseQuantity
-|`4`
+|`1`
 
 |===
