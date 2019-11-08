@@ -22,7 +22,7 @@
          <Reference tag="x" type="BUSINESS_TERM">BT-24</Reference>
          <Reference tag="x" type="RULE">PEPPOL-EN16931-R004</Reference>
          <Reference tag="x" type="RULE">BR-01</Reference>
-         <Value type="FIXED">urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0</Value>
+         <Value type="FIXED">urn:fdc:anskaffelser.no:2019:ehf:spec:payment-request:3.0</Value>
       </Element>
       <Element>
          <Term>cbc:ProfileID</Term>
@@ -31,7 +31,7 @@
          <DataType>Text</DataType>
          <Reference tag="x" type="BUSINESS_TERM">BT-23</Reference>
          <Reference tag="x" type="RULE">PEPPOL-EN16931-R001</Reference>
-         <Value type="FIXED">urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</Value>
+         <Value type="FIXED">urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:07:1.0</Value>
       </Element>
       <Element>
          <Term>cbc:ID</Term>

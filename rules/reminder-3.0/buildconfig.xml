@@ -16,8 +16,8 @@
     <configuration>
         <identifier>ehf-reminder-06-3.0</identifier>
         <title>EHF Reminder 3.0 (Profile 06)</title>
-        <profileId>urn:fdc:difi.no:2019:ehf:postaward:g3:06:1.0</profileId>
-        <customizationId>urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0#conformant#urn:fdc:difi.no:2017:ehf:reminder:3.0</customizationId>
+        <profileId>urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:06:1.0</profileId>
+        <customizationId>urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0#conformant#urn:fdc:anskaffelser.no:2019:ehf:reminder:3.0</customizationId>
         <inherit>ubl-invoice-2.1</inherit>
         <inherit>ehf-reminder-base-3.0</inherit>
     </configuration>

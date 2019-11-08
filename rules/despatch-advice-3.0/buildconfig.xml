@@ -8,8 +8,8 @@
     <configuration>
         <identifier>ehf-despatch-advice-05-3.0</identifier>
         <title>EHF Despatch Advice 3.0 (Profile 05)</title>
-        <profileId>urn:fdc:difi.no:2019:ehf:postaward:g3:05:1.0</profileId>
-        <customizationId>urn:fdc:peppol.eu:poacc:trns:despatch_advice:3:extended:urn:fdc:difi.no:2017:ehf:spec:3.0</customizationId>
+        <profileId>urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:05:1.0</profileId>
+        <customizationId>urn:fdc:peppol.eu:poacc:trns:despatch_advice:3:extended:urn:fdc:anskaffelser.no:2019:ehf:spec:3.0</customizationId>
         <inherit>ubl-2.2</inherit>
         <file path="sch/EHF-DESPATCH-ADVICE-3.0.sch" infoUrl="/ehf/g3/rules/{}/" />
     </configuration>

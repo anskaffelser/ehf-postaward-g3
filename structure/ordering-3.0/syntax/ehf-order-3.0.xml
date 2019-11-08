@@ -19,7 +19,7 @@
 				transaction.</Description>
 			<DataType>Identifier</DataType>
 			<Reference type="BUSINESS_TERM">tir01-001</Reference>
-			<Value type="FIXED">urn:fdc:peppol.eu:poacc:trns:order:3:extended:urn:fdc:difi.no:2017:ehf:spec:3.0</Value>
+			<Value type="FIXED">urn:fdc:peppol.eu:poacc:trns:order:3:extended:urn:fdc:anskaffelser.no:2019:ehf:spec:3.0</Value>
 		</Element>
 		<Element>
 			<Term>cbc:ProfileID</Term>
@@ -28,7 +28,7 @@
 				transaction appears.</Description>
 			<DataType>Identifier</DataType>
 			<Reference type="BUSINESS_TERM">tir01-002</Reference>
-			<Value type="FIXED">urn:fdc:difi.no:2019:ehf:postaward:g3:02:1.0</Value>
+			<Value type="FIXED">urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:02:1.0</Value>
 		</Element>
 		<Element>
 			<Term>cbc:ID</Term>

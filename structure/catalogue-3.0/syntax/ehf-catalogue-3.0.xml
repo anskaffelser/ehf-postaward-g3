@@ -19,7 +19,7 @@
 			<Description>Identifies the specification of content and rules that apply to the transaction.</Description>
 			<DataType>Identifier</DataType>
 			<Reference type="BUSINESS_TERM">tir19-002</Reference>
-			<Value type="FIXED">urn:fdc:peppol.eu:poacc:trns:catalogue:3:extended:urn:fdc:difi.no:2017:ehf:spec:3.0</Value>
+			<Value type="FIXED">urn:fdc:peppol.eu:poacc:trns:catalogue:3:extended:urn:fdc:anskaffelser.no:2019:ehf:spec:3.0</Value>
 		</Element>
 
 		<Element>
@@ -28,7 +28,7 @@
 			<Description>Identifies the BII profile or business process context in which the transaction appears.</Description>
 			<DataType>Identifier</DataType>
 			<Reference type="BUSINESS_TERM">tir19-001</Reference>
-			<Value type="FIXED">urn:fdc:difi.no:2019:ehf:postaward:g3:01:1.0</Value>
+			<Value type="FIXED">urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:01:1.0</Value>
 		</Element>
 
 		<Element>

@@ -2,8 +2,8 @@
 <DespatchAdvice xmlns="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2"
 				xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 				xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
-	<cbc:CustomizationID>urn:fdc:peppol.eu:poacc:trns:despatch_advice:3:extended:urn:fdc:difi.no:2017:ehf:spec:3.0</cbc:CustomizationID>
-	<cbc:ProfileID>urn:fdc:difi.no:2019:ehf:postaward:g3:05:1.0</cbc:ProfileID>
+	<cbc:CustomizationID>urn:fdc:peppol.eu:poacc:trns:despatch_advice:3:extended:urn:fdc:anskaffelser.no:2019:ehf:spec:3.0</cbc:CustomizationID>
+	<cbc:ProfileID>urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:05:1.0</cbc:ProfileID>
 	<cbc:ID>565899</cbc:ID>
 	<cbc:IssueDate>2018-09-20</cbc:IssueDate>
 	<cbc:IssueTime>12:00:00</cbc:IssueTime>

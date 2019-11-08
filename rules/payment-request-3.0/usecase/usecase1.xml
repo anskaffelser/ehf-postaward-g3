@@ -2,8 +2,8 @@
 <Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
          xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
          xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-    <cbc:CustomizationID>urn:fdc:difi.no:2017:ehf:spec:payment-request:3.0</cbc:CustomizationID>
-    <cbc:ProfileID>urn:fdc:difi.no:2019:ehf:postaward:g3:07:1.0</cbc:ProfileID>
+    <cbc:CustomizationID>urn:fdc:anskaffelser.no:2019:ehf:spec:payment-request:3.0</cbc:CustomizationID>
+    <cbc:ProfileID>urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:07:1.0</cbc:ProfileID>
     <cbc:ID>1234</cbc:ID>
     <cbc:IssueDate>2019-02-01</cbc:IssueDate>
     <cbc:Note>Case nr.234 - Victim of violent compensation</cbc:Note>
