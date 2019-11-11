@@ -5,7 +5,7 @@
 | Issue | Description | Type
 
 | -
-| Initial documentation based on PEPPOL BIS Punch Out 3.0.
-|
+| Updated customization identifier and processs identifier to refer to `anskaffelser.no`.
+| Syntax
 
 |===
