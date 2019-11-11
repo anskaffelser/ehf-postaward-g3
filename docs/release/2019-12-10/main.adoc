@@ -46,6 +46,6 @@ include::../../order-agreement-3.0/changelog/2019-12-10-3.0.0.adoc[]
 include::../../punch-out-3.0/changelog/2019-12-10-3.0.0.adoc[]
 
 
-== EHF Reminder 3.0.0
+== EHF Reminder 3.0.0 RC2
 
-include::../../reminder-3.0/changelog/2019-12-10-3.0.0.adoc[]
+include::../../reminder-3.0/changelog/2019-12-10-3.0.0-RC2.adoc[]

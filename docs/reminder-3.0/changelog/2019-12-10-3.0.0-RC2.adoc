@@ -5,6 +5,10 @@
 | Issue | Description | Type
 
 | -
+| Complete rewrite of syntax from using UBL Reminder to UBL Invoice.
+| Syntax
+
+| -
 | Updating customization identifier and processs identifier to refer to `anskaffelser.no`.
 | Syntax
 

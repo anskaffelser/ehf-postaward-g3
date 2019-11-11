@@ -6,7 +6,7 @@ include::{shared-dir}/settings.adoc[]
 
 = {doctitle}
 {name-difi-en}
-v3.0.0 RC
+v3.0.0 RC2
 :doctype: book
 :icons: font
 :toc: left
@@ -153,4 +153,3 @@ To send a reminder with a charge (called "gebyr" in Norwegian) we use the elemen
 ----
 <1> Using fixed value "true" such that allowance charge describes a charge.
 <2> The amount of a charge.
-
