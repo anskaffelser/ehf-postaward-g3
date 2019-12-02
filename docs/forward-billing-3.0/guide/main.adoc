@@ -1,0 +1,25 @@
+= EHF Forward Billing 3.0
+
+Invoice forward is about electronic invoice messages between business-to-business (B2B) and
+business-to-consumer (B2C). Today, we use EHF Billing 3.0 to send and receive B2B invoices, and
+this format can not be used to send B2C invoices.
+
+
+== Challenges with EHF Billing 3.0
+
+EHF Billing 3.0 contains a mandatory element named `cac:PartyLegalEntity`, which is an element for
+business customers. Thereby, todays EHF Billing 3.0 can not be used to send invoices to a householder
+customer.
+
+EHF Billing 2.0 is suitable for both cases, business customers and householder customers
+(B2B invoices and B2C invoices), in a forward invoice process. Read more about this
+link:https://vefa.difi.no/ehf/g2/energiveileder/[here].
+
+
+== Optional Solution
+
+One optional solution is to develope a "new" EHF Billing for a forward invoice process. We need
+new process identifier (`cbc:ProfileID`) and document identifier (`cbc:CustomizationID`). The main idea
+is to add a new rule to the element `cac:PartyLegalEntity` to differentiate B2C and B2B invoices.
+If the element `cac:PartyLegalEntity` exsist in the invoice message, then the invoice is a B2B invoice,
+and vice versa.

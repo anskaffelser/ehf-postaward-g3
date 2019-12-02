@@ -53,3 +53,13 @@ schutil exclude \
   /src/_source/poacc-billing/rules/sch/PEPPOL-EN16931-UBL.sch \
   /target/schematron-peppol/REMINDER-PEPPOL-EN16931-UBL.sch \
   PEPPOL-EN16931-R007,PEPPOL-EN16931-CL003
+
+# Forward Billing
+schutil exclude \
+  /src/_source/poacc-billing/rules/sch/CEN-EN16931-UBL.sch \
+  /target/schematron-peppol/FORWARD-BILLING-CEN-EN16931-UBL.sch \
+  BR-07
+schutil exclude \
+  /src/_source/poacc-billing/rules/sch/PEPPOL-EN16931-UBL.sch \
+  /target/schematron-peppol/FORWARD-BILLING-PEPPOL-EN16931-UBL.sch \
+  PEPPOL-EN16931-R007
