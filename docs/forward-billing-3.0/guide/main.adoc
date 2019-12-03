@@ -1,25 +1,218 @@
-= EHF Forward Billing 3.0
+:shared-dir: ../../_common
+:lang: en
+:doctitle: EHF Forward Billing 3.0
 
-Invoice forward is about electronic invoice messages between business-to-business (B2B) and
-business-to-consumer (B2C). Today, we use EHF Billing 3.0 to send and receive B2B invoices, and
-this format can not be used to send B2C invoices.
+include::{shared-dir}/settings.adoc[]
+
+= {doctitle}
+{name-difi-en}
+v3.0.0
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:source-language: xml
+:sectanchors:
+:sectnums:
+:title-logo-image: {shared-dir}/images/logo.jpg
 
 
-== Challenges with EHF Billing 3.0
-
-EHF Billing 3.0 contains a mandatory element named `cac:PartyLegalEntity`, which is an element for
-business customers. Thereby, todays EHF Billing 3.0 can not be used to send invoices to a householder
-customer.
-
-EHF Billing 2.0 is suitable for both cases, business customers and householder customers
-(B2B invoices and B2C invoices), in a forward invoice process. Read more about this
-link:https://vefa.difi.no/ehf/g2/energiveileder/[here].
+:leveloffset: +1
 
 
-== Optional Solution
+EHF Forward Billing 3.0 is used to perform forward billing, _"gjennomfakturering"_ in Norwegian, prior to billing of customer.
+This specifications adapts PEPPOL BIS Billing 3.0/EHF Billing 3.0 to support forward billing.
 
-One optional solution is to develope a "new" EHF Billing for a forward invoice process. We need
-new process identifier (`cbc:ProfileID`) and document identifier (`cbc:CustomizationID`). The main idea
-is to add a new rule to the element `cac:PartyLegalEntity` to differentiate B2C and B2B invoices.
-If the element `cac:PartyLegalEntity` exsist in the invoice message, then the invoice is a B2B invoice,
-and vice versa.
+
+= Overview
+
+This specification is conformant with PEPPOL BIS Billing 3.0, and therefore comformant with EN 16931.
+
+The full specification of link:https://vefa.difi.no/ehf/standard/ehf-billing-3.0/[EHF Billing 3.0] using UBL syntax is used to expressed the transaction.
+
+Deviations from PEPPOL BIS Billing 3.0 are made to
+
+.Deviations
+[cols="1,3", options="header"]
+|===
+| Rule
+| Reason
+
+| BR-07
+| Element `cac:AccountingCustomerParty/cac:Party/cac:PartyLegalEntity` is mandatory in EN 16931. This rules is removed to make `cac:PartyLegalEntity` optional, where the existence of the element indicate a business customer, and lack of the element indicate a consumer customer.
+
+| PEPPOL-EN16931-R007
+| Process identifier used in the forward billing transactions belongs to Difi. This rules is removed to deviate the process identifier.
+|===
+
+
+= Description
+
+This section describes aspects particular to forward billing.
+Please see the link:https://vefa.difi.no/ehf/standard/ehf-billing-3.0/[EHF Billing 3.0] documentation for more information.
+
+
+== Identification
+
+Transactions in forward billing is identified accordingly to allow for deviation and routing.
+
+[source,xml]
+.Identification in invoice
+--
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+
+  <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0#conformant#urn:fdc:anskaffelser.no:2019:ehf:forward-billing:3.0</cbc:CustomizationID> <1>
+  <cbc:ProfileID>urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:08:1.0</cbc:ProfileID> <2>
+--
+<1> Customization identifier indicating a forward billing transaction.
+<2> Process identifier indicating the forward billing process.
+
+[source,xml]
+.Identification in credit note
+--
+<?xml version="1.0" encoding="UTF-8"?>
+<CreditNote xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2"
+            xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+            xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+
+  <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0#conformant#urn:fdc:anskaffelser.no:2019:ehf:forward-billing:3.0</cbc:CustomizationID> <1>
+  <cbc:ProfileID>urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:08:1.0</cbc:ProfileID> <2>
+--
+<1> Customization identifier indicating a forward billing transaction.
+<2> Process identifier indicating the forward billing process.
+
+
+== Customer, business
+
+Business customers are provided accoring to EHF Billing 3.0, where the existence of `cac:PartyLegelEntity` indicate the customer is a business.
+
+[source,xml]
+.Example of customer being a business
+--
+<cac:AccountingCustomerParty>
+  <cac:Party>
+    <cbc:EndpointID schemeID="0192">987654325</cbc:EndpointID> <1>
+    <cac:PartyIdentification>
+      <cbc:ID>hn0073648</cbc:ID> <2>
+    </cac:PartyIdentification>
+    <cac:PostalAddress>
+      <cbc:StreetName>Storoveien 4</cbc:StreetName>
+      <cbc:CityName>Oslo</cbc:CityName>
+      <cbc:PostalZone>0542</cbc:PostalZone>
+      <cac:Country>
+        <cbc:IdentificationCode>NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:PostalAddress>
+    <cac:PartyLegalEntity> <3>
+      <cbc:RegistrationName>Buyer AS</cbc:RegistrationName>
+      <cbc:CompanyID schemeID="0192">877734641</cbc:CompanyID>
+    </cac:PartyLegalEntity>
+  </cac:Party>
+</cac:AccountingCustomerParty>
+--
+<1> Electronic address of the organization receiving the forward invoice/credit note for further billing of customer.
+<2> Party identification according to EHF Billing 3.0, may be bilaterally agreed.
+<3> Existence of `cac:PartyLegelEntity` indicate a business customer.
+
+
+== Customer, consumer
+
+Business customers are provided accoring to EHF Billing 3.0, where the lack of `cac:PartyLegelEntity` indicate the customer is a consumer.
+
+[source,xml]
+.Example of customer being a consumer
+--
+<cac:AccountingCustomerParty>
+  <cac:Party>
+    <cbc:EndpointID schemeID="0192">987654325</cbc:EndpointID> <1>
+    <cac:PartyIdentification>
+      <cbc:ID>hn0073648</cbc:ID> <2>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Lisa Johansen</cbc:Name>
+    </cac:PartyName>
+    <cac:PostalAddress>
+      <cbc:StreetName>Heimdalsgata 32</cbc:StreetName>
+      <cbc:CityName>Oslo</cbc:CityName>
+      <cbc:PostalZone>0154</cbc:PostalZone>
+      <cac:Country>
+        <cbc:IdentificationCode>NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:PostalAddress>
+  </cac:Party> <3>
+</cac:AccountingCustomerParty>
+--
+<1> Electronic address of the organization receiving the forward invoice/credit note for further billing of customer.
+<2> Party identification according to EHF Billing 3.0, may be bilaterally agreed.
+<3> Lack of `cac:PartyLegelEntity` indicate a consumer customer.
+
+
+= Sector usage
+
+This section contains information related to specific sectors using EHF Forward Billing 3.0.
+
+Information in this section does not limit use in sectors not mentioned.
+
+
+== Energy sector
+
+
+=== Background
+
+Norges Vassdrags- og Energidirektorat stated in its report no. 48-2016 «Endring i forskrift om måling, avregning, fakturering av nettjenester og elektrisk energi, nettselskapets nøytralitet mv. - Endringer vedrørende gjennomfakturering - Oppsummering av høringsuttalelser og endelig forskriftstekst», dated May 2016, the basis for carrying secondary law regarding invoicing of grid services to end users via power suppliers ("forward invoicing"), in force from September 1., 2016 [3]. Enforcement of this regulation is now safeguarded by Reguleringsmyndigheten for Energi (REM), in accordance with transfer of authority November 1. 2019.
+
+According to secondary law "Avregningsforskriften" [1], §7-4b, letter b, information exchange when forward invoicing shall be performed based on formats, protocols and timeframes set by Systemstøtte for Ediel. Furthermore, Avregningsforskriften [1] states that EHF Billing (EHF) shall be the standard format for distributing base data for electronic invoices and credit notes on grid owner services, and that meteringpoint ID shall be used to identify the end user in the course of the invoicing transmission.
+
+A national expert group ("Norsk Ediel Ekspertgruppe") with representatives from the Norwegian power industry has supplied existing regulation with business rules for the national forward invoicing EHF-based standard. These business rules were upgraded autumn 2019, in correspondence with the Difi upgrade to EHF ver. 3.0.
+
+=== Use of EHF Forward Billing 3.0
+
+All grid owners offering to forward their invoice to the end users via the power supplier must as a minimum be able to do so based on the EHF format, presenting the grid owner's "original invoice" to the end user as a PDF attachment. As a minimum option the grid owner must be able to distribute this through the EHF (PEPPOL) transport infrastructure to the power supplier's access point found in ELMA.
+
+The Peppol Network is the chosen interexchange infrastructure because of its automatic message validation properties. Other formats and transmission methods may be agreed bilaterally between grid owner and power supplier.
+
+By "original invoice" these guidelines refer to the original invoice from the grid owner, with the settlement information directed at the end user in the payment giro removed. Please note that RME only requires settlement information to be removed on invoices directed to household customers, as opposed to businesses, where the market parties may decide whether to remove/ mask the settlement information or not. According to requirements connected to usage of PDF attachments, it must be clearly specified in the document that the PDF attachment is not the valid invoice. Sending the "grid owner original invoice" as PDF attachment is a simple solution used by many market parties today, as PDFs are time-saving and easily accessible to print and forward to end users demanding paper copies of grid owner invoices.
+
+Settlement information is to be understood as due date, account number and KID (customer identification number).
+
+*	The grid owner's original invoice is to be forwarded as a PDF attachment:
+** The end user is the customer for the EHF forwarded invoice
+** The power supplier is the payer for the EHF forwarded invoice
+** Settlement information must be removed from the payment giro in the PDF, as the end user is to pay to the power supplier
+** The PDF is to be transmitted in Base64 format, please see examples in appendix ..  and .., as well as EHF invoice and credit note [..].
+* The standard solution allows only *one* meteringpoint ID in each EHF invoice, as the invoice recipient (the end user) must be stated in the header of the EHF invoice.
+* Transmission of contact details for the grid owner is not part of the standard for forward invoicing:
+** Contact information to the grid owner is voluntarily distributed through the EHF forward invoice.
+** This is handled through bilateral agreements between grid owner and power supplier
+** The transmission between the designated EHF access points is presently not encrypted
+
+
+=== Indicating original invoice
+
+To indicate original invoice PDF in forward billing is the identifier `Original invoice` used to find the attachement. Other attachements not using the identifier are additial attachements.
+
+[source,xml]
+.Example of attached original invoice.
+--
+<cac:AdditionalDocumentReference>
+  <cbc:ID>Original invoice</cbc:ID> <1>
+  <cac:Attachment>
+    <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" filename="originalinvoice.pdf">
+      QmFzZTY0IGNvbnRlbnQgZXhhbXBsZQ== <2>
+    </cbc:EmbeddedDocumentBinaryObject>
+  </cac:Attachment>
+</cac:AdditionalDocumentReference>
+--
+<1> Identifier `Original invoice` indicate the original invoice.
+<2> PDF content as base64.
+
+= Example files
+
+The following example files are made available:
+
+* link:example/forward-billing-nettleie-business.xml[forward-billing-nettleie-business.xml]
+* link:example/forward-billing-nettleie-consumer.xml[forward-billing-nettleie-consumer.xml]
