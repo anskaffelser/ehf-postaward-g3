@@ -5,7 +5,7 @@
 
 = Version 3.0.0 RC2 (2019-12-10) [[changelog-3.0.0-RC2]]
 
-include::2019-05-30-3.0.0-RC2.adoc[]
+include::2019-12-10-3.0.0-RC2.adoc[]
 
 
 = Version 3.0.0 RC1 (2019-05-30) [[changelog-3.0.0-RC1]]
