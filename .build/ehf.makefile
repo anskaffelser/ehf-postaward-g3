@@ -119,7 +119,7 @@ rules:
 ifeq "$(RULE_RULES)" "true"
 	$(call docker_run,rules,Running vefa-validator,\
 			-v $(PROJECT):/src \
-			difi/vefa-validator \
+			anskaffelser/validator:2.1.0 \
 			build -x -t -n $(RULES_IDENT) -a $(RULES_FOLDER) -b $(VERSION) -target target/validator /src)
 else
 	$(call skip,rules)
