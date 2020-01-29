@@ -1,0 +1,158 @@
+= Payment Information
+
+Payment information need to be provided in element `cac:PaymentMeans` in an invoice, which contains instruction about how a payment
+is expected to be (e.g. credit transfer), remittance information, and either payment card information, credit transfer information
+or direct debit information.
+
+In general, there are fire different types of payments:
+
+* Card payment - must use `cac:PaymentMeans/cac:CardAccount`
+* Credit transfer - must use `cac:PaymentMeans/cac:PayeeFinancialAccount`
+* Direct debit - must use `cac:PaymentMeans/cac:PaymentMandate`
+* Payment by post- or bank giro - must use `cac:PaymentMeans/cac:PayeeFinancialAccount`
+
+In the invoice the supplier can specify how a payment is expected to be, by using element `cbc:PaymentMeansCode`. The
+allowed payment codes can be found in link:https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL4461/[Payment means code - code list].
+
+//Note that, all allowed payment codes can be found in link:https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL4461/[Payment means code list],
+//and need to be provided in element `cbc:PaymentMeansCode`.
+
+See further details and examples of payment means information in link:https://docs.peppol.eu/poacc/billing/3.0/bis/#_payment_means_information[PEPPOL BIS Billing specification].
+
+
+== IBAN/BBAN Payments
+
+BBAN is a national bank account number used for national payments, while IBAN is a international bank account number
+used for international payments. In EHF Billing 3.0 (PEPPOL BIS Billing 3.0), BBAN and IBAN need to be applied as _credit transfer_, where
+the payment means code can, for example, be 30 (credit transfer), 54 (SEPA credit transfer) or other codes from
+link:https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL4461/[Payment means code - code list].
+
+If credit transfer information is provided in the invoice the payment account identifier must be present, regarding
+link:https://docs.peppol.eu/poacc/billing/3.0/bis/#cen_rules[BR-50]. Payment account identifier is an unique
+identifier of the financial payment account to which a payment should be made, such as BBAN or IBAN. In the invoice,
+the supplier can state the BBAN or IBAN by using the element `cac:PaymentMeans\cac:PayeeFinancialAccount\cbc:ID`.
+
+NOTE: The payment account identifier can be a BBAN or IBAN number, not the physical text "BBAN" or "IBAN".
+
+
+[source,xml]
+.UBL example of applying IBAN in an invoice.
+----
+<cac:PaymentMeans>
+    <cbc:PaymentMeansCode name="credit transfer">30</cbc:PaymentMeansCode><!--1-->
+    <cbc:PaymentID>01245785421</cbc:PaymentID><!--2-->
+    <cac:PayeeFinancialAccount>
+        <cbc:ID>NO4970011111222</cbc:ID><!--3-->
+        <cbc:Name>AccountX</cbc:Name><!--4-->
+        <cac:FinancialInsitutionBranch>
+            <cbc:ID>DNBANOKK</cbc:ID><!--5-->
+        </cac:FinancialInsitutionBranch>
+    </cac:PayeeFinancialAccount>
+</cac:PaymentMeans>
+----
+<1> Payment means type codes from link:https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL4461/[Payment means code - code list]
+<2> Remittance information about the payment, for example KID-number.
+<3> IBAN (International Bank Account Number)
+<4> Account name
+<5> BIC (Bank identifier code) or national clearing code
+
+Following example illustrates how to use BBAN in the invoice. Note that, element `cac:FinancialInsitutionBranch` is not used
+when applying BBAN.
+
+[source,xml]
+.UBL example of applying BBAN in an invoice.
+----
+<cac:PaymentMeans>
+    <cbc:PaymentMeansCode name="credit transfer">30</cbc:PaymentMeansCode><!--1-->
+    <cbc:PaymentID>01245785421</cbc:PaymentID><!--2-->
+    <cac:PayeeFinancialAccount>
+        <cbc:ID>4970011111222</cbc:ID><!--3-->
+        <cbc:Name>AccountX</cbc:Name><!--4-->
+    </cac:PayeeFinancialAccount>
+</cac:PaymentMeans>
+----
+<1> Payment means type codes from link:https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL4461/[Payment means code - code list]
+<2> Remittance information about the payment, for example KID-number
+<3> BBAN (National Bank Account Number)
+<4> Account name
+
+== SEPA Payments
+
+SEPA (Single Euro Payments Area) is an electronic Euro payment. There are two different SEPA payment methods in the invoice, from
+link:https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL4461/[Payment means code - code list] we have:
+
+* 58 - SEPA Credit transfer
+* 59 - SEPA Direct debit
+
+NOTE: BBAN is not allowed in SEPA payments- use IBAN.
+
+=== SEPA Credit Transfer
+
+
+[source,xml]
+.UBL example of applying SEPA Credit transfer with IBAN in an invoice.
+----
+<cac:PaymentMeans>
+    <cbc:PaymentMeansCode name="SEPA credit transfer">58</cbc:PaymentMeansCode><!--1-->
+    <cbc:PaymentID>01245785421</cbc:PaymentID><!--2-->
+    <cac:PayeeFinancialAccount>
+        <cbc:ID>NO4970011111222</cbc:ID><!--3-->
+        <cbc:Name>AccountX</cbc:Name><!--4-->
+        <cac:FinancialInsitutionBranch>
+            <cbc:ID>DNBANOKK</cbc:ID><!--5-->
+        </cac:FinancialInsitutionBranch>
+    </cac:PayeeFinancialAccount>
+</cac:PaymentMeans>
+----
+<1> SEPA credit transfer code from link:https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL4461/[Payment means code- code list]
+<2> Remittance information about the payment, for example KID-number.
+<3> IBAN (International Bank Account Number)
+<4> Account name
+<5> BIC (Bank identifier code) or national clearing code
+
+
+=== SEPA Direct Debit
+
+
+[source,xml]
+.UBL example of applying SEPA Direct Debit in an invoice.
+----
+<cac:AccountingSupplierParty>
+    <cac:Party>
+        <cbc:EndpointID schemeID="0192">987654325</cbc:EndpointID>
+        <cac:PartyIdentification schemeID="SEPA">9512357</cac:PartyIdentification><!--1-->
+    </cac:Party>
+    <!-- ... -->
+</cac:AccountingSupplierParty>
+<cac:PaymentMeans>
+    <cbc:PaymentMeansCode name="SEPA direct debit">59</cbc:PaymentMeansCode><!--2-->
+    <cbc:PaymentID>01245785421</cbc:PaymentID><!--3-->
+    <cac:PaymentMandate>
+        <cbc:ID>123456789</cbc:ID><!--4-->
+        <cac:PayerFinancialAccount>
+            <cbc:ID>NO4970011111222</cbc:ID><!--5-->
+        </cac:PayerFinancialAccount>
+    </cac:PaymentMandate>
+</cac:PaymentMeans>
+----
+<1> Unique banking reference identifier of the Seller/Payee, where the schemeID MUST be "SEPA"
+<2> SEPA direct debit code from link:https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL4461/[Payment means code - code list]
+<3> Remittance information
+<4> Mandate reference identifier
+<5> The account to the debited - IBAN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

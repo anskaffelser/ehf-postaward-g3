@@ -6,4 +6,6 @@ include::foretaksregisteret.adoc[]
 
 include::value-added-tax.adoc[]
 
+include::payment-information.adoc[]
+
 :leveloffset: -1
