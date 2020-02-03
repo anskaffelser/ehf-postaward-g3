@@ -22,13 +22,13 @@ See further details and examples of payment means information in link:https://do
 
 == IBAN/BBAN Payments
 
-BBAN is a national bank account number used for national payments, while IBAN is a international bank account number
+BBAN is a national bank account number used for national payments, while IBAN is an international bank account number
 used for international payments. In EHF Billing 3.0 (PEPPOL BIS Billing 3.0), BBAN and IBAN need to be applied as _credit transfer_, where
 the payment means code can, for example, be 30 (credit transfer), 54 (SEPA credit transfer) or other codes from
 link:https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL4461/[Payment means code - code list].
 
 If credit transfer information is provided in the invoice the payment account identifier must be present, regarding
-link:https://docs.peppol.eu/poacc/billing/3.0/bis/#cen_rules[BR-50]. Payment account identifier is an unique
+link:https://docs.peppol.eu/poacc/billing/3.0/bis/#cen_rules[BR-50]. Payment account identifier is a unique
 identifier of the financial payment account to which a payment should be made, such as BBAN or IBAN. In the invoice,
 the supplier can state the BBAN or IBAN by using the element `cac:PaymentMeans\cac:PayeeFinancialAccount\cbc:ID`.
 
