@@ -34,6 +34,8 @@ the supplier can state the BBAN or IBAN by using the element `cac:PaymentMeans\c
 
 NOTE: The payment account identifier can be a BBAN or IBAN number, not the physical text "BBAN" or "IBAN".
 
+Following example illustrates how to use IBAN in the invoice. Note that, only BIC (Bank identifier code) or national clearing code
+need to be provided in element `cac:FinancialInsitutionBranch\cbc:ID`, when applying IBAN in an invoice.
 
 [source,xml]
 .UBL example of applying IBAN in an invoice.
@@ -56,7 +58,7 @@ NOTE: The payment account identifier can be a BBAN or IBAN number, not the physi
 <4> Account name
 <5> BIC (Bank identifier code) or national clearing code
 
-Following example illustrates how to use BBAN in the invoice. Note that, element `cac:FinancialInsitutionBranch` is not used
+Following example illustrates how to use BBAN in the invoice. Note that, element `cac:FinancialInsitutionBranch` shall not be used
 when applying BBAN.
 
 [source,xml]
