@@ -49,3 +49,9 @@ include::{shared-dir}/settings.adoc[]
 == EHF Reminder 3.0.0
 
 include::../../reminder-3.0/changelog/2020-03-23-3.0.0.adoc[]
+
+
+== EHF Billing 3.0.3
+
+
+include::../../billing-3.0/norway/changelog/2020-01-24-3.0.3.adoc[]
