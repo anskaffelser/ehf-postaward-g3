@@ -83,6 +83,13 @@
         <Tag>ordering-3.0</Tag>
         <Tag>order-agreement-3.0</Tag>
         <Tag>punch-out-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2020-03-23</Path>
+        <Title>Release 2020-03-23</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2020-03-23'.</Description>
+        <Tag>release</Tag>
         <Tag>reminder-3.0</Tag>
     </Resource>
     <Resource>
