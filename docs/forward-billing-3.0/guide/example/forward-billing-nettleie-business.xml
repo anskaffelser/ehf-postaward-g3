@@ -18,7 +18,7 @@
   </cac:AdditionalDocumentReference>
 
   <cac:AdditionalDocumentReference>
-    <cbc:ID schemeID="AVE">Original invoice</cbc:ID>
+    <cbc:ID>Original invoice</cbc:ID>
     <cac:Attachment>
       <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" filename="originalinvoice.pdf">
         QmFzZTY0IGNvbnRlbnQgZXhhbXBsZQ==

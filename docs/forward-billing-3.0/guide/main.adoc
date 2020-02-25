@@ -6,7 +6,7 @@ include::{shared-dir}/settings.adoc[]
 
 = {doctitle}
 {name-difi-en}
-v3.0.0
+v3.0.1
 :doctype: book
 :icons: font
 :toc: left
@@ -151,68 +151,12 @@ Business customers are provided accoring to EHF Billing 3.0, where the lack of `
 <3> Lack of `cac:PartyLegelEntity` indicate a consumer customer.
 
 
-= Sector usage
-
-This section contains information related to specific sectors using EHF Forward Billing 3.0.
-
-Information in this section does not limit use in sectors not mentioned.
+include::sector/index.adoc[]
 
 
-== Energy sector
+// = Example files
 
+// The following example files are made available:
 
-=== Background
-
-Norges Vassdrags- og Energidirektorat stated in its report no. 48-2016 «Endring i forskrift om måling, avregning, fakturering av nettjenester og elektrisk energi, nettselskapets nøytralitet mv. - Endringer vedrørende gjennomfakturering - Oppsummering av høringsuttalelser og endelig forskriftstekst», dated May 2016, the basis for carrying secondary law regarding invoicing of grid services to end users via power suppliers ("forward invoicing"), in force from September 1., 2016 [3]. Enforcement of this regulation is now safeguarded by Reguleringsmyndigheten for Energi (REM), in accordance with transfer of authority November 1. 2019.
-
-According to secondary law "Avregningsforskriften" [1], §7-4b, letter b, information exchange when forward invoicing shall be performed based on formats, protocols and timeframes set by Systemstøtte for Ediel. Furthermore, Avregningsforskriften [1] states that EHF Billing (EHF) shall be the standard format for distributing base data for electronic invoices and credit notes on grid owner services, and that meteringpoint ID shall be used to identify the end user in the course of the invoicing transmission.
-
-A national expert group ("Norsk Ediel Ekspertgruppe") with representatives from the Norwegian power industry has supplied existing regulation with business rules for the national forward invoicing EHF-based standard. These business rules were upgraded autumn 2019, in correspondence with the Difi upgrade to EHF ver. 3.0.
-
-=== Use of EHF Forward Billing 3.0
-
-All grid owners offering to forward their invoice to the end users via the power supplier must as a minimum be able to do so based on the EHF format, presenting the grid owner's "original invoice" to the end user as a PDF attachment. As a minimum option the grid owner must be able to distribute this through the EHF (PEPPOL) transport infrastructure to the power supplier's access point found in ELMA.
-
-The Peppol Network is the chosen interexchange infrastructure because of its automatic message validation properties. Other formats and transmission methods may be agreed bilaterally between grid owner and power supplier.
-
-By "original invoice" these guidelines refer to the original invoice from the grid owner, with the settlement information directed at the end user in the payment giro removed. Please note that RME only requires settlement information to be removed on invoices directed to household customers, as opposed to businesses, where the market parties may decide whether to remove/ mask the settlement information or not. According to requirements connected to usage of PDF attachments, it must be clearly specified in the document that the PDF attachment is not the valid invoice. Sending the "grid owner original invoice" as PDF attachment is a simple solution used by many market parties today, as PDFs are time-saving and easily accessible to print and forward to end users demanding paper copies of grid owner invoices.
-
-Settlement information is to be understood as due date, account number and KID (customer identification number).
-
-*	The grid owner's original invoice is to be forwarded as a PDF attachment:
-** The end user is the customer for the EHF forwarded invoice
-** The power supplier is the payer for the EHF forwarded invoice
-** Settlement information must be removed from the payment giro in the PDF, as the end user is to pay to the power supplier
-** The PDF is to be transmitted in Base64 format, please see examples in appendix ..  and .., as well as EHF invoice and credit note [..].
-* The standard solution allows only *one* meteringpoint ID in each EHF invoice, as the invoice recipient (the end user) must be stated in the header of the EHF invoice.
-* Transmission of contact details for the grid owner is not part of the standard for forward invoicing:
-** Contact information to the grid owner is voluntarily distributed through the EHF forward invoice.
-** This is handled through bilateral agreements between grid owner and power supplier
-** The transmission between the designated EHF access points is presently not encrypted
-
-
-=== Indicating original invoice
-
-To indicate original invoice PDF in forward billing is the identifier `Original invoice` used to find the attachement. Other attachements not using the identifier are additial attachements.
-
-[source,xml]
-.Example of attached original invoice.
---
-<cac:AdditionalDocumentReference>
-  <cbc:ID>Original invoice</cbc:ID> <1>
-  <cac:Attachment>
-    <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" filename="originalinvoice.pdf">
-      QmFzZTY0IGNvbnRlbnQgZXhhbXBsZQ== <2>
-    </cbc:EmbeddedDocumentBinaryObject>
-  </cac:Attachment>
-</cac:AdditionalDocumentReference>
---
-<1> Identifier `Original invoice` indicate the original invoice.
-<2> PDF content as base64.
-
-= Example files
-
-The following example files are made available:
-
-* link:example/forward-billing-nettleie-business.xml[forward-billing-nettleie-business.xml]
-* link:example/forward-billing-nettleie-consumer.xml[forward-billing-nettleie-consumer.xml]
+// * link:example/forward-billing-nettleie-business.xml[forward-billing-nettleie-business.xml]
+// * link:example/forward-billing-nettleie-consumer.xml[forward-billing-nettleie-consumer.xml]

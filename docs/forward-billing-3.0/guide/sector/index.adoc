@@ -1,0 +1,11 @@
+= Sector usage
+
+This section contains information related to specific sectors using EHF Forward Billing 3.0.
+
+Information in this section does not limit use in sectors not mentioned.
+
+:leveloffset: +1
+
+include::energy.adoc[]
+
+:leveloffset: -1

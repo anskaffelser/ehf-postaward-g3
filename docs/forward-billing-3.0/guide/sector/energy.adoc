@@ -1,0 +1,180 @@
+= Energy sector
+
+
+== Background
+
+Norges Vassdrags- og Energidirektorat stated in its report no. 48-2016 «Endring i forskrift om måling, avregning, fakturering av nettjenester og elektrisk energi, nettselskapets nøytralitet mv. - Endringer vedrørende gjennomfakturering - Oppsummering av høringsuttalelser og endelig forskriftstekst», dated May 2016, the basis for carrying secondary law regarding invoicing of grid services to end users via power suppliers ("forward invoicing"), in force from September 1., 2016 [3]. Enforcement of this regulation is now safeguarded by Reguleringsmyndigheten for Energi (REM), in accordance with transfer of authority November 1. 2019.
+
+According to secondary law "Avregningsforskriften" [1], §7-4b, letter b, information exchange when forward invoicing shall be performed based on formats, protocols and timeframes set by Systemstøtte for Ediel. Furthermore, Avregningsforskriften [1] states that EHF Billing (EHF) shall be the standard format for distributing base data for electronic invoices and credit notes on grid owner services, and that meteringpoint ID shall be used to identify the end user in the course of the invoicing transmission.
+
+A national expert group ("Norsk Ediel Ekspertgruppe") with representatives from the Norwegian power industry has supplied existing regulation with business rules for the national forward invoicing EHF-based standard. These business rules were upgraded January 2020, in correspondence with the Difi upgrade to EHF ver. 3.0.
+
+== Use of EHF Forward Billing 3.0
+
+All grid owners offering to forward their invoice to the end users via the power supplier must as a minimum be able to do so based on the EHF format, presenting the grid owner’s "original invoice" to the end user as a PDF attachment. As a minimum option the grid owner must be able to distribute this through the EHF (PEPPOL) transport infrastructure to the power supplier’s access point found in ELMA.
+
+The Peppol Network is the chosen interexchange infrastructure because of its automatic message validation properties. Other formats and transmission methods may be agreed bilaterally between grid owner and power supplier.
+
+PEPPOL BIS Billing 3.0 has offered the opportunity to separate the forward billing process from ordinary EHF invoice exchange, simplifying identification and handling forward billing invoices with the receiving power suppliers.
+
+By "original invoice" these guidelines refer to the original invoice from the grid owner, with the settlement information directed at the end user in the payment giro removed. Please note that RME only requires settlement information to be removed on invoices directed to household customers, as opposed to businesses, where the market parties may decide whether to remove/ mask the settlement information or not. According to requirements connected to usage of PDF attachments, it must be clearly specified in the document that the PDF attachment is not the valid invoice. Sending the "grid owner original invoice" as PDF attachment is a simple solution used by many market parties today, as PDFs are time-saving and easily accessible to print and forward to end users demanding paper copies of grid owner invoices.
+
+Settlement information is to be understood as due date, account number and KID (customer identification number).
+
+* The grid owner’s original invoice is to be forwarded as a PDF attachment:
+** The end user is the customer for the EHF forwarded invoice
+** The power supplier is the payer for the EHF forwarded invoice
+** Settlement information must be removed from the payment giro in the PDF, as the end user is to pay to the power supplier
+** The PDF is to be transmitted in Base64 format, please see examples in appendix .. and .., as well as EHF invoice and credit note [..].
+* The standard solution allows only *one* meteringpoint ID in each EHF invoice, as the invoice recipient (the end user) must be stated in the header of the EHF invoice.
+* Transmission of contact details for the grid owner is not part of the standard for forward invoicing:
+** Contact information to the grid owner is voluntarily distributed through the EHF forward invoice.
+** This is handled through bilateral agreements between grid owner and power supplier
+** The transmission between the designated EHF access points is presently not encrypted
+
+
+== Meteringpoint ID
+
+Meteringpoint ID is in PEPPOL BIS Billing 3.0 awarded its own formal segment; `AdditionalDocumentReference`, in combination with schemeID `AVE`. Along with name, birth date/ organization number and installation address, this identifies the end user invoiced by the grid owner.
+
+[source,xml]
+.Identification of meteringpoint ID
+--
+<cac:AdditionalDocumentReference>
+  <!--AVE being code for meteringpoint id according to codelist-->
+  <cbc:ID schemeID="AVE">707057500011223344</cbc:ID>
+  <cbc:DocumentTypeCode>130</cbc:DocumentTypeCode>
+</cac:AdditionalDocumentReference>
+--
+
+
+== Indicating original invoice or credit note
+
+To indicate original invoice PDF in forward billing the identifier Original invoice is used to find the attachement. Other attachements not using the identifier are additional attachements.
+
+[source,xml]
+.Example of attached original invoice.
+--
+<cac:AdditionalDocumentReference>
+  <cbc:ID>Original invoice</cbc:ID>
+  <cac:Attachment>
+    <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" filename="originalinvoice.pdf">
+      QmFzZTY0IGNvbnRlbnQgZXhhbXBsZQ==
+    </cbc:EmbeddedDocumentBinaryObject>
+  </cac:Attachment>
+</cac:AdditionalDocumentReference>
+--
+
+Identifier `Original invoice` indicates the original invoice.
+
+Similarly, original credit note PDF is indicated by the identifier `Original credit note` to find the attachment.
+
+[source,xml]
+.Example of attached original credit note
+--
+<cac:AdditionalDocumentReference>
+  <cbc:ID>Original credit note</cbc:ID>
+  <cac:Attachment>
+    <cbc:EmbeddedDocumentBinaryObject filename="originalcreditnote.pdf" mimeCode="application/pdf">
+      QmFzZTY0IGNvbnRlbnQgZXhhbXBsZQ== <1>
+    </cbc:EmbeddedDocumentBinaryObject>
+   </cac:Attachment>
+ </cac:AdditionalDocumentReference>
+--
+<1> PDF content as base64.
+
+
+== Identifying power supplier
+
+The power supplier is in PEPPOL BIS Billing 3.0/ forward billing identified in the segments `AcccountingCustomerParty` and `PartyLegalEntity` and must correspond with EndpointID.
+
+[source,xml]
+.Identification of power supplier
+--
+<cac:AccountingCustomerParty>
+  <cac:Party>
+    <!--Kraftselskapets orgnummer og fakturainformasjon-->
+    <cbc:EndpointID schemeID="0192">987654325</cbc:EndpointID>
+    <cac:PartyIdentification>
+      <cbc:ID>hn0073648</cbc:ID>
+    </cac:PartyIdentification>
+    <cbc:Name>Kraftselskapet AS</cbc:Name>
+    <cac:PostalAddress>
+      <cbc:StreetName>Kraftveien 4</cbc:StreetName>
+      <cbc:CityName>Oslo</cbc:CityName>
+      <cbc:PostalZone>0542</cbc:PostalZone>
+      <cac:Country>
+        <cbc:IdentificationCode>NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:PostalAddress>
+    <cac:PartyLegalEntity>
+      <cbc:RegistrationName>Kraftselskapet AS</cbc:RegistrationName>
+      <cbc:CompanyID schemeID="0192">123456789</cbc:CompanyID>
+    </cac:PartyLegalEntity>
+  </cac:Party>
+</cac:AccountingCustomerParty>
+--
+
+
+== End user name, birth date/ organization number and installation address
+
+*Household end user* name is to be submitted in the `AdditionalDocumentReference` segment, with `ID` in the format YYYY-MM-DD, indicating a household end user. Corresponding segment `DocumentDescription` will then provide the household end user name.
+
+Please note that for security reasons *only birth date* is to be submitted for household end users, not the entire birth number.
+
+[source,xml]
+.Identification of household end user
+--
+<cac:AdditionalDocumentReference>
+  <!--If ID=YYYY-MM-DD the end user is a household customer, with name submitted in DocumentDescription-->
+  <cbc:ID>1985-02-14</cbc:ID>
+  <cbc:DocumentDescription>Ola Nordmann</cbc:DocumentDescription>
+</cac:AdditionalDocumentReference>
+--
+
+*For corporate end users*, the `AdditionalDocumentReference ID` will contain a 9-digit organization number, and consequently `DocumentDescription` will provide the corporate end user name.
+
+[source,xml]
+.Identification of corporate end user
+--
+<cac:AdditionalDocumentReference>
+  <!—If 9 digit ID, the end user is a corporate user, with name submitted in DocumentDescription-->
+  <cbc:ID>990399123</cbc:ID>
+  <cbc:DocumentDescription>Edisys Consulting AS</cbc:DocumentDescription>
+</cac:AdditionalDocumentReference>
+--
+
+*Installation address* may be found in the segment `Delivery`, beneficial for verifying correct installation for multiple installation end users.
+
+[source,xml]
+.Information on installation address
+--
+<cac:Delivery>
+  <cac:DeliveryLocation>
+    <cac:Address>
+      <cbc:StreetName>Anleggsadressen 12</cbc:StreetName>
+      <cbc:CityName>Oslo</cbc:CityName>
+      <cbc:PostalZone>1144</cbc:PostalZone>
+      <cac:Country>
+        <cbc:IdentificationCode>NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:Address>
+  </cac:DeliveryLocation>
+</cac:Delivery>
+--
+
+The fields are widely used by the energy sector for supplementary verification of correct end user.
+
+== Other
+
+According to PEPPOL BIS Billing 3.0 either `<cbc:BuyerReference>` or `<cac:ContractDocumentReference>` must be submitted by the grid owner. These segments are however not in use by the power industry. The grid owner submitting `NA` in one of these segments is deemed sufficient, and the power supplier may ignore contents of these two segments.
+
+
+== Example files
+
+The following example files are made available:
+
+* link:example/energy/Invoice_EHF3.0_forward-billing-nettleie-consumer_v1.0.xml[Invoice_EHF3.0_forward-billing-nettleie-consumer_v1.0.xml]
+* link:example/energy/Invoice_EHF3.0_forward-billing-nettleie-corporate_v1.0.xml[Invoice_EHF3.0_forward-billing-nettleie-corporate_v1.0.xml]
+* link:example/energy/Creditnote_EHF3.0_forward-billing-nettleie-consumer_v1.0.xml[Creditnote_EHF3.0_forward-billing-nettleie-consumer_v1.0.xml]
+* link:example/energy/Creditnote_EHF3.0_forward-billing-nettleie-corporate_v1.0.xml[Creditnote_EHF3.0_forward-billing-nettleie-corporate_v1.0.xml]
