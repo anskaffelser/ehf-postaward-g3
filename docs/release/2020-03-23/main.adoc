@@ -16,9 +16,9 @@ include::{shared-dir}/settings.adoc[]
 :title-logo-image: {shared-dir}/images/logo.jpg
 
 
-// == EHF Billing 3.0.2
+== EHF Billing 3.0.3
 
-// include::../../billing-3.0/norway/changelog/2019-05-30-3.0.2.adoc[]
+include::../../billing-3.0/norway/changelog/2020-03-23-3.0.3.adoc[]
 
 
 // == EHF Catalogue 3.0.0
@@ -29,6 +29,11 @@ include::{shared-dir}/settings.adoc[]
 // == EHF Despatch Advice 3.0.0
 
 // include::../../despatch-advice-3.0/changelog/2019-12-10-3.0.0.adoc[]
+
+
+== EHF Forward Billing 3.0.1
+
+include::../../forward-billing-3.0/changelog/2020-03-23-3.0.1.adoc[]
 
 
 // == EHF Ordering 3.0.0
@@ -49,9 +54,3 @@ include::{shared-dir}/settings.adoc[]
 == EHF Reminder 3.0.0
 
 include::../../reminder-3.0/changelog/2020-03-23-3.0.0.adoc[]
-
-
-== EHF Billing 3.0.3
-
-
-include::../../billing-3.0/norway/changelog/2020-01-24-3.0.3.adoc[]
