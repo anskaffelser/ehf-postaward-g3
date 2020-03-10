@@ -174,7 +174,7 @@ According to PEPPOL BIS Billing 3.0 either `<cbc:BuyerReference>` or `<cac:Contr
 
 The following example files are made available:
 
-* link:example/energy/Invoice_EHF3.0_forward-billing-nettleie-consumer_v1.0.xml[Invoice_EHF3.0_forward-billing-nettleie-consumer_v1.0.xml]
-* link:example/energy/Invoice_EHF3.0_forward-billing-nettleie-corporate_v1.0.xml[Invoice_EHF3.0_forward-billing-nettleie-corporate_v1.0.xml]
-* link:example/energy/Creditnote_EHF3.0_forward-billing-nettleie-consumer_v1.0.xml[Creditnote_EHF3.0_forward-billing-nettleie-consumer_v1.0.xml]
-* link:example/energy/Creditnote_EHF3.0_forward-billing-nettleie-corporate_v1.0.xml[Creditnote_EHF3.0_forward-billing-nettleie-corporate_v1.0.xml]
+* link:example/energy/Invoice_EHF3.0_forward-billing-nettleie-consumer_v2.0.xml[Invoice_EHF3.0_forward-billing-nettleie-consumer_v2.0.xml]
+* link:example/energy/Invoice_EHF3.0_forward-billing-nettleie-corporate_v2.0.xml[Invoice_EHF3.0_forward-billing-nettleie-corporate_v2.0.xml]
+* link:example/energy/Creditnote_EHF3.0_forward-billing-nettleie-consumer_v2.0.xml[Creditnote_EHF3.0_forward-billing-nettleie-consumer_v2.0.xml]
+* link:example/energy/Creditnote_EHF3.0_forward-billing-nettleie-corporate_v2.0.xml[Creditnote_EHF3.0_forward-billing-nettleie-corporate_v2.0.xml]
