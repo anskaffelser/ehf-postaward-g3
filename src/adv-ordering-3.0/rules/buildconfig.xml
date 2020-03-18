@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <package>EHF Advanced Ordering 3.0.0</package>
+
+    <testfolder>example</testfolder>
+
+    <!-- EHF Advanced Order 3.0 -->
+
+    <configuration>
+        <identifier>ehf-adv-order-02-3.0</identifier>
+        <title>EHF Advanced Order 3.0 (Profile 09)</title>
+        <profileId>urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:09:1.0</profileId>
+        <customizationId>urn:fdc:peppol.eu:poacc:trns:order:3:extended:urn:fdc:anskaffelser.no:2019:ehf:spec:3.0</customizationId>
+        <inherit>ubl-2.2</inherit>
+        <file path="sch/EHF-ORDER-3.0.sch" infoUrl="/ehf/g3/rules/{}/" />
+    </configuration>
+
+    <!-- EHF Advanced Order Response 3.0 -->
+
+    <configuration>
+        <identifier>ehf-adv-order-response-02-3.0</identifier>
+        <title>EHF Advanced Order Response 3.0 (Profile 02)</title>
+        <profileId>urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:09:1.0</profileId>
+        <customizationId>urn:fdc:peppol.eu:poacc:trns:order_response:3:extended:urn:fdc:anskaffelser.no:2019:ehf:spec:3.0</customizationId>
+        <inherit>ubl-2.2</inherit>
+        <file path="sch/EHF-ORDER-RESPONSE-3.0.sch" infoUrl="/ehf/g3/rules/{}/" />
+    </configuration>
+
+</buildConfigurations>

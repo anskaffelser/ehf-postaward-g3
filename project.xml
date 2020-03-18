@@ -151,55 +151,67 @@
     <!-- Syntax -->
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/catalogue-3.0/syntax/ehf-catalogue-3.0.xml</Path>
+        <Path>src/catalogue-3.0/syntax/ehf-catalogue-3.0.xml</Path>
         <Title>EHF Catalogue 3.0</Title>
         <Tag>catalogue-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/catalogue-3.0/syntax/ehf-catalogue-response-3.0.xml</Path>
+        <Path>src/catalogue-3.0/syntax/ehf-catalogue-response-3.0.xml</Path>
         <Title>EHF Catalogue Response 3.0</Title>
         <Tag>catalogue-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/despatch-advice-3.0/syntax/ehf-despatch-advice-3.0.xml</Path>
+        <Path>src/despatch-advice-3.0/syntax/ehf-despatch-advice-3.0.xml</Path>
         <Title>EHF Despatch Advice 3.0</Title>
         <Tag>despatch-advice-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/ordering-3.0/syntax/ehf-order-3.0.xml</Path>
+        <Path>src/ordering-3.0/syntax/ehf-order-3.0.xml</Path>
         <Title>EHF Order 3.0</Title>
         <Tag>ordering-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/ordering-3.0/syntax/ehf-order-response-3.0.xml</Path>
+        <Path>src/ordering-3.0/syntax/ehf-order-response-3.0.xml</Path>
         <Title>EHF Order Response 3.0</Title>
         <Tag>ordering-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/order-agreement-3.0/syntax/ehf-order-agreement-3.0.xml</Path>
+        <Path>src/adv-ordering-3.0/syntax/order-3.0.xml</Path>
+        <Title>EHF Advanced Order 3.0</Title>
+        <Tag>adv-ordering-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Syntax-1</Type>
+        <Path>src/adv-ordering-3.0/syntax/order-response-3.0.xml</Path>
+        <Title>EHF Advanced Order Response 3.0</Title>
+        <Tag>adv-ordering-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Syntax-1</Type>
+        <Path>src/order-agreement-3.0/syntax/ehf-order-agreement-3.0.xml</Path>
         <Title>EHF Order Agreement 3.0</Title>
         <Tag>order-agreement-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/punch-out-3.0/syntax/ehf-punch-out-3.0.xml</Path>
+        <Path>src/punch-out-3.0/syntax/ehf-punch-out-3.0.xml</Path>
         <Title>EHF Punch Out 3.0</Title>
         <Tag>punch-out-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/reminder-3.0/syntax/ehf-reminder-3.0.xml</Path>
+        <Path>src/reminder-3.0/syntax/ehf-reminder-3.0.xml</Path>
         <Title>EHF Reminder 3.0</Title>
         <Tag>reminder-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>structure/payment-request-3.0/syntax/ehf-payment-request.xml</Path>
+        <Path>src/payment-request-3.0/syntax/ehf-payment-request.xml</Path>
         <Title>EHF Payment Request 3.0</Title>
         <Tag>payment-request-3.0</Tag>
     </Resource>
@@ -208,7 +220,7 @@
     <Resource>
         <Identifier>common</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/_common/sch/parts/combined.sch</Path>
+        <Path>src/_common/rules/sch/parts/combined.sch</Path>
         <Title>EHF Post-Award Common 3.0</Title>
         <Description>Common rules for most transactions part of EHF Post-Award G3.</Description>
         <Tag>catalogue-3.0</Tag>
@@ -222,7 +234,7 @@
         <Identifier>t01-peppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>target/schematron-peppol/PEPPOL-M-T01.sch</Path>
-        <Title>Business rules for PEPPOL Order transaction 3.0 </Title>
+        <Title>Business rules for PEPPOL Order transaction 3.0</Title>
         <Tag>ordering-3.0</Tag>
     </Resource>
     <Resource>
@@ -277,6 +289,7 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>_source/poacc-upgrade/structure/codelist/eas.xml</Path>
+        <Tag>adv-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -291,6 +304,7 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>_source/poacc-upgrade/structure/codelist/ICD.xml</Path>
+        <Tag>adv-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -309,6 +323,7 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>_source/poacc-upgrade/structure/codelist/ISO4217_2015.xml</Path>
+        <Tag>adv-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -318,6 +333,7 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>_source/poacc-upgrade/structure/codelist/MimeCode.xml</Path>
+        <Tag>adv-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>ordering-3.0</Tag>
         <Tag>order-agreement-3.0</Tag>
@@ -394,6 +410,7 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>_source/poacc-upgrade/structure/codelist/UNCL7143.xml</Path>
+        <Tag>adv-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>ordering-3.0</Tag>
         <Tag>order-agreement-3.0</Tag>
@@ -410,6 +427,7 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>_source/poacc-upgrade/structure/codelist/UNECERec20-11e.xml</Path>
+        <Tag>adv-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -442,7 +460,7 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>structure/reminder-3.0/codelist/UNCL7161_REMINDER.xml</Path>
+        <Path>src/reminder-3.0/codelist/UNCL7161_REMINDER.xml</Path>
         <Tag>reminder-3.0</Tag>
     </Resource>
 
@@ -454,8 +472,10 @@
         <Property key="download">ehf-postaward-g3-examples.zip</Property>
         <Property key="filename">examples.zip</Property>
         <Property key="virtual">true</Property>
+        <Tag>adv-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
+        <Tag>forward-billing-3.0</Tag>
         <Tag>ordering-3.0</Tag>
         <Tag>order-agreement-3.0</Tag>
         <Tag>punch-out-3.0</Tag>
@@ -469,14 +489,20 @@
         <Property key="download">ehf-postaward-g3-schematron.zip</Property>
         <Property key="filename">schematron.zip</Property>
         <Property key="virtual">true</Property>
+        <Tag>adv-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
+        <Tag>forward-billing-3.0</Tag>
         <Tag>ordering-3.0</Tag>
         <Tag>order-agreement-3.0</Tag>
         <Tag>punch-out-3.0</Tag>
         <Tag>payment-request-3.0</Tag>
     </Resource>
 
+    <Tag>
+        <Identifier>adv-ordering-3.0</Identifier>
+        <Title>EHF Advanced Ordering 3.0</Title>
+    </Tag>
     <Tag>
         <Identifier>billing-3.0</Identifier>
         <Title>EHF Billing 3.0</Title>
