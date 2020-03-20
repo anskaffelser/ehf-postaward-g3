@@ -9,6 +9,11 @@ schutil exclude \
   /target/schematron-peppol/PEPPOL-M-T01.sch \
   PEPPOL-T01-R031
 
+cat target/schematron-peppol/PEPPOL-M-T01.sch \
+ | sed "s/ubl:Order/ubl:OrderChange/g" \
+ | sed "s/PEPPOL-T01/EHF-P09-CHANGE/g" \
+ > target/schematron-peppol/PEPPOL-M-T01-CHANGE.sch
+
 #schutil exclude \
 cp \
   /src/_source/poacc-upgrade/rules/sch/parts/PEPPOL-M-T16.sch \

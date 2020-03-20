@@ -54,3 +54,8 @@ include::../../forward-billing-3.0/changelog/2020-03-23-3.0.1.adoc[]
 == EHF Reminder 3.0.0
 
 include::../../reminder-3.0/changelog/2020-03-23-3.0.0.adoc[]
+
+
+== EHF Advanced Ordering 3.0.0
+
+include::../../advanced-ordering-3.0/changelog/2020-03-23-3.0.0.adoc[]

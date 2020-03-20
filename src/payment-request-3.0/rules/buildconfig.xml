@@ -14,7 +14,7 @@
         <inherit>ubl-2.2</inherit>
         <!-- <file source="../../target/schematron-peppol/CEN-EN16931-UBL.sch" path="sch/CEN-EN16931-UBL.sch" infoUrl="/ehf/g3/rules/{}/" /> -->
         <!-- <file source="../../target/schematron-peppol/PEPPOL-EN16931-UBL.sch" path="sch/PEPPOL-EN16931-UBL.sch" infoUrl="/ehf/g3/rules/{}/" /> -->
-        <file path="sch/EHF-PAYMENT-REQUEST-3.0.sch" infoUrl="/ehf/g3/rules/{}/" />
+        <file path="sch/EHF-P07-3.0-PAYMENT-REQUEST-3.0.sch" infoUrl="/ehf/g3/rules/{}/" />
     </configuration>
 
 </buildConfigurations>

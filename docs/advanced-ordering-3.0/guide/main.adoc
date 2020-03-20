@@ -1,0 +1,24 @@
+:shared-dir: ../../_common
+:lang: en
+:doctitle: EHF Advanced Ordering 3.0
+
+include::{shared-dir}/settings.adoc[]
+
+= {doctitle}
+{name-difi-en}
+v3.0.0
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:source-language: xml
+:sectanchors:
+:sectnums:
+:title-logo-image: {shared-dir}/images/logo.jpg
+
+:leveloffset: +1
+
+This document describe EHF Advanced Ordering (called "EHF Avansert Ordre" in Norwegian)format to be used for the exchange of electronic reminder information between
+trading partners. This document is a part of Norwegian Digitalisation Agency (Digdir) standardization work related to
+electronic commerce.

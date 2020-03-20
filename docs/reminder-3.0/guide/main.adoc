@@ -19,8 +19,8 @@ v3.0.0
 
 :leveloffset: +1
 
-This document describe EHF reminder (called "EHF Purring" in Norwegian)format to be used for the exchange of electronic reminder information between
-trading partners. This document is a part of Norwegian "Agency of Public Management and eGovernment" (Difi) standardization work related to
+This document describe EHF Reminder (called "EHF Purring" in Norwegian)format to be used for the exchange of electronic reminder information between
+trading partners. This document is a part of Norwegian Digitalisation Agency (Digdir) standardization work related to
 electronic commerce.
 
 include::definitions.adoc[]

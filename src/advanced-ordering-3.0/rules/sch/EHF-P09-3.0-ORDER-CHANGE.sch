@@ -28,6 +28,6 @@
 	<include href="../../../_common/rules/sch/parts/empty-elements.sch"/>
 	<include href="../../../../target/generated/p09-change-basic.sch"/>
 	<include href="../../../_common/rules/sch/parts/identifiers.sch"/>
-	<include href="../../../../target/schematron-peppol/PEPPOL-M-T01.sch"/>
+	<include href="../../../../target/schematron-peppol/PEPPOL-M-T01-CHANGE.sch"/>
 
 </schema>

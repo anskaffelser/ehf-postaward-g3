@@ -5,7 +5,7 @@
    <Name>EHF Reminder 3.0</Name>
 
    <Property key="sch:prefix">EHF-REMINDER</Property>
-   <Property key="sch:identifier">reminder-basic</Property>
+   <Property key="sch:identifier">p06-reminder-basic</Property>
 
    <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</Namespace>
    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2</Namespace>
@@ -21,8 +21,6 @@
             </Description>
          <DataType>Identifier</DataType>
          <Reference type="BUSINESS_TERM">BT-24</Reference>
-         <Reference type="RULE">PEPPOL-EN16931-R004</Reference>
-         <Reference type="RULE">BR-01</Reference>
          <Value type="FIXED">urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0#conformant#urn:fdc:anskaffelser.no:2019:ehf:reminder:3.0</Value>
       </Element>
       <Element>
@@ -33,7 +31,6 @@
             </Description>
          <DataType>Text</DataType>
          <Reference type="BUSINESS_TERM">BT-23</Reference>
-         <Reference type="RULE">PEPPOL-EN16931-R001</Reference>
          <Value type="FIXED">urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:06:1.0</Value>
       </Element>
       <Element>
@@ -42,7 +39,6 @@
          <Description>A unique identification of the Reminder.</Description>
          <DataType>Identifier</DataType>
          <Reference type="BUSINESS_TERM">BT-1</Reference>
-         <Reference type="RULE">BR-02</Reference>
          <Value type="EXAMPLE">33445566</Value>
       </Element>
       <Element>
@@ -51,8 +47,6 @@
          <Description>The date when the Reminder was issued. Format "YYYY-MM-DD"</Description>
          <DataType>Date</DataType>
          <Reference type="BUSINESS_TERM">BT-2</Reference>
-         <Reference type="RULE">BR-03</Reference>
-         <Reference type="RULE">PEPPOL-EN16931-F001</Reference>
          <Value type="EXAMPLE">2017-11-01</Value>
       </Element>
       <Element cardinality="0..1">
@@ -61,8 +55,6 @@
          <Description>The date when the payment is due.Format "YYYY-MM-DD". In case the Amount due for payment (BT-115) is positive, either the Payment due date (BT-9) or the Payment terms (BT-20) shall be present.</Description>
          <DataType>Date</DataType>
          <Reference type="BUSINESS_TERM">BT-9</Reference>
-         <Reference type="RULE">PEPPOL-EN16931-F001</Reference>
-         <Reference type="RULE">BR-CO-25</Reference>
          <Value type="EXAMPLE">2017-11-01</Value>
       </Element>
       <Element tag="x">
@@ -71,8 +63,6 @@
          <Description>A code specifying the functional type of the Invoice.</Description>
          <DataType>Code</DataType>
          <Reference type="BUSINESS_TERM">BT-3</Reference>
-         <Reference type="RULE">BR-04</Reference>
-         <Reference type="RULE">PEPPOL-EN16931-P0100</Reference>
          <Reference type="CODE_LIST">UNCL1001-inv</Reference>
          <Value type="EXAMPLE">380</Value>
       </Element>
@@ -82,7 +72,6 @@
          <Description>A textual note that gives unstructured information that is relevant to the Reminder as a whole.</Description>
          <DataType>Text</DataType>
          <Reference type="BUSINESS_TERM">BT-22</Reference>
-         <Reference type="RULE">PEPPOL-EN16931-R002</Reference>
          <Value type="EXAMPLE">Please note our new phone number 33 44 55 66</Value>
       </Element>
       <Element cardinality="0..1">
@@ -93,7 +82,6 @@
             </Description>
          <DataType>Date</DataType>
          <Reference type="BUSINESS_TERM">BT-7</Reference>
-         <Reference type="RULE">BR-CO-03</Reference>
          <Value type="EXAMPLE">2017-11-01</Value>
       </Element>
       <Element>
@@ -104,8 +92,6 @@
             </Description>
          <DataType>Code</DataType>
          <Reference type="BUSINESS_TERM">BT-5</Reference>
-         <Reference type="RULE">BR-05</Reference>
-         <Reference type="RULE">BR-CL-04</Reference>
          <Reference type="CODE_LIST">ISO4217</Reference>
          <Value type="EXAMPLE">NOK</Value>
       </Element>
@@ -118,8 +104,6 @@
             </Description>
          <DataType>Code</DataType>
          <Reference type="BUSINESS_TERM">BT-6</Reference>
-         <Reference type="RULE">BR-CL-05</Reference>
-         <Reference type="RULE">PEPPOL-EN16931-R005</Reference>
          <Reference type="CODE_LIST">ISO4217</Reference>
          <Value type="EXAMPLE">NOK</Value>
       </Element>
@@ -131,7 +115,6 @@
             </Description>
          <DataType>Text</DataType>
          <Reference type="BUSINESS_TERM">BT-19</Reference>
-         <Reference type="RULE">DK-R-001</Reference>
          <Value type="EXAMPLE">4217:2323:2323</Value>
       </Element>
       <Element cardinality="0..1">
@@ -140,7 +123,6 @@
          <Description>An identifier assigned by the Buyer used for internal routing purposes. An reminder must have buyer reference or purchase order reference.</Description>
          <DataType>Text</DataType>
          <Reference type="BUSINESS_TERM">BT-10</Reference>
-         <Reference type="RULE">PEPPOL-EN16931-R003</Reference>
          <Value type="EXAMPLE">abs1234</Value>
       </Element>
       <Element tag="x" cardinality="0..1">
@@ -149,15 +131,12 @@
          <Description>A group of business terms providing information on the invoice period. Also called delivery period.
                 If the group is used, the invoiceing period start date and/or end date must be used.</Description>
          <Reference type="BUSINESS_TERM">BG-14</Reference>
-         <Reference type="RULE">BR-IC-11</Reference>
          <Element cardinality="0..1">
             <Term>cbc:StartDate</Term>
             <Name>Invoicing period start date</Name>
             <Description>The date when the Invoice period starts. Format = "YYYY-MM-DD".</Description>
             <DataType>Date</DataType>
             <Reference type="BUSINESS_TERM">BT-73</Reference>
-            <Reference type="RULE">BR-CO-19</Reference>
-            <Reference type="RULE">PEPPOL-EN16931-F001</Reference>
             <Value type="EXAMPLE">2017-10-01</Value>
          </Element>
          <Element cardinality="0..1">
@@ -166,9 +145,6 @@
             <Description>The date when the Invoice period ends. Format = "YYYY-MM-DD".</Description>
             <DataType>Date</DataType>
             <Reference type="BUSINESS_TERM">BT-74</Reference>
-            <Reference type="RULE">PEPPOL-EN16931-F001</Reference>
-            <Reference type="RULE">BR-29</Reference>
-            <Reference type="RULE">BR-CO-19</Reference>
             <Value type="EXAMPLE">2017-10-31</Value>
          </Element>
          <Element cardinality="0..1">
@@ -177,8 +153,6 @@
             <Description>The code of the date when the VAT becomes accountable for the Seller and for the Buyer.</Description>
             <DataType>Code</DataType>
             <Reference type="BUSINESS_TERM">BT-8</Reference>
-            <Reference type="RULE">BR-CO-03</Reference>
-            <Reference type="RULE">BR-CL-06</Reference>
             <Reference type="CODE_LIST">UNCL2005</Reference>
             <Value type="EXAMPLE">35</Value>
          </Element>
@@ -192,7 +166,6 @@
             <Description>An identifier of a referenced purchase order, issued by the Buyer.An invoice must have buyer reference (BT-10) or purchase order reference.</Description>
             <DataType>Document Reference</DataType>
             <Reference type="BUSINESS_TERM">BT-13</Reference>
-            <Reference type="RULE">PEPPOL-EN16931-R003</Reference>
             <Value type="EXAMPLE">98776</Value>
          </Element>
          <Element cardinality="0..1">
@@ -218,7 +191,6 @@
                <Description>The identification of an Invoice that was previously sent by the Seller.</Description>
                <DataType>Document Reference</DataType>
                <Reference type="BUSINESS_TERM">BT-25</Reference>
-               <Reference type="RULE">BR-55</Reference>
                <Value type="EXAMPLE">inv123</Value>
             </Element>
             <Element cardinality="0..1">
@@ -228,7 +200,6 @@
                         provided in case the Preceding Invoice identifier is not unique. Format = "YYYY-MM-DD".</Description>
                <DataType>Date</DataType>
                <Reference type="BUSINESS_TERM">BT-26</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-F001</Reference>
                <Value type="EXAMPLE">2017-09-15</Value>
             </Element>
          </Element>
@@ -294,12 +265,10 @@
             <Description>An identifier for an object on which the invoice is based, given by the Seller, or the identifier for the supporting document.</Description>
             <DataType>Identifier</DataType>
             <Reference type="BUSINESS_TERM">BT-18, BT-122</Reference>
-            <Reference type="RULE">BR-52</Reference>
             <Attribute usage="Optional">
                <Term>schemeID</Term>
                <Name>Scheme identifier</Name>
                <Description>The identification scheme identifier of the Invoiced object identifier.</Description>
-               <Reference type="RULE">BR-CL-07</Reference>
                <Reference type="CODE_LIST">UNCL1153</Reference>
                <Value type="EXAMPLE">AUN</Value>
             </Attribute>
@@ -334,8 +303,6 @@
                   <Term>mimeCode</Term>
                   <Name>Attached document Mime code</Name>
                   <Description>The mime code of the attached document.</Description>
-                  <Reference type="RULE">PEPPOL-EN16931-CL001</Reference>
-                  <Reference type="RULE">UBL-DT-06</Reference>
                   <Reference type="CODE_LIST">MimeCode</Reference>
                   <Value type="EXAMPLE">text/csv</Value>
                </Attribute>
@@ -343,7 +310,6 @@
                   <Term>filename</Term>
                   <Name>Attached document Filename</Name>
                   <Description>The file name of the attached document</Description>
-                  <Reference type="RULE">UBL-DT-07</Reference>
                   <Value type="EXAMPLE">Hours-spent.csv</Value>
                </Attribute>
                <Value type="EXAMPLE">aHR0cHM6Ly90ZXN0LXZlZmEuZGlmaS5uby9wZXBwb2xiaXMvcG9hY2MvYmlsbGluZy8zLjAvYmlzLw==</Value>
@@ -390,7 +356,6 @@
                <Description>Identifies the Seller's electronic address to which a business document may be delivered.</Description>
                <DataType>Identifier</DataType>
                <Reference type="BUSINESS_TERM">BT-34</Reference>
-               <Reference type="RULE">BR-62</Reference>
                <Attribute>
                   <Term>schemeID</Term>
                   <Name>Seller electronic address identification scheme identifier</Name>
@@ -410,13 +375,10 @@
                      In order for the buyer to automatically identify a supplier, the Seller identifier (BT-29), the Seller legal registration identifier (BT-30) and/or the Seller VAT identifier (BT-31) shall be present</Description>
                   <DataType>Identifier</DataType>
                   <Reference type="BUSINESS_TERM">BT-29, BT-90</Reference>
-                  <Reference type="RULE">BR-CO-26</Reference>
                   <Attribute usage="Optional">
                      <Term>schemeID</Term>
                      <Name>Seller or bank assigned creditor identifier identification scheme identifier</Name>
                      <Description>The identification scheme identifier of the Seller identifier. For bank assigned creditor identifier (BT-90), value MUST be "SEPA"</Description>
-                     <Reference type="RULE">BR-CL-10</Reference>
-                     <Reference type="RULE">DK-R-013</Reference>
                      <Reference type="CODE_LIST">ICD</Reference>
                      <Reference type="CODE_LIST">SEPA</Reference>
                      <Value type="EXAMPLE">0192</Value>
@@ -443,14 +405,12 @@
                <Description>A group of business terms providing information about the address of the Seller.
                     Sufficient components of the address are to be filled to comply with legal requirements.</Description>
                <Reference type="BUSINESS_TERM">BG-5</Reference>
-               <Reference type="RULE">BR-08</Reference>
                <Element cardinality="0..1">
                   <Term>cbc:StreetName</Term>
                   <Name>Seller address line 1</Name>
                   <Description>The main address line in an address.</Description>
                   <DataType>Text</DataType>
                   <Reference type="BUSINESS_TERM">BT-35</Reference>
-                  <Reference type="RULE">IT-R-002</Reference>
                   <Value type="EXAMPLE">Main Street 1</Value>
                </Element>
                <Element cardinality="0..1">
@@ -467,7 +427,6 @@
                   <Description>The common name of the city, town or village, where the Seller address is located.</Description>
                   <DataType>Text</DataType>
                   <Reference type="BUSINESS_TERM">BT-37</Reference>
-                  <Reference type="RULE">IT-R-003</Reference>
                   <Value type="EXAMPLE">London</Value>
                </Element>
                <Element cardinality="0..1">
@@ -477,7 +436,6 @@
                     </Description>
                   <DataType>Text</DataType>
                   <Reference type="BUSINESS_TERM">BT-38</Reference>
-                  <Reference type="RULE">IT-R-004</Reference>
                   <Value type="EXAMPLE">W1G 8LZ</Value>
                </Element>
                <Element cardinality="0..1">
@@ -511,8 +469,6 @@
                      <Description>A code that identifies the country.</Description>
                      <DataType>Text</DataType>
                      <Reference type="BUSINESS_TERM">BT-40</Reference>
-                     <Reference type="RULE">BR-09</Reference>
-                     <Reference type="RULE">BR-CL-14</Reference>
                      <Reference type="CODE_LIST">ISO3166</Reference>
                      <Value type="EXAMPLE">GB</Value>
                   </Element>
@@ -528,41 +484,6 @@
                         reference that enables the Seller to state his registered tax status. In order for the buyer to automatically identify a supplier, the Seller identifier (BT-29), the Seller legal registration identifier (BT-30) and/or the Seller VAT identifier (BT-31) shall be present</Description>
                   <DataType>Identifier</DataType>
                   <Reference type="BUSINESS_TERM">BT-31, BT-32</Reference>
-                  <Reference type="RULE">BR-CO-09</Reference>
-                  <Reference type="RULE">BR-CO-26</Reference>
-                  <Reference type="RULE">BR-S-02</Reference>
-                  <Reference type="RULE">BR-S-03</Reference>
-                  <Reference type="RULE">BR-S-04</Reference>
-                  <Reference type="RULE">BR-Z-02</Reference>
-                  <Reference type="RULE">BR-Z-03</Reference>
-                  <Reference type="RULE">BR-Z-04</Reference>
-                  <Reference type="RULE">BR-E-02</Reference>
-                  <Reference type="RULE">BR-E-03</Reference>
-                  <Reference type="RULE">BR-E-04</Reference>
-                  <Reference type="RULE">BR-AE-02</Reference>
-                  <Reference type="RULE">BR-AE-03</Reference>
-                  <Reference type="RULE">BR-AE-04</Reference>
-                  <Reference type="RULE">BR-IC-02</Reference>
-                  <Reference type="RULE">BR-IC-03</Reference>
-                  <Reference type="RULE">BR-IC-04</Reference>
-                  <Reference type="RULE">BR-G-02</Reference>
-                  <Reference type="RULE">BR-G-03</Reference>
-                  <Reference type="RULE">BR-G-04</Reference>
-                  <Reference type="RULE">BR-O-02</Reference>
-                  <Reference type="RULE">BR-O-03</Reference>
-                  <Reference type="RULE">BR-O-04</Reference>
-                  <Reference type="RULE">BR-IG-02</Reference>
-                  <Reference type="RULE">BR-IG-03</Reference>
-                  <Reference type="RULE">BR-IG-04</Reference>
-                  <Reference type="RULE">BR-IP-02</Reference>
-                  <Reference type="RULE">BR-IP-03</Reference>
-                  <Reference type="RULE">BR-IP-04</Reference>
-                  <Reference type="RULE">IT-R-001</Reference>
-                  <Reference type="RULE">NO-R-001</Reference>
-                  <Reference type="RULE">NO-R-002</Reference>
-                  <Reference type="RULE">SE-R-001</Reference>
-                  <Reference type="RULE">SE-R-002</Reference>
-                  <Reference type="RULE">SE-R-005</Reference>
                   <Value type="EXAMPLE">NO999888777</Value>
                </Element>
                <Element>
@@ -586,7 +507,6 @@
                     </Description>
                   <DataType>Text</DataType>
                   <Reference type="BUSINESS_TERM">BT-27</Reference>
-                  <Reference type="RULE">BR-06</Reference>
                   <Value type="EXAMPLE">Full Formal Seller Name LTD.</Value>
                </Element>
                <Element cardinality="0..1">
@@ -597,11 +517,6 @@
                     </Description>
                   <DataType>Identifier</DataType>
                   <Reference type="BUSINESS_TERM">BT-30</Reference>
-                  <Reference type="RULE">BR-CO-26</Reference>
-                  <Reference type="RULE">DK-R-002</Reference>
-                  <Reference type="RULE">DK-R-014</Reference>
-                  <Reference type="RULE">SE-R-003</Reference>
-                  <Reference type="RULE">SE-R-004</Reference>
                   <Attribute usage="Optional">
                      <Term>schemeID</Term>
                      <Name>Seller legal registration identifier identification scheme identifier</Name>
@@ -666,7 +581,6 @@
                <Description>Identifies the Buyer's electronic address to which a business document should be delivered.</Description>
                <DataType>Identifier</DataType>
                <Reference type="BUSINESS_TERM">BT-49</Reference>
-               <Reference type="RULE">BR-63</Reference>
                <Attribute>
                   <Term>schemeID</Term>
                   <Name>Buyer electronic address identification scheme identifier</Name>
@@ -689,8 +603,6 @@
                      <Term>schemeID</Term>
                      <Name>Buyer identifier identification scheme identifier</Name>
                      <Description>The identification scheme identifier of the Buyer identifier.</Description>
-                     <Reference type="RULE">BR-CL-10</Reference>
-                     <Reference type="RULE">DK-R-013</Reference>
                      <Reference type="CODE_LIST">ICD</Reference>
                      <Value type="EXAMPLE">0192</Value>
                   </Attribute>
@@ -715,7 +627,6 @@
                <Description>A group of business terms providing information about the postal address for the Buyer.
                     Sufficient components of the address are to be filled to comply with legal requirements.</Description>
                <Reference type="BUSINESS_TERM">BG-8</Reference>
-               <Reference type="RULE">BR-10</Reference>
                <Element cardinality="0..1">
                   <Term>cbc:StreetName</Term>
                   <Name>Buyer address line 1</Name>
@@ -782,8 +693,6 @@
                      <Description>A code that identifies the country.</Description>
                      <DataType>Code</DataType>
                      <Reference type="BUSINESS_TERM">BT-55</Reference>
-                     <Reference type="RULE">BR-11</Reference>
-                     <Reference type="RULE">BR-CL-14</Reference>
                      <Reference type="CODE_LIST">ISO3166</Reference>
                      <Value type="EXAMPLE">SE</Value>
                   </Element>
@@ -798,16 +707,6 @@
                   <Description>The Buyer's VAT identifier (also known as Buyer VAT identification number).</Description>
                   <DataType>Identifier</DataType>
                   <Reference type="BUSINESS_TERM">BT-48</Reference>
-                  <Reference type="RULE">BR-CO-09</Reference>
-                  <Reference type="RULE">BR-AE-02</Reference>
-                  <Reference type="RULE">BR-AE-03</Reference>
-                  <Reference type="RULE">BR-AE-04</Reference>
-                  <Reference type="RULE">BR-IC-02</Reference>
-                  <Reference type="RULE">BR-IC-03</Reference>
-                  <Reference type="RULE">BR-IC-04</Reference>
-                  <Reference type="RULE">BR-O-02</Reference>
-                  <Reference type="RULE">BR-O-03</Reference>
-                  <Reference type="RULE">BR-O-04</Reference>
                   <Value type="EXAMPLE">SE8765456787</Value>
                </Element>
                <Element>
@@ -830,7 +729,6 @@
                   <Description>The full name of the Buyer.</Description>
                   <DataType>Text</DataType>
                   <Reference type="BUSINESS_TERM">BT-44</Reference>
-                  <Reference type="RULE">BR-07</Reference>
                   <Value type="EXAMPLE">Buyer Full Name AS</Value>
                </Element>
                <Element cardinality="0..1">
@@ -841,10 +739,6 @@
                     </Description>
                   <DataType>Identifier</DataType>
                   <Reference type="BUSINESS_TERM">BT-47</Reference>
-                  <Reference type="RULE">BR-AE-02</Reference>
-                  <Reference type="RULE">BR-AE-03</Reference>
-                  <Reference type="RULE">BR-AE-04</Reference>
-                  <Reference type="RULE">DK-R-014</Reference>
                   <Attribute usage="Optional">
                      <Term>schemeID</Term>
                      <Name>Buyer legal registration identifier identification scheme identifier</Name>
@@ -907,7 +801,6 @@
                   <Term>schemeID</Term>
                   <Name>Payee or bank assigned creditor identifier identification scheme identifier</Name>
                   <Description>The identification scheme identifier of the payee identifier. For bank assigned creditor identifier (BT-90), value MUST be "SEPA"</Description>
-                  <Reference type="RULE">BR-CL-10</Reference>
                   <Reference type="CODE_LIST">ICD</Reference>
                   <Reference type="CODE_LIST">SEPA</Reference>
                   <Value type="EXAMPLE">SEPA</Value>
@@ -924,7 +817,6 @@
                <Description>The name of the Payee.</Description>
                <DataType>Text</DataType>
                <Reference type="BUSINESS_TERM">BT-59</Reference>
-               <Reference type="RULE">BR-17</Reference>
                <Value type="EXAMPLE">Payee Name Ltd</Value>
             </Element>
          </Element>
@@ -943,7 +835,6 @@
                   <Term>schemeID</Term>
                   <Name>Payee legal registration identifier identification scheme identifier</Name>
                   <Description>The identification scheme identifier of the Payee legal registration identifier.</Description>
-                  <Reference type="RULE">BR-CL-10</Reference>
                   <Reference type="CODE_LIST">ICD</Reference>
                   <Value type="EXAMPLE">0002</Value>
                </Attribute>
@@ -966,7 +857,6 @@
                <Description>The full name of the Seller's tax representative party.</Description>
                <DataType>Text</DataType>
                <Reference type="BUSINESS_TERM">BT-62</Reference>
-               <Reference type="RULE">BR-18</Reference>
                <Value type="EXAMPLE">Tax Representative Name AS</Value>
             </Element>
          </Element>
@@ -977,7 +867,6 @@
                 party. Sufficient components of the address are to be filled to comply with legal requirements.
             </Description>
             <Reference type="BUSINESS_TERM">BG-12</Reference>
-            <Reference type="RULE">BR-19</Reference>
             <Element cardinality="0..1">
                <Term>cbc:StreetName</Term>
                <Name>Tax representative address line 1</Name>
@@ -1045,8 +934,6 @@
                   <Description>A code that identifies the country.</Description>
                   <DataType>Code</DataType>
                   <Reference type="BUSINESS_TERM">BT-69</Reference>
-                  <Reference type="RULE">BR-20</Reference>
-                  <Reference type="RULE">BR-CL-14</Reference>
                   <Reference type="CODE_LIST">ISO3166</Reference>
                   <Value type="EXAMPLE">SE</Value>
                </Element>
@@ -1061,35 +948,6 @@
                <Description>The VAT identifier of the Seller's tax representative party.</Description>
                <DataType>Identifier</DataType>
                <Reference type="BUSINESS_TERM">BT-63</Reference>
-               <Reference type="RULE">BR-56</Reference>
-               <Reference type="RULE">BR-CO-09</Reference>
-               <Reference type="RULE">BR-S-02</Reference>
-               <Reference type="RULE">BR-S-03</Reference>
-               <Reference type="RULE">BR-S-04</Reference>
-               <Reference type="RULE">BR-Z-02</Reference>
-               <Reference type="RULE">BR-Z-03</Reference>
-               <Reference type="RULE">BR-Z-04</Reference>
-               <Reference type="RULE">BR-E-02</Reference>
-               <Reference type="RULE">BR-E-03</Reference>
-               <Reference type="RULE">BR-E-04</Reference>
-               <Reference type="RULE">BR-AE-02</Reference>
-               <Reference type="RULE">BR-AE-03</Reference>
-               <Reference type="RULE">BR-AE-04</Reference>
-               <Reference type="RULE">BR-IC-02</Reference>
-               <Reference type="RULE">BR-IC-03</Reference>
-               <Reference type="RULE">BR-IC-04</Reference>
-               <Reference type="RULE">BR-G-02</Reference>
-               <Reference type="RULE">BR-G-03</Reference>
-               <Reference type="RULE">BR-G-04</Reference>
-               <Reference type="RULE">BR-O-02</Reference>
-               <Reference type="RULE">BR-O-03</Reference>
-               <Reference type="RULE">BR-O-04</Reference>
-               <Reference type="RULE">BR-IG-02</Reference>
-               <Reference type="RULE">BR-IG-03</Reference>
-               <Reference type="RULE">BR-IG-04</Reference>
-               <Reference type="RULE">BR-IP-02</Reference>
-               <Reference type="RULE">BR-IP-03</Reference>
-               <Reference type="RULE">BR-IP-04</Reference>
                <Value type="EXAMPLE">FR932874294</Value>
             </Element>
             <Element>
@@ -1116,8 +974,6 @@
             <Description>The date on which the supply of goods or services was made or completed. Format = "YYYY-MM-DD"</Description>
             <DataType>Date</DataType>
             <Reference type="BUSINESS_TERM">BT-72</Reference>
-            <Reference type="RULE">BR-IC-11</Reference>
-            <Reference type="RULE">PEPPOL-EN16931-F001</Reference>
             <Value type="EXAMPLE">2017-12-01</Value>
          </Element>
          <Element cardinality="0..1">
@@ -1211,9 +1067,6 @@
                      <Description>A code that identifies the country.</Description>
                      <DataType>Code</DataType>
                      <Reference type="BUSINESS_TERM">BT-80</Reference>
-                     <Reference type="RULE">BR-57</Reference>
-                     <Reference type="RULE">BR-CL-14</Reference>
-                     <Reference type="RULE">BR-IC-12</Reference>
                      <Reference type="CODE_LIST">ISO3166</Reference>
                      <Value type="EXAMPLE">SE</Value>
                   </Element>
@@ -1249,8 +1102,6 @@
             </Description>
             <DataType>Code</DataType>
             <Reference type="BUSINESS_TERM">BT-81</Reference>
-            <Reference type="RULE">BR-49</Reference>
-            <Reference type="RULE">BR-CL-16</Reference>
             <Reference type="CODE_LIST">UNCL4461</Reference>
             <Attribute usage="Optional">
                <Term>name</Term>
@@ -1287,7 +1138,6 @@
                     standards, an invoice should never include a full card primary account number.</Description>
                <DataType>Text</DataType>
                <Reference type="BUSINESS_TERM">BT-87</Reference>
-               <Reference type="RULE">BR-51</Reference>
                <Value type="EXAMPLE">1234</Value>
             </Element>
             <Element>
@@ -1318,8 +1168,6 @@
             </Description>
                <DataType>Identifier</DataType>
                <Reference type="BUSINESS_TERM">BT-84</Reference>
-               <Reference type="RULE">BR-50</Reference>
-               <Reference type="RULE">BR-61</Reference>
                <Value type="EXAMPLE">NO99991122222</Value>
             </Element>
             <Element cardinality="0..1">
@@ -1356,7 +1204,6 @@
                <Description>Unique identifier assigned by the Payee for referencing the direct debit mandate. Used in order to pre-notify the Buyer of a SEPA direct debit.</Description>
                <DataType>Identifier</DataType>
                <Reference type="BUSINESS_TERM">BT-89</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R061</Reference>
                <Value type="EXAMPLE">123456</Value>
             </Element>
             <Element cardinality="0..1">
@@ -1384,7 +1231,6 @@
                 </Description>
             <DataType>Text</DataType>
             <Reference type="BUSINESS_TERM">BT-20</Reference>
-            <Reference type="RULE">BR-CO-25</Reference>
             <Value type="EXAMPLE">Net within 30 days</Value>
          </Element>
       </Element>
@@ -1412,16 +1258,7 @@
             <DataType>Code</DataType>
             <Reference type="BUSINESS_TERM">BT-98, BT-105</Reference>
             <Reference type="CODE_LIST">UNCL5189</Reference>
-            <Reference type="RULE">BR-33</Reference>
-            <Reference type="RULE">BR-38</Reference>
-            <Reference type="RULE">BR-CO-05</Reference>
-            <Reference type="RULE">BR-CO-06</Reference>
-            <Reference type="RULE">BR-CO-21</Reference>
-            <Reference type="RULE">BR-CO-22</Reference>
-            <Reference type="RULE">PEPPOL-EN16931-CL003</Reference>
             <Reference type="CODE_LIST">UNCL7161</Reference>
-            <Reference type="RULE">PEPPOL-EN16931-CL002</Reference>
-            <Reference type="RULE">DK-R-004</Reference>
             <Reference type="CODE_LIST">REMINDER_CHARGE</Reference>
             <Value type="EXAMPLE">95</Value>
          </Element>
@@ -1432,13 +1269,6 @@
                 The Document level allowance reason code and the Document level allowance reason shall indicate the same allowance reason</Description>
             <DataType>Text</DataType>
             <Reference type="BUSINESS_TERM">BT-97, BT-104</Reference>
-            <Reference type="RULE">BR-33</Reference>
-            <Reference type="RULE">BR-38</Reference>
-            <Reference type="RULE">BR-CO-05</Reference>
-            <Reference type="RULE">BR-CO-06</Reference>
-            <Reference type="RULE">BR-CO-21</Reference>
-            <Reference type="RULE">BR-CO-22</Reference>
-            <Reference type="RULE">DK-R-004</Reference>
             <Value type="EXAMPLE">Discount</Value>
          </Element>
          <Element cardinality="0..1">
@@ -1449,7 +1279,6 @@
             </Description>
             <DataType>Percentage</DataType>
             <Reference type="BUSINESS_TERM">BT-94,BT-101</Reference>
-            <Reference type="RULE">PEPPOL-EN16931-R042</Reference>
             <Value type="EXAMPLE">20</Value>
          </Element>
          <Element>
@@ -1459,18 +1288,10 @@
             </Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-92,BT-99</Reference>
-            <Reference type="RULE">BR-31</Reference>
-            <Reference type="RULE">BR-36</Reference>
-            <Reference type="RULE">PEPPOL-EN16931-R040</Reference>
-            <Reference type="RULE">BR-DEC-01</Reference>
-            <Reference type="RULE">BR-DEC-05</Reference>
-            <Reference type="RULE">UBL-DT-01</Reference>
             <Attribute>
                <Term>currencyID</Term>
                <Description>Mandatory attribute. Use BT-5</Description>
-               <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
-               <Reference type="CODE_LIST">ISO4217</Reference>
+                                             <Reference type="CODE_LIST">ISO4217</Reference>
                <Value type="EXAMPLE">NOK</Value>
             </Attribute>
             <Value type="EXAMPLE">200</Value>
@@ -1483,15 +1304,9 @@
             </Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-93,BT-100</Reference>
-            <Reference type="RULE">PEPPOL-EN16931-R041</Reference>
-            <Reference type="RULE">BR-DEC-02</Reference>
-            <Reference type="RULE">BR-DEC-06</Reference>
-            <Reference type="RULE">UBL-DT-01</Reference>
             <Attribute>
                <Term>currencyID</Term>
                <Description>Mandatory attribute. Use BT-5</Description>
-               <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                <Reference type="CODE_LIST">ISO4217</Reference>
                <Value type="EXAMPLE">NOK</Value>
             </Attribute>
@@ -1506,10 +1321,6 @@
                <Description>A coded identification of what VAT category applies to the document level allowance or charge.</Description>
                <DataType>Code</DataType>
                <Reference type="BUSINESS_TERM">BT-95,BT-102</Reference>
-               <Reference type="RULE">BR-32</Reference>
-               <Reference type="RULE">BR-37</Reference>
-               <Reference type="RULE">BR-O-13</Reference>
-               <Reference type="RULE">BR-O-14</Reference>
                <Reference type="CODE_LIST">UNCL5305</Reference>
                <Value type="EXAMPLE">S</Value>
             </Element>
@@ -1519,25 +1330,6 @@
                <Description>The VAT rate, represented as percentage that applies to the document level allowance or charge.</Description>
                <DataType>Percentage</DataType>
                <Reference type="BUSINESS_TERM">BT-96,BT-103</Reference>
-               <Reference type="RULE">BR-S-06</Reference>
-               <Reference type="RULE">BR-S-07</Reference>
-               <Reference type="RULE">BR-Z-06</Reference>
-               <Reference type="RULE">BR-Z-07</Reference>
-               <Reference type="RULE">BR-E-06</Reference>
-               <Reference type="RULE">BR-E-07</Reference>
-               <Reference type="RULE">BR-AE-06</Reference>
-               <Reference type="RULE">BR-AE-07</Reference>
-               <Reference type="RULE">BR-IC-06</Reference>
-               <Reference type="RULE">BR-IC-07</Reference>
-               <Reference type="RULE">BR-G-06</Reference>
-               <Reference type="RULE">BR-G-07</Reference>
-               <Reference type="RULE">BR-O-06</Reference>
-               <Reference type="RULE">BR-O-07</Reference>
-               <Reference type="RULE">BR-IG-06</Reference>
-               <Reference type="RULE">BR-IG-07</Reference>
-               <Reference type="RULE">BR-IP-06</Reference>
-               <Reference type="RULE">BR-IP-07</Reference>
-               <Reference type="RULE">SE-R-006</Reference>
                <Value type="EXAMPLE">25</Value>
             </Element>
             <Element>
@@ -1555,7 +1347,6 @@
          <Term>cac:TaxTotal</Term>
          <Name>TAX TOTAL</Name>
          <Description>When tax currency code is provided, two instances of the tax total must be present, but only one with tax subtotal.</Description>
-         <Reference type="RULE">PEPPOL-EN16931-R054</Reference>
          <Element>
             <Term>cbc:TaxAmount</Term>
             <Name>Reminder total VAT amount, Reminder total VAT amount in accounting currency</Name>
@@ -1563,16 +1354,9 @@
                 the Seller. Must be rounded to maximum 2 decimals</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-110, BT-111</Reference>
-            <Reference type="RULE">BR-53</Reference>
-            <Reference type="RULE">BR-CO-14</Reference>
-            <Reference type="RULE">BR-DEC-13</Reference>
-            <Reference type="RULE">BR-DEC-15</Reference>
-            <Reference type="RULE">UBL-DT-01</Reference>
             <Attribute>
                <Term>currencyID</Term>
                <Description>Mandatory attribute. Use BT-5 or BT-6.</Description>
-               <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                <Reference type="CODE_LIST">ISO4217</Reference>
                <Value type="EXAMPLE">NOK</Value>
             </Attribute>
@@ -1585,9 +1369,6 @@
                 and exemption reasons
             </Description>
             <Reference type="BUSINESS_TERM">BG-23</Reference>
-            <Reference type="RULE">PEPPOL-EN16931-R053</Reference>
-            <Reference type="RULE">BR-CO-18</Reference>
-            <Reference type="RULE">BR-O-11</Reference>
             <Element>
                <Term>cbc:TaxableAmount</Term>
                <Name>VAT category taxable amount</Name>
@@ -1596,23 +1377,9 @@
                 </Description>
                <DataType>Amount</DataType>
                <Reference type="BUSINESS_TERM">BT-116</Reference>
-               <Reference type="RULE">BR-45</Reference>
-               <Reference type="RULE">BR-S-08</Reference>
-               <Reference type="RULE">BR-Z-08</Reference>
-               <Reference type="RULE">BR-E-08</Reference>
-               <Reference type="RULE">BR-AE-08</Reference>
-               <Reference type="RULE">BR-IC-08</Reference>
-               <Reference type="RULE">BR-G-08</Reference>
-               <Reference type="RULE">BR-O-08</Reference>
-               <Reference type="RULE">BR-IG-08</Reference>
-               <Reference type="RULE">BR-IP-08</Reference>
-               <Reference type="RULE">BR-DEC-19</Reference>
-               <Reference type="RULE">UBL-DT-01</Reference>
                <Attribute>
                   <Term>currencyID</Term>
                   <Description>Mandatory attribute. Use BT-5</Description>
-                  <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-                  <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                   <Reference type="CODE_LIST">ISO4217</Reference>
                   <Value type="EXAMPLE">NOK</Value>
                </Attribute>
@@ -1624,24 +1391,9 @@
                <Description>The total VAT amount for a given VAT category. Must be rounded to maximum 2 decimals.</Description>
                <DataType>Amount</DataType>
                <Reference type="BUSINESS_TERM">BT-117</Reference>
-               <Reference type="RULE">BR-46</Reference>
-               <Reference type="RULE">BR-CO-17</Reference>
-               <Reference type="RULE">BR-S-09</Reference>
-               <Reference type="RULE">BR-Z-09</Reference>
-               <Reference type="RULE">BR-E-09</Reference>
-               <Reference type="RULE">BR-AE-09</Reference>
-               <Reference type="RULE">BR-IC-09</Reference>
-               <Reference type="RULE">BR-G-09</Reference>
-               <Reference type="RULE">BR-O-09</Reference>
-               <Reference type="RULE">BR-IG-09</Reference>
-               <Reference type="RULE">BR-IP-09</Reference>
-               <Reference type="RULE">BR-DEC-20</Reference>
-               <Reference type="RULE">UBL-DT-01</Reference>
                <Attribute>
                   <Term>currencyID</Term>
                   <Description>Mandatory attribute. Use BT-5</Description>
-                  <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-                  <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                   <Reference type="CODE_LIST">ISO4217</Reference>
                   <Value type="EXAMPLE">NOK</Value>
                </Attribute>
@@ -1657,16 +1409,6 @@
                   <DataType>Code</DataType>
                   <Reference type="BUSINESS_TERM">BT-118</Reference>
                   <Reference type="CODE_LIST">UNCL5305</Reference>
-                  <Reference type="RULE">BR-47</Reference>
-                  <Reference type="RULE">BR-S-01</Reference>
-                  <Reference type="RULE">BR-Z-01</Reference>
-                  <Reference type="RULE">BR-E-01</Reference>
-                  <Reference type="RULE">BR-AE-01</Reference>
-                  <Reference type="RULE">BR-IC-01</Reference>
-                  <Reference type="RULE">BR-G-01</Reference>
-                  <Reference type="RULE">BR-O-10</Reference>
-                  <Reference type="RULE">BR-IG-01</Reference>
-                  <Reference type="RULE">BR-IP-01</Reference>
                   <Value type="EXAMPLE">S</Value>
                </Element>
                <Element cardinality="0..1">
@@ -1675,8 +1417,6 @@
                   <Description>The VAT rate, represented as percentage that applies for the relevant VAT category.</Description>
                   <DataType>Percentage</DataType>
                   <Reference type="BUSINESS_TERM">BT-119</Reference>
-                  <Reference type="RULE">BR-48</Reference>
-                  <Reference type="RULE">SE-R-006</Reference>
                   <Value type="EXAMPLE">25</Value>
                </Element>
                <Element cardinality="0..1">
@@ -1685,15 +1425,6 @@
                   <Description>A coded statement of the reason for why the amount is exempted from VAT. Code list is not yet available</Description>
                   <DataType>Text</DataType>
                   <Reference type="BUSINESS_TERM">BT-121</Reference>
-                  <Reference type="RULE">BR-S-10</Reference>
-                  <Reference type="RULE">BR-Z-10</Reference>
-                  <Reference type="RULE">BR-E-10</Reference>
-                  <Reference type="RULE">BR-AE-10</Reference>
-                  <Reference type="RULE">BR-IC-10</Reference>
-                  <Reference type="RULE">BR-G-10</Reference>
-                  <Reference type="RULE">BR-O-10</Reference>
-                  <Reference type="RULE">BR-IG-10</Reference>
-                  <Reference type="RULE">BR-IP-10</Reference>
                </Element>
                <Element cardinality="0..1">
                   <Term>cbc:TaxExemptionReason</Term>
@@ -1703,15 +1434,6 @@
                     </Description>
                   <DataType>Text</DataType>
                   <Reference type="BUSINESS_TERM">BT-120</Reference>
-                  <Reference type="RULE">BR-S-10</Reference>
-                  <Reference type="RULE">BR-Z-10</Reference>
-                  <Reference type="RULE">BR-E-10</Reference>
-                  <Reference type="RULE">BR-AE-10</Reference>
-                  <Reference type="RULE">BR-IC-10</Reference>
-                  <Reference type="RULE">BR-G-10</Reference>
-                  <Reference type="RULE">BR-O-10</Reference>
-                  <Reference type="RULE">BR-IG-10</Reference>
-                  <Reference type="RULE">BR-IP-10</Reference>
                   <Value type="EXAMPLE">Exempt</Value>
                </Element>
                <Element>
@@ -1737,15 +1459,9 @@
             <Description>Sum of all Reminder line net amounts in the Reminder. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-106</Reference>
-            <Reference type="RULE">BR-12</Reference>
-            <Reference type="RULE">BR-CO-10</Reference>
-            <Reference type="RULE">BR-DEC-09</Reference>
-            <Reference type="RULE">UBL-DT-01</Reference>
             <Attribute>
                <Term>currencyID</Term>
                <Description>Mandatory attribute. Use BT-5</Description>
-               <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                <Reference type="CODE_LIST">ISO4217</Reference>
                <Value type="EXAMPLE">NOK</Value>
             </Attribute>
@@ -1757,15 +1473,9 @@
             <Description>The total amount of the Reminder without VAT. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-109</Reference>
-            <Reference type="RULE">BR-13</Reference>
-            <Reference type="RULE">BR-CO-13</Reference>
-            <Reference type="RULE">BR-DEC-12</Reference>
-            <Reference type="RULE">UBL-DT-01</Reference>
             <Attribute>
                <Term>currencyID</Term>
                <Description>Mandatory attribute. Use BT-5</Description>
-               <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                <Reference type="CODE_LIST">ISO4217</Reference>
                <Value type="EXAMPLE">NOK</Value>
             </Attribute>
@@ -1777,15 +1487,9 @@
             <Description>The total amount of the Reminder with VAT. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-112</Reference>
-            <Reference type="RULE">BR-14</Reference>
-            <Reference type="RULE">BR-CO-15</Reference>
-            <Reference type="RULE">BR-DEC-14</Reference>
-            <Reference type="RULE">UBL-DT-01</Reference>
             <Attribute>
                <Term>currencyID</Term>
                <Description>Mandatory attribute. Use BT-5</Description>
-               <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                <Reference type="CODE_LIST">ISO4217</Reference>
                <Value type="EXAMPLE">NOK</Value>
             </Attribute>
@@ -1797,14 +1501,9 @@
             <Description>Sum of all allowances on document level in the Reminder. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-107</Reference>
-            <Reference type="RULE">BR-CO-11</Reference>
-            <Reference type="RULE">BR-DEC-10</Reference>
-            <Reference type="RULE">UBL-DT-01</Reference>
             <Attribute>
                <Term>currencyID</Term>
                <Description>Mandatory attribute. Use BT-5</Description>
-               <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                <Reference type="CODE_LIST">ISO4217</Reference>
                <Value type="EXAMPLE">NOK</Value>
             </Attribute>
@@ -1816,14 +1515,9 @@
             <Description>Sum of all charges on document level in the Reminder. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-108</Reference>
-            <Reference type="RULE">BR-CO-12</Reference>
-            <Reference type="RULE">BR-DEC-11</Reference>
-            <Reference type="RULE">UBL-DT-01</Reference>
             <Attribute>
                <Term>currencyID</Term>
                <Description>Mandatory attribute. Use BT-5</Description>
-               <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                <Reference type="CODE_LIST">ISO4217</Reference>
                <Value type="EXAMPLE">NOK</Value>
             </Attribute>
@@ -1835,13 +1529,9 @@
             <Description>The sum of amounts which have been paid in advance. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-113</Reference>
-            <Reference type="RULE">UBL-DT-01</Reference>
             <Attribute>
                <Term>currencyID</Term>
                <Description>Mandatory attribute. Use BT-5</Description>
-               <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
-               <Reference type="RULE">BR-DEC-16</Reference>
                <Reference type="CODE_LIST">ISO4217</Reference>
                <Value type="EXAMPLE">NOK</Value>
             </Attribute>
@@ -1853,13 +1543,9 @@
             <Description>The amount to be added to the reminder total to round the amount to be paid. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-114</Reference>
-            <Reference type="RULE">BR-DEC-17</Reference>
-            <Reference type="RULE">UBL-DT-01</Reference>
             <Attribute>
                <Term>currencyID</Term>
                <Description>Mandatory attribute. Use BT-5</Description>
-               <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                <Reference type="CODE_LIST">ISO4217</Reference>
                <Value type="EXAMPLE">NOK</Value>
             </Attribute>
@@ -1871,15 +1557,9 @@
             <Description>The outstanding amount that is requested to be paid. Must be rounded to maximum 2 decimals.</Description>
             <DataType>Amount</DataType>
             <Reference type="BUSINESS_TERM">BT-115</Reference>
-            <Reference type="RULE">BR-15</Reference>
-            <Reference type="RULE">BR-CO-16</Reference>
-            <Reference type="RULE">BR-DEC-18</Reference>
-            <Reference type="RULE">UBL-DT-01</Reference>
             <Attribute>
                <Term>currencyID</Term>
                <Description>Mandatory attribute. Use BT-5</Description>
-               <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                <Reference type="CODE_LIST">ISO4217</Reference>
                <Value type="EXAMPLE">NOK</Value>
             </Attribute>
@@ -1891,14 +1571,12 @@
          <Name>INVOICE LINE</Name>
          <Description>A group of business terms providing information on individual Invoice lines in original Invoice.</Description>
          <Reference type="BUSINESS_TERM">BG-25</Reference>
-         <Reference type="RULE">BR-16</Reference>
          <Element>
             <Term>cbc:ID</Term>
             <Name>Invoice line identifier</Name>
             <Description>A unique identifier for the individual line within the Invoice.</Description>
             <DataType>Identifier</DataType>
             <Reference type="BUSINESS_TERM">BT-126</Reference>
-            <Reference type="RULE">BR-21</Reference>
             <Value type="EXAMPLE">12</Value>
          </Element>
          <Element cardinality="0..1">
@@ -1916,7 +1594,6 @@
             <Description>The quantity of items (goods or services) that is charged in the Invoice line.</Description>
             <DataType>Quantity</DataType>
             <Reference type="BUSINESS_TERM">BT-129</Reference>
-            <Reference type="RULE">BR-22</Reference>
             <Attribute>
                <Term>unitCode</Term>
                <Name>Invoiced quantity unit of measure</Name>
@@ -1926,7 +1603,6 @@
 					</Description>
                <DataType>Code</DataType>
                <Reference type="BUSINESS_TERM">BT-130</Reference>
-               <Reference type="RULE">BR-23</Reference>
                <Reference type="CODE_LIST">UNECERec20</Reference>
                <Reference type="CODE_LIST">UNECERec21</Reference>
                <Value type="EXAMPLE">C62</Value>
@@ -1941,15 +1617,9 @@
                     Must be rounded to maximum 2 decimals.</Description>
             <DataType>Identifier</DataType>
             <Reference type="BUSINESS_TERM">BT-131</Reference>
-            <Reference type="RULE">BR-24</Reference>
-            <Reference type="RULE">PEPPOL-EN16931-R120</Reference>
-            <Reference type="RULE">BR-DEC-23</Reference>
-            <Reference type="RULE">UBL-DT-01</Reference>
             <Attribute>
                <Term>currencyID</Term>
                <Description>Mandatory attribute. Use BT-5</Description>
-               <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                <Reference type="CODE_LIST">ISO4217</Reference>
                <Value type="EXAMPLE">NOK</Value>
             </Attribute>
@@ -1977,9 +1647,6 @@
                <Description>The date when the Invoice period for this Invoice line starts. Format ="YYYY-MM-DD"</Description>
                <DataType>Date</DataType>
                <Reference type="BUSINESS_TERM">BT-134</Reference>
-               <Reference type="RULE">BR-CO-20</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R110</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-F001</Reference>
                <Value type="EXAMPLE">2017-10-05</Value>
             </Element>
             <Element cardinality="0..1">
@@ -1988,10 +1655,6 @@
                <Description>The date when the Invoice period for this Invoice line ends. Format ="YYYY-MM-DD"</Description>
                <DataType>Date</DataType>
                <Reference type="BUSINESS_TERM">BT-135</Reference>
-               <Reference type="RULE">BR-30</Reference>
-               <Reference type="RULE">BR-CO-20</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R111</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-F001</Reference>
                <Value type="EXAMPLE">2017-10-15</Value>
             </Element>
          </Element>
@@ -2055,14 +1718,7 @@
                <DataType>Code</DataType>
                <Reference type="BUSINESS_TERM">BT-140, BT-145</Reference>
                <Reference type="CODE_LIST">UNCL5189</Reference>
-               <Reference type="RULE">BR-42</Reference>
-               <Reference type="RULE">BR-44</Reference>
-               <Reference type="RULE">BR-CO-07</Reference>
-               <Reference type="RULE">BR-CO-08</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-CL003</Reference>
                <Reference type="CODE_LIST">UNCL7161</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-CL002</Reference>
-               <Reference type="RULE">DK-R-004</Reference>
                <Value type="EXAMPLE">95</Value>
             </Element>
             <Element cardinality="0..1">
@@ -2071,11 +1727,6 @@
                <Description>The reason for the line level allowance or charge, expressed as text.</Description>
                <DataType>Text</DataType>
                <Reference type="BUSINESS_TERM">BT-139, BT-144</Reference>
-               <Reference type="RULE">BR-42</Reference>
-               <Reference type="RULE">BR-44</Reference>
-               <Reference type="RULE">BR-CO-07</Reference>
-               <Reference type="RULE">BR-CO-08</Reference>
-               <Reference type="RULE">DK-R-004</Reference>
                <Value type="EXAMPLE">Discount</Value>
             </Element>
             <Element cardinality="0..1">
@@ -2086,7 +1737,6 @@
             </Description>
                <DataType>Percentage</DataType>
                <Reference type="BUSINESS_TERM">BT-138,BT-143</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R042</Reference>
                <Value type="EXAMPLE">20</Value>
             </Element>
             <Element>
@@ -2095,17 +1745,9 @@
                <Description>The amount of an allowance or a charge, without VAT. Must be rounded to maximum 2 decimals</Description>
                <DataType>Amount</DataType>
                <Reference type="BUSINESS_TERM">BT-136,BT-141</Reference>
-               <Reference type="RULE">BR-41</Reference>
-               <Reference type="RULE">BR-43</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R040</Reference>
-               <Reference type="RULE">BR-DEC-24</Reference>
-               <Reference type="RULE">BR-DEC-27</Reference>
-               <Reference type="RULE">UBL-DT-01</Reference>
                <Attribute>
                   <Term>currencyID</Term>
                   <Description>Mandatory attribute. Use BT-5</Description>
-                  <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-                  <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                   <Reference type="CODE_LIST">ISO4217</Reference>
                   <Value type="EXAMPLE">NOK</Value>
                </Attribute>
@@ -2119,15 +1761,9 @@
             </Description>
                <DataType>Amount</DataType>
                <Reference type="BUSINESS_TERM">BT-137,BT-142</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R041</Reference>
-               <Reference type="RULE">BR-DEC-25</Reference>
-               <Reference type="RULE">BR-DEC-28</Reference>
-               <Reference type="RULE">UBL-DT-01</Reference>
                <Attribute>
                   <Term>currencyID</Term>
                   <Description>Mandatory attribute. Use BT-5</Description>
-                  <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-                  <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                   <Reference type="CODE_LIST">ISO4217</Reference>
                   <Value type="EXAMPLE">NOK</Value>
                </Attribute>
@@ -2154,7 +1790,6 @@
                <Description>A name for an item.</Description>
                <DataType>Text</DataType>
                <Reference type="BUSINESS_TERM">BT-153</Reference>
-               <Reference type="RULE">BR-25</Reference>
                <Value type="EXAMPLE">Item name</Value>
             </Element>
             <Element tag="x" cardinality="0..1">
@@ -2190,7 +1825,6 @@
                   <Description>An item identifier based on a registered scheme.</Description>
                   <DataType>Identifier</DataType>
                   <Reference type="BUSINESS_TERM">BT-157</Reference>
-                  <Reference type="RULE">BR-64</Reference>
                   <Attribute>
                      <Term>schemeID</Term>
                      <Name>Item standard identifier identification scheme identifier</Name>
@@ -2210,7 +1844,6 @@
                   <Description>The code identifying the country from which the item originates.</Description>
                   <DataType>Code</DataType>
                   <Reference type="BUSINESS_TERM">BT-159</Reference>
-                  <Reference type="RULE">BR-CL-15</Reference>
                   <Reference type="CODE_LIST">ISO3166</Reference>
                   <Value type="EXAMPLE">CN</Value>
                </Element>
@@ -2224,12 +1857,10 @@
                   <Description>A code for classifying the item by its type or nature.</Description>
                   <DataType>Identifier</DataType>
                   <Reference type="BUSINESS_TERM">BT-158</Reference>
-                  <Reference type="RULE">BR-65</Reference>
                   <Attribute>
                      <Term>listID</Term>
                      <Name>Item classification identifier identification scheme identifier</Name>
                      <Description>The identification scheme identifier of the Item classification identifier</Description>
-                     <Reference type="RULE">BR-CL-13</Reference>
                      <Reference type="CODE_LIST">UNCL7143</Reference>
                      <Value type="EXAMPLE">STI</Value>
                   </Attribute>
@@ -2237,7 +1868,6 @@
                      <Term>listVersionID</Term>
                      <Name>Item classification identifier version identification scheme identifier</Name>
                      <Description>The identification scheme version identifier of the Item classification identifier</Description>
-                     <Reference type="RULE">DK-R-003</Reference>
                   </Attribute>
                   <Value type="EXAMPLE">9873242</Value>
                </Element>
@@ -2255,8 +1885,6 @@
                   <Description>The VAT category code for the invoiced item.</Description>
                   <DataType>Code</DataType>
                   <Reference type="BUSINESS_TERM">BT-151</Reference>
-                  <Reference type="RULE">BR-CO-04</Reference>
-                  <Reference type="RULE">BR-O-12</Reference>
                   <Reference type="CODE_LIST">UNCL5305</Reference>
                   <Value type="EXAMPLE">S</Value>
                </Element>
@@ -2266,16 +1894,6 @@
                   <Description>The VAT rate, represented as percentage that applies to the invoiced item.</Description>
                   <DataType>Percentage</DataType>
                   <Reference type="BUSINESS_TERM">BT-152</Reference>
-                  <Reference type="RULE">BR-S-05</Reference>
-                  <Reference type="RULE">BR-Z-05</Reference>
-                  <Reference type="RULE">BR-E-05</Reference>
-                  <Reference type="RULE">BR-AE-05</Reference>
-                  <Reference type="RULE">BR-IC-05</Reference>
-                  <Reference type="RULE">BR-G-05</Reference>
-                  <Reference type="RULE">BR-O-05</Reference>
-                  <Reference type="RULE">BR-IG-05</Reference>
-                  <Reference type="RULE">BR-IP-05</Reference>
-                  <Reference type="RULE">SE-R-006</Reference>
                   <Value type="EXAMPLE">25</Value>
                </Element>
                <Element>
@@ -2301,7 +1919,6 @@
                   <Description>The name of the attribute or property of the item.</Description>
                   <DataType>Text</DataType>
                   <Reference type="BUSINESS_TERM">BT-160</Reference>
-                  <Reference type="RULE">BR-54</Reference>
                   <Value type="EXAMPLE">Color</Value>
                </Element>
                <Element>
@@ -2310,7 +1927,6 @@
                   <Description>The value of the attribute or property of the item.</Description>
                   <DataType>Text</DataType>
                   <Reference type="BUSINESS_TERM">BT-161</Reference>
-                  <Reference type="RULE">BR-54</Reference>
                   <Value type="EXAMPLE">Black</Value>
                </Element>
             </Element>
@@ -2329,14 +1945,9 @@
                 Item gross price less the Item price discount, if they are both provided. Item price can not be negative.</Description>
                <DataType>Amount</DataType>
                <Reference type="BUSINESS_TERM">BT-146</Reference>
-               <Reference type="RULE">BR-26</Reference>
-               <Reference type="RULE">BR-27</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R046</Reference>
                <Attribute>
                   <Term>currencyID</Term>
                   <Description>Mandatory attribute. Use BT-5</Description>
-                  <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-                  <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                   <Reference type="CODE_LIST">ISO4217</Reference>
                   <Value type="EXAMPLE">NOK</Value>
                </Attribute>
@@ -2348,7 +1959,6 @@
                <Description>The number of item units to which the price applies.</Description>
                <DataType>Quantity</DataType>
                <Reference type="BUSINESS_TERM">BT-149</Reference>
-               <Reference type="RULE">PEPPOL-EN16931-R121</Reference>
                <Attribute usage="Optional">
                   <Term>unitCode</Term>
                   <Name>Item price base quantity unit of measure code</Name>
@@ -2357,7 +1967,6 @@
                 </Description>
                   <Reference type="CODE_LIST">UNECERec20</Reference>
                   <Reference type="CODE_LIST">UNECERec21</Reference>
-                  <Reference type="RULE">PEPPOL-EN16931-R130</Reference>
                   <Value type="EXAMPLE">C62</Value>
                </Attribute>
                <Value type="EXAMPLE">1</Value>
@@ -2368,7 +1977,6 @@
                <Element>
                   <Term>cbc:ChargeIndicator</Term>
                   <Description>Mandatory element. Value must be “false”</Description>
-                  <Reference type="RULE">PEPPOL-EN16931-R044</Reference>
                   <Value type="FIXED">false</Value>
                </Element>
                <Element>
@@ -2381,8 +1989,6 @@
                   <Attribute>
                      <Term>currencyID</Term>
                      <Description>Mandatory attribute. Use BT-5</Description>
-                     <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-                     <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                      <Reference type="CODE_LIST">ISO4217</Reference>
                      <Value type="EXAMPLE">NOK</Value>
                   </Attribute>
@@ -2394,12 +2000,9 @@
                   <Description>The unit price, exclusive of VAT, before subtracting Item price discount, can not be negative</Description>
                   <DataType>Amount</DataType>
                   <Reference type="BUSINESS_TERM">BT-148</Reference>
-                  <Reference type="RULE">BR-28</Reference>
                   <Attribute>
                      <Term>currencyID</Term>
                      <Description>Mandatory attribute. Use BT-5</Description>
-                     <Reference type="RULE">PEPPOL-EN16931-CL007</Reference>
-                     <Reference type="RULE">PEPPOL-EN16931-R051</Reference>
                      <Reference type="CODE_LIST">ISO4217</Reference>
                      <Value type="EXAMPLE">NOK</Value>
                   </Attribute>

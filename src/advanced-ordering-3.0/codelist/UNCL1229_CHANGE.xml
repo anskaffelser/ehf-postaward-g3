@@ -25,6 +25,11 @@
         <Description>The Order line is accepted with change.</Description>
     </Code>
     <Code>
+        <Id>4</Id>
+        <Name>No action</Name>
+        <Description>This line item is not affected by the actual message.</Description>
+    </Code>
+    <Code>
         <Id>74</Id>
         <Name>Reopened</Name>
         <Description>Opened again.</Description>

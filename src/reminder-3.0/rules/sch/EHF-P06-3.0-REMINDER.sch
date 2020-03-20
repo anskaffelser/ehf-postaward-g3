@@ -21,7 +21,7 @@
 	<!-- Rules -->
 
 	<include href="../../../_common/rules/sch/parts/empty-elements.sch"/>
-	<include href="../../../../target/generated/reminder-basic.sch"/>
+	<include href="../../../../target/generated/p06-reminder-basic.sch"/>
 	<include href="../../../_common/rules/sch/parts/identifiers.sch"/>
 	<!-- <include href="business/invoice.sch"/> -->
 

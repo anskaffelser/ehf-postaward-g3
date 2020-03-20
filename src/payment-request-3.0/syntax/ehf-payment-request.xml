@@ -4,7 +4,7 @@
    <Name>EHF Payment Request</Name>
 
    <Property key="sch:prefix">EHF-PR</Property>
-   <Property key="sch:identifier">pr-basic</Property>
+   <Property key="sch:identifier">p07-request-basic</Property>
 
    <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</Namespace>
    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2</Namespace>

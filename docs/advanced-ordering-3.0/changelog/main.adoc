@@ -1,12 +1,12 @@
 :shared-dir: ../../_common
 :lang: en
-:doctitle: Changelog EHF Reminder 3.0
+:doctitle: Changelog EHF Advanced Ordering 3.0
 
 include::{shared-dir}/settings.adoc[]
 
 = {doctitle}
 {name-difi-en}
-:description: This document describes the changelog of EHF Reminder (called "EHF Purring" in Norwegian). The document is part of Norwegian Digitalisation Agency (Digdir) standardization work related to electronic commerce.
+:description: This document describes the changelog of EHF Advanced Ordering (called "EHF Avansert Ordre" in Norwegian). The document is part of Norwegian Digitalisation Agency (Digdir) standardization work related to electronic commerce.
 :doctype: book
 :icons: font
 :toc: left

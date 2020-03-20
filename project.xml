@@ -16,6 +16,12 @@
         <Title>Implementation Guideline</Title>
         <Tag>ordering-3.0</Tag>
     </Resource>
+    <!-- <Resource>
+        <Type>Doc-1</Type>
+        <Path>advanced-ordering-3.0/guide/</Path>
+        <Title>Implementation Guideline</Title>
+        <Tag>advanced-ordering-3.0</Tag>
+    </Resource> -->
     <Resource>
         <Type>Doc-1</Type>
         <Path>catalogue-3.0/guide/</Path>
@@ -96,6 +102,8 @@
         <Title>Release 2020-03-23</Title>
         <Description>Release notes describing changes related to EHF Post-Award G3 in release '2020-03-23'.</Description>
         <Tag>release</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
+        <Tag>billing-3.0</Tag>
         <Tag>forward-billing-3.0</Tag>
         <Tag>reminder-3.0</Tag>
     </Resource>
@@ -181,27 +189,27 @@
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>src/adv-ordering-3.0/syntax/order-init-3.0.xml</Path>
+        <Path>src/advanced-ordering-3.0/syntax/order-init-3.0.xml</Path>
         <Title>EHF Advanced Order Initiation 3.0</Title>
-        <Tag>adv-ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>src/adv-ordering-3.0/syntax/order-change-3.0.xml</Path>
+        <Path>src/advanced-ordering-3.0/syntax/order-change-3.0.xml</Path>
         <Title>EHF Advanced Order Change 3.0</Title>
-        <Tag>adv-ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>src/adv-ordering-3.0/syntax/order-cancellation-3.0.xml</Path>
+        <Path>src/advanced-ordering-3.0/syntax/order-cancellation-3.0.xml</Path>
         <Title>EHF Advanced Order Cancellation 3.0</Title>
-        <Tag>adv-ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>src/adv-ordering-3.0/syntax/order-response-3.0.xml</Path>
+        <Path>src/advanced-ordering-3.0/syntax/order-response-3.0.xml</Path>
         <Title>EHF Advanced Order Response 3.0</Title>
-        <Tag>adv-ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
@@ -246,42 +254,52 @@
         <Identifier>t01-peppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>target/schematron-peppol/PEPPOL-M-T01.sch</Path>
-        <Title>Business rules for PEPPOL Order transaction 3.0</Title>
+        <Title>Business rules for EHF Order 3.0</Title>
         <Tag>ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Identifier>t01-peppol</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>target/schematron-peppol/PEPPOL-M-T01-CHANGE.sch</Path>
+        <Title>Business rules for EHF Order Change 3.0</Title>
+        <Tag>ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
     </Resource>
     <Resource>
         <Identifier>t16-peppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>target/schematron-peppol/PEPPOL-M-T16.sch</Path>
-        <Title>Business rules for PEPPOL Despatch Advice transaction 3.0</Title>
+        <Title>Business rules for EHF Despatch Advice 3.0</Title>
         <Tag>despatch-advice-3.0</Tag>
     </Resource>
     <Resource>
         <Identifier>t19-peppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>target/schematron-peppol/PEPPOL-M-T19.sch</Path>
-        <Title>Business rules for PEPPOL Catalogue transaction 3.0</Title>
+        <Title>Business rules for EHF Catalogue 3.0</Title>
         <Tag>catalogue-3.0</Tag>
     </Resource>
     <Resource>
         <Identifier>t76-peppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>target/schematron-peppol/PEPPOL-M-T76.sch</Path>
-        <Title>Business rules for PEPPOL Order Response transaction 3.0</Title>
+        <Title>Business rules for EHF Order Response 3.0</Title>
         <Tag>ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
     </Resource>
     <Resource>
         <Identifier>t77-peppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>target/schematron-peppol/PEPPOL-M-T77.sch</Path>
-        <Title>Business rules for PEPPOL Punch Out transaction 3.0</Title>
+        <Title>Business rules for EHF Punch Out 3.0</Title>
         <Tag>punch-out-3.0</Tag>
     </Resource>
     <Resource>
         <Identifier>t110-peppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>target/schematron-peppol/PEPPOL-M-T110.sch</Path>
-        <Title>Business rules for PEPPOL Order Agreement transaction 3.0</Title>
+        <Title>Business rules for EHF Order Agreement 3.0</Title>
         <Tag>order-agreement-3.0</Tag>
     </Resource>
 
@@ -301,7 +319,7 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>_source/poacc-upgrade/structure/codelist/eas.xml</Path>
-        <Tag>adv-ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -316,7 +334,7 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>_source/poacc-upgrade/structure/codelist/ICD.xml</Path>
-        <Tag>adv-ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -335,7 +353,7 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>_source/poacc-upgrade/structure/codelist/ISO4217_2015.xml</Path>
-        <Tag>adv-ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -345,7 +363,7 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>_source/poacc-upgrade/structure/codelist/MimeCode.xml</Path>
-        <Tag>adv-ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>ordering-3.0</Tag>
         <Tag>order-agreement-3.0</Tag>
@@ -422,7 +440,7 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>_source/poacc-upgrade/structure/codelist/UNCL7143.xml</Path>
-        <Tag>adv-ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>ordering-3.0</Tag>
         <Tag>order-agreement-3.0</Tag>
@@ -439,7 +457,7 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>_source/poacc-upgrade/structure/codelist/UNECERec20-11e.xml</Path>
-        <Tag>adv-ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -477,8 +495,8 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>src/adv-ordering-3.0/codelist/UNCL1229_CHANGE.xml</Path>
-        <Tag>adv-ordering-3.0</Tag>
+        <Path>src/advanced-ordering-3.0/codelist/UNCL1229_CHANGE.xml</Path>
+        <Tag>advanced-ordering-3.0</Tag>
     </Resource>
 
     <!-- Files -->
@@ -489,7 +507,7 @@
         <Property key="download">ehf-postaward-g3-examples.zip</Property>
         <Property key="filename">examples.zip</Property>
         <Property key="virtual">true</Property>
-        <Tag>adv-ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>forward-billing-3.0</Tag>
@@ -506,7 +524,7 @@
         <Property key="download">ehf-postaward-g3-schematron.zip</Property>
         <Property key="filename">schematron.zip</Property>
         <Property key="virtual">true</Property>
-        <Tag>adv-ordering-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
         <Tag>forward-billing-3.0</Tag>
@@ -517,7 +535,7 @@
     </Resource>
 
     <Tag>
-        <Identifier>adv-ordering-3.0</Identifier>
+        <Identifier>advanced-ordering-3.0</Identifier>
         <Title>EHF Advanced Ordering 3.0</Title>
     </Tag>
     <Tag>
