@@ -3,8 +3,8 @@
 
 	<Term>adv-order-response-3.0</Term>
 
-	<Property key="sch:prefix">EHF-T76a</Property>
-	<Property key="sch:identifier">t76a-basic</Property>
+	<Property key="sch:prefix">EHF-P09-RES</Property>
+	<Property key="sch:identifier">p09-response-basic</Property>
 
 	<Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2</Namespace>
 	<Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2</Namespace>
@@ -42,6 +42,13 @@
 			<Reference type="BUSINESS_TERM">tir76-003</Reference>
 
 			<Value type="EXAMPLE">or0987</Value>
+		</Element>
+		<Element cardinality="0..1">
+			<Term>cbc:UUID</Term>
+			<Name>Unique identifier</Name>
+			<Description>Unique identifier of the instance document.</Description>
+			<DataType>Identifier</DataType>
+			<Value type="EXAMPLE">ee3eefc8-597b-4615-baff-f9890f4a94b9</Value>
 		</Element>
 		<Element cardinality="0..1">
 			<Term>cbc:SalesOrderID</Term>
@@ -119,6 +126,20 @@
 				<Value type="EXAMPLE">o-23424</Value>
 			</Element>
 		</Element>
+
+		<Element cardinality="0..1">
+			<Term>cac:OrderChangeDocumentReference</Term>
+			<Name>Order change reference</Name>
+			<Element>
+				<Term>cbc:ID</Term>
+				<Name>Order change document reference</Name>
+				<Description>Used to reference the order change that is being responded to.</Description>
+				<DataType>Document reference</DataType>
+
+				<Value type="EXAMPLE">oc-23424</Value>
+			</Element>
+		</Element>
+
 		<Element>
 			<Term>cac:SellerSupplierParty</Term>
 			<Name>Seller information </Name>
@@ -638,8 +659,8 @@
 						<Element cardinality="0..1">
 							<Term>cbc:ValueQualifier</Term>
 							<Name>Property classification</Name>
-							<DataType>Text</DataType>
 							<Description>Standardized and predefined classification of items properties.</Description>
+							<DataType>Text</DataType>
 							<Reference type="BUSINESS_TERM">tir76-p009</Reference>
 						</Element>
 					</Element>

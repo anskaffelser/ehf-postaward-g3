@@ -181,8 +181,20 @@
     </Resource>
     <Resource>
         <Type>Syntax-1</Type>
-        <Path>src/adv-ordering-3.0/syntax/order-3.0.xml</Path>
-        <Title>EHF Advanced Order 3.0</Title>
+        <Path>src/adv-ordering-3.0/syntax/order-init-3.0.xml</Path>
+        <Title>EHF Advanced Order Initiation 3.0</Title>
+        <Tag>adv-ordering-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Syntax-1</Type>
+        <Path>src/adv-ordering-3.0/syntax/order-change-3.0.xml</Path>
+        <Title>EHF Advanced Order Change 3.0</Title>
+        <Tag>adv-ordering-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Syntax-1</Type>
+        <Path>src/adv-ordering-3.0/syntax/order-cancellation-3.0.xml</Path>
+        <Title>EHF Advanced Order Cancellation 3.0</Title>
         <Tag>adv-ordering-3.0</Tag>
     </Resource>
     <Resource>
@@ -462,6 +474,11 @@
         <Type>CodeList-1</Type>
         <Path>src/reminder-3.0/codelist/UNCL7161_REMINDER.xml</Path>
         <Tag>reminder-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>CodeList-1</Type>
+        <Path>src/adv-ordering-3.0/codelist/UNCL1229_CHANGE.xml</Path>
+        <Tag>adv-ordering-3.0</Tag>
     </Resource>
 
     <!-- Files -->

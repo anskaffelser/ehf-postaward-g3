@@ -5,7 +5,7 @@
 				xmlns:u="utils"
 				schemaVersion="iso" queryBinding="xslt2">
 
-	<title>EHF Advanced Order 3.0</title>
+	<title>EHF Advanced Order Change 3.0</title>
 
 	<ns prefix="cbc" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"/>
 	<ns prefix="cac" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"/>
@@ -26,9 +26,8 @@
 	<!-- Rules -->
 
 	<include href="../../../_common/rules/sch/parts/empty-elements.sch"/>
-	<include href="../../../../target/generated/t01a-basic.sch"/>
+	<include href="../../../../target/generated/p09-cancellation-basic.sch"/>
 	<include href="../../../_common/rules/sch/parts/identifiers.sch"/>
-	<include href="../../../../target/schematron-peppol/PEPPOL-M-T01.sch"/>
-	<!-- <include href="business/EHF-REMINDER.sch"/> -->
+	<!-- <include href="../../../../target/schematron-peppol/PEPPOL-M-T01.sch"/> -->
 
 </schema>

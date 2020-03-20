@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Syntax xmlns="urn:fdc:difi.no:2017:vefa:structure:Syntax-1">
 
-	<Term>adv-order-3.0</Term>
+	<Term>adv-order-init-3.0</Term>
 
-	<Property key="sch:prefix">EHF-T01a</Property>
-	<Property key="sch:identifier">t01a-basic</Property>
+	<Property key="sch:prefix">EHF-P09-INIT</Property>
+	<Property key="sch:identifier">p09-init-basic</Property>
 
 	<Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Order-2</Namespace>
 	<Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2</Namespace>
@@ -39,6 +39,13 @@
 			<DataType>Identifier</DataType>
 			<Reference type="BUSINESS_TERM">tir01-003</Reference>
 			<Value type="EXAMPLE">0-123</Value>
+		</Element>
+		<Element cardinality="0..1">
+			<Term>cbc:UUID</Term>
+			<Name>Unique identifier</Name>
+			<Description>Unique identifier of the instance document.</Description>
+			<DataType>Identifier</DataType>
+			<Value type="EXAMPLE">ee3eefc8-597b-4615-baff-f9890f4a94b9</Value>
 		</Element>
 		<Element cardinality="0..1">
 			<Term>cbc:SalesOrderID</Term>
@@ -1973,6 +1980,14 @@
 				<Element>
 					<Term>cac:Item</Term>
 					<Name>Item information</Name>
+					<Element cardinality="0..1">
+						<Term>cbc:Description</Term>
+						<Name>Item description</Name>
+						<Description>Free-form field that can be used to give a text description of
+							the item. A detailed description of the item.</Description>
+						<DataType>Text</DataType>
+						<Reference type="BUSINESS_TERM">tir01-133</Reference>
+					</Element>
 					<Element>
 						<Term>cbc:Name</Term>
 						<Name>Item name</Name>
@@ -1981,14 +1996,6 @@
 							description.</Description>
 						<DataType>Text</DataType>
 						<Reference type="BUSINESS_TERM">tir01-135</Reference>
-					</Element>
-					<Element cardinality="0..1">
-						<Term>cbc:Description</Term>
-						<Name>Item description</Name>
-						<Description>Free-form field that can be used to give a text description of
-							the item. A detailed description of the item.</Description>
-						<DataType>Text</DataType>
-						<Reference type="BUSINESS_TERM">tir01-133</Reference>
 					</Element>
 					<Element cardinality="0..1">
 						<Term>cac:BuyersItemIdentification</Term>
