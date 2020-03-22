@@ -39,13 +39,15 @@ test ! -r /target/env || . /target/env
 rm -rf /target/examples
 mkdir -p /target/examples /target/site/files
 test ! -r /src/.build/template/examples-readme || cat /src/.build/template/examples-readme | envsubst > /target/examples/README
-for folder in $(find /src/rules -mindepth 2 -maxdepth 2 -name example -type d | sort); do
-cp -r $folder/* /target/examples/
+for folder in $(find src/*/rules -mindepth 1 -maxdepth 1 -name example -type d | sort); do
+spec=$(echo $folder | cut -d '/' -f 2)
+mkdir /target/examples/$spec
+cp -r $folder/* /target/examples/$spec/
 done
 test ! -r /src/.build/script/examples.sh || . /src/.build/script/examples.sh
 cd /target/examples
 rm -rf /target/examples.zip
-zip -9 -r /target/examples.zip *
+zip -q9r /target/examples.zip *
 cp /target/examples.zip /target/site/files/examples.zip
 )
 trigger_schematron() (
@@ -53,14 +55,16 @@ test ! -r /target/env || . /target/env
 rm -rf /target/schematron
 mkdir -p /target/schematron /target/site/files
 test ! -r /src/.build/template/schematron-readme || cat /src/.build/template/schematron-readme | envsubst > /target/schematron/README
-for sch in $(ls /src/rules/*/sch/*.sch | sort); do
+for sch in $(ls /src/src/*/rules/sch/*.sch | sort); do
 echo "Prepare: $sch"
-schematron prepare $sch /target/schematron/$(basename $sch)
+spec=$(echo $sch | cut -d '/' -f 4)
+mkdir -p /target/schematron/$spec
+schematron prepare $sch /target/schematron/$spec/$(basename $sch)
 done
 test ! -r /src/.build/script/schematron.sh || . /src/.build/script/schematron.sh
 cd /target/schematron
 rm -rf /target/schematron.zip
-zip -9 -r /target/schematron.zip *
+zip -q9r /target/schematron.zip *
 cp /target/schematron.zip /target/site/files/schematron.zip
 )
 trigger_xsd() (

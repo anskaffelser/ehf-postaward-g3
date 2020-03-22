@@ -7,7 +7,6 @@ RELEASE := $(if $(RELEASE),$(RELEASE),Unofficial)
 DOCS_FOLDER := $(if $(DOCS_FOLDER),$(DOCS_FOLDER),docs)
 RULES_FOLDER := $(if $(RULES_FOLDER),$(RULES_FOLDER),rules)
 RULES_IDENT := $(if $(RULES_IDENT),$(RULES_IDENT),rules)
-VERSION := $(if $(GITHUB_REF),$(shell echo "$(GITHUB_REF)" | sed "s:.*/::g"),snapshot)
 BUILD = structure example schematron xsd xslt rules docs static
 .DEFAULT_GOAL = default
 define docker_pull
@@ -119,8 +118,8 @@ rules:
 ifeq "$(RULE_RULES)" "true"
 	$(call docker_run,rules,Running vefa-validator,\
 			-v $(PROJECT):/src \
-			anskaffelser/validator:2.1.0 \
-			build -x -t -n $(RULES_IDENT) -a $(RULES_FOLDER) -b $(VERSION) -target target/validator /src)
+			difi/vefa-validator \
+			build -x -t -n $(RULES_IDENT) -a $(RULES_FOLDER) -target target/validator /src)
 else
 	$(call skip,rules)
 endif
@@ -190,7 +189,7 @@ ifeq "$(RULE_STATIC)" "true"
 else
 	$(call skip,static)
 endif
-RULE_SCHEMATRON=$(shell test -e $(PROJECT)/rules && find $(PROJECT)/rules -mindepth 2 -maxdepth 2 -name sch -type d | wc -l | xargs test "0" != && echo true || echo false)
+RULE_SCHEMATRON=$(shell find src/*/rules -mindepth 1 -maxdepth 1 -name sch -type d | wc -l | xargs test "0" != && echo true || echo false)
 schematron:
 ifeq "$(RULE_SCHEMATRON)" "true"
 	$(call docker_run,schematron,Packaging Schematron files,\
@@ -201,7 +200,7 @@ ifeq "$(RULE_SCHEMATRON)" "true"
 else
 	$(call skip,schematron)
 endif
-RULE_EXAMPLE=$(shell test -d $(PROJECT)/rules && find $(PROJECT)/rules -mindepth 2 -maxdepth 2 -name example -type d | wc -l | xargs test "0" != && echo true || echo false)
+RULE_EXAMPLE=$(shell find src/*/rules -mindepth 1 -maxdepth 1 -name example -type d | wc -l | xargs test "0" != && echo true || echo false)
 example:
 ifeq "$(RULE_EXAMPLE)" "true"
 	$(call docker_run,examples,Packaging example files,\
