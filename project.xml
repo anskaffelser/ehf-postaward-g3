@@ -16,12 +16,12 @@
         <Title>Implementation Guideline</Title>
         <Tag>ordering-3.0</Tag>
     </Resource>
-    <!-- <Resource>
+    <Resource>
         <Type>Doc-1</Type>
         <Path>advanced-ordering-3.0/guide/</Path>
         <Title>Implementation Guideline</Title>
         <Tag>advanced-ordering-3.0</Tag>
-    </Resource> -->
+    </Resource>
     <Resource>
         <Type>Doc-1</Type>
         <Path>catalogue-3.0/guide/</Path>

@@ -1,0 +1,48 @@
+= Referencing documents
+
+
+== Identifying document
+
+To be able to reference the individual document must a unique document identifier be provided for all documents.
+
+[source,xml]
+.Example of document identifier provided for an order document
+----
+<cbc:ID>1337</cbc:ID>
+----
+
+
+== Unique identification of document
+
+[source,xml]
+.Example of unique identification of a document
+----
+<cbc:UUID>fb9f30ac-b796-4d3c-a526-3a9193bf748f</cbc:UUID>
+----
+
+
+== Referencing order document
+
+For all document types except the initial order must a order reference be provided.
+The order reference will always contain the document identifier provided in the order document.
+
+[source,xml]
+.Example of order referene provided in an order reseponse
+----
+<cac:OrderReference>
+  <cbc:ID>1337</cbc:ID>
+</cac:OrderReference>
+----
+
+
+== Referencing change order document
+
+When an order response is provided for an order change must order change reference be provided.
+
+[source,xml]
+.Example of order change referene provided in an order reseponse
+----
+<cac:OrderChangeDocumentReference>
+  <cbc:ID>1aaacbb3-f52f-4333-9640-36af26d0aafa</cbc:ID>
+</cac:OrderChangeDocumentReference>
+----

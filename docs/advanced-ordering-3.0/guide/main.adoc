@@ -22,3 +22,8 @@ v3.0.0
 This document describe EHF Advanced Ordering (called "EHF Avansert Ordre" in Norwegian)format to be used for the exchange of electronic reminder information between
 trading partners. This document is a part of Norwegian Digitalisation Agency (Digdir) standardization work related to
 electronic commerce.
+
+
+include::usecase/index.adoc[]
+
+include::description/index.adoc[]
