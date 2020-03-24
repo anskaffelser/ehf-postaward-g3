@@ -19,7 +19,6 @@
                 transaction.</Description>
 			<DataType>Identifier</DataType>
 			<Reference type="BUSINESS_TERM">tir76-001</Reference>
-
 			<Value type="FIXED">urn:fdc:peppol.eu:poacc:trns:order_response:3:extended:urn:fdc:anskaffelser.no:2019:ehf:spec:3.0</Value>
 		</Element>
 		<Element>
@@ -29,7 +28,6 @@
                 transaction appears.</Description>
 			<DataType>Identifier</DataType>
 			<Reference type="BUSINESS_TERM">tir76-002</Reference>
-
 			<Value type="FIXED">urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:09:1.0</Value>
 		</Element>
 		<Element>
@@ -40,7 +38,6 @@
                 that are part of the same process.</Description>
 			<DataType>Identifier</DataType>
 			<Reference type="BUSINESS_TERM">tir76-003</Reference>
-
 			<Value type="EXAMPLE">or0987</Value>
 		</Element>
 		<Element cardinality="0..1">
@@ -64,7 +61,6 @@
 			<Description>The date on which the transaction instance was issued.</Description>
 			<DataType>Date</DataType>
 			<Reference type="BUSINESS_TERM">tir76-004</Reference>
-
 			<Value type="EXAMPLE">2018-05-15</Value>
 		</Element>
 		<Element cardinality="0..1">
@@ -84,7 +80,6 @@
 			<DataType>Code</DataType>
 			<Reference type="BUSINESS_TERM">tir76-200</Reference>
 			<Reference type="CODE_LIST">UNCL4343-T76</Reference>
-
 			<Value type="EXAMPLE">AP</Value>
 		</Element>
 		<Element cardinality="0..1">
@@ -99,7 +94,6 @@
 			<Name>Document currency</Name>
 			<Description>The default currency for the offer.</Description>
 			<Reference type="BUSINESS_TERM">tir76-007</Reference>
-
 			<Reference type="CODE_LIST">ISO4217</Reference>
 			<Value type="EXAMPLE">EUR</Value>
 		</Element>
@@ -122,7 +116,6 @@
 				<Description>Used to reference the order that is being responded to.</Description>
 				<DataType>Document reference</DataType>
 				<Reference type="BUSINESS_TERM">tir76-011</Reference>
-
 				<Value type="EXAMPLE">o-23424</Value>
 			</Element>
 		</Element>
@@ -135,7 +128,6 @@
 				<Name>Order change document reference</Name>
 				<Description>Used to reference the order change that is being responded to.</Description>
 				<DataType>Document reference</DataType>
-
 				<Value type="EXAMPLE">oc-23424</Value>
 			</Element>
 		</Element>
@@ -170,7 +162,6 @@
 						<Description>Identifies a party.</Description>
 						<DataType>Identifier</DataType>
 						<Reference type="BUSINESS_TERM">tir76-059</Reference>
-
 						<Attribute usage="optional">
 							<Term>schemeID</Term>
 							<Name>Scheme identifier</Name>
@@ -228,7 +219,6 @@
 						<Name>Buyer party identification</Name>
 						<Description>An identification for the buyer party.</Description>
 						<Reference type="BUSINESS_TERM">tir76-022</Reference>
-
 
 						<Attribute usage="optional">
 							<Term>schemeID</Term>
@@ -458,7 +448,6 @@
 								seller's system. </Description>
 							<DataType>Identifier</DataType>
 							<Reference type="BUSINESS_TERM">tir76-206</Reference>
-
 							<Value type="EXAMPLE">3249834</Value>
 						</Element>
 					</Element>
@@ -578,7 +567,6 @@
 							<Description>The VAT category code for the item.</Description>
 							<DataType>Code</DataType>
 							<Reference type="BUSINESS_TERM">tir76-150</Reference>
-
 							<Reference type="CODE_LIST">UNCL5305</Reference>
 							<Value type="EXAMPLE">S</Value>
 						</Element>
@@ -675,7 +663,6 @@
 					<Description>Used to reference the initial order line that correspondes to the
 						response.All order lines should be stated when an order is changed.</Description>
 					<Reference type="BUSINESS_TERM">tir76-201</Reference>
-
 					<Value type="EXAMPLE">34</Value>
 				</Element>
 			</Element>

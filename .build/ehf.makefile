@@ -1,13 +1,13 @@
 #!make
 # This is a generated file. Please make sure to edit source files.
 PROJECT := $(if $(PROJECT),$(PROJECT),$(shell dirname $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))))
+VERSION := $(if $(GITHUB_REF),$(shell echo "$(GITHUB_REF)" | sed "s:.*/::g"),$(shell date -u +%Y%m%d%H%M%Sz))
 IDENIFIER := $(if $(IDENIFIER),$(IDENIFIER),unknown)
 TITLE := $(if $(TITLE),$(TITLE),Unknown)
 RELEASE := $(if $(RELEASE),$(RELEASE),Unofficial)
 DOCS_FOLDER := $(if $(DOCS_FOLDER),$(DOCS_FOLDER),docs)
 RULES_FOLDER := $(if $(RULES_FOLDER),$(RULES_FOLDER),rules)
 RULES_IDENT := $(if $(RULES_IDENT),$(RULES_IDENT),rules)
-VERSION := $(if $(GITHUB_REF),$(shell echo "$(GITHUB_REF)" | sed "s:.*/::g"),snapshot)
 BUILD = structure example schematron xsd xslt rules docs static
 .DEFAULT_GOAL = default
 define docker_pull
