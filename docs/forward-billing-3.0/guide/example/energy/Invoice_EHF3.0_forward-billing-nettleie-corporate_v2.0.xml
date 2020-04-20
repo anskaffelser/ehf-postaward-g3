@@ -72,7 +72,9 @@
       <cac:PartyIdentification>
         <cbc:ID>hn0073648</cbc:ID>
       </cac:PartyIdentification>
-      <cbc:Name>Kraftselskapet AS</cbc:Name>
+      <cac:PartyName>
+        <cbc:Name>Kraftselskapet AS</cbc:Name>
+      </cac:PartyName>
       <cac:PostalAddress>
         <cbc:StreetName>Kraftveien 4</cbc:StreetName>
         <cbc:CityName>Oslo</cbc:CityName>
