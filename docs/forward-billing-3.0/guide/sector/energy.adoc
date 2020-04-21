@@ -98,7 +98,9 @@ The power supplier is in PEPPOL BIS Billing 3.0/ forward billing identified in t
     <cac:PartyIdentification>
       <cbc:ID>hn0073648</cbc:ID>
     </cac:PartyIdentification>
-    <cbc:Name>Kraftselskapet AS</cbc:Name>
+    <cac:PartyName>
+      <cbc:Name>Kraftselskapet AS</cbc:Name>
+    </cac:PartyName>
     <cac:PostalAddress>
       <cbc:StreetName>Kraftveien 4</cbc:StreetName>
       <cbc:CityName>Oslo</cbc:CityName>

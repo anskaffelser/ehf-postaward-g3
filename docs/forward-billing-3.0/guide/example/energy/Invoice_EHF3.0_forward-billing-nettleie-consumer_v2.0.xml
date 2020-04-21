@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
   <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0#conformant#urn:fdc:anskaffelser.no:2019:ehf:forward-billing:3.0</cbc:CustomizationID>
   <cbc:ProfileID>urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:08:1.0</cbc:ProfileID>
   <cbc:ID>0997462625</cbc:ID>
@@ -17,17 +19,20 @@
     <cbc:ID schemeID="AVE">707057500011223344</cbc:ID>
     <cbc:DocumentTypeCode>130</cbc:DocumentTypeCode>
   </cac:AdditionalDocumentReference>
+
   <cac:AdditionalDocumentReference>
     <!--Dersom ID=YYYY-MM-DD så er sluttkunden en privatkunde med kundenavn i DocumentDescription-->
     <cbc:ID>1985-02-14</cbc:ID>
     <cbc:DocumentDescription>Ola Nordmann</cbc:DocumentDescription>
   </cac:AdditionalDocumentReference>
+
   <cac:AdditionalDocumentReference>
     <cbc:ID>Original invoice</cbc:ID>
     <cac:Attachment>
       <cbc:EmbeddedDocumentBinaryObject filename="originalinvoice.pdf" mimeCode="application/pdf">QmFzZTY0IGNvbnRlbnQgZXhhbXBsZQ==</cbc:EmbeddedDocumentBinaryObject>
     </cac:Attachment>
   </cac:AdditionalDocumentReference>
+
   <!--Avsendende nettselskap -->
   <cac:AccountingSupplierParty>
     <cac:Party>
@@ -65,6 +70,7 @@
       </cac:PartyLegalEntity>
     </cac:Party>
   </cac:AccountingSupplierParty>
+
   <cac:AccountingCustomerParty>
     <cac:Party>
       <!--Kraftselskapets orgnummer og fakturainformasjon-->
@@ -89,6 +95,7 @@
       </cac:PartyLegalEntity>
     </cac:Party>
   </cac:AccountingCustomerParty>
+
   <!--Anleggsadresse-->
   <cac:Delivery>
     <cac:DeliveryLocation>
@@ -102,6 +109,7 @@
       </cac:Address>
     </cac:DeliveryLocation>
   </cac:Delivery>
+
   <cac:PaymentMeans>
     <cbc:PaymentMeansCode name="Debit transfer">31</cbc:PaymentMeansCode>
     <cbc:PaymentID>0003434323213231</cbc:PaymentID>
@@ -112,6 +120,7 @@
       </cac:FinancialInstitutionBranch>
     </cac:PayeeFinancialAccount>
   </cac:PaymentMeans>
+
   <cac:TaxTotal>
     <cbc:TaxAmount currencyID="NOK">308.63</cbc:TaxAmount>
     <cac:TaxSubtotal>
@@ -126,12 +135,14 @@
       </cac:TaxCategory>
     </cac:TaxSubtotal>
   </cac:TaxTotal>
+
   <cac:LegalMonetaryTotal>
     <cbc:LineExtensionAmount currencyID="NOK">1234.71</cbc:LineExtensionAmount>
     <cbc:TaxExclusiveAmount currencyID="NOK">1234.71</cbc:TaxExclusiveAmount>
     <cbc:TaxInclusiveAmount currencyID="NOK">1543.34</cbc:TaxInclusiveAmount>
     <cbc:PayableAmount currencyID="NOK">1543.34</cbc:PayableAmount>
   </cac:LegalMonetaryTotal>
+
   <cac:InvoiceLine>
     <cbc:ID>1</cbc:ID>
     <!-- PriceAmount / BaseQuantity * InvoicedQuantity = LineExtensionAmount-->
@@ -163,6 +174,7 @@
       <cbc:BaseQuantity unitCode="DAY">365</cbc:BaseQuantity>
     </cac:Price>
   </cac:InvoiceLine>
+
   <cac:InvoiceLine>
     <cbc:ID>2</cbc:ID>
     <cbc:InvoicedQuantity unitCode="KWH">2561.00</cbc:InvoicedQuantity>
