@@ -1,4 +1,4 @@
-:shared-dir: /../../_common
+:shared-dir: ../../_common
 :lang: en
 :doctitle: Changelog EHF Forward Billing 3.0
 
