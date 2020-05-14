@@ -2,8 +2,4 @@
 |===
 | Issue | Description | Type
 
-| -
-| Inital 3.0 version
-| -
-
 |===

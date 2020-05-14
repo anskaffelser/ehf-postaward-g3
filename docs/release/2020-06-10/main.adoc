@@ -1,6 +1,6 @@
 :shared-dir: ../../_common
 :lang: en
-:doctitle: Release 2020-03-23
+:doctitle: Release 2020-06-10
 
 include::{shared-dir}/settings.adoc[]
 
@@ -21,9 +21,9 @@ include::{shared-dir}/settings.adoc[]
 // include::../../billing-3.0/norway/changelog/2020-03-23-3.0.3.adoc[]
 
 
-// == EHF Catalogue 3.0.0
+== EHF Catalogue 3.0.1
 
-// include::../../catalogue-3.0/changelog/2019-12-10-3.0.0.adoc[]
+include::../../catalogue-3.0/changelog/2020-06-10-3.0.1.adoc[]
 
 
 // == EHF Despatch Advice 3.0.0
@@ -36,19 +36,19 @@ include::{shared-dir}/settings.adoc[]
 // include::../../forward-billing-3.0/changelog/2020-03-23-3.0.1.adoc[]
 
 
-// == EHF Ordering 3.0.0
+== EHF Ordering 3.0.1
 
-// include::../../ordering-3.0/changelog/2019-12-10-3.0.0.adoc[]
-
-
-// == EHF Order Agreement 3.0.0
-
-// include::../../order-agreement-3.0/changelog/2019-12-10-3.0.0.adoc[]
+include::../../ordering-3.0/changelog/2020-06-10-3.0.1.adoc[]
 
 
-// == EHF Punch Out 3.0.0
+== EHF Order Agreement 3.0.1
 
-// include::../../punch-out-3.0/changelog/2019-12-10-3.0.0.adoc[]
+include::../../order-agreement-3.0/changelog/2020-06-10-3.0.1.adoc[]
+
+
+== EHF Punch Out 3.0.1
+
+include::../../punch-out-3.0/changelog/2020-06-10-3.0.1.adoc[]
 
 
 == EHF Reminder 3.0.1
@@ -56,6 +56,6 @@ include::{shared-dir}/settings.adoc[]
 include::../../reminder-3.0/changelog/2020-06-10-3.0.1.adoc[]
 
 
-// == EHF Advanced Ordering 3.0.0
+== EHF Advanced Ordering 3.0.1
 
-// include::../../advanced-ordering-3.0/changelog/2020-03-23-3.0.0.adoc[]
+include::../../advanced-ordering-3.0/changelog/2020-06-10-3.0.1.adoc[]
