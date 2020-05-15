@@ -63,7 +63,7 @@ schutil exclude \
 schutil exclude \
   /src/_source/poacc-billing/rules/sch/CEN-EN16931-UBL.sch \
   /target/schematron-peppol/FORWARD-BILLING-CEN-EN16931-UBL.sch \
-  BR-07
+  BR-07 UBL-CR-665
 schutil exclude \
   /src/_source/poacc-billing/rules/sch/PEPPOL-EN16931-UBL.sch \
   /target/schematron-peppol/FORWARD-BILLING-PEPPOL-EN16931-UBL.sch \

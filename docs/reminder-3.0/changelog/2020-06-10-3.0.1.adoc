@@ -8,4 +8,8 @@
 | Fixing missing link to bundle containing Schematron files on specification homepage.
 | Publising
 
+| -
+| Updated validation rules based on latest release of PEPPOL BIS Billing 3.0.
+| Validator
+
 |===

@@ -1,0 +1,13 @@
+[cols="1,9,2", options="header"]
+|===
+| Issue | Description | Type
+
+| -
+| Updated documentation for use in engery sector
+| Guide
+
+| -
+| Updated validation rules based on latest release of PEPPOL BIS Billing 3.0.
+| Validator
+
+|===
