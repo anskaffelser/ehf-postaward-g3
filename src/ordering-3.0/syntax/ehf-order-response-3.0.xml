@@ -608,7 +608,7 @@
 								<Description>An identifier for the code list used for the Name code, this is bilaterally agreed</Description>
 							</Attribute>
 						</Element>
-						<Element>
+						<Element cardinality="0..1">
 							<Term>cbc:Value</Term>
 							<Name>Item property value</Name>
 							<Description>The value of the item property.</Description>
@@ -641,6 +641,11 @@
 							<Description>Standardized and predefined classification of items properties.</Description>
 							<DataType>Text</DataType>
 							<Reference type="BUSINESS_TERM">tir76-p009</Reference>
+						</Element>
+						<Element cardinality="0..n">
+							<Term>cbc:ListValue</Term>
+							<name>Item property values</name>
+							<DataType>Text</DataType>
 						</Element>
 					</Element>
 				</Element>

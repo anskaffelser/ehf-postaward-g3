@@ -1678,7 +1678,7 @@
 
 							</Attribute>
 						</Element>
-						<Element>
+						<Element cardinality="0..1">
 							<Term>cbc:Value</Term>
 							<Name>Item property value</Name>
 							<Description>The value of the item property.</Description>
@@ -1708,6 +1708,11 @@
 							<DataType>Text</DataType>
 							<Description>Standardized and predefined classification of items properties.</Description>
 							<Reference type="BUSINESS_TERM">tir110-p004</Reference>
+						</Element>
+						<Element cardinality="0..n">
+							<Term>cbc:ListValue</Term>
+							<name>Item property values</name>
+							<DataType>Text</DataType>
 						</Element>
 					</Element>
 					<Element cardinality="0..n">

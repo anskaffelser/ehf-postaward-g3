@@ -2,4 +2,8 @@
 |===
 | Issue | Description | Type
 
+| link:https://github.com/anskaffelser/ehf-postaward-g3/issues/9[#9]
+| Adding support for `ListValue` in `AdditionalItemProperty` when `NameCode` is set.
+| Syntax
+
 |===
