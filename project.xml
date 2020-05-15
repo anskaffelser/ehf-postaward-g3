@@ -90,11 +90,7 @@
         <Title>Release 2019-12-10</Title>
         <Description>Release notes describing changes related to EHF Post-Award G3 in release '2019-12-10'.</Description>
         <Tag>release</Tag>
-        <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
-        <Tag>ordering-3.0</Tag>
-        <Tag>order-agreement-3.0</Tag>
-        <Tag>punch-out-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
@@ -102,10 +98,21 @@
         <Title>Release 2020-03-23</Title>
         <Description>Release notes describing changes related to EHF Post-Award G3 in release '2020-03-23'.</Description>
         <Tag>release</Tag>
-        <Tag>advanced-ordering-3.0</Tag>
         <Tag>billing-3.0</Tag>
         <Tag>forward-billing-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2020-06-10</Path>
+        <Title>Release 2020-06-10</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2020-06-10'.</Description>
+        <Tag>release</Tag>
+        <Tag>catalogue-3.0</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
         <Tag>reminder-3.0</Tag>
+        <Tag>ordering-3.0</Tag>
+        <Tag>order-agreement-3.0</Tag>
+        <Tag>punch-out-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Doc-1</Type>

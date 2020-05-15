@@ -2,4 +2,8 @@
 |===
 | Issue | Description | Type
 
+| link:https://github.com/anskaffelser/ehf-postaward-g3/issues/10[#10]
+| Fixing configuration for VEFA Validator to correctly recognize Order Change and Order Cancellation messages.
+| Validator
+
 |===

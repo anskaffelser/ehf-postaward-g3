@@ -16,7 +16,7 @@
     <configuration>
         <identifier>ehf-09-3.0-change</identifier>
         <title>EHF Advanced Ordering 3.0 - Order Change</title>
-        <declaration type="xml.ubl">urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:09:1.0#urn:fdc:peppol.eu:poacc:trns:order:3:extended:urn:fdc:anskaffelser.no:2019:ehf:spec:3.0</declaration>
+        <declaration type="xml.ubl">urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:09:1.0#urn:fdc:anskaffelser.no:2019:ehf:spec:adv-order-change:3.0</declaration>
         <inherit>ubl-2.2</inherit>
         <file path="sch/EHF-P09-3.0-ORDER-CHANGE.sch" infoUrl="/ehf/g3/rules/{}/" />
     </configuration>
@@ -24,7 +24,7 @@
     <configuration>
         <identifier>ehf-09-3.0-cancellation</identifier>
         <title>EHF Advanced Ordering 3.0 - Order Cancellation</title>
-        <declaration type="xml.ubl">urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:09:1.0#urn:fdc:peppol.eu:poacc:trns:order:3:extended:urn:fdc:anskaffelser.no:2019:ehf:spec:3.0</declaration>
+        <declaration type="xml.ubl">urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:09:1.0#urn:fdc:anskaffelser.no:2019:ehf:spec:adv-order-cancellation:3.0</declaration>
         <inherit>ubl-2.2</inherit>
         <file path="sch/EHF-P09-3.0-ORDER-CANCELLATION.sch" infoUrl="/ehf/g3/rules/{}/" />
     </configuration>
