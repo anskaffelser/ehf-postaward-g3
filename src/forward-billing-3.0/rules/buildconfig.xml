@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
-    <!-- <package>EHF Forward Billing 3.0.0 RC2</package> -->
+    <package>EHF Forward Billing 3.0.2</package>
 
     <testfolder>example</testfolder>
 
@@ -17,7 +17,7 @@
         <title>EHF Forward Billing 3.0 (Profile 08)</title>
         <profileId>urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:08:1.0</profileId>
         <customizationId>urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0#conformant#urn:fdc:anskaffelser.no:2019:ehf:forward-billing:3.0</customizationId>
-        <!-- <inherit>ubl-invoice-2.1</inherit> -->
+        <inherit>ubl-invoice-2.1</inherit>
         <inherit>ehf-forward-billing-base-3.0</inherit>
     </configuration>
 

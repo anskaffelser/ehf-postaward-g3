@@ -116,6 +116,12 @@
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
+        <Path>advanced-ordering-3.0/changelog/</Path>
+        <Title>Changelog</Title>
+        <Tag>advanced-ordering-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
         <Path>ordering-3.0/changelog/</Path>
         <Title>Changelog</Title>
         <Tag>ordering-3.0</Tag>
@@ -131,6 +137,12 @@
         <Path>catalogue-3.0/changelog/</Path>
         <Title>Changelog</Title>
         <Tag>catalogue-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>forward-billing-3.0/changelog/</Path>
+        <Title>Changelog</Title>
+        <Tag>forward-billing-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
