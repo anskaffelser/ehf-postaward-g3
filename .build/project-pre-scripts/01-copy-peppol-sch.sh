@@ -5,7 +5,7 @@ test ! -e /target/schematron-peppol || rm -r /target/schematron-peppol
 mkdir -p /target/schematron-peppol
 
 schutil exclude \
-  /src/_source/poacc-upgrade/rules/sch/parts/PEPPOL-M-T01.sch \
+  /src/src/ordering-3.0/rules/patch/PEPPOL-M-T01.sch \
   /target/schematron-peppol/PEPPOL-M-T01.sch \
   PEPPOL-T01-R031
 
