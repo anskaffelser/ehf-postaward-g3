@@ -7,7 +7,7 @@ for f in $(find /target/examples -type f); do
     cat <<EOF >> $f.tmp
 <!--
 
-This file is distributes as part of $TITLE.
+This file is distributed as part of $TITLE.
 
 Release: $RELEASE
 Timestamp: $TIMESTAMP
@@ -22,7 +22,7 @@ EOF
 done
 
 cat <<EOF >> /target/examples/README
-This archive contains example files distributes as part of $TITLE.
+This archive contains example files distributed as part of $TITLE.
 
 Release: $RELEASE
 Timestamp: $TIMESTAMP

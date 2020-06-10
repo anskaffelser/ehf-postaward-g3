@@ -14,7 +14,7 @@ for f in $(find /target/schematron -type f); do
     cat <<EOF >> $f.tmp
 <!--
 
-This file is distributes as part of $TITLE.
+This file is distributed as part of $TITLE.
 
 Release: $RELEASE
 Timestamp: $TIMESTAMP
@@ -29,7 +29,7 @@ EOF
 done
 
 cat <<EOF >> /target/schematron/README
-This archive contains Schematron files distributes as part of $TITLE.
+This archive contains Schematron files distributed as part of $TITLE.
 
 Release: $RELEASE
 Timestamp: $TIMESTAMP
