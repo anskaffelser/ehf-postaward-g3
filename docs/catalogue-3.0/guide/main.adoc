@@ -35,7 +35,8 @@ include::{source-path}/profiles/1-catalogueonly/principles/index.adoc[]
 
 include::usecase/index.adoc[]
 
-include::{source-path}/transactions/19-catalogue/description/index.adoc[]
+include::description/index.adoc[]
+//include::{source-path}/transactions/19-catalogue/description/index.adoc[]
 
 include::appendix.adoc[]
 

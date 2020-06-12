@@ -1,0 +1,42 @@
+:description-source-path: ../../../../_source/poacc-upgrade/guides/transactions/19-catalogue/description
+=  Description of selected parts of the catalogue message
+
+:leveloffset: +1
+
+include::{description-source-path}/parties.adoc[]
+
+:leveloffset: -1
+
+include::{description-source-path}/actioncode.adoc[]
+
+include::{description-source-path}/itemidentification.adoc[]
+
+include::{description-source-path}/hazardousitem.adoc[]
+
+include::{description-source-path}/itemnameanddescription.adoc[]
+
+include::{description-source-path}/classification.adoc[]
+
+include::{description-source-path}/keyword.adoc[]
+
+include::{description-source-path}/quantitiesandunits.adoc[]
+
+include::{description-source-path}/prices.adoc[]
+
+include::itemlabeling.adoc[]
+
+include::{description-source-path}/relateditem.adoc[]
+
+include::{description-source-path}/logistics.adoc[]
+
+include::{description-source-path}/dimensions.adoc[]
+
+include::{description-source-path}/additionalproperties.adoc[]
+
+include::{description-source-path}/replaceditem.adoc[]
+
+:leveloffset: +1
+
+include::{description-source-path}/../../../shared/files/vat-cat-line.adoc[]
+
+:leveloffset: -1
