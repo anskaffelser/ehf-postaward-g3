@@ -6,7 +6,7 @@ include::{shared-dir}/settings.adoc[]
 
 = {doctitle}
 {name-difi-en}
-v3.0.1
+v3.0.2
 :doctype: book
 :icons: font
 :toc: left
@@ -162,5 +162,3 @@ include::sector/index.adoc[]
 // * link:example/forward-billing-nettleie-consumer.xml[forward-billing-nettleie-consumer.xml]
 
 include::appendix.adoc[]
-
-
