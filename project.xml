@@ -556,16 +556,16 @@
 
     <Tag>
         <Identifier>advanced-ordering-3.0</Identifier>
-        <Title>EHF Advanced Ordering 3.0.1</Title>
+        <Title>EHF Advanced Ordering 3.0</Title>
     </Tag>
     <Tag>
         <Identifier>billing-3.0</Identifier>
-        <Title>EHF Billing 3.0.3</Title>
+        <Title>EHF Billing 3.0</Title>
         <Description>Information related to implementation of EN16931 in Norway.</Description>
     </Tag>
     <Tag>
         <Identifier>catalogue-3.0</Identifier>
-        <Title>EHF Catalogue 3.0.1</Title>
+        <Title>EHF Catalogue 3.0</Title>
     </Tag>
     <Tag>
         <Identifier>despatch-advice-3.0</Identifier>
@@ -573,23 +573,23 @@
     </Tag>
     <Tag>
         <Identifier>forward-billing-3.0</Identifier>
-        <Title>EHF Forward Billing 3.0.2</Title>
+        <Title>EHF Forward Billing 3.0</Title>
     </Tag>
     <Tag>
         <Identifier>ordering-3.0</Identifier>
-        <Title>EHF Ordering 3.0.1</Title>
+        <Title>EHF Ordering 3.0</Title>
     </Tag>
     <Tag>
         <Identifier>order-agreement-3.0</Identifier>
-        <Title>EHF Order Agreement 3.0.1</Title>
+        <Title>EHF Order Agreement 3.0</Title>
     </Tag>
     <Tag>
         <Identifier>punch-out-3.0</Identifier>
-        <Title>EHF Punch Out 3.0.1</Title>
+        <Title>EHF Punch Out 3.0</Title>
     </Tag>
     <Tag>
         <Identifier>reminder-3.0</Identifier>
-        <Title>EHF Reminder 3.0.1</Title>
+        <Title>EHF Reminder 3.0</Title>
     </Tag>
     <Tag>
         <Identifier>payment-request-3.0</Identifier>
