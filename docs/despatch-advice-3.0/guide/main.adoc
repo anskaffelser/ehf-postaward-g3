@@ -8,7 +8,7 @@ include::{shared-dir}/settings.adoc[]
 = {doctitle}
 {name-difi-en}
 v3.0.0
-:description: This document describes the new version of EHF Despatch Advice (called "EHF Pakkseddel"). The document is part of Norwegian "Agency of Public Management and eGovernment" (Difi) standardization work related to electronic commerce.
+:description: This document describes the new version of EHF Despatch Advice (called "EHF Pakkseddel"). The document is part of Norwegian Agency for Public and Financial Management (DFØ) standardization work related to electronic commerce.
 :doctype: book
 :icons: font
 :toc: left
