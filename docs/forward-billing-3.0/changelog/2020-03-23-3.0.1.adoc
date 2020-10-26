@@ -3,7 +3,7 @@
 | Issue | Description | Type
 
 | -
-| Updated documentation for use in engery sector
+| Updated documentation for use in energy sector
 | Guide
 
 |===
