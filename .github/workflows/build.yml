@@ -23,41 +23,37 @@ jobs:
       run: cd target/site && zip -rq ../../site.zip *
 
     - name: Upload validation artifact
-      uses: klakegg/github-upload@v0.9.1
+      uses: k15g/action-github-asset-upload@v1
       if: startsWith(github.ref, 'refs/tags/')
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         file: "target/validator/no.anskaffelser.ehf.postaward.g3-${TAG}.asice"
         label: "Validation artifacts for VEFA Validator 2.x"
         type: "application/vnd.difi.validator.v2+zip"
 
     - name: Upload examples files
-      uses: klakegg/github-upload@v0.9.1
+      uses: k15g/action-github-asset-upload@v1
       if: startsWith(github.ref, 'refs/tags/')
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         file: "target/examples.zip"
         name: "ehf-postaward-g3-examples-${TAG}.zip"
         label: "Example files"
 
     - name: Upload Schematron files
-      uses: klakegg/github-upload@v0.9.1
+      uses: k15g/action-github-asset-upload@v1
       if: startsWith(github.ref, 'refs/tags/')
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         file: "target/schematron.zip"
         name: "ehf-postaward-g3-schematron-${TAG}.zip"
         label: "Schematron files"
 
     - name: Upload site files
-      uses: klakegg/github-upload@v0.9.1
+      uses: k15g/action-github-asset-upload@v1
       if: startsWith(github.ref, 'refs/tags/')
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         file: "site.zip"
         name: "ehf-postaward-g3-site-${TAG}.zip"
         label: "Site files"
