@@ -1,0 +1,11 @@
+
+
+[cols="1,9,2", options="header"]
+|===
+| Issue | Description | Type
+
+| link:https://github.com/anskaffelser/ehf-postaward-g3/issues/13[#13]
+| Removing validation rule `BR-CL-20` in favour of auto generated rule.
+| Validator
+
+|===

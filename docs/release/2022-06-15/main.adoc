@@ -1,0 +1,61 @@
+:shared-dir: ../../_common
+:lang: en
+:doctitle: Release 2022-06-15
+
+include::{shared-dir}/settings.adoc[]
+
+= {doctitle}
+{name-difi-en}
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:source-language: xml
+:sectanchors:
+:title-logo-image: {shared-dir}/images/logo.jpg
+
+
+// == EHF Billing 3.0.3
+
+// include::../../billing-3.0/norway/changelog/2020-03-23-3.0.3.adoc[]
+
+
+// == EHF Catalogue 3.0.1
+
+// include::../../catalogue-3.0/changelog/2020-06-10-3.0.1.adoc[]
+
+
+// == EHF Despatch Advice 3.0.0
+
+// include::../../despatch-advice-3.0/changelog/2019-12-10-3.0.0.adoc[]
+
+
+// == EHF Forward Billing 3.0.2
+
+// include::../../forward-billing-3.0/changelog/2020-06-10-3.0.2.adoc[]
+
+
+// == EHF Ordering 3.0.1
+
+// include::../../ordering-3.0/changelog/2020-06-10-3.0.1.adoc[]
+
+
+// == EHF Order Agreement 3.0.1
+
+// include::../../order-agreement-3.0/changelog/2020-06-10-3.0.1.adoc[]
+
+
+// == EHF Punch Out 3.0.1
+
+// include::../../punch-out-3.0/changelog/2020-06-10-3.0.1.adoc[]
+
+
+== EHF Reminder 3.0.2
+
+include::../../reminder-3.0/changelog/2022-06-15-3.0.2.adoc[]
+
+
+// == EHF Advanced Ordering 3.0.1
+
+// include::../../advanced-ordering-3.0/changelog/2020-06-10-3.0.1.adoc[]

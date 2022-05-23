@@ -53,7 +53,7 @@ cp \
 schutil exclude \
   /src/_source/poacc-billing/rules/sch/CEN-EN16931-UBL.sch \
   /target/schematron-peppol/REMINDER-CEN-EN16931-UBL.sch \
-  BR-04
+  BR-04,BR-CL-20
 schutil exclude \
   /src/_source/poacc-billing/rules/sch/PEPPOL-EN16931-UBL.sch \
   /target/schematron-peppol/REMINDER-PEPPOL-EN16931-UBL.sch \
