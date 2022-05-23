@@ -14,8 +14,18 @@
 
 	<!-- Functions -->
 
+	<xi:include href="../../../_common/rules/sch/function/abn.xml"/>
+	<xi:include href="../../../_common/rules/sch/function/addPIVA.xml"/>
+	<xi:include href="../../../_common/rules/sch/function/cat2str.xml"/>
+	<xi:include href="../../../_common/rules/sch/function/checkCF.xml"/>
+	<xi:include href="../../../_common/rules/sch/function/checkCF16.xml"/>
+	<xi:include href="../../../_common/rules/sch/function/checkCodiceIPA.xml"/>
+	<xi:include href="../../../_common/rules/sch/function/checkPIVA.xml"/>
+	<xi:include href="../../../_common/rules/sch/function/checkPIVAseIT.xml"/>
 	<xi:include href="../../../_common/rules/sch/function/gln.xml"/>
 	<xi:include href="../../../_common/rules/sch/function/mod11.xml"/>
+	<xi:include href="../../../_common/rules/sch/function/mod97-0208.xml"/>
+	<xi:include href="../../../_common/rules/sch/function/slack.xml"/>
 
 	<!-- Rules -->
 

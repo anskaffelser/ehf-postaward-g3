@@ -21,14 +21,14 @@ include::{shared-dir}/settings.adoc[]
 // include::../../billing-3.0/norway/changelog/2020-03-23-3.0.3.adoc[]
 
 
-// == EHF Catalogue 3.0.1
+== EHF Catalogue 3.0.2
 
-// include::../../catalogue-3.0/changelog/2020-06-10-3.0.1.adoc[]
+include::../../catalogue-3.0/changelog/2022-06-15-3.0.2.adoc[]
 
 
-// == EHF Despatch Advice 3.0.0
+== EHF Despatch Advice 3.0.1
 
-// include::../../despatch-advice-3.0/changelog/2019-12-10-3.0.0.adoc[]
+include::../../despatch-advice-3.0/changelog/2022-06-15-3.0.1.adoc[]
 
 
 // == EHF Forward Billing 3.0.2
@@ -36,19 +36,24 @@ include::{shared-dir}/settings.adoc[]
 // include::../../forward-billing-3.0/changelog/2020-06-10-3.0.2.adoc[]
 
 
-// == EHF Ordering 3.0.1
+== EHF Ordering 3.0.2
 
-// include::../../ordering-3.0/changelog/2020-06-10-3.0.1.adoc[]
-
-
-// == EHF Order Agreement 3.0.1
-
-// include::../../order-agreement-3.0/changelog/2020-06-10-3.0.1.adoc[]
+include::../../ordering-3.0/changelog/2022-06-15-3.0.2.adoc[]
 
 
-// == EHF Punch Out 3.0.1
+== EHF Order Agreement 3.0.2
 
-// include::../../punch-out-3.0/changelog/2020-06-10-3.0.1.adoc[]
+include::../../order-agreement-3.0/changelog/2022-06-15-3.0.2.adoc[]
+
+
+== EHF Payment Request 3.0.1
+
+include::../../payment-request-3.0/changelog/2022-06-15-3.0.1.adoc[]
+
+
+== EHF Punch Out 3.0.2
+
+include::../../punch-out-3.0/changelog/2022-06-15-3.0.2.adoc[]
 
 
 == EHF Reminder 3.0.2
@@ -56,6 +61,6 @@ include::{shared-dir}/settings.adoc[]
 include::../../reminder-3.0/changelog/2022-06-15-3.0.2.adoc[]
 
 
-// == EHF Advanced Ordering 3.0.1
+== EHF Advanced Ordering 3.0.2
 
-// include::../../advanced-ordering-3.0/changelog/2020-06-10-3.0.1.adoc[]
+include::../../advanced-ordering-3.0/changelog/2022-06-15-3.0.2.adoc[]

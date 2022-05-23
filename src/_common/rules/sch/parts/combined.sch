@@ -14,7 +14,18 @@
 
 	<!-- Functions -->
 
+	<xi:include href="../function/abn.xml"/>
+	<xi:include href="../function/addPIVA.xml"/>
+	<xi:include href="../function/cat2str.xml"/>
+	<xi:include href="../function/checkCF.xml"/>
+	<xi:include href="../function/checkCF16.xml"/>
+	<xi:include href="../function/checkCodiceIPA.xml"/>
+	<xi:include href="../function/checkPIVA.xml"/>
+	<xi:include href="../function/checkPIVAseIT.xml"/>
+	<xi:include href="../function/gln.xml"/>
 	<xi:include href="../function/mod11.xml"/>
+	<xi:include href="../function/mod97-0208.xml"/>
+	<xi:include href="../function/slack.xml"/>
 
 	<!-- Rules -->
 

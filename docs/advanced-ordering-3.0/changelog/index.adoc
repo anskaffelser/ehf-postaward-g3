@@ -4,6 +4,11 @@
 :leveloffset: +1
 
 
+= Version 3.0.2 (2022-06-15) [[changelog-3.0.2]]
+
+include::2022-06-15-3.0.2.adoc[]
+
+
 = Version 3.0.1 (2020-06-10) [[changelog-3.0.1]]
 
 include::2020-06-10-3.0.1.adoc[]
