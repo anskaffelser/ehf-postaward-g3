@@ -59,7 +59,9 @@ for sch in $(ls /src/src/*/rules/sch/*.sch | sort); do
 echo "Prepare: $sch"
 spec=$(echo $sch | cut -d '/' -f 4)
 mkdir -p /target/schematron/$spec
-schematron prepare $sch /target/schematron/$spec/$(basename $sch)
+schematron include $sch /target/schematron/$spec/$(basename $sch).step1
+schematron expand /target/schematron/$spec/$(basename $sch).step1 /target/schematron/$spec/$(basename $sch)
+rm /target/schematron/$spec/$(basename $sch).step1
 done
 test ! -r /src/.build/script/schematron.sh || . /src/.build/script/schematron.sh
 cd /target/schematron
