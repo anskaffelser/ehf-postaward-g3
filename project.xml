@@ -333,19 +333,19 @@
     <!-- Code list -->
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/ActionCode_header.xml</Path>
+        <Path>src/_common/codelist/ActionCode_header.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/ActionCode_line.xml</Path>
+        <Path>src/_common/codelist/ActionCode_line.xml</Path>
     </Resource>
     <!-- <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/ClarificationListID.xml</Path>
+        <Path>src/_common/codelist/ClarificationListID.xml</Path>
     </Resource> -->
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/eas.xml</Path>
+        <Path>src/_common/codelist/eas.xml</Path>
         <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
@@ -356,11 +356,11 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/GS17009.xml</Path>
+        <Path>src/_common/codelist/GS17009.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/ICD.xml</Path>
+        <Path>src/_common/codelist/ICD.xml</Path>
         <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
@@ -371,15 +371,15 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/Image.xml</Path>
+        <Path>src/_common/codelist/Image.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/ISO3166-1_Alpha2.xml</Path>
+        <Path>src/_common/codelist/ISO3166-1_Alpha2.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/ISO4217_2015.xml</Path>
+        <Path>src/_common/codelist/ISO4217_2015.xml</Path>
         <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
@@ -389,7 +389,7 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/MimeCode.xml</Path>
+        <Path>src/_common/codelist/MimeCode.xml</Path>
         <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -398,75 +398,75 @@
     </Resource>
     <!-- <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/OPStatusAction.xml</Path>
+        <Path>src/_common/codelist/OPStatusAction.xml</Path>
     </Resource> -->
     <!-- <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/OPStatusReason.xml</Path>
+        <Path>src/_common/codelist/OPStatusReason.xml</Path>
     </Resource> -->
     <!-- <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/StatusReason.xml</Path>
+        <Path>src/_common/codelist/StatusReason.xml</Path>
     </Resource> -->
     <!-- <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/TransactionConditions.xml</Path>
+        <Path>src/_common/codelist/TransactionConditions.xml</Path>
     </Resource> -->
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/TrueFalse.xml</Path>
+        <Path>src/_common/codelist/TrueFalse.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL1001_T01.xml</Path>
+        <Path>src/_common/codelist/UNCL1001_T01.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL1001.xml</Path>
+        <Path>src/_common/codelist/UNCL1001.xml</Path>
     </Resource>
     <!-- <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL1225.xml</Path>
+        <Path>src/_common/codelist/UNCL1225.xml</Path>
     </Resource> -->
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL1229.xml</Path>
+        <Path>src/_common/codelist/UNCL1229.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL4343-T76.xml</Path>
+        <Path>src/_common/codelist/UNCL4343-T76.xml</Path>
     </Resource>
     <!-- <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL4343-T111.xml</Path>
+        <Path>src/_common/codelist/UNCL4343-T111.xml</Path>
     </Resource> -->
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL4343.xml</Path>
+        <Path>src/_common/codelist/UNCL4343.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL5189.xml</Path>
+        <Path>src/_common/codelist/UNCL5189.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL5305.xml</Path>
+        <Path>src/_common/codelist/UNCL5305.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL5387.xml</Path>
+        <Path>src/_common/codelist/UNCL5387.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL6313-T16.xml</Path>
+        <Path>src/_common/codelist/UNCL6313-T16.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL6313.xml</Path>
+        <Path>src/_common/codelist/UNCL6313.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL7143.xml</Path>
+        <Path>src/_common/codelist/UNCL7143.xml</Path>
         <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>ordering-3.0</Tag>
@@ -475,15 +475,15 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL7161.xml</Path>
+        <Path>src/_common/codelist/UNCL7161.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNCL8273.xml</Path>
+        <Path>src/_common/codelist/UNCL8273.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNECERec20-11e.xml</Path>
+        <Path>src/_common/codelist/UNECERec20-11e.xml</Path>
         <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
@@ -493,26 +493,26 @@
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-upgrade/structure/codelist/UNECERec21-9e.xml</Path>
+        <Path>src/_common/codelist/UNECERec21-9e.xml</Path>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-billing/structure/codelist/SEPA.xml</Path>
+        <Path>src/_common/codelist/SEPA.xml</Path>
         <Tag>reminder-3.0</Tag>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-billing/structure/codelist/UNCL1153.xml</Path>
+        <Path>src/_common/codelist/UNCL1153.xml</Path>
         <Tag>reminder-3.0</Tag>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-billing/structure/codelist/UNCL2005.xml</Path>
+        <Path>src/_common/codelist/UNCL2005.xml</Path>
         <Tag>reminder-3.0</Tag>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
-        <Path>_source/poacc-billing/structure/codelist/UNCL4461.xml</Path>
+        <Path>src/_common/codelist/UNCL4461.xml</Path>
         <Tag>reminder-3.0</Tag>
     </Resource>
     <Resource>

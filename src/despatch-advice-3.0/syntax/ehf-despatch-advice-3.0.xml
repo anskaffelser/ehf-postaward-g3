@@ -1079,7 +1079,6 @@
 						<Description>Identifies the order that the reference order line belongs
 							to.</Description>
 						<Reference type="BUSINESS_TERM">tir16-p010</Reference>
-						<Reference type="RULE">PEPPOL-T16-R002</Reference>
 					</Element>
 				</Element>
 			</Element>

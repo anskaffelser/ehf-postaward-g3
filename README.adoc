@@ -1,3 +1,3 @@
 = EHF Post-Award (G3)
 
-Please use link:https://vefa.difi.no/[VEFA portal] for easy access to EHF resources and other related resources.
+Please use link:https://anskaffelser.dev/[Anskaffelser.dev] for easy access to EHF resources and other related resources.
