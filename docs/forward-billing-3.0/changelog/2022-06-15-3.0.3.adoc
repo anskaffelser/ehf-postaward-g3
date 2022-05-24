@@ -7,7 +7,24 @@
 | Validator
 
 | -
-| Updated codelists intherited from OpenPeppol.
+a| Updated codelists intherited from OpenPeppol. The following codes are introduces in the specification in the spring release and available for use in the autumn release:
+
+* ICD:
+** Added: `0194`, `0197`, `0198`, `0199`, `0200`, `0201`, `0202`, `0203`, `0204`, `0205`, `0206`, `0207`, `0208`, `0209`, `0210`, `0211`, `0212`, `0213`, `0214`, `0215`, `0216`
+* eas:
+** Added: `0130`, `0147`, `0151`, `0170`, `0183`, `0188`, `0201`, `0202`, `0204`, `0208`, `0209`, `0210`, `0211`, `0212`, `0213`, `0215`, `0216`
+** Removed: `9902`, `9904`, `9905`, `9917`, `9921`, `9956`, `9958`
+* ISO3166-1 Alpha2:
+** Added: `1A`, `XI`
+* UNCL7143:
+** Added: `TSQ`, `TSR`, `TSS`, `TST`, `TSU`
+* UNECERec20:
+** Added: `DBM`, `DBW`, `FNU`, `HMO`, `HWE`, `IUG`, `KWN`, `KWS`, `KWY`, `MKD`, `MKM`, `MKW`, `MNJ`, `MQD`, `MQM`, `MQW`, `MRD`, `MRW`, `MTZ`, `NTU`, `ODG`, `ODK`, `ODM`, `Q41`, `Q42`, `Z9`
+* UNECERec21 (as extension to UNECERec20):
+** Added: `X01`, `X02`, `X03`, `X04`, `X05`, `X06`, `X07`, `X08`, `X09`, `XOG`, `XOH`, `XOI`, `XOJ`, `XOL`, `XOM`, `XON`, `XOP`, `XOQ`, `XOR`, `XOS`, `XOV`, `XOW`, `XOX`, `XOY`, `XOZ`, `XP1`, `XP3`, `XP4`, `XSX`, `XZZ`
+* UNECERec21:
+** `01`, `02`, `03`, `04`, `05`, `06`, `07`, `08`, `09`, `OG`, `OH`, `OI`, `OJ`, `OM`, `ON`, `OP`, `OQ`, `OR`, `OS`, `OV`, `OW`, `OX`, `OY`, `OZ`, `P1`, `P3`, `P4`, `SX`
+
 | Validator
 
 |===

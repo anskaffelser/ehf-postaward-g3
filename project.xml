@@ -372,6 +372,7 @@
     <Resource>
         <Type>CodeList-1</Type>
         <Path>src/_common/codelist/Image.xml</Path>
+        <Tag>catalogue-3.0</Tag>
     </Resource>
     <Resource>
         <Type>CodeList-1</Type>
