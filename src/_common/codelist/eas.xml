@@ -163,6 +163,18 @@
         <Name>Danish Ministry of the Interior and Health</Name>
     </Code>
     <Code>
+        <Id>9902</Id>
+        <Name>The Danish Commerce and Companies Agency (DEPRECATED)</Name>
+    </Code>
+    <Code>
+        <Id>9904</Id>
+        <Name>"Danish Ministry of Taxation, Central Customs and Tax Administration" (DEPRECATED)</Name>
+    </Code>
+    <Code>
+        <Id>9905</Id>
+        <Name>Danish VANS providers (DEPRECATED)</Name>
+    </Code>
+    <Code>
         <Id>9906</Id>
         <Name>Ufficio responsabile gestione partite IVA</Name>
     </Code>
@@ -187,6 +199,10 @@
         <Name>"Österreichisches Verwaltungs bzw. Organisationskennzeichen"</Name>
     </Code>
     <Code>
+        <Id>9917</Id>
+        <Name>Kennitala - Iceland legal id for organizations and individuals (DEPRECATED)</Name>
+    </Code>
+    <Code>
         <Id>9918</Id>
         <Name>"SOCIETY FOR WORLDWIDE INTERBANK FINANCIAL, TELECOMMUNICATION S.W.I.F.T"</Name>
     </Code>
@@ -197,6 +213,10 @@
     <Code>
         <Id>9920</Id>
         <Name>Agencia Española de Administración Tributaria </Name>
+    </Code>
+    <Code>
+        <Id>9921</Id>
+        <Name>Indice delle Pubbliche Amministrazioni (DEPRECATED)</Name>
     </Code>
     <Code>
         <Id>9922</Id>
@@ -331,8 +351,16 @@
         <Name>Swedish VAT number</Name>
     </Code>
     <Code>
+        <Id>9956</Id>
+        <Name>Belgian Crossroad Bank of Enterprises (DEPRECATED)</Name>
+    </Code>
+    <Code>
         <Id>9957</Id>
         <Name>French VAT number</Name>
+    </Code>
+    <Code>
+        <Id>9958</Id>
+        <Name>German Leitweg ID (DEPRECATED)</Name>
     </Code>
 
 </CodeList>
