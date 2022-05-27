@@ -397,6 +397,12 @@
         <Tag>order-agreement-3.0</Tag>
         <Tag>punch-out-3.0</Tag>
     </Resource>
+    <Resource>
+        <Type>CodeList-1</Type>
+        <Path>src/_common/codelist/NA.xml</Path>
+        <Tag>catalogue-3.0</Tag>
+        <Tag>punch-out-3.0</Tag>
+    </Resource>
     <!-- <Resource>
         <Type>CodeList-1</Type>
         <Path>src/_common/codelist/OPStatusAction.xml</Path>

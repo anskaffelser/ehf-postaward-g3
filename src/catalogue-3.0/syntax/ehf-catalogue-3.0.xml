@@ -1802,7 +1802,8 @@
 						<Description>The UBL structure used for item labeling requires this elements,
 							use the value NA.</Description>
 						<DataType>Code</DataType>
-						<Value type="FIXED">NA</Value>
+						<Reference type="CODE_LIST">NA</Reference>
+						<Value type="EXAMPLE">NA</Value>
 					</Element>
 					<Element>
 						<Term>cbc:CertificateType</Term>
