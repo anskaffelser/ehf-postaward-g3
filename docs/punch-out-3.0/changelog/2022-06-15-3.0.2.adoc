@@ -29,4 +29,8 @@ Use of added codes will result in error in this release and will become availabl
 
 | Validator
 
+| -
+| Adding GS1 codelist 'PackagingMarkedLabelAccreditationCode' in addition to `NA` value for certificate types.
+| Validator
+
 |===

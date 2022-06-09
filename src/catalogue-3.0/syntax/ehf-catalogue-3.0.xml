@@ -1803,6 +1803,7 @@
 							use the value NA.</Description>
 						<DataType>Code</DataType>
 						<Reference type="CODE_LIST">NA</Reference>
+						<Reference type="CODE_LIST">PackagingMarkedLabelAccreditationCode</Reference>
 						<Value type="EXAMPLE">NA</Value>
 					</Element>
 					<Element>
