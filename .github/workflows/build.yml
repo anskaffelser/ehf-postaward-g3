@@ -4,69 +4,74 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-      with:
-        submodules: true
+      - name: Checkout
+        uses: actions/checkout@v1
+        with:
+          submodules: true
 
-    - name: Pull images
-      run: make pull
+      - name: Prepare version labels
+        uses: k15g/action-version-labels@edge
+        with:
+          match: ^refs/tags/
+          version_regex: ^refs/tags/(.+)$
 
-    - name: Build
-      run: make
+      - name: Pull images
+        run: make pull
 
-    - name: Package site files
-      run: cd target/site && zip -rq ../../site.zip *
+      - name: Build
+        run: make
 
-    - name: Upload validation artifact
-      uses: k15g/action-github-asset-upload@v1
-      if: startsWith(github.ref, 'refs/tags/')
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        file: "target/validator/no.anskaffelser.ehf.postaward.g3-${TAG}.asice"
-        label: "Validation artifacts for VEFA Validator 2.x"
-        type: "application/vnd.difi.validator.v2+zip"
+      - name: Package site files
+        run: cd target/site && zip -rq ../../site.zip *
 
-    - name: Upload examples files
-      uses: k15g/action-github-asset-upload@v1
-      if: startsWith(github.ref, 'refs/tags/')
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        file: "target/examples.zip"
-        name: "ehf-postaward-g3-examples-${TAG}.zip"
-        label: "Example files"
+      - name: Upload validation artifact
+        uses: k15g/action-github-asset-upload@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          file: "target/validator/no.anskaffelser.ehf.postaward.g3-${{ env.VERSION }}.asice"
+          label: "Validation artifacts for VEFA Validator 2.x"
+          type: "application/vnd.difi.validator.v2+zip"
 
-    - name: Upload Schematron files
-      uses: k15g/action-github-asset-upload@v1
-      if: startsWith(github.ref, 'refs/tags/')
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        file: "target/schematron.zip"
-        name: "ehf-postaward-g3-schematron-${TAG}.zip"
-        label: "Schematron files"
+      - name: Upload examples files
+        uses: k15g/action-github-asset-upload@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          file: "target/examples.zip"
+          name: "ehf-postaward-g3-examples-${{ env.VERSION }}.zip"
+          label: "Example files"
 
-    - name: Upload site files
-      uses: k15g/action-github-asset-upload@v1
-      if: startsWith(github.ref, 'refs/tags/')
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        file: "site.zip"
-        name: "ehf-postaward-g3-site-${TAG}.zip"
-        label: "Site files"
+      - name: Upload Schematron files
+        uses: k15g/action-github-asset-upload@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          file: "target/schematron.zip"
+          name: "ehf-postaward-g3-schematron-${{ env.VERSION }}.zip"
+          label: "Schematron files"
 
-    - name: Deploy [Default]
-      env:
-        DEPLOY_SERVICE: ${{ secrets.DEPLOY_SERVICE }}
-        DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-      run: docker run --rm -i -e DEPLOY_SERVICE -e DEPLOY_TOKEN -v $(pwd):/src -w /src klakegg/deployer:edge push
+      - name: Upload site files
+        uses: k15g/action-github-asset-upload@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          file: "site.zip"
+          name: "ehf-postaward-g3-site-${{ env.VERSION }}.zip"
+          label: "Site files"
 
-    - name: Deploy [Release]
-      if: startsWith(github.ref, 'refs/tags/')
-      env:
-        DEPLOY_SERVICE: ${{ secrets.DEPLOY_SERVICE }}
-        DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-      run: docker run --rm -i -e DEPLOY_SERVICE -e DEPLOY_TOKEN -v $(pwd):/src -w /src klakegg/deployer:edge push -m release
+      - name: Deploy [Default]
+        env:
+          DEPLOY_SERVICE: ${{ secrets.DEPLOY_SERVICE }}
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        run: docker run --rm -i -e DEPLOY_SERVICE -e DEPLOY_TOKEN -v $(pwd):/src -w /src klakegg/deployer:edge push
+
+      - name: Deploy [Release]
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          DEPLOY_SERVICE: ${{ secrets.DEPLOY_SERVICE }}
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        run: docker run --rm -i -e DEPLOY_SERVICE -e DEPLOY_TOKEN -v $(pwd):/src -w /src klakegg/deployer:edge push -m release
