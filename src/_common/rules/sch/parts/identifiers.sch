@@ -51,59 +51,6 @@
     </rule> 
     <rule context="cbc:EndpointID[@schemeID = '0151'] | cac:PartyIdentification/cbc:ID[@schemeID = '0151'] | cbc:CompanyID[@schemeID = '0151']">
       <assert id="PEPPOL-COMMON-R050" test="u:abn(normalize-space())" flag="warning">Australian Business Number (ABN) MUST be stated in the correct format.</assert>
-    </rule> 
-
-    <!-- Specific for EHF G3 release 2022-06-15: -->
-
-    <let name="ICD_ADDED" value="tokenize('0194 0197 0198 0199 0200 0201 0202 0203 0204 0205 0206 0207 0208 0209 0210 0211 0212 0213 0214 0215 0216', '\s')"/>
-    <let name="EAS_ADDED" value="tokenize('0130 0147 0151 0170 0183 0188 0201 0202 0204 0208 0209 0210 0211 0212 0213 0215 0216', '\s')"/>
-    <let name="EAS_DEPRECATED" value="tokenize('9902 9904 9905 9917 9921 9956 9958', '\s')"/>
-    <let name="IMAGE_ADDED" value="tokenize('TRADE_ITEM_DESCRIPTION', '\s')"/>
-    <let name="ISO3166_ADDED" value="tokenize('1A XI', '\s')"/>
-    <let name="UNCL7143_ADDED" value="tokenize('TSQ TSR TSS TST TSU', '\s')"/>
-    <let name="UNECERec20_ADDED" value="tokenize('DBM DBW FNU HMO HWE IUG KWN KWS KWY MKD MKM MKW MNJ MQD MQM MQW MRD MRW MTZ NTU ODG ODK ODM Q41 Q42 Z9 X01 X02 X03 X04 X05 X06 X07 X08 X09 XOG XOH XOI XOJ XOL XOM XON XOP XOQ XOR XOS XOV XOW XOX XOY XOZ XP1 XP3 XP4 XSX XZZ', '\s')"/>
-    <let name="UNECERec21_ADDED" value="tokenize('01 02 03 04 05 06 07 08 09 OG OH OI OJ OM ON OP OQ OR OS OV OW OX OY OZ P1 P3 P4 SX', '\s')"/>
-
-    <!-- ICD -->
-    <rule context="cac:PartyIdentification/cbc:ID/@schemeID | cac:PartyLegalEntity/cbc:CompanyID/@schemeID | cac:Item/cac:StandardItemIdentification/cbc:ID/@schemeID | cac:Delivery/cac:DeliveryLocation/cbc:ID/@schemeID">
-      <assert id="EHF-CL-N001" test="not(@schemeID) or not(some $code in $ICD_ADDED satisfies $code = @schemeID)" flag="fatal">Code will become available for usage in release autumn 2022.</assert>
-    </rule>
-
-    <!-- EAS -->
-    <rule context="cbc:EndpointID">
-      <assert id="EHF-CL-N002" test="not(@schemeID) or not(some $code in $EAS_ADDED satisfies $code = @schemeID)" flag="fatal">Code is not to be used before release in autumn 2022.</assert>
-      <assert id="EHF-CL-N003" test="not(@schemeID) or not(some $code in $EAS_DEPRECATED satisfies $code = @schemeID)" flag="warning">Code is deprecated and will become removed as part of release autumn 2022.</assert>
-    </rule>
-
-    <!-- IMAGE -->
-    <rule context="cac:CatalogueLine/cac:Item/cac:ItemSpecificationDocumentReference/cbc:DocumentTypeCode">
-      <assert id="EHF-CL-N004" test="not(some $code in $IMAGE_ADDED satisfies $code = normalize-space())" flag="fatal">Code is not to be used before release in autumn 2022.</assert>
-    </rule>
-
-    <!-- ISO3166 -->
-    <rule context="cac:Country/cbc:IdentificationCode | cac:OriginCountry/cbc:IdentificationCode">
-      <assert id="EHF-CL-N005" test="not(some $code in $ISO3166_ADDED satisfies $code = normalize-space())" flag="fatal">Code is not to be used before release in autumn 2022.</assert>
-    </rule>
-
-    <!-- UNCL7143 -->
-    <rule context="cac:Item/cac:CommodityClassification/cbc:ItemClassificationCode">
-      <assert id="EHF-CL-N006" test="not(@listID) or not(some $code in $UNCL7143_ADDED satisfies $code = @listID)" flag="fatal">Code is not to be used before release in autumn 2022.</assert>
-    </rule>
-
-    <!-- UNECERec20 -->
-    <rule context="cac:CatalogueLine/cbc:OrderableUnit">
-      <assert id="EHF-CL-N007" test="not(some $code in $UNECERec20_ADDED satisfies $code = normalize-space())" flag="fatal">Code is not to be used before release in autumn 2022.</assert>
-    </rule>
-    <rule context="cac:CatalogueLine/cbc:OrderableUnit | cac:CatalogueLine/cbc:ContentUnitQuantity | cac:CatalogueLine/cbc:MinimumOrderQuantity | cac:CatalogueLine/cbc:MaximumOrderQuantity | cac:CatalogueLine/cac:ItemComparison/cbc:Quantity | cac:CatalogueLine/cac:ComponentRelatedItem/cbc:Quantity | cac:CatalogueLine/cac:AccessoryRelatedItem/cbc:Quantity | cac:CatalogueLine/cac:RequiredRelatedItem/cbc:Quantity | cac:CatalogueLine/cac:ReplacedRelatedItem/cbc:Quantity | cac:CatalogueLine/cac:RequiredItemLocationQuantity/cbc:LeadTimeMeasure | cac:CatalogueLine/cac:RequiredItemLocationQuantity/cbc:MinimumQuantity | cac:CatalogueLine/cac:RequiredItemLocationQuantity/cbc:MaximumQuantity | cac:CatalogueLine/cac:RequiredItemLocationQuantity/cac:Price/cbc:BaseQuantity | cac:CatalogueLine/cac:Item/cbc:PackQuantity | cac:CatalogueLine/cac:Item/cac:AdditionalItemProperty/cbc:ValueQuantity | cac:CatalogueLine/cac:Item/cac:Dimension/cbc:Measure | cac:CatalogueLine/cac:Item/cac:Dimension/cbc:MinimumMeasure | cac:CatalogueLine/cac:Item/cac:Dimension/cbc:MaximumMeasure | cac:Shipment/cbc:GrossWeightMeasure | cac:Shipment/cbc:GrossVolumeMeasure | cac:DespatchLine/cbc:DeliveredQuantity | cac:DespatchLine/cbc:OutstandingQuantity | cac:DespatchLine/cac:Item/cbc:ValueQuantity | cac:DespatchLine/cac:Shipment/cac:TransportHandlingUnit/cac:MeasurementDimension/cbc:Measure | cac:OrderLine/cac:LineItem/cbc:Quantity | cac:OrderLine/cac:LineItem/cac:Price/cbc:BaseQuantity | cac:OrderLine/cac:LineItem/cac:Item/cac:AdditionalItemProperty/cbc:ValueQuantity | cac:OrderLine/cac:SellerSubstitutedLineItem/cac:Item/cac:AdditionalItemProperty/cbc:ValueQuantity | cac:OrderLine/cac:LineItem/cac:Delivery/cbc:Quantity | cac:CatalogueLine/cac:RequiredItemLocationQuantity/cac:DeliveryUnit/cbc:BatchQuantity | cac:InvoiceLine/cbc:InvoicedQuantity | cac:InvoiceLine/cac:Price/cbc:BaseQuantity">
-      <assert id="EHF-CL-N008" test="not(@unitCode) or not(some $code in $UNECERec20_ADDED satisfies $code = @unitCode)" flag="fatal">Code is not to be used before release in autumn 2022.</assert>
-    </rule>
-
-    <!-- UNECERec21 -->
-    <rule context="cac:DespatchLine/cac:Shipment/cac:TransportHandlingUnit/cbc:TransportHandlingUnitTypeCode">
-      <assert id="EHF-CL-N009" test="not(some $code in $UNECERec21_ADDED satisfies $code = normalize-space())" flag="fatal">Code is not to be used before release in autumn 2022.</assert>
-    </rule>
-    <rule context="cac:InvoiceLine/cbc:InvoicedQuantity | cac:InvoiceLine/cac:Price/cbc:BaseQuantity">
-      <assert id="EHF-CL-N010" test="not(@unitCode) or not(some $code in $UNECERec21_ADDED satisfies $code = @unitCode)" flag="fatal">Code is not to be used before release in autumn 2022.</assert>
     </rule>
 
   </pattern>

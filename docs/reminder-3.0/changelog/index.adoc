@@ -3,7 +3,11 @@
 :sectnums!:
 :leveloffset: +1
 
-= Version 3.0.2 (2022-06-25) [[changelog-3.0.2]]
+= Version 3.0.3 (2023-02-16) [[changelog-3.0.3]]
+
+include::2023-02-16-3.0.3.adoc[]
+
+= Version 3.0.2 (2022-06-15) [[changelog-3.0.2]]
 
 include::2022-06-15-3.0.2.adoc[]
 

@@ -70,25 +70,35 @@
         <Title>Implementation Guideline</Title>
         <Tag>reminder-3.0</Tag>
     </Resource>
+
     <Resource>
         <Type>Doc-1</Type>
-        <Path>release/2018-11-15</Path>
-        <Title>Release 2018-11-15</Title>
-        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2018-11-15'.</Description>
+        <Path>release/2023-02-16</Path>
+        <Title>Release 2023-02-16</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2023-02-16'.</Description>
         <Tag>release</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
+        <Tag>catalogue-3.0</Tag>
+        <Tag>despatch-advice-3.0</Tag>
+        <Tag>ordering-3.0</Tag>
+        <Tag>order-agreement-3.0</Tag>
+        <Tag>payment-request-3.0</Tag>
+        <Tag>punch-out-3.0</Tag>
+        <Tag>reminder-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
-        <Path>release/2019-05-30</Path>
-        <Title>Release 2019-05-30</Title>
-        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2019-05-30'.</Description>
+        <Path>release/2022-06-15</Path>
+        <Title>Release 2022-06-15</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2022-06-15'.</Description>
         <Tag>release</Tag>
+        <Tag>forward-billing-3.0</Tag>
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
-        <Path>release/2019-12-10</Path>
-        <Title>Release 2019-12-10</Title>
-        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2019-12-10'.</Description>
+        <Path>release/2020-06-10</Path>
+        <Title>Release 2020-06-10</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2020-06-10'.</Description>
         <Tag>release</Tag>
     </Resource>
     <Resource>
@@ -101,27 +111,26 @@
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
-        <Path>release/2020-06-10</Path>
-        <Title>Release 2020-06-10</Title>
-        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2020-06-10'.</Description>
+        <Path>release/2019-12-10</Path>
+        <Title>Release 2019-12-10</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2019-12-10'.</Description>
         <Tag>release</Tag>
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
-        <Path>release/2022-06-15</Path>
-        <Title>Release 2022-06-15</Title>
-        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2022-06-15'.</Description>
+        <Path>release/2019-05-30</Path>
+        <Title>Release 2019-05-30</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2019-05-30'.</Description>
         <Tag>release</Tag>
-        <Tag>advanced-ordering-3.0</Tag>
-        <Tag>catalogue-3.0</Tag>
-        <Tag>despatch-advice-3.0</Tag>
-        <Tag>forward-billing-3.0</Tag>
-        <Tag>ordering-3.0</Tag>
-        <Tag>order-agreement-3.0</Tag>
-        <Tag>payment-request-3.0</Tag>
-        <Tag>punch-out-3.0</Tag>
-        <Tag>reminder-3.0</Tag>
     </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2018-11-15</Path>
+        <Title>Release 2018-11-15</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2018-11-15'.</Description>
+        <Tag>release</Tag>
+    </Resource>
+
     <Resource>
         <Type>Doc-1</Type>
         <Path>advanced-ordering-3.0/changelog/</Path>
