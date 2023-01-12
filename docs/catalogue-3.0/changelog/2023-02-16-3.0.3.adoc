@@ -25,4 +25,8 @@ a| Allowing updated codelists intherited from OpenPeppol.
 
 | Validator
 
+| -
+| In the Catalogue transaction the code PRODUCT_IMAGE is added to allowed DocumentTypeCodes in ItemSpecificationDocumentReference on line level. The code may be used to identify the main image of a product.
+| Validator
+
 |===

@@ -12,9 +12,6 @@ party’s web-site which is referred to via an URI.
 
 Several labels can be connected to each product.
 
-The following are used: http://www.anskaffelser.no/verktoy/codes-use-ehf-catalogue-labels-environmental-and-social-responsibility
-
-
 .Example of Classification codes
 [cols="^.^2a,8a", options="header"]
 |===
