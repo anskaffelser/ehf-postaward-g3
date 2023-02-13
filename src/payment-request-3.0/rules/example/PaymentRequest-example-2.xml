@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
-<ubl:Invoice
-    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-    xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 
     <cbc:CustomizationID>urn:fdc:anskaffelser.no:2019:ehf:spec:payment-request:3.0</cbc:CustomizationID>
     <cbc:ProfileID>urn:fdc:anskaffelser.no:2019:ehf:postaward:g3:07:1.0</cbc:ProfileID>
@@ -106,4 +103,4 @@
         </cac:Price>
     </cac:InvoiceLine>
 
-</ubl:Invoice>
+</Invoice>
