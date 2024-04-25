@@ -73,17 +73,24 @@
 
     <Resource>
         <Type>Doc-1</Type>
+        <Path>release/2024-05-22</Path>
+        <Title>Release 2024-05-22</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2024-04-22'.</Description>
+        <Tag>release</Tag>
+        <Tag>advanced-ordering-3.0</Tag>
+        <Tag>catalogue-3.0</Tag>
+        <Tag>ordering-3.0</Tag>
+        <Tag>order-agreement-3.0</Tag>
+        <Tag>punch-out-3.0</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
         <Path>release/2023-02-16</Path>
         <Title>Release 2023-02-16</Title>
         <Description>Release notes describing changes related to EHF Post-Award G3 in release '2023-02-16'.</Description>
         <Tag>release</Tag>
-        <Tag>advanced-ordering-3.0</Tag>
-        <Tag>catalogue-3.0</Tag>
         <Tag>despatch-advice-3.0</Tag>
-        <Tag>ordering-3.0</Tag>
-        <Tag>order-agreement-3.0</Tag>
         <Tag>payment-request-3.0</Tag>
-        <Tag>punch-out-3.0</Tag>
         <Tag>reminder-3.0</Tag>
     </Resource>
     <Resource>
