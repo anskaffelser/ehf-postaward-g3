@@ -38,6 +38,6 @@
 	<include href="../../../../target/generated/t76-basic.sch"/>
 	<include href="../../../_common/rules/sch/parts/identifiers.sch"/>
 	<include href="../../../../target/schematron-peppol/PEPPOL-M-T76.sch"/>
-	<!-- <include href="business/EHF-REMINDER.sch"/> -->
+	<include href="../../../_common/rules/qii/order_response_3x_pattern.sch"/>
 
 </schema>

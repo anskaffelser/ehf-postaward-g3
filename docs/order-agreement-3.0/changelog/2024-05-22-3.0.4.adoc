@@ -1,0 +1,6 @@
+[cols="1,9,2", options="header"]
+|===
+| Issue | Description | Type
+| - | Adding support for QII for Order Agreement message. | Validator
+
+|===

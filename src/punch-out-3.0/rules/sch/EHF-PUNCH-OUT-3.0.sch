@@ -34,6 +34,6 @@
 	<include href="../../../../target/generated/t77-basic.sch"/>
 	<include href="../../../_common/rules/sch/parts/identifiers.sch"/>
 	<include href="../../../../target/schematron-peppol/PEPPOL-M-T77.sch"/>
-	<!-- <include href="business/EHF-REMINDER.sch"/> -->
+	<include href="../../../_common/rules/qii/punch_out_3x_pattern.sch"/>
 
 </schema>

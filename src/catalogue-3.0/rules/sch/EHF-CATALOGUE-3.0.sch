@@ -34,6 +34,6 @@
 	<include href="../../../../target/generated/t19-basic.sch"/>
 	<include href="../../../_common/rules/sch/parts/identifiers.sch"/>
 	<include href="../../../../target/schematron-peppol/PEPPOL-M-T19.sch"/>
-	<!-- <include href="business/EHF-REMINDER.sch"/> -->
+	<include href="../../../_common/rules/qii/catalogue_3x_pattern.sch"/>
 
 </schema>

@@ -34,6 +34,6 @@
 	<include href="../../../../target/generated/t110-basic.sch"/>
 	<include href="../../../_common/rules/sch/parts/identifiers.sch"/>
 	<include href="../../../../target/schematron-peppol/PEPPOL-M-T110.sch"/>
-	<!-- <include href="business/EHF-REMINDER.sch"/> -->
+	<include href="../../../_common/rules/qii/order_agreement_3x_pattern.sch"/>
 
 </schema>
