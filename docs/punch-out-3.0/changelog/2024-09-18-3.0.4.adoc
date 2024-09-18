@@ -2,5 +2,6 @@
 |===
 | Issue | Description | Type
 | - | Adding support for QII for Punch Out message. | Validator
+| - | Updated codelist PackagingMarkedLabelAccreditationCode to release 3.1 | Validator
 
 |===

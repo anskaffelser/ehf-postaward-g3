@@ -35,6 +35,7 @@ include::{description-source-path}/additionalproperties.adoc[]
 
 include::{description-source-path}/replaceditem.adoc[]
 
+
 :leveloffset: +1
 
 include::{description-source-path}/../../../shared/files/vat-cat-line.adoc[]

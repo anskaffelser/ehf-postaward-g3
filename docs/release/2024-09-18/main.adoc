@@ -1,6 +1,6 @@
 :shared-dir: ../../_common
 :lang: en
-:doctitle: Release 2024-05-22
+:doctitle: Release 2024-09-18
 
 include::{shared-dir}/settings.adoc[]
 
@@ -23,7 +23,7 @@ include::{shared-dir}/settings.adoc[]
 
 == EHF Catalogue 3.0.4
 
-include::../../catalogue-3.0/changelog/2024-05-22-3.0.4.adoc[]
+include::../../catalogue-3.0/changelog/2024-09-18-3.0.4.adoc[]
 
 
 // == EHF Despatch Advice 3.0.2
@@ -38,12 +38,12 @@ include::../../catalogue-3.0/changelog/2024-05-22-3.0.4.adoc[]
 
 == EHF Ordering 3.0.4
 
-include::../../ordering-3.0/changelog/2024-05-22-3.0.4.adoc[]
+include::../../ordering-3.0/changelog/2024-09-18-3.0.4.adoc[]
 
 
 == EHF Order Agreement 3.0.4
 
-include::../../order-agreement-3.0/changelog/2024-05-22-3.0.4.adoc[]
+include::../../order-agreement-3.0/changelog/2024-09-18-3.0.4.adoc[]
 
 
 // == EHF Payment Request 3.0.2
@@ -53,7 +53,7 @@ include::../../order-agreement-3.0/changelog/2024-05-22-3.0.4.adoc[]
 
 == EHF Punch Out 3.0.4
 
-include::../../punch-out-3.0/changelog/2024-05-22-3.0.4.adoc[]
+include::../../punch-out-3.0/changelog/2024-09-18-3.0.4.adoc[]
 
 
 // == EHF Reminder 3.0.3
@@ -63,4 +63,4 @@ include::../../punch-out-3.0/changelog/2024-05-22-3.0.4.adoc[]
 
 == EHF Advanced Ordering 3.0.4
 
-include::../../advanced-ordering-3.0/changelog/2024-05-22-3.0.4.adoc[]
+include::../../advanced-ordering-3.0/changelog/2024-09-18-3.0.4.adoc[]

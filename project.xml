@@ -73,9 +73,9 @@
 
     <Resource>
         <Type>Doc-1</Type>
-        <Path>release/2024-05-22</Path>
-        <Title>Release 2024-05-22</Title>
-        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2024-04-22'.</Description>
+        <Path>release/2024-09-18</Path>
+        <Title>Release 2024-09-18</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G3 in release '2024-09-18'.</Description>
         <Tag>release</Tag>
         <Tag>advanced-ordering-3.0</Tag>
         <Tag>catalogue-3.0</Tag>

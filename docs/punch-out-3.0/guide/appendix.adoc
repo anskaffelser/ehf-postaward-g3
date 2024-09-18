@@ -3,3 +3,34 @@ include::../../_common/appendix/ubl-2.2.adoc[]
 
 include::../../_common/appendix/semantic-datatypes.adoc[]
 
+[[qii]]
+[appendix]
+= Qualified Item Identification
+
+This specification supports use of https://anskaffelser.dev/incubator/qii/spec/g1/[EHF Qualified Item Identification G1] to add additional item properies with qualified information supported by validation.
+
+To indicate use of EHF Qulified Item Identification must this be indicated on product level:
+
+.Example, indication of indication
+[source, xml]
+----
+<cac:Item>
+  <cac:CommodityClassification>
+    <cbc:ItemClassificationCode listID="ZZZ">
+      urn:fdc:anskaffelser.no:2022:ehf:qii:item
+    </cbc:ItemClassificationCode>
+  </cac:CommodityClassification>
+</cac:Item>
+----
+
+Then may the linked library be used to add qualified information:
+
+.Example, qualified information:
+[source, xml, indent=0]
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>Used</cbc:Name>
+  <cbc:NameCode>#used</cbc:NameCode>
+  <cbc:Value>true</cbc:Value>
+</cac:AdditionalItemProperty>
+----
