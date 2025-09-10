@@ -43,7 +43,7 @@ Deviations from PEPPOL BIS Billing 3.0 are made to
 | Element `cac:AccountingCustomerParty/cac:Party/cac:PartyLegalEntity` is mandatory in EN 16931. This rules is removed to make `cac:PartyLegalEntity` optional, where the existence of the element indicate a business customer, and lack of the element indicate a consumer customer.
 
 | PEPPOL-EN16931-R007
-| Process identifier used in the forward billing transactions belongs to Difi. This rules is removed to deviate the process identifier.
+| Process identifier used in the forward billing transactions belongs to DFØ. This rules is removed to deviate the process identifier.
 |===
 
 
