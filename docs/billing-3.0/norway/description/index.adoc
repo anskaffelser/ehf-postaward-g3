@@ -8,4 +8,6 @@ include::value-added-tax.adoc[]
 
 include::payment-information.adoc[]
 
+include::ehf-fakturering.adoc[]
+
 :leveloffset: -1

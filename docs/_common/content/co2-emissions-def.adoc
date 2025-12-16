@@ -1,0 +1,27 @@
+[cols="20,155", options="header"]
+.Definition of CO2 emission data fields added in AdditionalItemProperty
+|===
+| Property
+| Description
+
+s| EmissionFactor | Emissions per invoiced unit.
+Unit of measure is always kilogram CO2-eq (CO2e) per unit of InvoicedQuantity.
+s| NetEmissionQuantity | NetEmissionQuantity is the total CO2e amount for the invoice line item (always in CO2e)
+Calculated as InvoicedQuantity * EmissionFactor
+Unit of measure is always kg CO2e.
+s| EmissionFactorSource | The source for the CO2e calculation. Can be either an internal source (Internal) or external database(Database). This indicates whether the sender has done their own CO2e calculation or relies on third parties.
+s| EmissionFactorCalculationRate | The multiplication factor for converting the emission factor listed in EmissionFactorSource into emissions per invoiced unit listed in EmissionFactor.
+
+                                   The EmissionFactorCalculationRate is required if the emission factor in the EmissionFactorSource is calculated on a different basis than InvoicedQuantity. For example:
+                                   * The source specifies emission factor per kilogram (KGM), but InvoicedQuantity is each (EA). In this case EmissionFactorCalculationRate is the (average) number of kilogram per piece. If each piece is 10 kilogram (on average), the EmissionFactorCalculationRate is 10.
+                                   * The source specifies the emission factor per 100 litre, but the InvoicedQuantity is in litre. In this case the EmissionFactorCalculationRate is equal to 0.01.
+
+                                   This allows EmissionFactor to be calculated from first principles as
+                                   (the emission factor from EmissionFactorSource) * EmissionFactorCalculationRate.
+s| EmissionFactorCalculationUnit | The EmissionFactorCalculationUnit is required if the emission factor unit code is different from the InvoicedQuantity unit code (e.g. source specifies emissions factor per kilogram (KGM) but InvoicedQuantity is each (EA)). EmissionFactorCalculationUnit is used to specify the base unit used by the source (e.g. KGM).
+
+                                   Unit of measure shall contain a valid unit code (e.g. KGM (kilogram) or LTR (litre)), which must be different from the unit code of InvoicedQuantity.
+s| EmissionFactor | Emissions per invoiced unit.
+                    Unit of measure is always kilogram CO2-eq (CO2e) per unit of InvoicedQuantity.
+
+|===
