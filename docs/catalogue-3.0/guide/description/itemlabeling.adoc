@@ -51,3 +51,84 @@ Certificate TypeCode: OrganicLabel (Ecological)
   </cac:DocumentReference>
 </cac:Certificate>
 ----
+
+== EHF Catalogue as a carrier of CO2 values (fet skrift)
+
+The EHF/Peppol BIS catalogue is a carrier of product information that can directly affect the environmental footprint by providing the customer with good information about CO2 values per product. The catalogue can also carry links to extended environmental information in the form of an environmental certificate or an EPD. Labels can also be used to indicate that a product or service is quality assured by a third party. You can also use a code such as "Used" if a supplier sells used goods. A used item automatically has a lower environmental footprint.
+
+Below you will find examples of how to include CO2 values at line level in the EHF/BIS catalogue:
+
+.Definition of CO2 emission data fields added in AdditionalItemProperty
+
+include::../{shared-dir}/content/co2-emissions-def.adoc[]
+
+NB!:: Base Quantity does not impact the Emission Factor and the Emission Factor Quantity (which are defined per invoiced unit, not per price unit).
+
+[source,xml]
+.UBL XML eksempel EHF catalogue
+
+----
+<cac:CatalogueLine>
+ <cbc:ID>1</cbc:ID>
+      <cbc:ActionCode>Add</cbc:ActionCode>
+      <cbc:OrderableIndicator>true</cbc:OrderableIndicator>
+<cbc:OrderableUnit>XBD</cbc:OrderableUnit>
+      <cac:LineValidityPeriod>
+<cbc:StartDate>2025-04-18</cbc:StartDate>
+      </cac:LineValidityPeriod>
+<cac:ItemComparison>
+             <cbc:PriceAmount currencyID="NOK">447.13</cbc:PriceAmount>
+<cbc:Quantity unitCode="XBD">1</cbc:Quantity>
+      </cac:ItemComparison>
+<cac:Item>
+<cbc:Name>ARBOR SPONPL GULV 2420 FUKTB</cbc:Name>
+                      <cac:SellersItemIdentification>
+                       <cbc:ID>20004866</cbc:ID>
+                       </cac:SellersItemIdentification>
+<cac:StandardItemIdentification>
+ <cbc:ID schemeID="0160">7038840000105</cbc:ID>
+ </cac:StandardItemIdentification>
+ <cac:AdditionalItemProperty>
+<cbc:Name>CO2EmissionFactorSource</cbc:Name> <cbc:Value>https://klimatdatabasen.boverket.se</cbc:Value
+</cac:AdditionalItemProperty>
+   <cac:AdditionalItemProperty>
+   <cbc:Name>EmissionFactor</cbc:Name>
+ <cbc:Value>0.39</cbc:Value>
+</cac:AdditionalItemProperty>
+  <cac:AdditionalItemProperty>
+<cbc:Name>NetEmissionQuantity</cbc:Name>
+ <cbc:Value>7.92597</cbc:Value>
+</cac:AdditionalItemProperty>
+ <cac:AdditionalItemProperty>
+   <cbc:Name>EmissionFactorSource</cbc:Name>
+   <cbc:Value>Database</cbc:Value>
+</cac:AdditionalItemProperty>
+  <cac:AdditionalItemProperty>
+  <cbc:Name>EmissionFactorCalculationRate</cbc:Name>
+  <cbc:Value>20.323</cbc:Value>
+</cac:AdditionalItemProperty>
+  <cac:AdditionalItemProperty>
+  <cbc:Name>EmissionFactorCalculationUnit</cbc:Name>
+  <cbc:Value>KGM</cbc:Value>
+ </cac:AdditionalItemProperty>
+</cac:Item> </cac:CatalogueLine>
+
+----
+
+Obtain environmental information for individual products via external database::
+
+
+For obtaining environmental information stored in external databases, in the form of machine-readable EPDs or Digital Product Passports, the free fields can also be used. The purpose is that the digital files sent do not become too large. The information collected by the client/buyer can be used in the analysis of the company's behaviour and used for various reporting purposes. The environmental properties of the product in combination with information from the ordering process (EHF order and order confirmation) and the delivery process (EHF despatch advice), can form a more complete data basis of the environmental footprint from production until the product is with the client/buyer. Below you will find an xml example:
+
+[source,xml]
+----
+<cac:InvoiceLine>
+           <cbc:ID/>
+          <cbc:LineExtensionAmount/>
+                     <cac:Item>
+                                <cac:AdditionalItemProperty>
+                                     <cbc:Name>CO2EmissionFactorSource</cbc:Name>
+                                     <cbc:Value>[lenke til miljødatabase]</cbc:Value>
+                                </cac:AdditionalItemProperty>
+
+----
