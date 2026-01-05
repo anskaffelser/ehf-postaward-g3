@@ -52,15 +52,14 @@ Certificate TypeCode: OrganicLabel (Ecological)
 </cac:Certificate>
 ----
 
-== EHF Catalogue as a carrier of CO2 values (fet skrift)
+== EHF Catalogue as a carrier of CO2 values
 
 The EHF/Peppol BIS catalogue is a carrier of product information that can directly affect the environmental footprint by providing the customer with good information about CO2 values per product. The catalogue can also carry links to extended environmental information in the form of an environmental certificate or an EPD. Labels can also be used to indicate that a product or service is quality assured by a third party. You can also use a code such as "Used" if a supplier sells used goods. A used item automatically has a lower environmental footprint.
 
 Below you will find examples of how to include CO2 values at line level in the EHF/BIS catalogue:
 
-.Definition of CO2 emission data fields added in AdditionalItemProperty
 
-include::../{shared-dir}/content/co2-emissions-def.adoc[]
+include::../{shared-dir}/content/co2-emissions-def-catalogue.adoc[]
 
 NB!:: Base Quantity does not impact the Emission Factor and the Emission Factor Quantity (which are defined per invoiced unit, not per price unit).
 
@@ -89,7 +88,7 @@ NB!:: Base Quantity does not impact the Emission Factor and the Emission Factor 
  <cbc:ID schemeID="0160">7038840000105</cbc:ID>
  </cac:StandardItemIdentification>
  <cac:AdditionalItemProperty>
-<cbc:Name>CO2EmissionFactorSource</cbc:Name> <cbc:Value>https://klimatdatabasen.boverket.se</cbc:Value
+<cbc:Name>CO2EmissionFactorSource</cbc:Name> <cbc:Value>https://klimatdatabasen.boverket.se</cbc:Value>
 </cac:AdditionalItemProperty>
    <cac:AdditionalItemProperty>
    <cbc:Name>EmissionFactor</cbc:Name>
