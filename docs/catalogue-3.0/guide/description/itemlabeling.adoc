@@ -56,7 +56,7 @@ Certificate TypeCode: OrganicLabel (Ecological)
 
 The EHF/Peppol BIS catalogue is a carrier of product information that can directly affect the environmental footprint by providing the customer with good information about CO2 values per product. The catalogue can also carry links to extended environmental information in the form of an environmental certificate or an EPD. Labels can also be used to indicate that a product or service is quality assured by a third party. You can also use a code such as "Used" if a supplier sells used goods. A used item automatically has a lower environmental footprint.
 
-Below you will find examples of how to include CO2 values at line level in the EHF/BIS catalogue:
+Below you will find examples of how to include CO2 values at line level in the EHF catalogue:
 
 
 include::../{shared-dir}/content/co2-emissions-def-catalogue.adoc[]
