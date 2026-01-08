@@ -143,6 +143,75 @@ NOTE: BBAN is not allowed in SEPA payments- use IBAN.
 <4> Mandate reference identifier
 <5> The account to the debited - IBAN
 
+== EHF Catalogue as a carrier of CO2 values
+
+The EHF/Peppol BIS catalogue is a carrier of product information that can directly affect the environmental footprint by providing the customer with good information about CO2 values per product. The catalogue can also carry links to extended environmental information in the form of an environmental certificate or an EPD. Labels can also be used to indicate that a product or service is quality assured by a third party. You can also use a code such as "Used" if a supplier sells used goods. A used item automatically has a lower environmental footprint.
+
+Below you will find examples of how to include CO2 values at line level in the EHF catalogue:
+
+
+include::../{shared-dir}/content/co2-emissions-def-catalogue.adoc[]
+
+NB!:: Base Quantity does not impact the Emission Factor and the Emission Factor Quantity (which are defined per invoiced unit, not per price unit).
+
+[source,xml]
+.UBL XML eksempel EHF faktura
+
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice
+xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+<cbc:ID/>
+<cbc:IssueDate/>
+<cac:AccountingSupplierParty/>
+<cac:AccountingCustomerParty/>
+ <cac:LegalMonetaryTotal>
+<cbc:PayableAmount/>
+</cac:LegalMonetaryTotal>
+ <cac:InvoiceLine>
+    <cbc:ID/>
+    <cbc:LineExtensionAmount/>
+        <cac:Item>
+             <cac:AdditionalItemProperty>
+                  <cbc:Name>EmissionFactor</cbc:Name>
+                  <cbc:Value>0.20</cbc:Value>
+              </cac:AdditionalItemProperty>
+              <cac:AdditionalItemProperty>
+                  <cbc:Name>NetEmissionQuantity</cbc:Name>
+                 <cbc:Value>1.4</cbc:Value> </cac:AdditionalItemProperty>
+            <cac:AdditionalItemProperty>
+                <cbc:Name>EmissionFactorSource</cbc:Name>
+                <cbc:Value>Database</cbc:Value> </cac:AdditionalItemProperty>
+           <cac:AdditionalItemProperty>
+                <cbc:Name>EmissionFactorCalculationRate</cbc:Name>
+                <cbc:Value>0.25</cbc:Value> </cac:AdditionalItemProperty>
+          <cac:AdditionalItemProperty>
+               <cbc:Name>EmissionFactorCalculationUnit</cbc:Name>
+              <cbc:Value>KGM</cbc:Value>
+         </cac:AdditionalItemProperty>
+</cac:Item>
+</cac:InvoiceLine>
+</Invoice>
+
+----
+
+Innhente miljøinformasjon for enkeltprodukter via ekstern database ::
+For obtaining environmental information stored in external databases, in the form of machine-readable EPDs or Digital Product Passports, the free fields can also be used. The purpose is that the digital files sent do not become too large. The information collected by the client/buyer can be used in the analysis of the company's behaviour and used for various reporting purposes. The environmental properties of the product in combination with information from the ordering process (EHF order and order confirmation) and the delivery process (EHF despatch advice), can form a more complete data basis of the environmental footprint from production until the product is with the client/buyer. Below you will find an xml example:
+
+[source,xml]
+----
+<cac:InvoiceLine>
+           <cbc:ID/>
+          <cbc:LineExtensionAmount/>
+                     <cac:Item>
+                                <cac:AdditionalItemProperty>
+                                     <cbc:Name>CO2EmissionFactorSource</cbc:Name>
+                                     <cbc:Value>[lenke til miljødatabase]</cbc:Value>
+                                </cac:AdditionalItemProperty>
+
+----
+
+
 
 
 

@@ -47,12 +47,10 @@ Based on work done in Peppol BIS Billing 3.0, Difi has included Norwegian rules 
 
 == Standard documentation
 
-Norwegian organizations may download the following parts of EN16931 for free from Standard Norge:
+Norwegian organizations may download the following parts of EN16931:
 
-* link:https://www.standard.no/nettbutikk/produktkatalogen/produktpresentasjon/?ProductID=934421[Electronic invoicing - Part 1: Semantic data model of the core elements of an electronic invoice]
-* link:https://www.standard.no/nettbutikk/produktkatalogen/produktpresentasjon/?ProductID=937500[Electronic invoicing - Part 2: List of syntaxes that comply with EN 16931-1]
-
-link:https://www.standard.no/nettbutikk/sokeresultater/?search=cen+16931[Other parts of EN 16931] is available for a fee.
+* link:https://online.standard.no/nb/ns-en-16931-1-2017a1-2019ac-2020[Electronic invoicing - Part 1: Semantic data model of the core elements of an electronic invoice]
+* link:https://online.standard.no/nb/sn-cents-16931-2-2017[Electronic invoicing - Part 2: List of syntaxes that comply with EN 16931-1]
 
 
 include::description/index.adoc[]
