@@ -48,7 +48,7 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oa
 </Invoice>
 ----
 
-Innhente miljøinformasjon for enkeltprodukter via ekstern database::
+Obtain environmental information for individual products via external database::
 
 For obtaining environmental information stored in external databases, in the form of machine-readable EPDs or Digital Product Passports, the free fields can also be used. The purpose is that the digital files sent do not become too large. The information collected by the client/buyer can be used in the analysis of the company's behaviour and used for various reporting purposes. The environmental properties of the product in combination with information from the ordering process (EHF order and order confirmation) and the delivery process (EHF despatch advice), can form a more complete data basis of the environmental footprint from production until the product is with the client/buyer.
 [source,xml]
