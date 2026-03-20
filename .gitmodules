@@ -4,3 +4,6 @@
 [submodule "_source/poacc-upgrade"]
 	path = _source/poacc-upgrade
 	url = https://github.com/OpenPEPPOL/poacc-upgrade-3.git
+[submodule "_source/poacc-logistics"]
+	path = _source/poacc-logistics
+	url = https://github.com/OpenPEPPOL/logistics-bis.git
