@@ -142,7 +142,7 @@ ifeq "$(RULE_XSD)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			anskaffelser/ehfbuild \
-			sh /src/.build/ehf.sh trigger_xsd --verbose)
+			sh /src/.build/ehf.sh trigger_xsd)
 else
 	$(call skip,xsds)
 endif
@@ -153,7 +153,7 @@ ifeq "$(RULE_XSLT)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			anskaffelser/ehfbuild \
-			sh /src/.build/ehf.sh trigger_xslt --verbose)
+			sh /src/.build/ehf.sh trigger_xslt)
 else
 	$(call skip,xslts)
 endif
@@ -164,7 +164,7 @@ ifeq "$(RULE_SCRIPTS_PRE)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			anskaffelser/ehfbuild \
-			sh /src/.build/ehf.sh trigger_scripts project-pre --verbose)
+			sh /src/.build/ehf.sh trigger_scripts project-pre)
 else
 	$(call skip,pre scripts)
 endif
@@ -175,7 +175,7 @@ ifeq "$(RULE_SCRIPTS_POST)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			anskaffelser/ehfbuild \
-			sh /src/.build/ehf.sh trigger_scripts project-post --verbose)
+			sh /src/.build/ehf.sh trigger_scripts project-post)
 else
 	$(call skip,post scripts)
 endif
@@ -187,7 +187,7 @@ ifeq "$(RULE_STATIC)" "true"
 			-v $(PROJECT)/target:/target \
 			-w /src/static \
 			anskaffelser/ehfbuild \
-			sh /src/.build/ehf.sh trigger_static --verbose)
+			sh /src/.build/ehf.sh trigger_static)
 else
 	$(call skip,static)
 endif
@@ -198,7 +198,7 @@ ifeq "$(RULE_SCHEMATRON)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			anskaffelser/ehfbuild \
-			sh /src/.build/ehf.sh trigger_schematron --verbose)
+			sh /src/.build/ehf.sh trigger_schematron)
 else
 	$(call skip,schematron)
 endif
@@ -209,7 +209,7 @@ ifeq "$(RULE_EXAMPLE)" "true"
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			anskaffelser/ehfbuild \
-			sh /src/.build/ehf.sh trigger_examples --verbose)
+			sh /src/.build/ehf.sh trigger_examples)
 else
 	$(call skip,example files)
 endif
