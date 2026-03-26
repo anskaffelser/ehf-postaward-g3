@@ -8,8 +8,6 @@ RULES_IDENT = no.anskaffelser.ehf.postaward.g3
 RULES_FOLDER = src
 HAS_GIT_SUBMODULES := $(shell test -d .git -a -f .gitmodules && echo true || echo false)
 
-include .build/ehf.makefile
-
 build: gitsubs
 
 gitsubs:
@@ -19,3 +17,6 @@ gitsubs:
 	else \
 		echo "\033[2;37mSkipping git submodules\033[0m"; \
 	fi
+
+include .build/ehf.makefile
+
