@@ -4,6 +4,10 @@ test ! -e /target/schematron-peppol || rm -r /target/schematron-peppol
 
 mkdir -p /target/schematron-peppol
 
+# copy Logistics 1.3 schamtron files.
+
+cp /src/_source/poacc-logistics/rules/sch/parts/*.sch /target/schematron-peppol/
+
 schutil exclude \
   /src/src/ordering-3.0/rules/patch/PEPPOL-M-T01.sch \
   /target/schematron-peppol/PEPPOL-M-T01.sch \
