@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <package>Peppol Logistics Application Response 1.0</package>
+
+    <configuration>
+        <identifier>peppolbis-T129-base-1.0</identifier>
+        <title>Application Response 1.0 (T129)</title>
+        <inherit>ubl-applicationresponse-2.1</inherit>
+        <file source="../../../_source/poacc-logistics/target/schematron/PEPPOLBIS-T129.sch" path="sch/PEPPOLBIS-T129.sch"/>
+    </configuration>
+
+    <configuration>
+        <identifier>peppolbis-129-advanced</identifier>
+        <title>Advanced Transport Execution Plan</title>
+        <profileId>urn:fdc:peppol.eu:logistics:bis:advanced_transport_execution_plan:1</profileId>
+        <customizationId>urn:fdc:peppol.eu:logistics:trns:application_response:1</customizationId>
+        <inherit>peppolbis-T129-base-1.0</inherit>
+    </configuration>
+
+</buildConfigurations>

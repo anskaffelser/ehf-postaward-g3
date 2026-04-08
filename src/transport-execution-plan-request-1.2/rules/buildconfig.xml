@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <package>Peppol Transport Execution Plan Request 1.2</package>
+
+    <configuration>
+        <identifier>peppolbis-T123-base-1.0</identifier>
+        <title>Transport Execution Plan Request (T123)</title>
+        <inherit>ubl-transport-execution-plan-request-2.4</inherit>
+        <file source="../../../_source/poacc-logistics/target/schematron/PEPPOLBIS-T123.sch" path="sch/PEPPOLBIS-T123.sch"/>
+    </configuration>
+
+    <configuration>
+        <identifier>peppolbis-123-request</identifier>
+        <title>Transport Execution Plan with Request</title>
+        <profileId>urn:fdc:peppol.eu:logistics:bis:transport_execution_plan_w_request:1</profileId>
+        <customizationId>urn:fdc:peppol.eu:logistics:trns:transport_execution_plan_request:1</customizationId>
+        <inherit>peppolbis-T123-base-1.0</inherit>
+    </configuration>
+
+    <configuration>
+        <identifier>peppolbis-T124-base-1.0</identifier>
+        <title>Transport Execution Plan (T124)</title>
+        <inherit>ubl-transport-execution-plan-2.4</inherit>
+        <file source="../../../_source/poacc-logistics/target/schematron/PEPPOLBIS-T124.sch" path="sch/PEPPOLBIS-T124.sch"/>
+    </configuration>
+
+    <configuration>
+        <identifier>peppolbis-123-advanced</identifier>
+        <title>Advanced Transport Execution Plan</title>
+        <profileId>urn:fdc:peppol.eu:logistics:bis:advanced_transport_execution_plan:1</profileId>
+        <customizationId>urn:fdc:peppol.eu:logistics:trns:transport_execution_plan_request:1</customizationId>
+        <inherit>peppolbis-T123-base-1.0</inherit>
+    </configuration>
+
+    <configuration>
+        <identifier>peppolbis-124-request</identifier>
+        <title>Transport Execution Plan with Request</title>
+        <profileId>urn:fdc:peppol.eu:logistics:bis:transport_execution_plan_w_request:1</profileId>
+        <customizationId>urn:fdc:peppol.eu:logistics:trns:transport_execution_plan:1</customizationId>
+        <inherit>peppolbis-T124-base-1.0</inherit>
+    </configuration>
+
+    <configuration>
+        <identifier>peppolbis-124-only</identifier>
+        <title>Transport Execution Plan Only</title>
+        <profileId>urn:fdc:peppol.eu:logistics:bis:transport_execution_plan_only:1</profileId>
+        <customizationId>urn:fdc:peppol.eu:logistics:trns:transport_execution_plan:1</customizationId>
+        <inherit>peppolbis-T124-base-1.0</inherit>
+    </configuration>
+
+    <configuration>
+        <identifier>peppolbis-124-advanced</identifier>
+        <title>Advanced Transport Execution Plan</title>
+        <profileId>urn:fdc:peppol.eu:logistics:bis:advanced_transport_execution_plan:1</profileId>
+        <customizationId>urn:fdc:peppol.eu:logistics:trns:transport_execution_plan:1</customizationId>
+        <inherit>peppolbis-T124-base-1.0</inherit>
+    </configuration>
+
+
+</buildConfigurations>
