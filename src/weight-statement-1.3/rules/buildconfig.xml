@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <package>Peppol Weight Statement 1.3</package>
+
+    <configuration>
+        <identifier>peppolbis-T122-base-1.1</identifier>
+        <title>Weight Statement (T122)</title>
+        <inherit>ubl-weightstatement-2.3</inherit>
+        <file source="../../../_source/poacc-logistics/target/schematron/PEPPOLBIS-T122.sch" path="sch/PEPPOLBIS-T122.sch"/>
+    </configuration>
+
+    <configuration>
+        <identifier>peppolbis-122</identifier>
+        <title>Weight Statement</title>
+        <profileId>urn:fdc:peppol.eu:logistics:bis:weight_statement:1</profileId>
+        <customizationId>urn:fdc:peppol.eu:logistics:trns:weight_statement:1</customizationId>
+        <inherit>peppolbis-T122-base-1.1</inherit>
+    </configuration>
+
+</buildConfigurations>

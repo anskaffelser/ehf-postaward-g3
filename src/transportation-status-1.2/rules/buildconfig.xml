@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <package>Peppol Transportation Status 1.2</package>
+
+    <configuration>
+        <identifier>peppolbis-T127-base-1.0</identifier>
+        <title>Transportation Status (T127)</title>
+        <inherit>ubl-transportation-status-2.3</inherit>
+        <file source="../../../_source/poacc-logistics/target/schematron/PEPPOLBIS-T127.sch" path="sch/PEPPOLBIS-T127.sch"/>
+    </configuration>
+
+    <configuration>
+        <identifier>peppolbis-127-only</identifier>
+        <title>Transportation Status Only</title>
+        <profileId>urn:fdc:peppol.eu:logistics:bis:transportation_status_only:1</profileId>
+        <customizationId>urn:fdc:peppol.eu:logistics:trns:transportation_status:1</customizationId>
+        <inherit>peppolbis-T127-base-1.0</inherit>
+    </configuration>
+
+    <configuration>
+        <identifier>peppolbis-127-request</identifier>
+        <title>Transportation Status with Request</title>
+        <profileId>urn:fdc:peppol.eu:logistics:bis:transportation_status_w_request:1</profileId>
+        <customizationId>urn:fdc:peppol.eu:logistics:trns:transportation_status:1</customizationId>
+        <inherit>peppolbis-T127-base-1.0</inherit>
+    </configuration>
+
+    <configuration>
+        <identifier>peppolbis-127-advanced</identifier>
+        <title>Advanced Transport Execution Plan</title>
+        <profileId>urn:fdc:peppol.eu:logistics:bis:advanced_transport_execution_plan:1</profileId>
+        <customizationId>urn:fdc:peppol.eu:logistics:trns:transportation_status:1</customizationId>
+        <inherit>peppolbis-T127-base-1.0</inherit>
+    </configuration>
+
+</buildConfigurations>

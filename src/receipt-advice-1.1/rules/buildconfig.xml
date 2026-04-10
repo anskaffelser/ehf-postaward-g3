@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <package>Peppol Receipt Advice 1.1</package>
+
+    <configuration>
+        <identifier>peppolbis-T128-base-1.0</identifier>
+        <title>Receipt Advice (T128)</title>
+        <inherit>ubl-receipt-advice-2.3</inherit>
+        <file source="../../../_source/poacc-logistics/target/schematron/PEPPOLBIS-T128.sch" path="sch/PEPPOLBIS-T128.sch"/>
+    </configuration>
+
+    <configuration>
+        <identifier>peppolbis-128-w-despatch-advice</identifier>
+        <title>Receipt Advice</title>
+        <profileId>urn:fdc:peppol.eu:logistics:bis:despatch_advice_w_receipt_advice:1</profileId>
+        <customizationId>urn:fdc:peppol.eu:logistics:trns:receipt_advice:1</customizationId>
+        <inherit>peppolbis-T128-base-1.0</inherit>
+    </configuration>
+
+</buildConfigurations>

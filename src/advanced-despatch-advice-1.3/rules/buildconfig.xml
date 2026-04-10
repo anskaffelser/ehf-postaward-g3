@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <package>Peppol Advanced Despatch Advice 1.3</package>
+
+    <configuration>
+        <identifier>peppolbis-T120-base-1.1</identifier>
+        <title>Advanced Despatch Advice 1.0 (T120)</title>
+        <inherit>ubl-despatchadvice-2.1</inherit>
+        <file source="../../../_source/poacc-logistics/target/schematron/PEPPOLBIS-T120.sch" path="sch/PEPPOLBIS-T120.sch"/>
+    </configuration>
+
+    <configuration>
+        <identifier>peppolbis-120-only</identifier>
+        <title>Advanced Despatch Advice Only 1.1</title>
+        <profileId>urn:fdc:peppol.eu:logistics:bis:despatch_advice_only:1</profileId>
+        <customizationId>urn:fdc:peppol.eu:logistics:trns:advanced_despatch_advice:1</customizationId>
+        <inherit>peppolbis-T120-base-1.1</inherit>
+    </configuration>
+
+</buildConfigurations>
