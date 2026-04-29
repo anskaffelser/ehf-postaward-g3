@@ -23,17 +23,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Prepare version labels
-        uses: k15g/action-version-labels@edge
-        with:
-          match: ^refs/tags/
-          version_regex: ^refs/tags/(.+)$
-
       - name: Pull images
         run: make pull
-
-      - name: Pull from ghcr.io
-        run: docker pull ghcr.io/anskaffelser/validator:latest
 
       - name: Build
         run: make
