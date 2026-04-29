@@ -11,6 +11,7 @@ RULES_IDENT := $(if $(RULES_IDENT),$(RULES_IDENT),rules)
 BUILD = structure example schematron xsd xslt rules docs static
 .DEFAULT_GOAL = default
 define docker_pull
+    echo "Pulling $(1) image..." && \
 	@docker pull $(1)
 endef
 define docker_run
