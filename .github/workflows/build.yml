@@ -32,6 +32,9 @@ jobs:
       - name: Pull images
         run: make pull
 
+      - name: Pull from ghcr.io
+        run: docker pull ghcr.io/difi/vefa-validator:latest
+
       - name: Build
         run: make
 
