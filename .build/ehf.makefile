@@ -11,7 +11,8 @@ RULES_IDENT := $(if $(RULES_IDENT),$(RULES_IDENT),rules)
 BUILD = structure example schematron xsd xslt rules docs static
 .DEFAULT_GOAL = default
 define docker_pull
-	@docker pull $(1)
+    echo "Pulling $(1) image..." && \
+	docker pull $(1)
 endef
 define docker_run
 	$(call fold_start,$(1),$(2))
@@ -86,7 +87,7 @@ serve:
 pull:
 	$(call fold_start,docker_pull,Pulling Docker images)
 	$(call docker_pull,anskaffelser/vefa-structure:edge)
-	$(call docker_pull,anskaffelser/validator:edge)
+	$(call docker_pull,ghcr.io/anskaffelser/validator:latest)
 	$(call docker_pull,anskaffelser/ehfbuild)
 	$(call docker_pull,asciidoctor/docker-asciidoctor)
 	$(call fold_end,docker_pull)
@@ -119,7 +120,7 @@ rules:
 ifeq "$(RULE_RULES)" "true"
 	$(call docker_run,rules,Running vefa-validator,\
 			-v $(PROJECT):/src \
-			anskaffelser/validator:edge \
+			ghcr.io/anskaffelser/validator:latest \
 			build -x -t -n $(RULES_IDENT) -a $(RULES_FOLDER) -b $(VERSION) -target target/validator /src)
 else
 	$(call skip,rules)
