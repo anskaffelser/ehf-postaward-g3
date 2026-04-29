@@ -12,7 +12,7 @@ BUILD = structure example schematron xsd xslt rules docs static
 .DEFAULT_GOAL = default
 define docker_pull
     echo "Pulling $(1) image..." && \
-	@docker pull $(1)
+	docker pull $(1)
 endef
 define docker_run
 	$(call fold_start,$(1),$(2))
