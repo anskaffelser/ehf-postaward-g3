@@ -87,7 +87,7 @@ serve:
 pull:
 	$(call fold_start,docker_pull,Pulling Docker images)
 	$(call docker_pull,anskaffelser/vefa-structure:edge)
-	$(call docker_pull,ghcr.io/anskaffelser/validator:edge)
+	$(call docker_pull,ghcr.io/anskaffelser/validator:latest)
 	$(call docker_pull,anskaffelser/ehfbuild)
 	$(call docker_pull,asciidoctor/docker-asciidoctor)
 	$(call fold_end,docker_pull)
