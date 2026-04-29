@@ -19,10 +19,15 @@ jobs:
       - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
-            registry: ghcr.io
-            username: ${{ github.actor }}
-            password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Prepare version labels
+        uses: k15g/action-version-labels@edge
+        with:
+          match: ^refs/tags/
+          version_regex: ^refs/tags/(.+)$
 
       - name: Pull images
         run: make pull
