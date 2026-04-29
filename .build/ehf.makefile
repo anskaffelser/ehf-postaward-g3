@@ -86,7 +86,7 @@ serve:
 pull:
 	$(call fold_start,docker_pull,Pulling Docker images)
 	$(call docker_pull,anskaffelser/vefa-structure:edge)
-	$(call docker_pull,anskaffelser/validator:edge)
+	$(call docker_pull,ghcr.io/anskaffelser/validator:edge)
 	$(call docker_pull,anskaffelser/ehfbuild)
 	$(call docker_pull,asciidoctor/docker-asciidoctor)
 	$(call fold_end,docker_pull)
@@ -119,7 +119,7 @@ rules:
 ifeq "$(RULE_RULES)" "true"
 	$(call docker_run,rules,Running vefa-validator,\
 			-v $(PROJECT):/src \
-			anskaffelser/validator:edge \
+			ghcr.io/anskaffelser/validator:latest \
 			build -x -t -n $(RULES_IDENT) -a $(RULES_FOLDER) -b $(VERSION) -target target/validator /src)
 else
 	$(call skip,rules)
