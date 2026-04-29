@@ -33,7 +33,7 @@ jobs:
         run: make pull
 
       - name: Pull from ghcr.io
-        run: docker pull ghcr.io/difi/vefa-validator:latest
+        run: docker pull ghcr.io/anskaffelser/validator:latest
 
       - name: Build
         run: make
