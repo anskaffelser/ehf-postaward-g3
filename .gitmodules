@@ -1,9 +1,12 @@
 [submodule "_source/poacc-billing"]
 	path = _source/poacc-billing
 	url = https://github.com/OpenPEPPOL/peppol-bis-invoice-3.git
+	branch = 2026-Q2-QA2
 [submodule "_source/poacc-upgrade"]
 	path = _source/poacc-upgrade
 	url = https://github.com/OpenPEPPOL/poacc-upgrade-3.git
+	branch = 2026-Q2-QA2
 [submodule "_source/poacc-logistics"]
 	path = _source/poacc-logistics
 	url = https://github.com/OpenPEPPOL/logistics-bis.git
+	branch = 2026-Q2
