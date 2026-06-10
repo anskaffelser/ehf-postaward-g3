@@ -23,14 +23,6 @@ include .build/ehf.makefile
 
 # Fetches and extracts remote tags for specific external git repositories
 fetch-external-tags:
-	@echo "Repository|Tag|Commit Hash|Location | Authored Date"
-	@echo "---|---|---|---"
-	@# Repository 1: Example pepol-bis-invoice-3
-	@git ls-remote --tags --sort='v:refname' https://github.com/OpenPEPPOL/peppol-bis-invoice-3.git | tail -n 5 | awk '{print "OpenPEPPOL/peppol-bis-invoice-3|" $$2 "|" $$1 "|Remote"}' | sed 's|refs/tags/||'
-	@# Repository 2: Example peppol-bis-order-3
-	@git ls-remote --tags --sort='v:refname' https://github.com/OpenPEPPOL/poacc-upgrade-3.git | tail -n 5 | awk '{print "OpenPEPPOL/poacc-upgrade-3|" $$2 "|" $$1 "|Remote"}' | sed 's|refs/tags/||'
-	@# Repository 3: Example peppol-logistics-bis
-	@git ls-remote --tags --sort='v:refname' https://github.com/OpenPEPPOL/logistics-bis.git | tail -n 5 | awk '{print "OpenPEPPOL/logistics-bis.git|" $$2 "|" $$1 "|Remote"}' | sed 's|refs/tags/||'
-
-
-
+	@echo "Repository|Tag|Commit Hash|Location|Authored Date";
+	@echo "---|---|---|---|---";
+	@for repo in OpenPEPPOL/peppol-bis-invoice-3 OpenPEPPOL/poacc-upgrade-3 OpenPEPPOL/logistics-bis; do tmp="$(mktemp -d)"; git -C "$tmp" init -q; git -C "$tmp" remote add origin "https://github.com/$repo.git"; git -C "$tmp" fetch -q --tags origin; git -C "$tmp" for-each-ref --sort=-creatordate --format="$repo|%(refname:short)|%(objectname)|Remote|%(creatordate:short)" refs/tags | head -n 5; rm -rf "$tmp"; done | column -t -s '|'
