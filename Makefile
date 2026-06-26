@@ -13,7 +13,7 @@ build: gitsubs
 gitsubs:
 	@if [ "$(HAS_GIT_SUBMODULES)" = "true" ]; then \
 		git submodule sync --recursive; \
-		git submodule update --init --recursive; \
+		git submodule update --init --remote --recursive; \
 	else \
 		echo "\033[2;37mSkipping git submodules\033[0m"; \
 	fi
