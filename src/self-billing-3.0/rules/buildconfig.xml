@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <package>EHF Selvfakturering og Peppol BIS Self-Billing 3.0</package>
+
+    <testfolder>example</testfolder>
+
+    <!-- CEN TC434 UBL -->
+    <configuration>
+        <identifier>peppolbis-en16931-cen-ubl</identifier>
+        <title>CEN TC434 UBL</title>
+        <file source="../../../_source/poacc-self-billing/rules/sch/CEN-EN16931-UBL.sch" path="sch/CEN-EN16931-UBL.sch" />
+    </configuration>
+
+    <!-- PEPPOL BIS Billing 3.0 (Envelope) -->
+    <configuration>
+        <identifier>peppolbis-envelope-3.0-sbdh</identifier>
+        <title>PEPPOL BIS Billing 3.0 (Envelope)</title>
+        <file source="../../../_source/poacc-self-billing/rules/sch/PeppolBIS-Envelope-Rules.sch" path="sch/PeppolBIS-Envelope-Rules.sch" />
+    </configuration>
+
+    <!-- PEPPOL BIS Self-Billing 3.0 (Base) -->
+    <configuration>
+        <identifier>peppolbis-en16931-sbbase-3.0-ubl</identifier>
+        <title>PEPPOL BIS Self-Billing 3.0 (Base)</title>
+        <file source="../../../_source/poacc-self-billing/rules/sch/PEPPOL-EN16931-UBL-SB.sch" path="sch/EHF-SB-3.0-EN16391-PEPPOL.sch" />
+    </configuration>
+
+    <!-- PEPPOL BIS Self-Billing 3.0 (Invoice Profile) -->
+    <configuration>
+        <identifier>peppolbis-en16931-01-3.0-ubl-sbinvoice</identifier>
+        <title>PEPPOL BIS Self-Billing 3.0 (Profile)</title>
+        <declaration type="xml.ubl">Invoice::urn:fdc:peppol.eu:2017:poacc:selfbilling:01:1.0#urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0</declaration>
+        <inherit>ubl-invoice-2.1</inherit>
+        <inherit>peppolbis-en16931-cen-ubl</inherit>
+        <inherit>peppolbis-en16931-sbbase-3.0-ubl</inherit>
+        <inherit>peppolbis-en16931-stylesheet-3.0-ubl-sb</inherit>
+    </configuration>
+
+    <!-- PEPPOL BIS Self-Billing 3.0 (CreditNote Profile) -->
+    <configuration>
+        <identifier>peppolbis-en16931-01-3.0-ubl-sbcreditnote</identifier>
+        <title>PEPPOL BIS Self-Billing 3.0 (CreditNote Profile)</title>
+        <declaration type="xml.ubl">CreditNote::urn:fdc:peppol.eu:2017:poacc:selfbilling:01:1.0#urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:selfbilling:3.0</declaration>
+        <inherit>ubl-creditnote-2.1</inherit>
+        <inherit>peppolbis-en16931-cen-ubl</inherit>
+        <inherit>peppolbis-en16931-sbbase-3.0-ubl</inherit>
+        <inherit>peppolbis-en16931-stylesheet-3.0-ubl-sb</inherit>
+    </configuration>
+
+</buildConfigurations>
