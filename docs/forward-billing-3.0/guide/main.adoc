@@ -86,7 +86,11 @@ Transactions in forward billing is identified accordingly to allow for deviation
 <2> Process identifier indicating the forward billing process.
 
 
-== Customer, business
+== Customer information
+The presence or absence of cac:PartyLegalEntity is used to distinguish between business and consumer customers. This differentiation does not apply to the energy sector when used for "gjennomfakturering", where cac:PartyLegalEntity instead identifies the power supplier. See chapter 3.1.5.
+
+
+=== Customer, business
 
 Business customers are provided accoring to EHF Billing 3.0, where the existence of `cac:PartyLegelEntity` indicate the customer is a business.
 
@@ -119,7 +123,7 @@ Business customers are provided accoring to EHF Billing 3.0, where the existence
 <3> Existence of `cac:PartyLegelEntity` indicate a business customer.
 
 
-== Customer, consumer
+=== Customer, consumer
 
 Business customers are provided accoring to EHF Billing 3.0, where the lack of `cac:PartyLegelEntity` indicate the customer is a consumer.
 
