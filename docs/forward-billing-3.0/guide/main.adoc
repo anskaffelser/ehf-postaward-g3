@@ -40,7 +40,7 @@ Deviations from PEPPOL BIS Billing 3.0 are made to
 | Reason
 
 | BR-07
-| Element `cac:AccountingCustomerParty/cac:Party/cac:PartyLegalEntity` is mandatory in EN 16931. This rules is removed to make `cac:PartyLegalEntity` optional, where the existence of the element indicate a business customer, and lack of the element indicate a consumer customer.
+| Element cac:AccountingCustomerParty/cac:Party/cac:PartyLegalEntity is mandatory in EN 16931. This rule is removed to make cac:PartyLegalEntity optional. In most sectors, the presence of the element indicates a business customer and its absence indicates a consumer customer. For the energy sector and "gjennomfakturering", cac:PartyLegalEntity is instead used to identify the power supplier (see chapter 3.1.5).
 
 | PEPPOL-EN16931-R007
 | Process identifier used in the forward billing transactions belongs to DFØ. This rules is removed to deviate the process identifier.
