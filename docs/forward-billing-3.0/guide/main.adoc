@@ -40,7 +40,7 @@ Deviations from PEPPOL BIS Billing 3.0 are made to
 | Reason
 
 | BR-07
-| Element `cac:AccountingCustomerParty/cac:Party/cac:PartyLegalEntity` is mandatory in EN 16931. This rules is removed to make `cac:PartyLegalEntity` optional, where the existence of the element indicate a business customer, and lack of the element indicate a consumer customer.
+| Element cac:AccountingCustomerParty/cac:Party/cac:PartyLegalEntity is mandatory in EN 16931. This rule is removed to make cac:PartyLegalEntity optional. In most sectors, the presence of the element indicates a business customer and its absence indicates a consumer customer. For the energy sector and "gjennomfakturering", cac:PartyLegalEntity is instead used to identify the power supplier (see chapter 3.1.5).
 
 | PEPPOL-EN16931-R007
 | Process identifier used in the forward billing transactions belongs to DFØ. This rules is removed to deviate the process identifier.
@@ -86,7 +86,11 @@ Transactions in forward billing is identified accordingly to allow for deviation
 <2> Process identifier indicating the forward billing process.
 
 
-== Customer, business
+== Customer information
+The presence or absence of cac:PartyLegalEntity is used to distinguish between business and consumer customers. This differentiation does not apply to the energy sector when used for "gjennomfakturering", where cac:PartyLegalEntity instead identifies the power supplier. See chapter 3.1.5.
+
+
+=== Customer, business
 
 Business customers are provided accoring to EHF Billing 3.0, where the existence of `cac:PartyLegelEntity` indicate the customer is a business.
 
@@ -119,7 +123,7 @@ Business customers are provided accoring to EHF Billing 3.0, where the existence
 <3> Existence of `cac:PartyLegelEntity` indicate a business customer.
 
 
-== Customer, consumer
+=== Customer, consumer
 
 Business customers are provided accoring to EHF Billing 3.0, where the lack of `cac:PartyLegelEntity` indicate the customer is a consumer.
 
