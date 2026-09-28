@@ -6,6 +6,31 @@
     <!-- Documentation -->
     <Resource>
         <Type>Doc-1</Type>
+        <Path>cv1.0/</Path>
+        <Title>EHF CV and EHF CV Request</Title>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>cv1.0/guide/</Path>
+        <Title>EHF CV and CV Request Implementation Guideline</Title>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>cv1.0/cv/</Path>
+        <Title>EHF CV 1.0</Title>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>cv1.0/cv-request/</Path>
+        <Title>EHF CV Request 1.0</Title>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>cv1.0/changelog/</Path>
+        <Title>EHF CV and CV Request Changelog</Title>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
         <Path>billing-3.0/norway/</Path>
         <Title>Norwegian implementation of EN16931</Title>
         <Tag>billing-3.0</Tag>

@@ -12,6 +12,13 @@ jobs:
         with:
           submodules: true
 
+      - name: Checkout EHF CV
+        uses: actions/checkout@v4
+        with:
+          repository: anskaffelser/ehf-cv
+          ref: 7402b5c8a9eaa041357cbe86ac8777252b4ecdb5
+          path: _source/ehf-cv
+
       - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
@@ -30,6 +37,45 @@ jobs:
 
       - name: Build
         run: make
+
+      - name: Build and add EHF CV site
+        run: |
+          rm -f _source/ehf-cv/.failed
+          make -C _source/ehf-cv
+          if [[ -e _source/ehf-cv/.failed ]]; then
+            echo "EHF CV build reported a failed build step"
+            exit 1
+          fi
+          cv_site=_source/ehf-cv/target/site
+          find "$cv_site/rules" -mindepth 3 -maxdepth 3 -type f -name index.html \
+            -exec sed -i 's|href="syntax/|href="../../../syntax/|g' {} +
+          for artifact in \
+            index.html \
+            guide/index.html \
+            cv/index.html \
+            cv-request/index.html \
+            changelog/index.html \
+            syntax/cv/tree/index.html \
+            syntax/cv-request/tree/index.html \
+            rules/cv-process-1.0/index.html \
+            rules/cv-request-process-1.0/index.html \
+            files/examples.zip \
+            files/schematron.zip; do
+            if [[ ! -f "$cv_site/$artifact" ]]; then
+              echo "Missing EHF CV site artifact: $artifact"
+              exit 1
+            fi
+          done
+          if grep -R -q 'href="syntax/' "$cv_site/rules"; then
+            echo "Found unresolved CV syntax links in generated rule pages"
+            exit 1
+          fi
+          for version in cv-1.0 cv-request-1.0; do
+            unzip -Z1 "$cv_site/files/examples.zip" | grep -q "^$version/"
+            unzip -Z1 "$cv_site/files/schematron.zip" | grep -q "^$version/"
+          done
+          mkdir -p target/site/cv1.0
+          cp -a "$cv_site/". target/site/cv1.0/
 
       - name: Package site files
         run: cd target/site && zip -rq ../../site.zip *
