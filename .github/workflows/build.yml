@@ -12,13 +12,6 @@ jobs:
         with:
           submodules: true
 
-      - name: Checkout EHF CV
-        uses: actions/checkout@v4
-        with:
-          repository: anskaffelser/ehf-cv
-          ref: 7402b5c8a9eaa041357cbe86ac8777252b4ecdb5
-          path: _source/ehf-cv
-
       - name: Log in to GHCR
         uses: docker/login-action@v3
         with:

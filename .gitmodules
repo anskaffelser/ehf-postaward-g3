@@ -14,3 +14,7 @@
 	path = _source/poacc-self-billing
 	url = https://github.com/OpenPEPPOL/peppol-bis-invoice-3.git
 	branch = selfbilling-2026-Q2-QA
+[submodule "_source/ehf-cv"]
+	path = _source/ehf-cv
+	url = https://github.com/anskaffelser/ehf-cv.git
+	branch = master
