@@ -44,15 +44,25 @@ cp \
   /target/schematron-peppol/PEPPOL-M-T110.sch
 
 # Invoice Z02
-#cp \
-#  /src/_source/poacc-billing/rules/sch/CEN-EN16931-UBL.sch \
-#  /target/schematron-peppol/CEN-EN16931-UBL.sch
-#schutil exclude \
-#  /src/_source/poacc-billing/rules/sch/PEPPOL-EN16931-UBL.sch \
-#  /target/schematron-peppol/PEPPOL-EN16931-UBL.sch \
-#  PEPPOL-EN16931-R007
+cp \
+  /src/_source/poacc-billing/rules/sch/CEN-EN16931-UBL.sch \
+  /target/schematron-peppol/CEN-EN16931-UBL.sch
+schutil exclude \
+  /src/_source/poacc-billing/rules/sch/PEPPOL-EN16931-UBL.sch \
+  /target/schematron-peppol/PEPPOL-EN16931-UBL.sch \
+  PEPPOL-EN16931-R007
 
-
+  # Billing 3.0 CII rules
+cp \
+  /src/_source/poacc-billing/rules/sch/CEN-EN16931-CII.sch \
+  /target/schematron-peppol/CEN-EN16931-CII.sch
+cp \
+  /src/_source/poacc-billing/rules/sch/PEPPOL-EN16931-CII.sch \
+  /target/schematron-peppol/PEPPOL-EN16931-CII.sch
+# Billing 3.0 Envelope rules
+cp \
+  /src/_source/poacc-billing/rules/sch/PeppolBIS-Envelope-Rules.sch \
+  /target/schematron-peppol/PeppolBIS-Envelope-Rules.sch
 # Reminder
 schutil exclude \
   /src/_source/poacc-billing/rules/sch/CEN-EN16931-UBL.sch \
